@@ -1,0 +1,19 @@
+<html>
+<body>
+#set( $foo = "Velocity" )
+Hello $foo World!
+</body>
+
+
+
+## 这是单行注释
+
+#*
+    这是多行注释
+    这是多行注释
+    这是多行注释
+    @author
+    @version
+*#
+
+<html>

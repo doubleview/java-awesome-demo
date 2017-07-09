@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>java-awesome-demo</artifactId>
+        <groupId>com.doubleview</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>java-se-samples</artifactId>
+    <packaging>pom</packaging>
+
+    <name>java-se-samples</name>
+    <url>http://maven.apache.org</url>
+    <modules>
+        <module>thread</module>
+        <module>net</module>
+        <module>jdbc</module>
+        <module>io</module>
+        <module>collection</module>
+        <module>reflect</module>
+        <module>xml</module>
+        <module>anotation</module>
+        <module>exception</module>
+        <module>generic</module>
+        <module>base</module>
+        <module>security</module>
+        <module>concurrent</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mysql.jdbc.version>5.1.21</mysql.jdbc.version>
+    </properties>
+
+    <dependencies>
+        <!--mysql驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.jdbc.version}</version>
+        </dependency>
+    </dependencies>
+</project>
