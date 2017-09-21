@@ -16,7 +16,6 @@ public class URLTest {
 
         System.out.println("资源名 : " + url.getFile());
         System.out.println("主机名 : " + url.getHost());
-        System.out.println("资源路径 : " + url.getFile());
         System.out.println("端口 : " + url.getPort());
         System.out.println("协议 : " + url.getProtocol());
         System.out.println("查询字符串 : " + url.getQuery());
