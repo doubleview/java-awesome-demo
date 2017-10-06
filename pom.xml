@@ -15,8 +15,12 @@
         <module>dom4j</module>
         <module>velocity</module>
         <module>json</module>
+<<<<<<< HEAD
         <module>guava</module>
         <module>netty</module>
+=======
+        <module>rxjava</module>
+>>>>>>> 1372df7074a062f1ae1a25bc1e5f5b1a14c3fa62
     </modules>
 
     <properties>
