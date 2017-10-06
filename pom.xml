@@ -12,10 +12,11 @@
     <modules>
         <module>hibernate</module>
         <module>java-se-samples</module>
-        <module>fastjson</module>
         <module>dom4j</module>
         <module>velocity</module>
         <module>json</module>
+        <module>guava</module>
+        <module>netty</module>
     </modules>
 
     <properties>
