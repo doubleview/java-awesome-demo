@@ -16,6 +16,7 @@
         <module>velocity</module>
         <module>json</module>
         <module>rxjava</module>
+        <module>netty</module>
     </modules>
 
     <properties>
