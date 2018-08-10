@@ -16,12 +16,12 @@ public class TestGson {
 
 
     @Test
-    public void test1() {
+    public void writeJsonString() {
         Gson gson = new Gson();
         User user = new User();
         user.setId(1);
         user.setName("hcc");
-        //user.setAge(23);
+        user.setAge(23);
 
         Order order = new Order();
         order.setId(2);
@@ -32,18 +32,19 @@ public class TestGson {
         map.put("user", user);
         map.put("order", order);
 
-         
-//        System.out.println(json);
+        String json = gson.toJson(map);
+
+        System.out.println(json);
 
 
         JsonParser parser = new JsonParser();
-//        JsonObject object = (JsonObject) parser.parse(json);
+        JsonObject object = (JsonObject) parser.parse(json);
 
-//        JsonObject userObject = object.getAsJsonObject("user");
-//        JsonObject orderObject = object.getAsJsonObject("order");
-//        User userResult = gson.fromJson(userObject, User.class);
-//        Order orderResult = gson.fromJson(orderObject, Order.class);
-//        System.out.println(userResult);
-//        System.out.println(orderResult);
+        JsonObject userObject = object.getAsJsonObject("user");
+        JsonObject orderObject = object.getAsJsonObject("order");
+        User userResult = gson.fromJson(userObject, User.class);
+        Order orderResult = gson.fromJson(orderObject, Order.class);
+        System.out.println(userResult);
+        System.out.println(orderResult);
     }
 }

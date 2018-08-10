@@ -1,11 +1,10 @@
 {
   "name" : "hcc",
   "age" : 24,
-  "photo" : null,
   "idCardNo" : "340121199310044612",
   "gender" : 1,
-  "birthday" : 1506741729078,
-  "createTime" : 1506741729078,
-  "lastModifyTime" : 1506741729078,
+  "birthday" : 1510131735817,
+  "createTime" : 1510131735817,
+  "lastModifyTime" : 1510131735817,
   "onlyMethod" : "onlyMethod"
 }

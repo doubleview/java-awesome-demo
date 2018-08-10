@@ -7,8 +7,8 @@ public class FilenameFilterTest {
         File file = new File(".");
         System.out.println(file.getPath());
         System.out.println(file.getAbsolutePath());
-        // Ê¹ÓÃLambda±í´ïÊ½£¨Ä¿±êÀàÐÍÎªFilenameFilter£©ÊµÏÖÎÄ¼þ¹ýÂËÆ÷¡£
-        // Èç¹ûÎÄ¼þÃûÒÔ.java½áÎ²£¬»òÕßÎÄ¼þ¶ÔÓ¦Ò»¸öÂ·¾¶£¬·µ»Øtrue
+        // ä½¿ç”¨Lambdaè¡¨è¾¾å¼ï¼ˆç›®æ ‡ç±»åž‹ä¸ºFilenameFilterï¼‰å®žçŽ°æ–‡ä»¶è¿‡æ»¤å™¨ã€‚
+        // å¦‚æžœæ–‡ä»¶åä»¥.javaç»“å°¾ï¼Œæˆ–è€…æ–‡ä»¶å¯¹åº”ä¸€ä¸ªè·¯å¾„ï¼Œè¿”å›žtrue
         String[] nameList = file.list((dir, name) -> name.endsWith(".java")
                 || new File(name).isDirectory());
         for (String name : nameList) {

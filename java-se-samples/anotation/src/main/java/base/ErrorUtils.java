@@ -6,6 +6,9 @@ import java.util.Random;
 
 public class ErrorUtils {
     @SafeVarargs
+
+
+
     public static void faultyMethod(List<String>... listStrArray) {
         // Java语言不允许创建泛型数组，因此listArray只能被当成List[]处理
         // 此时相当于把List<String>赋给了List，已经发生了“擦除”

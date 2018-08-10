@@ -17,6 +17,7 @@
         <module>json</module>
         <module>rxjava</module>
         <module>netty</module>
+        <module>cglib</module>
     </modules>
 
     <properties>

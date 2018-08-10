@@ -5,15 +5,15 @@ import java.lang.reflect.Array;
 public class ArrayTest1 {
     public static void main(String args[]) {
         try {
-            // ´´½¨Ò»¸öÔªËØÀàĞÍÎªString £¬³¤¶ÈÎª10µÄÊı×é
+            // åˆ›å»ºä¸€ä¸ªå…ƒç´ ç±»å‹ä¸ºString ï¼Œé•¿åº¦ä¸º10çš„æ•°ç»„
             Object arr = Array.newInstance(String.class, 10);
-            // ÒÀ´ÎÎªarrÊı×éÖĞindexÎª5¡¢6µÄÔªËØ¸³Öµ
-            Array.set(arr, 5, "Java¿ª·¢");
-            Array.set(arr, 6, "ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-            // ÒÀ´ÎÈ¡³öarrÊı×éÖĞindexÎª5¡¢6µÄÔªËØµÄÖµ
+            // ä¾æ¬¡ä¸ºarræ•°ç»„ä¸­indexä¸º5ã€6çš„å…ƒç´ èµ‹å€¼
+            Array.set(arr, 5, "Javaå¼€å‘");
+            Array.set(arr, 6, "è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+            // ä¾æ¬¡å–å‡ºarræ•°ç»„ä¸­indexä¸º5ã€6çš„å…ƒç´ çš„å€¼
             Object book1 = Array.get(arr, 5);
             Object book2 = Array.get(arr, 6);
-            // Êä³öarrÊı×éÖĞindexÎª5¡¢6µÄÔªËØ
+            // è¾“å‡ºarræ•°ç»„ä¸­indexä¸º5ã€6çš„å…ƒç´ 
             System.out.println(book1);
             System.out.println(book2);
         } catch (Throwable e) {

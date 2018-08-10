@@ -17,7 +17,7 @@ public class FilePathTest {
         System.out.println(f.getAbsolutePath());
         System.out.println(f.getAbsoluteFile().getPath());
         System.out.println("--------------------------------");
-        System.out.println("size £º" + f.length());
+        System.out.println("size ï¼š" + f.length());
         System.out.println("----------------------------------");
         for (File file : f.getParentFile().listFiles()) {
             System.out.println(file.getName());

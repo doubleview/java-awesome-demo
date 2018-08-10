@@ -9,20 +9,20 @@ public class Person {
     @Property(column = "person_age", type = "integer")
     private int age;
 
-    //ÎÞ²ÎÊýµÄ¹¹ÔìÆ÷
+    //æ— å‚æ•°çš„æž„é€ å™¨
     public Person() {
     }
 
-    //³õÊ¼»¯È«²¿³ÉÔ±±äÁ¿µÄ¹¹ÔìÆ÷
+    //åˆå§‹åŒ–å…¨éƒ¨æˆå‘˜å˜é‡çš„æž„é€ å™¨
     public Person(int id, String name, int age) {
         this.id = id;
         this.name = name;
         this.age = age;
     }
 
-    // ÏÂÃæÊ¡ÂÔËùÓÐ³ÉÔ±±äÁ¿µÄsetterºÍgetter·½·¨
+    // ä¸‹é¢çœç•¥æ‰€æœ‰æˆå‘˜å˜é‡çš„setterå’Œgetteræ–¹æ³•
 
-    //idµÄsetterºÍgetter·½·¨
+    //idçš„setterå’Œgetteræ–¹æ³•
     public void setId(int id) {
         this.id = id;
     }
@@ -31,7 +31,7 @@ public class Person {
         return this.id;
     }
 
-    //nameµÄsetterºÍgetter·½·¨
+    //nameçš„setterå’Œgetteræ–¹æ³•
     public void setName(String name) {
         this.name = name;
     }
@@ -40,7 +40,7 @@ public class Person {
         return this.name;
     }
 
-    //ageµÄsetterºÍgetter·½·¨
+    //ageçš„setterå’Œgetteræ–¹æ³•
     public void setAge(int age) {
         this.age = age;
     }

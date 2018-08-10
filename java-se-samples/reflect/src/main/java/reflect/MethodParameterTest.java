@@ -5,6 +5,8 @@ import java.lang.reflect.Parameter;
 import java.util.List;
 
 class Test {
+
+
     public void replace(String str, List<String> list) {
 
     }
@@ -13,22 +15,22 @@ class Test {
 public class MethodParameterTest {
 
     public static void main(String[] args) throws Exception {
-        // »ñÈ¡StringµÄÀà
+        // è·å–Stringçš„ç±»
         Class<Test> clazz = Test.class;
-        // »ñÈ¡StringÀàµÄ´øÁ½¸ö²ÎÊıµÄreplace()·½·¨
+        // è·å–Stringç±»çš„å¸¦ä¸¤ä¸ªå‚æ•°çš„replace()æ–¹æ³•
         Method replace = clazz.getMethod("replace", String.class, List.class);
-        // »ñÈ¡Ö¸¶¨·½·¨µÄ²ÎÊı¸öÊı
-        System.out.println("replace·½·¨²ÎÊı¸öÊı£º" + replace.getParameterCount());
-        // »ñÈ¡replaceµÄËùÓĞ²ÎÊıĞÅÏ¢
+        // è·å–æŒ‡å®šæ–¹æ³•çš„å‚æ•°ä¸ªæ•°
+        System.out.println("replaceæ–¹æ³•å‚æ•°ä¸ªæ•°ï¼š" + replace.getParameterCount());
+        // è·å–replaceçš„æ‰€æœ‰å‚æ•°ä¿¡æ¯
         Parameter[] parameters = replace.getParameters();
         int index = 1;
-        // ±éÀúËùÓĞ²ÎÊı
+        // éå†æ‰€æœ‰å‚æ•°
         for (Parameter p : parameters) {
            // if (p.isNamePresent()) {
-                System.out.println("---µÚ" + index++ + "¸ö²ÎÊıĞÅÏ¢---");
-                System.out.println("²ÎÊıÃû£º" + p.getName());
-                System.out.println("ĞÎ²ÎÀàĞÍ£º" + p.getType());
-                System.out.println("·ºĞÍÀàĞÍ£º" + p.getParameterizedType());
+                System.out.println("---ç¬¬" + index++ + "ä¸ªå‚æ•°ä¿¡æ¯---");
+                System.out.println("å‚æ•°åï¼š" + p.getName());
+                System.out.println("å½¢å‚ç±»å‹ï¼š" + p.getType());
+                System.out.println("æ³›å‹ç±»å‹ï¼š" + p.getParameterizedType());
            // }
         }
     }

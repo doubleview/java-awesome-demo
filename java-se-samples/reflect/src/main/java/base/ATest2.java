@@ -3,9 +3,9 @@ package base;
 
 public class ATest2 {
     public static void main(String[] args) {
-        // ´´½¨AÀàµÄÊµÀı
+        // åˆ›å»ºAç±»çš„å®ä¾‹
         A b = new A();
-        // Êä³öbÊµÀıµÄÀà±äÁ¿aµÄÖµ
+        // è¾“å‡ºbå®ä¾‹çš„ç±»å˜é‡açš„å€¼
         System.out.println(A.a);
     }
 }

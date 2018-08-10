@@ -2,13 +2,13 @@ package proxy.DynaProxy;
 
 
 public class DogUtil {
-    // µÚÒ»¸öÀ¹½ØÆ÷·½·¨
+    // ç¬¬ä¸€ä¸ªæ‹¦æˆªå™¨æ–¹æ³•
     public void method1() {
-        System.out.println("=====Ä£ÄâµÚÒ»¸öÍ¨ÓÃ·½·¨=====");
+        System.out.println("=====æ¨¡æ‹Ÿç¬¬ä¸€ä¸ªé€šç”¨æ–¹æ³•=====");
     }
 
-    // µÚ¶þ¸öÀ¹½ØÆ÷·½·¨
+    // ç¬¬äºŒä¸ªæ‹¦æˆªå™¨æ–¹æ³•
     public void method2() {
-        System.out.println("=====Ä£ÄâÍ¨ÓÃ·½·¨¶þ=====");
+        System.out.println("=====æ¨¡æ‹Ÿé€šç”¨æ–¹æ³•äºŒ=====");
     }
 }

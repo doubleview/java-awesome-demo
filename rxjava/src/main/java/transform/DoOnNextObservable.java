@@ -13,7 +13,8 @@ public class DoOnNextObservable {
 
     public static void main(String[] args) {
         Observable.just(1 , 2 ,  3 , 4)
-            .doOnNext(integer -> System.out.println("doOnNext : " + integer)).subscribe(integer -> System.out.println("onNext : " + integer));
+            .doOnNext(integer -> System.out.println("doOnNext : " + integer))
+            .subscribe(integer -> System.out.println("onNext : " + integer));
     }
 
 }

@@ -187,15 +187,15 @@ public final class SubscribeReqProto {
 
         public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-            return com.phei.netty.codec.protobuf.SubscribeReqProto.internal_static_netty_SubscribeReq_descriptor;
+            return internal_static_netty_SubscribeReq_descriptor;
         }
 
         protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-            return com.phei.netty.codec.protobuf.SubscribeReqProto.internal_static_netty_SubscribeReq_fieldAccessorTable
+            return internal_static_netty_SubscribeReq_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq.class,
-                    com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq.Builder.class);
+                    SubscribeReq.class,
+                    SubscribeReq.Builder.class);
         }
 
         public static com.google.protobuf.Parser<SubscribeReq> PARSER =
@@ -450,63 +450,63 @@ public final class SubscribeReqProto {
             return super.writeReplace();
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseFrom(
+        public static SubscribeReq parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseFrom(
+        public static SubscribeReq parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseFrom(byte[] data)
+        public static SubscribeReq parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseFrom(
+        public static SubscribeReq parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseFrom(java.io.InputStream input)
+        public static SubscribeReq parseFrom(java.io.InputStream input)
             throws java.io.IOException {
             return PARSER.parseFrom(input);
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseFrom(
+        public static SubscribeReq parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
             return PARSER.parseFrom(input, extensionRegistry);
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseDelimitedFrom(
+        public static SubscribeReq parseDelimitedFrom(
             java.io.InputStream input)
             throws java.io.IOException {
             return PARSER.parseDelimitedFrom(input);
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseDelimitedFrom(
+        public static SubscribeReq parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
             return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseFrom(
+        public static SubscribeReq parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
             return PARSER.parseFrom(input);
         }
 
-        public static com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parseFrom(
+        public static SubscribeReq parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -521,7 +521,7 @@ public final class SubscribeReqProto {
             return newBuilder();
         }
 
-        public static Builder newBuilder(com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq prototype) {
+        public static Builder newBuilder(SubscribeReq prototype) {
             return newBuilder().mergeFrom(prototype);
         }
 
@@ -541,22 +541,22 @@ public final class SubscribeReqProto {
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessage.Builder<Builder>
-            implements com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReqOrBuilder {
+            implements SubscribeReqOrBuilder {
 
             public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-                return com.phei.netty.codec.protobuf.SubscribeReqProto.internal_static_netty_SubscribeReq_descriptor;
+                return internal_static_netty_SubscribeReq_descriptor;
             }
 
             protected FieldAccessorTable
             internalGetFieldAccessorTable() {
-                return com.phei.netty.codec.protobuf.SubscribeReqProto.internal_static_netty_SubscribeReq_fieldAccessorTable
+                return internal_static_netty_SubscribeReq_fieldAccessorTable
                     .ensureFieldAccessorsInitialized(
-                        com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq.class,
-                        com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq.Builder.class);
+                        SubscribeReq.class,
+                        SubscribeReq.Builder.class);
             }
 
-            // Construct using com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq.newBuilder()
+            // Construct using SubscribeReq.newBuilder()
             private Builder() {
                 maybeForceBuilderInitialization();
             }
@@ -595,23 +595,23 @@ public final class SubscribeReqProto {
 
             public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-                return com.phei.netty.codec.protobuf.SubscribeReqProto.internal_static_netty_SubscribeReq_descriptor;
+                return internal_static_netty_SubscribeReq_descriptor;
             }
 
-            public com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq getDefaultInstanceForType() {
-                return com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq.getDefaultInstance();
+            public SubscribeReq getDefaultInstanceForType() {
+                return SubscribeReq.getDefaultInstance();
             }
 
-            public com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq build() {
-                com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq result = buildPartial();
+            public SubscribeReq build() {
+                SubscribeReq result = buildPartial();
                 if (!result.isInitialized()) {
                     throw newUninitializedMessageException(result);
                 }
                 return result;
             }
 
-            public com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq buildPartial() {
-                com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq result = new com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq(
+            public SubscribeReq buildPartial() {
+                SubscribeReq result = new SubscribeReq(
                     this);
                 int from_bitField0_ = bitField0_;
                 int to_bitField0_ = 0;
@@ -639,16 +639,16 @@ public final class SubscribeReqProto {
             }
 
             public Builder mergeFrom(com.google.protobuf.Message other) {
-                if (other instanceof com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq) {
-                    return mergeFrom((com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq) other);
+                if (other instanceof SubscribeReq) {
+                    return mergeFrom((SubscribeReq) other);
                 } else {
                     super.mergeFrom(other);
                     return this;
                 }
             }
 
-            public Builder mergeFrom(com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq other) {
-                if (other == com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq.getDefaultInstance()) {
+            public Builder mergeFrom(SubscribeReq other) {
+                if (other == SubscribeReq.getDefaultInstance()) {
                     return this;
                 }
                 if (other.hasSubReqID()) {
@@ -698,11 +698,11 @@ public final class SubscribeReqProto {
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
                 throws java.io.IOException {
-                com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq parsedMessage = null;
+                SubscribeReq parsedMessage = null;
                 try {
                     parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
                 } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-                    parsedMessage = (com.phei.netty.codec.protobuf.SubscribeReqProto.SubscribeReq) e
+                    parsedMessage = (SubscribeReq) e
                         .getUnfinishedMessage();
                     throw e;
                 } finally {

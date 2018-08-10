@@ -6,24 +6,23 @@ import java.util.Enumeration;
 
 public class ClassLoaderPropTest {
     public static void main(String[] args) throws IOException {
-        // »ñÈ¡ÏµÍ³Àà¼ÓÔØÆ÷
+        // è·å–ç³»ç»Ÿç±»åŠ è½½å™¨
         ClassLoader systemLoader = ClassLoader.getSystemClassLoader();
-        System.out.println("ÏµÍ³Àà¼ÓÔØÆ÷£º" + systemLoader);
+        System.out.println("ç³»ç»Ÿç±»åŠ è½½å™¨ï¼š" + systemLoader);
         /*
-            »ñÈ¡ÏµÍ³Àà¼ÓÔØÆ÷µÄ¼ÓÔØÂ·¾¶¡ª¡ªÍ¨³£ÓÉCLASSPATH»·¾³±äÁ¿Ö¸¶¨
-            Èç¹û²Ù×÷ÏµÍ³Ã»ÓĞÖ¸¶¨CLASSPATH»·¾³±äÁ¿£¬Ä¬ÈÏÒÔµ±Ç°Â·¾¶×÷Îª
-            ÏµÍ³Àà¼ÓÔØÆ÷µÄ¼ÓÔØÂ·¾¶
+            è·å–ç³»ç»Ÿç±»åŠ è½½å™¨çš„åŠ è½½è·¯å¾„â€”â€”é€šå¸¸ç”±CLASSPATHç¯å¢ƒå˜é‡æŒ‡å®š
+            å¦‚æœæ“ä½œç³»ç»Ÿæ²¡æœ‰æŒ‡å®šCLASSPATHç¯å¢ƒå˜é‡ï¼Œé»˜è®¤ä»¥å½“å‰è·¯å¾„ä½œä¸º
+            ç³»ç»Ÿç±»åŠ è½½å™¨çš„åŠ è½½è·¯å¾„
 		*/
         Enumeration<URL> em1 = systemLoader.getResources("");
         while (em1.hasMoreElements()) {
             System.out.println(em1.nextElement());
         }
-        // »ñÈ¡ÏµÍ³Àà¼ÓÔØÆ÷µÄ¸¸Àà¼ÓÔØÆ÷£ºµÃµ½À©Õ¹Àà¼ÓÔØÆ÷
+        // è·å–ç³»ç»Ÿç±»åŠ è½½å™¨çš„çˆ¶ç±»åŠ è½½å™¨ï¼šå¾—åˆ°æ‰©å±•ç±»åŠ è½½å™¨
         ClassLoader extensionLader = systemLoader.getParent();
-        System.out.println("À©Õ¹Àà¼ÓÔØÆ÷£º" + extensionLader);
-        System.out.println("À©Õ¹Àà¼ÓÔØÆ÷µÄ¼ÓÔØÂ·¾¶£º" + System.getProperty("java.ext.dirs"));
-        System.out.println("À©Õ¹Àà¼ÓÔØÆ÷µÄparent: "
-                + extensionLader.getParent());
+        System.out.println("æ‰©å±•ç±»åŠ è½½å™¨ï¼š" + extensionLader);
+        System.out.println("æ‰©å±•ç±»åŠ è½½å™¨çš„åŠ è½½è·¯å¾„ï¼š" + System.getProperty("java.ext.dirs"));
+        System.out.println("æ‰©å±•ç±»åŠ è½½å™¨çš„parent: " + extensionLader.getParent());
     }
 }
 

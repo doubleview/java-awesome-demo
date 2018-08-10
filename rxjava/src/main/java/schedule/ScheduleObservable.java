@@ -39,7 +39,7 @@ public class ScheduleObservable {
 
                 @Override
                 public void onNext(String s) {
-                    System.out.println("currentThreadName : " + Thread.currentThread().getName());
+                    System.out.println("currentThreadName-- : " + Thread.currentThread().getName());
                     System.out.println("onNext : " + s);
                 }
             });

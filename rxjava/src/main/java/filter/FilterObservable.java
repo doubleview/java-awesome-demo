@@ -11,8 +11,8 @@ import rx.Observable;
 public class FilterObservable {
 
     public static void main(String[] args) {
-        Observable.just(1 , 2 , 3 , 4 , 5 , 6).filter(integer -> integer > 2).subscribe(
-            integer -> System.out.println(integer));
-
+        Observable.just(1 , 2 , 3 , 4 , 5 , 6)
+            .filter(integer -> integer > 2)
+            .subscribe(System.out::println);
     }
 }

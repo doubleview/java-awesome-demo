@@ -3,16 +3,16 @@ package base;
 
 class MyTest {
     static {
-        System.out.println("¾²Ì¬³õÊ¼»¯¿é...");
+        System.out.println("é™æ€åˆå§‹åŒ–å—...");
     }
 
-    // Ê¹ÓÃÒ»¸ö×Ö·û´®Ö±½ÓÁ¿Îªstatic finalµÄÀà±äÁ¿¸³Öµ
-    static final String compileConstant = "Java¿ª·¢";
+    // ä½¿ç”¨ä¸€ä¸ªå­—ç¬¦ä¸²ç›´æ¥é‡ä¸ºstatic finalçš„ç±»å˜é‡èµ‹å€¼
+    static final String compileConstant = "Javaå¼€å‘";
 }
 
 public class CompileConstantTest {
     public static void main(String[] args) {
-        // ·ÃÎÊ¡¢Êä³öMyTestÖĞµÄcompileConstantÀà±äÁ¿
-        System.out.println(MyTest.compileConstant);   // ¢Ù
+        // è®¿é—®ã€è¾“å‡ºMyTestä¸­çš„compileConstantç±»å˜é‡
+        System.out.println(MyTest.compileConstant);   // â‘ 
     }
 }

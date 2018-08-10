@@ -5,13 +5,13 @@ import java.lang.reflect.Constructor;
 /**/
 public class CreateJFrame {
     public static void main(String[] args) throws Exception {
-        // 获取JFrame对应的Class对象
+        // 鑾峰彇JFrame瀵瑰簲鐨凜lass瀵硅薄
         Class<?> jframeClazz = Class.forName("javax.swing.JFrame");
-        // 获取JFrame中带一个字符串参数的构造器
+        // 鑾峰彇JFrame涓甫涓�涓瓧绗︿覆鍙傛暟鐨勬瀯閫犲櫒
         Constructor ctor = jframeClazz.getConstructor(String.class);
-        // 调用Constructor的newInstance方法创建对象
-        Object obj = ctor.newInstance("测试窗口");
-        // 输出JFrame对象
+        // 璋冪敤Constructor鐨刵ewInstance鏂规硶鍒涘缓瀵硅薄
+        Object obj = ctor.newInstance("娴嬭瘯绐楀彛");
+        // 杈撳嚭JFrame瀵硅薄
         System.out.println(obj);
     }
 }

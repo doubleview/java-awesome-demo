@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -34,13 +35,18 @@ public class JacksonAnnotationTest {
         mapper.setSerializationInclusion(Include.NON_NULL);
 
         System.out.println(mapper.writeValueAsString(user));
+        mapper.writeValue(new File("user.json") , user);
 
         user = mapper.readValue("{\n"
+            + "  \"name\" : \"huchengchao\",\n"
+            + "  \"age\" : 24,\n"
             + "  \"height\" : 10,\n"
-            + "  \"birthDay\" : 1506585818376,\n"
-            + "  \"createTime\" : 1506585818376,\n"
-            + "  \"modifyTime\" : 1506585818376,\n"
-            + "  \"MyAge\" : 24\n"
+            + "  \"birthDay\" : \"2017-11-08 09:09:36\",\n"
+            + "  \"createTime\" : 1510132176345,\n"
+            + "  \"internal\" : \"\",\n"
+            + "  \"dog\" : null,\n"
+            + "  \"width\" : 10,\n"
+            + "  \"1\" : 1\n"
             + "}", User.class);
         System.out.println(user);
     }

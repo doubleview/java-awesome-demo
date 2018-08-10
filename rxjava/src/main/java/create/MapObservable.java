@@ -12,12 +12,15 @@ import rx.schedulers.Schedulers;
 public class MapObservable {
 
     public static void main(String[] args) {
-        Observable.just(1 , 2 , 3 , 4).map(integer -> String.valueOf(integer)).subscribeOn(Schedulers.io())
-            .subscribe(s -> System.out.println(s));
-
+        Observable.just(1 , 2 , 3 , 4)
+            .map(String::valueOf)
+            .subscribeOn(Schedulers.io())
+            .subscribe(System.out::println);
 
         Observable.just(1 , 2 , 3 , 4)
-            .flatMap(integer -> Observable.just(integer)).map(integer -> String.valueOf(integer)).subscribeOn(Schedulers.io())
-        .subscribe(s -> System.out.println(s));
+            .flatMap(Observable::just)
+            .map(String::valueOf)
+            .subscribeOn(Schedulers.io())
+            .subscribe(System.out::println);
     }
 }

@@ -1,6 +1,7 @@
 package jackson;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
@@ -37,6 +38,8 @@ public class JacksonTest {
 
     @Test
     public void testWriteJson() throws IOException {
+        //不输出值null的属性
+        mapper.setSerializationInclusion(Include.NON_NULL);
         People people = new People();
         people.setName("hcc");
         people.setAge(24);
@@ -46,7 +49,10 @@ public class JacksonTest {
         people.setGender(1);
         people.setIdCardNo("340121199310044612");
 
+        //输出json
         System.out.println(mapper.writeValueAsString(people));
+
+        //输出到文件中
         mapper.writeValue(new File("result.json") , people);
 
         List<People> peopleList = new ArrayList<>();
@@ -57,26 +63,27 @@ public class JacksonTest {
 
     @Test
     public void testReadJson() throws IOException {
+        //从文件中读取
         People people = mapper.readValue(new File("result.json"), People.class);
         System.out.println(people);
-        System.out.println("-----------");
 
+        Map<String, String> map = mapper.readValue(new File("result.json"), new TypeReference<Map<String , String>>(){});
+        System.out.println(map);
+
+        List<People> peopleList = mapper.readValue(new File("resultList.json"), new TypeReference<List<People>>(){});
+        System.out.println(peopleList);
+
+        //默认将对象型json格式转换为Map类型
+        List resultList = mapper.readValue(new File("resultList.json"), List.class);
+        System.out.println(resultList.get(0).getClass());
+        System.out.println(resultList);
+
+        //从字符串中读取并解析
         people = mapper.readValue("{\"name\":\"hcc\",\"age\":24,\"photo\":\"my.jpg\","
             + "\"idCardNo\":\"340121199310044612\",\"gender\":1,\"birthday\":1506580198051,\"createTime\":1506580198051,"
             + "\"lastModifyTime\":1506580198051,\"onlyMethod\":\"onlyMethod\"}", People.class);
         System.out.println(people);
-        System.out.println("------------");
 
-        Map<String, String> map = mapper.readValue(new File("result.json"), new TypeReference<Map<String , String>>(){});
-        System.out.println(map);
-        System.out.println("-------------");
-
-        List<String> stringList = mapper.readValue(new File("resultList.json"), List.class);
-        System.out.println(stringList);
-        System.out.println("---------------");
-
-        List<People> list = mapper.readValue(new File("resultList.json"), new TypeReference<List<People>>(){});
-        System.out.println(list);
 
     }
 
@@ -160,15 +167,14 @@ public class JacksonTest {
 
     @Test
     public void testDeserializationFeature() throws IOException {
+        //在遇到未知属性时，会抛出异常, 默认enable
+        mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+        //允许将空字符串"" 作为空对象处理，默认disable
+        mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
         People people = mapper.readValue("{\"name\":\"hcc\",\"age\":24,\"photo\":\"my.jpg\","
             + "\"idCardNo\":\"340121199310044612\",\"gender\":1,\"birthday\":1506580198051,\"createTime\":1506580198051,"
             + "\"lastModifyTime\":1506580198051,\"onlyMethod\":\"onlyMethod\",\"other\":\"other\"}", People.class);
-
-        //在遇到未知属性时，会抛出异常, 默认enable
-        mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         System.out.println(people);
-        //允许将空字符串"" 作为空对象处理，默认disable
-        mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
     }
 
 

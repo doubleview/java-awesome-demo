@@ -11,6 +11,6 @@ import rx.Observable;
 public class TakeObservable {
 
     public static void main(String[] args) {
-        Observable.just(1 , 2 , 3 , 4 , 5).take(3).subscribe(integer -> System.out.println(integer));
+        Observable.just(1 , 2 , 3 , 4 , 5).take(3).subscribe(System.out::println);
     }
 }

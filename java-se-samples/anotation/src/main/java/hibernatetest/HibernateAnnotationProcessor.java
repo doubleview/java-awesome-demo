@@ -14,26 +14,26 @@ import java.io.PrintStream;
 import java.util.Set;
 
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
-// Ö¸¶¨¿É´¦Àí@Persistent¡¢@Id¡¢@PropertyÈı¸öAnnotation
+// æŒ‡å®šå¯å¤„ç†@Persistentã€@Idã€@Propertyä¸‰ä¸ªAnnotation
 @SupportedAnnotationTypes({"Persistent", "Id", "Property"})
 public class HibernateAnnotationProcessor
         extends AbstractProcessor {
-    // Ñ­»·´¦ÀíÃ¿¸öĞèÒª´¦ÀíµÄ³ÌĞò¶ÔÏó
+    // å¾ªç¯å¤„ç†æ¯ä¸ªéœ€è¦å¤„ç†çš„ç¨‹åºå¯¹è±¡
     public boolean process(Set<? extends TypeElement> annotations
             , RoundEnvironment roundEnv) {
-        // ¶¨ÒåÒ»¸öÎÄ¼şÊä³öÁ÷£¬ÓÃÓÚÉú³É¶îÍâµÄÎÄ¼ş
+        // å®šä¹‰ä¸€ä¸ªæ–‡ä»¶è¾“å‡ºæµï¼Œç”¨äºç”Ÿæˆé¢å¤–çš„æ–‡ä»¶
         PrintStream ps = null;
         try {
-            // ±éÀúÃ¿¸ö±»@PersistentĞŞÊÎµÄclassÎÄ¼ş
+            // éå†æ¯ä¸ªè¢«@Persistentä¿®é¥°çš„classæ–‡ä»¶
             for (Element t : roundEnv.getElementsAnnotatedWith(Persistent.class)) {
-                // »ñÈ¡ÕıÔÚ´¦ÀíµÄÀàÃû
+                // è·å–æ­£åœ¨å¤„ç†çš„ç±»å
                 Name clazzName = t.getSimpleName();
-                // »ñÈ¡Àà¶¨ÒåÇ°µÄ@Persistent Annotation
+                // è·å–ç±»å®šä¹‰å‰çš„@Persistent Annotation
                 Persistent per = t.getAnnotation(Persistent.class);
-                // ´´½¨ÎÄ¼şÊä³öÁ÷
+                // åˆ›å»ºæ–‡ä»¶è¾“å‡ºæµ
                 ps = new PrintStream(new FileOutputStream(clazzName
                         + ".hbm.xml"));
-                // Ö´ĞĞÊä³ö
+                // æ‰§è¡Œè¾“å‡º
                 ps.println("<?xml version=\"1.0\"?>");
                 ps.println("<!DOCTYPE hibernate-mapping PUBLIC");
                 ps.println("	\"-//Hibernate/Hibernate "
@@ -42,15 +42,15 @@ public class HibernateAnnotationProcessor
                         + "hibernate-mapping-3.0.dtd\">");
                 ps.println("<hibernate-mapping>");
                 ps.print("	<class name=\"" + t);
-                // Êä³öperµÄtable()µÄÖµ
+                // è¾“å‡ºperçš„table()çš„å€¼
                 ps.println("\" table=\"" + per.table() + "\">");
                 for (Element f : t.getEnclosedElements()) {
-                    // Ö»´¦Àí³ÉÔ±±äÁ¿ÉÏµÄAnnotation
-                    if (f.getKind() == ElementKind.FIELD)   // ¢Ù
+                    // åªå¤„ç†æˆå‘˜å˜é‡ä¸Šçš„Annotation
+                    if (f.getKind() == ElementKind.FIELD)   // â‘ 
                     {
-                        // »ñÈ¡³ÉÔ±±äÁ¿¶¨ÒåÇ°µÄ@Id Annotation
-                        Id id = f.getAnnotation(Id.class);      // ¢Ú
-                        // µ±@Id Annotation´æÔÚÊ±Êä³ö<id.../>ÔªËØ
+                        // è·å–æˆå‘˜å˜é‡å®šä¹‰å‰çš„@Id Annotation
+                        Id id = f.getAnnotation(Id.class);      // â‘¡
+                        // å½“@Id Annotationå­˜åœ¨æ—¶è¾“å‡º<id.../>å…ƒç´ 
                         if (id != null) {
                             ps.println("		<id name=\""
                                     + f.getSimpleName()
@@ -61,9 +61,9 @@ public class HibernateAnnotationProcessor
                                     + id.generator() + "\"/>");
                             ps.println("		</id>");
                         }
-                        // »ñÈ¡³ÉÔ±±äÁ¿¶¨ÒåÇ°µÄ@Property Annotation
-                        Property p = f.getAnnotation(Property.class);  // ¢Û
-                        // µ±@Property Annotation´æÔÚÊ±Êä³ö<property.../>ÔªËØ
+                        // è·å–æˆå‘˜å˜é‡å®šä¹‰å‰çš„@Property Annotation
+                        Property p = f.getAnnotation(Property.class);  // â‘¢
+                        // å½“@Property Annotationå­˜åœ¨æ—¶è¾“å‡º<property.../>å…ƒç´ 
                         if (p != null) {
                             ps.println("		<property name=\""
                                     + f.getSimpleName()

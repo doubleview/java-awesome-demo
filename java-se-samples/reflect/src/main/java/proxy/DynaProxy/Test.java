@@ -3,9 +3,9 @@ package proxy.DynaProxy;
 
 public class Test {
     public static void main(String[] args) throws Exception {
-        // ´´½¨Ò»¸öÔ­Ê¼µÄGunDog¶ÔÏó£¬×÷Îªtarget
+        // åˆ›å»ºä¸€ä¸ªåŸå§‹çš„GunDogå¯¹è±¡ï¼Œä½œä¸ºtarget
         Dog target = new GunDog();
-        // ÒÔÖ¸¶¨µÄtargetÀ´´´½¨¶¯Ì¬´úÀí
+        // ä»¥æŒ‡å®šçš„targetæ¥åˆ›å»ºåŠ¨æ€ä»£ç†
         Dog dog = (Dog) MyProxyFactory.getProxy(target);
         dog.info();
         dog.run();

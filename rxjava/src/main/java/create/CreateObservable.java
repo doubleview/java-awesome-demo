@@ -1,6 +1,8 @@
 package create;
 
 
+import static java.lang.System.*;
+
 import rx.Observable;
 import rx.Observable.OnSubscribe;
 import rx.Subscriber;
@@ -19,10 +21,10 @@ public class CreateObservable {
             try {
                 if (!subscriber.isUnsubscribed()) {
                     for (int i = 1; i < 5; i++) {
-                        System.out.println("onNext:" + i);
+                        out.println("onNext:" + i);
                         subscriber.onNext(i);
                     }
-                System.out.println("onCompleted");
+                    out.println("onCompleted");
                     subscriber.onCompleted();
                 }
             } catch (Exception e) {
@@ -31,22 +33,19 @@ public class CreateObservable {
         }).subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
-                System.out.println("Sequence Completed");
+                out.println("Sequence Completed");
             }
 
             @Override
             public void onError(Throwable e) {
-                System.out.println("Error: " + e.getMessage());
+                out.println("Error: " + e.getMessage());
             }
 
             @Override
             public void onNext(Integer integer) {
-                System.out.println("Next: " + integer);
+                out.println("Next: " + integer);
             }
         });
-
-
-
     }
 
 }

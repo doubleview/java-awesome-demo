@@ -2,10 +2,10 @@ package proxy.DynaProxy;
 
 
 public interface Dog {
-    // info方法声明
+    // info鏂规硶澹版槑
     void info();
 
-    // run方法声明
+    // run鏂规硶澹版槑
     void run();
 }
 

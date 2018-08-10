@@ -21,10 +21,9 @@ import java.util.Map;
  */
 //反序列化会忽略未知属性，推荐加上
 @JsonIgnoreProperties(ignoreUnknown = true)
+//只输出不为空的属性
 @JsonInclude(Include.NON_NULL)
 public class User {
-
-    private Date modifyTime;
 
     private String name;
 
@@ -36,19 +35,22 @@ public class User {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date birthDay;
 
+    //默认以时间戳的形式输出该属性
     private Date createTime;
+
+    private Date modifyTime;
 
     //表示该属性将会输出
     @JsonView
-    private String internal = "";
+    private String internal = "internal";
+
+    //该属性不会输出
+    private String onlyField = "onlyField";
+
 
     //直接以toString的方式序列化，并去除双引号""
     @JsonRawValue
     private Dog dog = new Dog();
-
-    private String onlyField = "onlyField";
-
-
 
 
     public String getName() {
@@ -99,6 +101,15 @@ public class User {
         this.height = height;
     }
 
+    public Dog getDog() {
+        return dog;
+    }
+
+    public void setDog(Dog dog) {
+        this.dog = dog;
+    }
+
+    //该方法的返回值将会以属性的方式输出
     @JsonAnyGetter
     public Map<String , Integer> anyGetter() {
         Map<String, Integer> map = new HashMap<>();
@@ -111,6 +122,9 @@ public class User {
     public Integer width() {
         return 10;
     }
+
+
+
 
     private class Dog{
         private String name = "blackTiger";

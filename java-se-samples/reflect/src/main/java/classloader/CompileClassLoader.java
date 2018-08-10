@@ -53,8 +53,7 @@ public class CompileClassLoader extends ClassLoader {
             try {
                 // 如果编译失败，或者该Class文件不存在
                 if (!compile(javaFilename) || !classFile.exists()) {
-                    throw new ClassNotFoundException(
-                            "ClassNotFoundExcetpion:" + javaFilename);
+                    throw new ClassNotFoundException("ClassNotFoundExcetpion:" + javaFilename);
                 }
             } catch (IOException ex) {
                 ex.printStackTrace();

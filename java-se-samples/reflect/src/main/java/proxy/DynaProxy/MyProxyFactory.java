@@ -4,15 +4,14 @@ import java.lang.reflect.Proxy;
 
 public class MyProxyFactory {
 
-    // ÎªÖ¸¶¨targetÉú³É¶¯Ì¬´úÀí¶ÔÏó
+    // ä¸ºæŒ‡å®štargetç”ŸæˆåŠ¨æ€ä»£ç†å¯¹è±¡
     public static Object getProxy(Object target) throws Exception {
-        // ´´½¨Ò»¸öMyInvokationHandler¶ÔÏó
+        // åˆ›å»ºä¸€ä¸ªMyInvokationHandlerå¯¹è±¡
         MyInvokationHandler handler = new MyInvokationHandler();
-        // ÎªMyInvokationHandlerÉèÖÃtarget¶ÔÏó
+        // ä¸ºMyInvokationHandlerè®¾ç½®targetå¯¹è±¡
         handler.setTarget(target);
-        // ´´½¨¡¢²¢·µ»ØÒ»¸ö¶¯Ì¬´úÀí
-        return Proxy.newProxyInstance(ClassLoader.getSystemClassLoader()
-                , target.getClass().getInterfaces(), handler);
+        // åˆ›å»ºã€å¹¶è¿”å›ä¸€ä¸ªåŠ¨æ€ä»£ç†
+        return Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), target.getClass().getInterfaces(), handler);
     }
 
 }

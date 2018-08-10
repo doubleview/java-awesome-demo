@@ -2,9 +2,9 @@ package base;
 
 public class ATest1 {
     public static void main(String[] args) {
-        // ´´½¨AÀàµÄÊµÀı
+        // åˆ›å»ºAç±»çš„å®ä¾‹
         A a = new A();
-        // ÈÃaÊµÀıµÄÀà±äÁ¿aµÄÖµ×Ô¼Ó
+        // è®©aå®ä¾‹çš„ç±»å˜é‡açš„å€¼è‡ªåŠ 
         A.a++;
         System.out.println(A.a);
     }

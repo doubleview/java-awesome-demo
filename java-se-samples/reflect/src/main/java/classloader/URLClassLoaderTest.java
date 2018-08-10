@@ -15,16 +15,22 @@ public class URLClassLoaderTest {
             // 创建一个URL数组
             URL[] urls = {new URL("file:mysql-connector-java-5.1.30-bin.jar")};
             // 以默认的ClassLoader作为父ClassLoader，创建URLClassLoader
-            URLClassLoader myClassLoader = new URLClassLoader(urls);
-            // 加载MySQL的JDBC驱动，并创建默认实例
-            Driver driver = (Driver) myClassLoader.loadClass("com.mysql.jdbc.Driver").newInstance();
-            // 创建一个设置JDBC连接属性的Properties对象
-            Properties props = new Properties();
-            // 至少需要为该对象传入user和password两个属性
-            props.setProperty("user", user);
-            props.setProperty("password", pass);
-            // 调用Driver对象的connect方法来取得数据库连接
-            conn = driver.connect(url, props);
+            URLClassLoader myClassLoader = null;
+            try {
+                myClassLoader = new URLClassLoader(urls);
+                // 加载MySQL的JDBC驱动，并创建默认实例
+                Driver driver = (Driver) myClassLoader.loadClass("com.mysql.jdbc.Driver").newInstance();
+                myClassLoader.close();
+                // 创建一个设置JDBC连接属性的Properties对象
+                Properties props = new Properties();
+                // 至少需要为该对象传入user和password两个属性
+                props.setProperty("user", user);
+                props.setProperty("password", pass);
+                // 调用Driver对象的connect方法来取得数据库连接
+                conn = driver.connect(url, props);
+            }finally {
+                myClassLoader.close();
+            }
         }
         return conn;
     }

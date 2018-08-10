@@ -9,38 +9,31 @@ public class GenericTest {
 
     private Map<String, Integer> score;
 
-
     static {
         System.out.println("---------------");
     }
 
-
     public static void main(String[] args) throws Exception {
-
-
-        System.out.println(Class.forName("java.lang.String").newInstance().getClass());
-
         Class<GenericTest> clazz = GenericTest.class;
         Field f = clazz.getDeclaredField("score");
 
-        Class<?> a = f.getType();// Ö±½ÓÊ¹ÓÃgetType()È¡³öµÄÀàĞÍÖ»¶ÔÆÕÍ¨ÀàĞÍµÄ³ÉÔ±±äÁ¿ÓĞĞ§
-        System.out.println("scoreµÄÀàĞÍÊÇ:" + a);
+        Class<?> a = f.getType();// ç›´æ¥ä½¿ç”¨getType()å–å‡ºçš„ç±»å‹åªå¯¹æ™®é€šç±»å‹çš„æˆå‘˜å˜é‡æœ‰æ•ˆ
+        System.out.println("scoreçš„ç±»å‹æ˜¯:" + a);
 
-        Type gType = f.getGenericType();// »ñµÃ³ÉÔ±±äÁ¿fµÄ·ºĞÍÀàĞÍ
+        Type gType = f.getGenericType();// è·å¾—æˆå‘˜å˜é‡fçš„æ³›å‹ç±»å‹
 
         if (gType instanceof ParameterizedType) {
-
             ParameterizedType pType = (ParameterizedType) gType;
-            Type rType = pType.getRawType();    // »ñÈ¡Ô­Ê¼ÀàĞÍ
-            System.out.println("Ô­Ê¼ÀàĞÍÊÇ£º" + rType.getTypeName());
-            Type[] tArgs = pType.getActualTypeArguments(); // È¡µÃ·ºĞÍÀàĞÍµÄ·ºĞÍ²ÎÊı
-            System.out.println("·ºĞÍĞÅÏ¢ÊÇ:");
+            Type rType = pType.getRawType();    // è·å–åŸå§‹ç±»å‹
+            System.out.println("åŸå§‹ç±»å‹æ˜¯ï¼š" + rType.getTypeName());
+            Type[] tArgs = pType.getActualTypeArguments(); // å–å¾—æ³›å‹ç±»å‹çš„æ³›å‹å‚æ•°
+            System.out.println("æ³›å‹ä¿¡æ¯æ˜¯:");
             for (int i = 0; i < tArgs.length; i++) {
-                System.out.println("µÚ" + i + "¸ö·ºĞÍÀàĞÍÊÇ£º" + tArgs[i].getTypeName());
+                System.out.println("ç¬¬" + i + "ä¸ªæ³›å‹ç±»å‹æ˜¯ï¼š" + tArgs[i].getTypeName());
             }
 
         } else {
-            System.out.println("»ñÈ¡·ºĞÍÀàĞÍ³ö´í£¡");
+            System.out.println("è·å–æ³›å‹ç±»å‹å‡ºé”™ï¼");
         }
     }
 }

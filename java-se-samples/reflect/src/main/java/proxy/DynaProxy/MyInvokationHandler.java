@@ -5,22 +5,22 @@ import java.lang.reflect.Method;
 
 public class MyInvokationHandler implements InvocationHandler {
 
-    // ĞèÒª±»´úÀíµÄ¶ÔÏó
+    // éœ€è¦è¢«ä»£ç†çš„å¯¹è±¡
     private Object target;
 
     public void setTarget(Object target) {
         this.target = target;
     }
 
-    // Ö´ĞĞ¶¯Ì¬´úÀí¶ÔÏóµÄËùÓĞ·½·¨Ê±£¬¶¼»á±»Ìæ»»³ÉÖ´ĞĞÈçÏÂµÄinvoke·½·¨
+    // æ‰§è¡ŒåŠ¨æ€ä»£ç†å¯¹è±¡çš„æ‰€æœ‰æ–¹æ³•æ—¶ï¼Œéƒ½ä¼šè¢«æ›¿æ¢æˆæ‰§è¡Œå¦‚ä¸‹çš„invokeæ–¹æ³•
     public Object invoke(Object proxy, Method method, Object[] args) throws Exception {
         System.out.println(proxy.getClass().getName());
         DogUtil du = new DogUtil();
-        // Ö´ĞĞDogUtil¶ÔÏóÖĞµÄmethod1¡£
+        // æ‰§è¡ŒDogUtilå¯¹è±¡ä¸­çš„method1ã€‚
         du.method1();
-        // ÒÔtarget×÷ÎªÖ÷µ÷À´Ö´ĞĞmethod·½·¨
+        // ä»¥targetä½œä¸ºä¸»è°ƒæ¥æ‰§è¡Œmethodæ–¹æ³•
         Object result = method.invoke(target, args);
-        // Ö´ĞĞDogUtil¶ÔÏóÖĞµÄmethod2¡£
+        // æ‰§è¡ŒDogUtilå¯¹è±¡ä¸­çš„method2ã€‚
         du.method2();
         return result;
     }

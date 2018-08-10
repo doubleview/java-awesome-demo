@@ -3,18 +3,17 @@ package base;
 
 class Tester {
     static {
-        System.out.println("TesterÀàµÄ¾²Ì¬³õÊ¼»¯¿é...");
+        System.out.println("Testerç±»çš„é™æ€åˆå§‹åŒ–å—...");
     }
 }
 
 public class ClassLoaderTest {
-    public static void main(String[] args)
-            throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException {
         ClassLoader cl = ClassLoader.getSystemClassLoader();
-        // ÏÂÃæÓï¾ä½ö½öÊÇ¼ÓÔØTesterÀà
+        // ä¸‹é¢è¯­å¥ä»…ä»…æ˜¯åŠ è½½Testerç±»
         cl.loadClass("Tester");
-        System.out.println("ÏµÍ³¼ÓÔØTesterÀà");
-        // ÏÂÃæÓï¾ä²Å»á³õÊ¼»¯TesterÀà
+        System.out.println("ç³»ç»ŸåŠ è½½Testerç±»");
+        // ä¸‹é¢è¯­å¥æ‰ä¼šåˆå§‹åŒ–Testerç±»
         Class.forName("Tester");
     }
 }

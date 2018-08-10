@@ -8,8 +8,7 @@ class Person {
     private int age;
 
     public String toString() {
-        return "Person[name:" + name +
-                " , age:" + age + " ]";
+        return "Person[name:" + name + " , age:" + age + " ]";
     }
 
 }
@@ -19,20 +18,20 @@ public class FieldTest {
         Person p = new Person();
         Class<Person> personClazz = Person.class;
 
-        // »ñÈ¡PersonµÄÃûÎªnameµÄ³ÉÔ±±äÁ¿
-        // Ê¹ÓÃgetDeclaredField()·½·¨±íÃ÷¿É»ñÈ¡¸÷ÖÖ·ÃÎÊ¿ØÖÆ·ûµÄ³ÉÔ±±äÁ¿
+        // è·å–Personçš„åä¸ºnameçš„æˆå‘˜å˜é‡
+        // ä½¿ç”¨getDeclaredField()æ–¹æ³•è¡¨æ˜å¯è·å–å„ç§è®¿é—®æ§åˆ¶ç¬¦çš„æˆå‘˜å˜é‡
         Field nameField = personClazz.getDeclaredField("name");
 
-        // ÉèÖÃÍ¨¹ı·´Éä·ÃÎÊ¸Ã³ÉÔ±±äÁ¿Ê±È¡Ïû·ÃÎÊÈ¨ÏŞ¼ì²é
+        // è®¾ç½®é€šè¿‡åå°„è®¿é—®è¯¥æˆå‘˜å˜é‡æ—¶å–æ¶ˆè®¿é—®æƒé™æ£€æŸ¥
         nameField.setAccessible(true);
-        // µ÷ÓÃset()·½·¨Îªp¶ÔÏóµÄname³ÉÔ±±äÁ¿ÉèÖÃÖµ
+        // è°ƒç”¨set()æ–¹æ³•ä¸ºpå¯¹è±¡çš„nameæˆå‘˜å˜é‡è®¾ç½®å€¼
         nameField.set(p, "Yeeku.H.Lee");
-        // »ñÈ¡PersonÀàÃûÎªageµÄ³ÉÔ±±äÁ¿
+        // è·å–Personç±»åä¸ºageçš„æˆå‘˜å˜é‡
         Field ageField = personClazz.getDeclaredField("age");
 
-        // ÉèÖÃÍ¨¹ı·´Éä·ÃÎÊ¸Ã³ÉÔ±±äÁ¿Ê±È¡Ïû·ÃÎÊÈ¨ÏŞ¼ì²é
+        // è®¾ç½®é€šè¿‡åå°„è®¿é—®è¯¥æˆå‘˜å˜é‡æ—¶å–æ¶ˆè®¿é—®æƒé™æ£€æŸ¥
         ageField.setAccessible(true);
-        // µ÷ÓÃsetInt()·½·¨Îªp¶ÔÏóµÄage³ÉÔ±±äÁ¿ÉèÖÃÖµ
+        // è°ƒç”¨setInt()æ–¹æ³•ä¸ºpå¯¹è±¡çš„ageæˆå‘˜å˜é‡è®¾ç½®å€¼
         ageField.setInt(p, 30);
         System.out.println(p);
     }
