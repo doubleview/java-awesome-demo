@@ -20,6 +20,7 @@
         <module>rxjava</module>
         <module>netty</module>
         <module>cglib</module>
+        <module>hystrix</module>
     </modules>
 
     <properties>

@@ -12,17 +12,21 @@ import java.util.Map;
 public class URLTest {
 
     public static void main(String[] args) throws IOException {
-        URL url = new URL("ftp://www.baidu.com:8080/a/b/c?name=hcc");
+        URL url = new URL("ftp://www.baidu.com:8080/a/b/c?name=èƒ¡æˆè¶…");
 
-        System.out.println("×ÊÔ´Ãû : " + url.getFile());
-        System.out.println("Ö÷»úÃû : " + url.getHost());
-        System.out.println("¶Ë¿Ú : " + url.getPort());
-        System.out.println("Ğ­Òé : " + url.getProtocol());
-        System.out.println("²éÑ¯×Ö·û´® : " + url.getQuery());
+        System.out.println("file : " + url.getFile());
+        System.out.println("host : " + url.getHost());
+        System.out.println("port : " + url.getPort());
+        System.out.println("protocol : " + url.getProtocol());
+        System.out.println("query : " + url.getQuery());
+        System.out.println("authority: " + url.getAuthority());
+        System.out.println("userInfo: " + url.getUserInfo());
+        System.out.println("ref: " + url.getRef());
+        System.out.println("path: " + url.getPath());
 
         System.out.println("----------------------------");
         url = new URL("http://www.baidu.com");
-        // »ñÈ¡ËùÓĞÏìÓ¦Í·×Ö¶Î
+        // è·å–æ‰€æœ‰å“åº”å¤´å­—æ®µ
         URLConnection urlConnection = url.openConnection();
         System.out.println(urlConnection.getContentEncoding());
         System.out.println(urlConnection.getContentLength());
@@ -30,11 +34,9 @@ public class URLTest {
         System.out.println(urlConnection.getDate());
         System.out.println(urlConnection.getContent());
         Map<String, List<String>> map = urlConnection.getHeaderFields();
-        // ±éÀúËùÓĞµÄÏìÓ¦Í·×Ö¶Î
+        // éå†æ‰€æœ‰çš„å“åº”å¤´å­—æ®µ
         for (String key : map.keySet()) {
             System.out.println(key + "--->" + map.get(key));
         }
-
-
     }
 }

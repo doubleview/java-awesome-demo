@@ -15,8 +15,6 @@
  */
 package netty.aio;
 
-import java.io.IOException;
-
 /**
  * @author lilinfeng
  * @version 1.0
@@ -26,9 +24,8 @@ public class TimeServer {
 
     /**
      * @param args
-     * @throws IOException
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int port = 8080;
         if (args != null && args.length > 0) {
             try {
