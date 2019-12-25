@@ -10,16 +10,16 @@ public class RandomFileChannelTest {
     public static void main(String[] args) throws IOException {
         File f = new File("a.txt");
         try (
-                // ´´½¨Ò»¸öRandomAccessFile¶ÔÏó
+                // åˆ›å»ºä¸€ä¸ªRandomAccessFileå¯¹è±¡
                 RandomAccessFile raf = new RandomAccessFile(f, "rw");
-                // »ñÈ¡RandomAccessFile¶ÔÓ¦µÄChannel
+                // è·å–RandomAccessFileå¯¹åº”çš„Channel
                 FileChannel randomChannel = raf.getChannel()) {
-            // ½«ChannelÖĞËùÓĞÊı¾İÓ³Éä³ÉByteBuffer
+            // å°†Channelä¸­æ‰€æœ‰æ•°æ®æ˜ å°„æˆByteBuffer
             ByteBuffer buffer = randomChannel.map(FileChannel
                     .MapMode.READ_ONLY, 0, f.length());
-            // °ÑChannelµÄ¼ÇÂ¼Ö¸ÕëÒÆ¶¯µ½×îºó
+            // æŠŠChannelçš„è®°å½•æŒ‡é’ˆç§»åŠ¨åˆ°æœ€å
             randomChannel.position(f.length());
-            // ½«bufferÖĞËùÓĞÊı¾İÊä³ö
+            // å°†bufferä¸­æ‰€æœ‰æ•°æ®è¾“å‡º
             randomChannel.write(buffer);
         }
     }

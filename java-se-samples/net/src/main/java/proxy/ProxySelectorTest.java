@@ -8,44 +8,44 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProxySelectorTest {
-    // ÏÂÃæÊÇ´úÀí·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿Ú£¬
-    // Ëæ±ãÒ»¸ö´úÀí·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿Ú
+    // ä¸‹é¢æ˜¯ä»£ç†æœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£ï¼Œ
+    // éšä¾¿ä¸€ä¸ªä»£ç†æœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£
     final String PROXY_ADDR = "139.82.12.188";
     final int PROXY_PORT = 3124;
-    // ¶¨ÒåĞèÒª·ÃÎÊµÄÍøÕ¾µØÖ·
+    // å®šä¹‰éœ€è¦è®¿é—®çš„ç½‘ç«™åœ°å€
     String urlStr = "http://www.baidu.org";
 
     public void init() throws IOException {
-        // ×¢²áÄ¬ÈÏµÄ´úÀíÑ¡ÔñÆ÷
+        // æ³¨å†Œé»˜è®¤çš„ä»£ç†é€‰æ‹©å™¨
         ProxySelector.setDefault(new ProxySelector() {
             @Override
             public void connectFailed(URI uri, SocketAddress sa, IOException ioe) {
-                System.out.println("ÎŞ·¨Á¬½Óµ½Ö¸¶¨´úÀí·şÎñÆ÷£¡");
+                System.out.println("æ— æ³•è¿æ¥åˆ°æŒ‡å®šä»£ç†æœåŠ¡å™¨ï¼");
             }
 
-            // ¸ù¾İ"ÒµÎñĞèÒª"·µ»ØÌØ¶¨µÄ¶ÔÓ¦µÄ´úÀí·şÎñÆ÷
+            // æ ¹æ®"ä¸šåŠ¡éœ€è¦"è¿”å›ç‰¹å®šçš„å¯¹åº”çš„ä»£ç†æœåŠ¡å™¨
             @Override
             public List<Proxy> select(URI uri) {
-                // ±¾³ÌĞò×ÜÊÇ·µ»ØÄ³¸ö¹Ì¶¨µÄ´úÀí·şÎñÆ÷¡£
+                // æœ¬ç¨‹åºæ€»æ˜¯è¿”å›æŸä¸ªå›ºå®šçš„ä»£ç†æœåŠ¡å™¨ã€‚
                 List<Proxy> result = new ArrayList<>();
                 result.add(new Proxy(Proxy.Type.HTTP, new InetSocketAddress(PROXY_ADDR, PROXY_PORT)));
                 return result;
             }
         });
         URL url = new URL(urlStr);
-        // Ã»ÓĞÖ¸¶¨´úÀí·şÎñÆ÷¡¢Ö±½Ó´ò¿ªÁ¬½Ó
-        URLConnection conn = url.openConnection();   //¢Ù
-        // ÉèÖÃ³¬Ê±Ê±³¤¡£
+        // æ²¡æœ‰æŒ‡å®šä»£ç†æœåŠ¡å™¨ã€ç›´æ¥æ‰“å¼€è¿æ¥
+        URLConnection conn = url.openConnection();   //â‘ 
+        // è®¾ç½®è¶…æ—¶æ—¶é•¿ã€‚
         conn.setConnectTimeout(3000);
         try (
-                // Í¨¹ı´úÀí·şÎñÆ÷¶ÁÈ¡Êı¾İµÄScanner
+                // é€šè¿‡ä»£ç†æœåŠ¡å™¨è¯»å–æ•°æ®çš„Scanner
                 Scanner scan = new Scanner(conn.getInputStream());
                 PrintStream ps = new PrintStream("index.htm")) {
             while (scan.hasNextLine()) {
                 String line = scan.nextLine();
-                // ÔÚ¿ØÖÆÌ¨Êä³öÍøÒ³×ÊÔ´ÄÚÈİ
+                // åœ¨æ§åˆ¶å°è¾“å‡ºç½‘é¡µèµ„æºå†…å®¹
                 System.out.println(line);
-                // ½«ÍøÒ³×ÊÔ´ÄÚÈİÊä³öµ½Ö¸¶¨Êä³öÁ÷
+                // å°†ç½‘é¡µèµ„æºå†…å®¹è¾“å‡ºåˆ°æŒ‡å®šè¾“å‡ºæµ
                 ps.println(line);
             }
         }

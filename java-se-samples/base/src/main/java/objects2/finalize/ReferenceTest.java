@@ -6,24 +6,24 @@ import java.lang.ref.WeakReference;
 public class ReferenceTest {
     public static void main(String[] args)
             throws Exception {
-        // ´´½¨Ò»¸ö×Ö·û´®¶ÔÏó
-        String str = new String("Java¿ª·¢");
-        String str2 = new String("java¿ª·¢");
-        // ´´½¨Ò»¸öÈõÒıÓÃ£¬ÈÃ´ËÈõÒıÓÃÒıÓÃµ½"Java¿ª·¢"×Ö·û´®
-        WeakReference wr = new WeakReference(str);  //¢Ù
+        // åˆ›å»ºä¸€ä¸ªå­—ç¬¦ä¸²å¯¹è±¡
+        String str = new String("Javaå¼€å‘");
+        String str2 = new String("javaå¼€å‘");
+        // åˆ›å»ºä¸€ä¸ªå¼±å¼•ç”¨ï¼Œè®©æ­¤å¼±å¼•ç”¨å¼•ç”¨åˆ°"Javaå¼€å‘"å­—ç¬¦ä¸²
+        WeakReference wr = new WeakReference(str);  //â‘ 
         SoftReference sr = new SoftReference(str2);
 
-        // ÇĞ¶ÏstrÒıÓÃºÍ"Java¿ª·¢"×Ö·û´®Ö®¼äµÄÒıÓÃ
-        str = null;   //¢Ú
+        // åˆ‡æ–­strå¼•ç”¨å’Œ"Javaå¼€å‘"å­—ç¬¦ä¸²ä¹‹é—´çš„å¼•ç”¨
+        str = null;   //â‘¡
         str2 = null;
-        // È¡³öÈõÒıÓÃËùÒıÓÃµÄ¶ÔÏó
-        System.out.println(wr.get());  //¢Û
+        // å–å‡ºå¼±å¼•ç”¨æ‰€å¼•ç”¨çš„å¯¹è±¡
+        System.out.println(wr.get());  //â‘¢
         System.out.println(sr.get());
-        // Ç¿ÖÆÀ¬»ø»ØÊÕ
+        // å¼ºåˆ¶åƒåœ¾å›æ”¶
         System.gc();
         System.runFinalization();
-        // ÔÙ´ÎÈ¡³öÈõÒıÓÃËùÒıÓÃµÄ¶ÔÏó
-        System.out.println(wr.get());  //¢Ü
+        // å†æ¬¡å–å‡ºå¼±å¼•ç”¨æ‰€å¼•ç”¨çš„å¯¹è±¡
+        System.out.println(wr.get());  //â‘£
         System.out.println(sr.get());
     }
 }

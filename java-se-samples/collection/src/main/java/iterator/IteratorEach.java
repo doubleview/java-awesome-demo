@@ -6,14 +6,14 @@ import java.util.Iterator;
 
 public class IteratorEach {
     public static void main(String[] args) {
-        // ´´½¨¼¯ºÏ¡¢Ìí¼ÓÔªËØµÄ´úÂëÓëÇ°Ò»¸ö³ÌĞòÏàÍ¬
+        // åˆ›å»ºé›†åˆã€æ·»åŠ å…ƒç´ çš„ä»£ç ä¸å‰ä¸€ä¸ªç¨‹åºç›¸åŒ
         Collection books = new HashSet();
-        books.add("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-        books.add("Java¿ª·¢");
-        books.add("Android¿ª·¢");
-        // »ñÈ¡books¼¯ºÏ¶ÔÓ¦µÄµü´úÆ÷
+        books.add("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+        books.add("Javaå¼€å‘");
+        books.add("Androidå¼€å‘");
+        // è·å–booksé›†åˆå¯¹åº”çš„è¿­ä»£å™¨
         Iterator it = books.iterator();
-        // Ê¹ÓÃLambda±í´ïÊ½£¨Ä¿±êÀàĞÍÊÇComsumer£©À´±éÀú¼¯ºÏÔªËØ
-        it.forEachRemaining(obj -> System.out.println("µü´ú¼¯ºÏÔªËØ£º" + obj));
+        // ä½¿ç”¨Lambdaè¡¨è¾¾å¼ï¼ˆç›®æ ‡ç±»å‹æ˜¯Comsumerï¼‰æ¥éå†é›†åˆå…ƒç´ 
+        it.forEachRemaining(obj -> System.out.println("è¿­ä»£é›†åˆå…ƒç´ ï¼š" + obj));
     }
 }

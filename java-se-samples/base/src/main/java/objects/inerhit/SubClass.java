@@ -12,13 +12,13 @@ public class SubClass extends BaseClass {
     }
 
     public void accessBase() {
-        // Í¨¹ısuperÀ´ÏŞ¶¨·ÃÎÊ´Ó¸¸Àà¼Ì³ĞµÃµ½µÄaÊµÀı±äÁ¿
+        // é–«æ°³ç¹ƒsuperé‰ãƒ©æªºç€¹æ°³î†–é—‚î†»ç² é–å‰è¢«ç¼Ñ„å£™å¯°æ¥€åŸŒé¨åˆŸç€¹ç‚°ç·¥é™æ©€å™º
         System.out.println(super.a);
     }
 
     public static void main(String[] args) {
         SubClass sc = new SubClass();
-        sc.accessOwner(); // Êä³ö7
-        sc.accessBase(); // Êä³ö5
+        sc.accessOwner(); // æˆæ’³åš­7
+        sc.accessBase(); // æˆæ’³åš­5
     }
 }

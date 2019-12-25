@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class ScannerFileTest {
     public static void main(String[] args)
             throws Exception {
-        // ½«Ò»¸öFile¶ÔÏó×÷ÎªScannerµÄ¹¹ÔìÆ÷²ÎÊı£¬Scanner¶ÁÈ¡ÎÄ¼şÄÚÈİ
+        // å°†ä¸€ä¸ªFileå¯¹è±¡ä½œä¸ºScannerçš„æ„é€ å™¨å‚æ•°ï¼ŒScannerè¯»å–æ–‡ä»¶å†…å®¹
         Scanner sc = new Scanner(new File("ScannerFileTest.java"));
-        System.out.println("ScannerFileTest.javaÎÄ¼şÄÚÈİÈçÏÂ£º");
-        // ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»ĞĞ
+        System.out.println("ScannerFileTest.javaæ–‡ä»¶å†…å®¹å¦‚ä¸‹ï¼š");
+        // åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€è¡Œ
         while (sc.hasNextLine()) {
-            // Êä³öÎÄ¼şÖĞµÄÏÂÒ»ĞĞ
+            // è¾“å‡ºæ–‡ä»¶ä¸­çš„ä¸‹ä¸€è¡Œ
             System.out.println(sc.nextLine());
         }
     }

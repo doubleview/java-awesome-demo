@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class ScannerLongTest {
     public static void main(String[] args) {
-        // System.in´ú±í±ê×¼ÊäÈë£¬¾ÍÊÇ¼üÅÌÊäÈë
+        // System.inä»£è¡¨æ ‡å‡†è¾“å…¥ï¼Œå°±æ˜¯é”®ç›˜è¾“å…¥
         Scanner sc = new Scanner(System.in);
-        // ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸ölongĞÍÕûÊı
+        // åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä¸ªlongå‹æ•´æ•°
         while (sc.hasNextLong()) {
-            // Êä³öÊäÈëÏî
-            System.out.println("¼üÅÌÊäÈëµÄÄÚÈİÊÇ£º" + sc.nextLong());
+            // è¾“å‡ºè¾“å…¥é¡¹
+            System.out.println("é”®ç›˜è¾“å…¥çš„å†…å®¹æ˜¯ï¼š" + sc.nextLong());
         }
     }
 }

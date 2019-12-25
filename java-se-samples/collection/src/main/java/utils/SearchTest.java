@@ -10,16 +10,16 @@ public class SearchTest {
         nums.add(-5);
         nums.add(3);
         nums.add(0);
-        System.out.println(nums); // Êä³ö:[2, -5, 3, 0]
-        System.out.println(Collections.max(nums)); // Êä³ö×î´óÔªËØ£¬½«Êä³ö3
-        System.out.println(Collections.min(nums)); // Êä³ö×îĞ¡ÔªËØ£¬½«Êä³ö-5
-        Collections.replaceAll(nums, 0, 1); // ½«numsÖĞµÄ0Ê¹ÓÃ1À´´úÌæ
-        System.out.println(nums); // Êä³ö:[2, -5, 3, 1]
-        // ÅĞ¶Ï-5ÔÚList¼¯ºÏÖĞ³öÏÖµÄ´ÎÊı£¬·µ»Ø1
+        System.out.println(nums); // è¾“å‡º:[2, -5, 3, 0]
+        System.out.println(Collections.max(nums)); // è¾“å‡ºæœ€å¤§å…ƒç´ ï¼Œå°†è¾“å‡º3
+        System.out.println(Collections.min(nums)); // è¾“å‡ºæœ€å°å…ƒç´ ï¼Œå°†è¾“å‡º-5
+        Collections.replaceAll(nums, 0, 1); // å°†numsä¸­çš„0ä½¿ç”¨1æ¥ä»£æ›¿
+        System.out.println(nums); // è¾“å‡º:[2, -5, 3, 1]
+        // åˆ¤æ–­-5åœ¨Listé›†åˆä¸­å‡ºç°çš„æ¬¡æ•°ï¼Œè¿”å›1
         System.out.println(Collections.frequency(nums, -5));
-        Collections.sort(nums); // ¶Ônums¼¯ºÏÅÅĞò
-        System.out.println(nums); // Êä³ö:[-5, 1, 2, 3]
-        //Ö»ÓĞÅÅĞòºóµÄList¼¯ºÏ²Å¿ÉÓÃ¶ş·Ö·¨²éÑ¯£¬Êä³ö3
+        Collections.sort(nums); // å¯¹numsé›†åˆæ’åº
+        System.out.println(nums); // è¾“å‡º:[-5, 1, 2, 3]
+        //åªæœ‰æ’åºåçš„Listé›†åˆæ‰å¯ç”¨äºŒåˆ†æ³•æŸ¥è¯¢ï¼Œè¾“å‡º3
         System.out.println(Collections.binarySearch(nums, 3));
     }
 }

@@ -3,11 +3,11 @@ package base;
 import java.util.ArrayList;
 import java.util.List;
 
-// ¹Ø±ÕÕû¸öÀàÀïµÄ±àÒëÆ÷¾¯¸æ
+// å…³é—­æ•´ä¸ªç±»é‡Œçš„ç¼–è¯‘å™¨è­¦å‘Š
 @SuppressWarnings(value = "unchecked")
 public class SuppressWarningsTest {
     public static void main(String[] args) {
-        List<String> myList = new ArrayList();     // ¢Ù
+        List<String> myList = new ArrayList();     // â‘ 
     }
 }
 

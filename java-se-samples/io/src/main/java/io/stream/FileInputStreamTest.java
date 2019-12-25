@@ -5,19 +5,19 @@ import java.io.IOException;
 
 public class FileInputStreamTest {
     public static void main(String[] args) throws IOException {
-        // ´´½¨×Ö½ÚÊäÈëÁ÷
+        // åˆ›å»ºå­—èŠ‚è¾“å…¥æµ
         FileInputStream fis = new FileInputStream(
                 "FileInputStreamTest.java");
-        // ´´½¨Ò»¸ö³¤¶ÈÎª1024µÄ¡°ÖñÍ²¡±
+        // åˆ›å»ºä¸€ä¸ªé•¿åº¦ä¸º1024çš„â€œç«¹ç­’â€
         byte[] bbuf = new byte[1024];
-        // ÓÃÓÚ±£´æÊµ¼Ê¶ÁÈ¡µÄ×Ö½ÚÊý
+        // ç”¨äºŽä¿å­˜å®žé™…è¯»å–çš„å­—èŠ‚æ•°
         int hasRead = 0;
-        // Ê¹ÓÃÑ­»·À´ÖØ¸´¡°È¡Ë®¡±¹ý³Ì
+        // ä½¿ç”¨å¾ªçŽ¯æ¥é‡å¤â€œå–æ°´â€è¿‡ç¨‹
         while ((hasRead = fis.read(bbuf)) > 0) {
-            // È¡³ö¡°ÖñÍ²¡±ÖÐË®µÎ£¨×Ö½Ú£©£¬½«×Ö½ÚÊý×é×ª»»³É×Ö·û´®ÊäÈë£¡
+            // å–å‡ºâ€œç«¹ç­’â€ä¸­æ°´æ»´ï¼ˆå­—èŠ‚ï¼‰ï¼Œå°†å­—èŠ‚æ•°ç»„è½¬æ¢æˆå­—ç¬¦ä¸²è¾“å…¥ï¼
             System.out.print(new String(bbuf, 0, hasRead));
         }
-        // ¹Ø±ÕÎÄ¼þÊäÈëÁ÷£¬·ÅÔÚfinally¿éÀï¸ü°²È«
+        // å…³é—­æ–‡ä»¶è¾“å…¥æµï¼Œæ”¾åœ¨finallyå—é‡Œæ›´å®‰å…¨
         fis.close();
     }
 }

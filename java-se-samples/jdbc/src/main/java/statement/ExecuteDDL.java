@@ -14,7 +14,7 @@ public class ExecuteDDL {
 
     public void initParam(String paramFile)
             throws Exception {
-        // Ê¹ÓÃPropertiesÀàÀ´¼ÓÔØÊôĞÔÎÄ¼ş
+        // ä½¿ç”¨Propertiesç±»æ¥åŠ è½½å±æ€§æ–‡ä»¶
         Properties props = new Properties();
         props.load(new FileInputStream(paramFile));
         driver = props.getProperty("driver");
@@ -24,14 +24,14 @@ public class ExecuteDDL {
     }
 
     public void createTable(String sql) throws Exception {
-        // ¼ÓÔØÇı¶¯
+        // åŠ è½½é©±åŠ¨
         Class.forName(driver);
         try (
-                // »ñÈ¡Êı¾İ¿âÁ¬½Ó
+                // è·å–æ•°æ®åº“è¿æ¥
                 Connection conn = DriverManager.getConnection(url, user, pass);
-                // Ê¹ÓÃConnectionÀ´´´½¨Ò»¸öStatment¶ÔÏó
+                // ä½¿ç”¨Connectionæ¥åˆ›å»ºä¸€ä¸ªStatmentå¯¹è±¡
                 Statement stmt = conn.createStatement()) {
-            // Ö´ĞĞDDL,´´½¨Êı¾İ±í
+            // æ‰§è¡ŒDDL,åˆ›å»ºæ•°æ®è¡¨
             stmt.executeUpdate(sql);
         }
     }
@@ -43,7 +43,7 @@ public class ExecuteDDL {
                 + "( jdbc_id int auto_increment primary key, "
                 + "jdbc_name varchar(255), "
                 + "jdbc_desc text);");
-        System.out.println("-----½¨±í³É¹¦-----");
+        System.out.println("-----å»ºè¡¨æˆåŠŸ-----");
     }
 }
 

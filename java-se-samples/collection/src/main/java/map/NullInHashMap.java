@@ -5,12 +5,12 @@ import java.util.HashMap;
 public class NullInHashMap {
     public static void main(String[] args) {
         HashMap hm = new HashMap();
-        // ÊÔÍ¼½«Á½¸ökeyÎªnullµÄkey-value¶Ô·ÅÈëHashMapÖĞ
+        // è¯•å›¾å°†ä¸¤ä¸ªkeyä¸ºnullçš„key-valueå¯¹æ”¾å…¥HashMapä¸­
         hm.put(null, null);
-        hm.put(null, null);    // ¢Ù
-        // ½«Ò»¸övalueÎªnullµÄkey-value¶Ô·ÅÈëHashMapÖĞ
-        hm.put("a", null);    // ¢Ú
-        // Êä³öMap¶ÔÏó
+        hm.put(null, null);    // â‘ 
+        // å°†ä¸€ä¸ªvalueä¸ºnullçš„key-valueå¯¹æ”¾å…¥HashMapä¸­
+        hm.put("a", null);    // â‘¡
+        // è¾“å‡ºMapå¯¹è±¡
         System.out.println(hm);
     }
 }

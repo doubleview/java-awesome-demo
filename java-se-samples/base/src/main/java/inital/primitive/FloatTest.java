@@ -4,22 +4,22 @@ package inital.primitive;
 public class FloatTest {
     public static void main(String[] args) {
         float af = 5.2345556f;
-        // ÏÂÃæ½«¿´µ½afµÄÖµÒÑ¾­·¢ÉúÁË¸Ä±ä
+        // ä¸‹é¢å°†çœ‹åˆ°afçš„å€¼å·²ç»å‘ç”Ÿäº†æ”¹å˜
         System.out.println(af);
         double a = 0.0;
         double c = Double.NEGATIVE_INFINITY;
         float d = Float.NEGATIVE_INFINITY;
-        // ¿´µ½floatºÍdoubleµÄ¸ºÎŞÇî´óÊÇÏàµÈµÄ¡£
+        // çœ‹åˆ°floatå’Œdoubleçš„è´Ÿæ— ç©·å¤§æ˜¯ç›¸ç­‰çš„ã€‚
         System.out.println(c == d);
-        // 0.0³ıÒÔ0.0½«³öÏÖ·ÇÊı
+        // 0.0é™¤ä»¥0.0å°†å‡ºç°éæ•°
         System.out.println(a / a);
-        // Á½¸ö·ÇÊıÖ®¼äÊÇ²»ÏàµÈµÄ
+        // ä¸¤ä¸ªéæ•°ä¹‹é—´æ˜¯ä¸ç›¸ç­‰çš„
         System.out.println(a / a == Float.NaN);
-        // ËùÓĞÕıÎŞÇî´ó¶¼ÊÇÏàµÈµÄ
+        // æ‰€æœ‰æ­£æ— ç©·å¤§éƒ½æ˜¯ç›¸ç­‰çš„
         System.out.println(6.0 / 0 == 555.0 / 0);
-        // ¸ºÊı³ıÒÔ0.0µÃµ½¸ºÎŞÇî´ó
+        // è´Ÿæ•°é™¤ä»¥0.0å¾—åˆ°è´Ÿæ— ç©·å¤§
         System.out.println(-8 / a);
-        // ÏÂÃæ´úÂë½«Å×³ö³ıÒÔ0µÄÒì³£
+        // ä¸‹é¢ä»£ç å°†æŠ›å‡ºé™¤ä»¥0çš„å¼‚å¸¸
         // System.out.println(0 / 0);
     }
 }

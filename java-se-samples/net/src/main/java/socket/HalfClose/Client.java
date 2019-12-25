@@ -13,8 +13,8 @@ public class Client {
             System.out.println(scan.nextLine());
         }
         PrintStream ps = new PrintStream(s.getOutputStream());
-        ps.println("¿Í»§¶ËµÄµÚÒ»ĞĞÊı¾İ");
-        ps.println("¿Í»§¶ËµÄµÚ¶şĞĞÊı¾İ");
+        ps.println("å®¢æˆ·ç«¯çš„ç¬¬ä¸€è¡Œæ•°æ®");
+        ps.println("å®¢æˆ·ç«¯çš„ç¬¬äºŒè¡Œæ•°æ®");
         ps.close();
         scan.close();
         s.close();

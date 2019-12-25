@@ -3,15 +3,15 @@ package base;
 
 public class MultiThreadDown {
     public static void main(String[] args) throws Exception {
-        // ³õÊ¼»¯DownUtil¶ÔÏó
+        // åˆå§‹åŒ–DownUtilå¯¹è±¡
         final DownUtil downUtil = new DownUtil("http://www.baidu.org/" + "attachments/month_1403/1403202355ff6cc9a4fbf6f14a.png", "ios.png", 4);
-        // ¿ªÊ¼ÏÂÔØ
+        // å¼€å§‹ä¸‹è½½
         downUtil.download();
         new Thread(() -> {
             while (downUtil.getCompleteRate() < 1) {
-                // Ã¿¸ô0.1Ãë²éÑ¯Ò»´ÎÈÎÎñµÄÍê³É½ø¶È£¬
-                // GUI³ÌÐòÖÐ¿É¸ù¾Ý¸Ã½ø¶ÈÀ´»æÖÆ½ø¶ÈÌõ
-                System.out.println("ÒÑÍê³É£º" + downUtil.getCompleteRate());
+                // æ¯éš”0.1ç§’æŸ¥è¯¢ä¸€æ¬¡ä»»åŠ¡çš„å®Œæˆè¿›åº¦ï¼Œ
+                // GUIç¨‹åºä¸­å¯æ ¹æ®è¯¥è¿›åº¦æ¥ç»˜åˆ¶è¿›åº¦æ¡
+                System.out.println("å·²å®Œæˆï¼š" + downUtil.getCompleteRate());
                 try {
                     Thread.sleep(1000);
                 } catch (Exception ex) {

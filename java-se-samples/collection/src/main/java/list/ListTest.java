@@ -6,26 +6,26 @@ import java.util.*;
 public class ListTest {
     public static void main(String[] args) {
         List books = new ArrayList();
-        // Ïòbooks¼¯ºÏÖĞÌí¼ÓÈı¸öÔªËØ
-        books.add(new String("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½"));
-        books.add(new String("·è¿ñJava½²Òå"));
-        books.add(new String("·è¿ñAndroid½²Òå"));
+        // å‘booksé›†åˆä¸­æ·»åŠ ä¸‰ä¸ªå…ƒç´ 
+        books.add(new String("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜"));
+        books.add(new String("ç–¯ç‹‚Javaè®²ä¹‰"));
+        books.add(new String("ç–¯ç‹‚Androidè®²ä¹‰"));
         System.out.println(books);
-        // ½«ĞÂ×Ö·û´®¶ÔÏó²åÈëÔÚµÚ¶ş¸öÎ»ÖÃ
-        books.add(1, new String("·è¿ñAjax½²Òå"));
+        // å°†æ–°å­—ç¬¦ä¸²å¯¹è±¡æ’å…¥åœ¨ç¬¬äºŒä¸ªä½ç½®
+        books.add(1, new String("ç–¯ç‹‚Ajaxè®²ä¹‰"));
         for (int i = 0; i < books.size(); i++) {
             System.out.println(books.get(i));
         }
-        // É¾³ıµÚÈı¸öÔªËØ
+        // åˆ é™¤ç¬¬ä¸‰ä¸ªå…ƒç´ 
         books.remove(2);
         System.out.println(books);
-        // ÅĞ¶ÏÖ¸¶¨ÔªËØÔÚList¼¯ºÏÖĞÎ»ÖÃ£ºÊä³ö1£¬±íÃ÷Î»ÓÚµÚ¶şÎ»
-        System.out.println(books.indexOf(new String("·è¿ñAjax½²Òå"))); //¢Ù
-        //½«µÚ¶ş¸öÔªËØÌæ»»³ÉĞÂµÄ×Ö·û´®¶ÔÏó
-        books.set(1, new String("·è¿ñJava½²Òå"));
+        // åˆ¤æ–­æŒ‡å®šå…ƒç´ åœ¨Listé›†åˆä¸­ä½ç½®ï¼šè¾“å‡º1ï¼Œè¡¨æ˜ä½äºç¬¬äºŒä½
+        System.out.println(books.indexOf(new String("ç–¯ç‹‚Ajaxè®²ä¹‰"))); //â‘ 
+        //å°†ç¬¬äºŒä¸ªå…ƒç´ æ›¿æ¢æˆæ–°çš„å­—ç¬¦ä¸²å¯¹è±¡
+        books.set(1, new String("ç–¯ç‹‚Javaè®²ä¹‰"));
         System.out.println(books);
-        //½«books¼¯ºÏµÄµÚ¶ş¸öÔªËØ£¨°üÀ¨£©
-        //µ½µÚÈı¸öÔªËØ£¨²»°üÀ¨£©½ØÈ¡³É×Ó¼¯ºÏ
+        //å°†booksé›†åˆçš„ç¬¬äºŒä¸ªå…ƒç´ ï¼ˆåŒ…æ‹¬ï¼‰
+        //åˆ°ç¬¬ä¸‰ä¸ªå…ƒç´ ï¼ˆä¸åŒ…æ‹¬ï¼‰æˆªå–æˆå­é›†åˆ
         System.out.println(books.subList(1, 2));
     }
 }

@@ -17,13 +17,12 @@ package netty.protocol.netty.codec;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import netty.protocol.netty.struct.Header;
+import netty.protocol.netty.struct.NettyMessage;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.phei.netty.protocol.netty.struct.Header;
-import com.phei.netty.protocol.netty.struct.NettyMessage;
 
 /**
  * @author Administrator

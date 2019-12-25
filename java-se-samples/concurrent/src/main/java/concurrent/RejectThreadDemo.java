@@ -3,7 +3,7 @@ package concurrent;
 import java.util.concurrent.*;
 
 /**
- * 线程池的拒绝策略
+ * 绾跨▼姹犵殑鎷掔粷绛栫暐
  */
 public class RejectThreadDemo {
 

@@ -10,12 +10,12 @@ public class FinallyTest {
             fis = new FileInputStream("a.txt");
         } catch (IOException ioe) {
             System.out.println(ioe.getMessage());
-            // returnÓï¾äÇ¿ÖÆ·½·¨·µ»Ø
-            return;       // ¢Ù
-            // Ê¹ÓÃexitÀ´ÍË³öĞéÄâ»ú
-            // System.exit(1);     // ¢Ú
+            // returnè¯­å¥å¼ºåˆ¶æ–¹æ³•è¿”å›
+            return;       // â‘ 
+            // ä½¿ç”¨exitæ¥é€€å‡ºè™šæ‹Ÿæœº
+            // System.exit(1);     // â‘¡
         } finally {
-            // ¹Ø±Õ´ÅÅÌÎÄ¼ş£¬»ØÊÕ×ÊÔ´
+            // å…³é—­ç£ç›˜æ–‡ä»¶ï¼Œå›æ”¶èµ„æº
             if (fis != null) {
                 try {
                     fis.close();
@@ -23,7 +23,7 @@ public class FinallyTest {
                     ioe.printStackTrace();
                 }
             }
-            System.out.println("Ö´ĞĞfinally¿éÀïµÄ×ÊÔ´»ØÊÕ!");
+            System.out.println("æ‰§è¡Œfinallyå—é‡Œçš„èµ„æºå›æ”¶!");
         }
     }
 }

@@ -3,17 +3,17 @@ package inital.conversion;
 public class AutoConversion {
     public static void main(String[] args) {
         int a = 6;
-        // int¿ÉÒÔ×Ô¶¯×ª»»ÎªfloatÀàĞÍ
+        // intå¯ä»¥è‡ªåŠ¨è½¬æ¢ä¸ºfloatç±»å‹
         float f = a;
-        // ÏÂÃæ½«Êä³ö6.0
+        // ä¸‹é¢å°†è¾“å‡º6.0
         System.out.println(f);
-        // ¶¨ÒåÒ»¸öbyteÀàĞÍµÄÕûÊı±äÁ¿
+        // å®šä¹‰ä¸€ä¸ªbyteç±»å‹çš„æ•´æ•°å˜é‡
         byte b = 9;
-        // ÏÂÃæ´úÂë½«³ö´í£¬byteĞÍ²»ÄÜ×Ô¶¯ÀàĞÍ×ª»»ÎªcharĞÍ
+        // ä¸‹é¢ä»£ç å°†å‡ºé”™ï¼Œbyteå‹ä¸èƒ½è‡ªåŠ¨ç±»å‹è½¬æ¢ä¸ºcharå‹
         // char c = b;
-        // ÏÂÃæÊÇbyteĞÍ±äÁ¿¿ÉÒÔ×Ô¶¯ÀàĞÍ×ª»»ÎªdoubleĞÍ
+        // ä¸‹é¢æ˜¯byteå‹å˜é‡å¯ä»¥è‡ªåŠ¨ç±»å‹è½¬æ¢ä¸ºdoubleå‹
         double d = b;
-        // ÏÂÃæ½«Êä³ö9.0
+        // ä¸‹é¢å°†è¾“å‡º9.0
         System.out.println(d);
     }
 }

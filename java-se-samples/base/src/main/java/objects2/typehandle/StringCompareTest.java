@@ -3,25 +3,25 @@ package objects2.typehandle;
 
 public class StringCompareTest {
     public static void main(String[] args) {
-        // s1Ö±½ÓÒıÓÃ³£Á¿³ØÖĞµÄ"Java"
+        // s1ç›´æ¥å¼•ç”¨å¸¸é‡æ± ä¸­çš„"Java"
         String s1 = "Java";
         String s2 = "";
         String s3 = "Java";
-        // s4ºóÃæµÄ×Ö·û´®Öµ¿ÉÒÔÔÚ±àÒëÊ±¾ÍÈ·¶¨ÏÂÀ´
-        // s4Ö±½ÓÒıÓÃ³£Á¿³ØÖĞµÄ"Java"
+        // s4åé¢çš„å­—ç¬¦ä¸²å€¼å¯ä»¥åœ¨ç¼–è¯‘æ—¶å°±ç¡®å®šä¸‹æ¥
+        // s4ç›´æ¥å¼•ç”¨å¸¸é‡æ± ä¸­çš„"Java"
         String s4 = "" + "Java";
-        // s5ºóÃæµÄ×Ö·û´®Öµ¿ÉÒÔÔÚ±àÒëÊ±¾ÍÈ·¶¨ÏÂÀ´
-        // s5Ö±½ÓÒıÓÃ³£Á¿³ØÖĞµÄ"Java"
-        String s5 = "·è" + "¿ñ" + "Java";
-        // s6ºóÃæµÄ×Ö·û´®Öµ²»ÄÜÔÚ±àÒëÊ±¾ÍÈ·¶¨ÏÂÀ´£¬
-        // ²»ÄÜÒıÓÃ³£Á¿³ØÖĞµÄ×Ö·û´®
+        // s5åé¢çš„å­—ç¬¦ä¸²å€¼å¯ä»¥åœ¨ç¼–è¯‘æ—¶å°±ç¡®å®šä¸‹æ¥
+        // s5ç›´æ¥å¼•ç”¨å¸¸é‡æ± ä¸­çš„"Java"
+        String s5 = "ç–¯" + "ç‹‚" + "Java";
+        // s6åé¢çš„å­—ç¬¦ä¸²å€¼ä¸èƒ½åœ¨ç¼–è¯‘æ—¶å°±ç¡®å®šä¸‹æ¥ï¼Œ
+        // ä¸èƒ½å¼•ç”¨å¸¸é‡æ± ä¸­çš„å­—ç¬¦ä¸²
         String s6 = s2 + s3;
-        // Ê¹ÓÃnewµ÷ÓÃ¹¹ÔìÆ÷½«»á´´½¨Ò»¸öĞÂµÄString¶ÔÏó£¬
-        // s7ÒıÓÃ¶ÑÄÚ´æÖĞĞÂ´´½¨µÄString¶ÔÏó
+        // ä½¿ç”¨newè°ƒç”¨æ„é€ å™¨å°†ä¼šåˆ›å»ºä¸€ä¸ªæ–°çš„Stringå¯¹è±¡ï¼Œ
+        // s7å¼•ç”¨å †å†…å­˜ä¸­æ–°åˆ›å»ºçš„Stringå¯¹è±¡
         String s7 = new String("Java");
-        System.out.println(s1 == s4); // Êä³ötrue
-        System.out.println(s1 == s5); // Êä³ötrue
-        System.out.println(s1 == s6); // Êä³öfalse
-        System.out.println(s1 == s7); // Êä³öfalse
+        System.out.println(s1 == s4); // è¾“å‡ºtrue
+        System.out.println(s1 == s5); // è¾“å‡ºtrue
+        System.out.println(s1 == s6); // è¾“å‡ºfalse
+        System.out.println(s1 == s7); // è¾“å‡ºfalse
     }
 }

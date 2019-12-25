@@ -1,14 +1,12 @@
-
 package apibase.args;
 
 public class ArgsTest {
     public static void main(String[] args) {
-        // Êä³öargsÊı×éµÄ³¤¶È
+        // è¾“å‡ºargsæ•°ç»„çš„é•¿åº¦
         System.out.println(args.length);
-        // ±éÀúargsÊı×éµÄÃ¿¸öÔªËØ
+        // éå†argsæ•°ç»„çš„æ¯ä¸ªå…ƒç´ 
         for (String arg : args) {
             System.out.println(arg);
         }
     }
 }
-

@@ -15,18 +15,13 @@
  */
 package netty.protocol.http.xml;
 
+import netty.protocol.http.xml.pojo.Order;
+import netty.protocol.http.xml.pojo.OrderFactory;
+import org.jibx.runtime.*;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
-
-import org.jibx.runtime.BindingDirectory;
-import org.jibx.runtime.IBindingFactory;
-import org.jibx.runtime.IMarshallingContext;
-import org.jibx.runtime.IUnmarshallingContext;
-import org.jibx.runtime.JiBXException;
-
-import com.phei.netty.protocol.http.xml.pojo.Order;
-import com.phei.netty.protocol.http.xml.pojo.OrderFactory;
 
 /**
  * @author Lilinfeng

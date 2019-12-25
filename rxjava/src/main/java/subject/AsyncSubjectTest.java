@@ -17,8 +17,6 @@ public class AsyncSubjectTest {
         asyncSubject.onNext("next1");
         asyncSubject.onNext("next2");
         asyncSubject.onNext("next3");
-        asyncSubject.onNext("next4");
-        asyncSubject.onCompleted();
         asyncSubject.subscribe(new Observer<String>() {
             @Override
             public void onCompleted() {
@@ -35,7 +33,8 @@ public class AsyncSubjectTest {
                 System.out.println(s);
             }
         });
-
+        asyncSubject.onNext("next4");
+        asyncSubject.onCompleted();
     }
 
 

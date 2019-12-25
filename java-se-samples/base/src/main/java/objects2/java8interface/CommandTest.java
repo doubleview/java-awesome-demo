@@ -4,10 +4,10 @@ public class CommandTest {
     public static void main(String[] args) {
         ProcessArray pa = new ProcessArray();
         int[] target = {3, -4, 6, 4};
-        // 第一次处理数组，具体处理行为取决于PrintCommand
+        // 缁楊兛绔村▎鈥愁槱閻炲棙鏆熺紒鍕剁礉閸忚渹缍嬫径鍕倞鐞涘奔璐熼崣鏍у枀娴滃侗rintCommand
         pa.process(target, new PrintCommand());
         System.out.println("------------------");
-        // 第二次处理数组，具体处理行为取决于AddCommand
+        // 缁楊兛绨╁▎鈥愁槱閻炲棙鏆熺紒鍕剁礉閸忚渹缍嬫径鍕倞鐞涘奔璐熼崣鏍у枀娴滃盯ddCommand
         pa.process(target, new AddCommand());
     }
 }

@@ -26,12 +26,11 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpRequestEncoder;
 import io.netty.handler.codec.http.HttpResponseDecoder;
+import netty.protocol.http.xml.codec.HttpXmlRequestEncoder;
+import netty.protocol.http.xml.codec.HttpXmlResponseDecoder;
+import netty.protocol.http.xml.pojo.Order;
 
 import java.net.InetSocketAddress;
-
-import com.phei.netty.protocol.http.xml.codec.HttpXmlRequestEncoder;
-import com.phei.netty.protocol.http.xml.codec.HttpXmlResponseDecoder;
-import com.phei.netty.protocol.http.xml.pojo.Order;
 
 /**
  * @author lilinfeng
@@ -49,23 +48,15 @@ public class HttpXmlClient {
                 .option(ChannelOption.TCP_NODELAY, true)
                 .handler(new ChannelInitializer<SocketChannel>() {
                     @Override
-                    public void initChannel(SocketChannel ch)
-                        throws Exception {
-                        ch.pipeline().addLast("http-decoder",
-                            new HttpResponseDecoder());
-                        ch.pipeline().addLast("http-aggregator",
-                            new HttpObjectAggregator(65536));
+                    public void initChannel(SocketChannel ch) throws Exception {
+                        ch.pipeline().addLast("http-decoder", new HttpResponseDecoder());
+                        ch.pipeline().addLast("http-aggregator", new HttpObjectAggregator(65536));
                         // XML解码器
-                        ch.pipeline().addLast(
-                            "xml-decoder",
-                            new HttpXmlResponseDecoder(Order.class,
+                        ch.pipeline().addLast("xml-decoder", new HttpXmlResponseDecoder(Order.class,
                                 true));
-                        ch.pipeline().addLast("http-encoder",
-                            new HttpRequestEncoder());
-                        ch.pipeline().addLast("xml-encoder",
-                            new HttpXmlRequestEncoder());
-                        ch.pipeline().addLast("xmlClientHandler",
-                            new HttpXmlClientHandle());
+                        ch.pipeline().addLast("http-encoder", new HttpRequestEncoder());
+                        ch.pipeline().addLast("xml-encoder", new HttpXmlRequestEncoder());
+                        ch.pipeline().addLast("xmlClientHandler", new HttpXmlClientHandle());
                     }
                 });
 

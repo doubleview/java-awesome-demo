@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class RightTest {
-    // 声明一个泛型方法，该泛型方法中带一个T形参
+    // 澹版槑涓�涓硾鍨嬫柟娉曪紝璇ユ硾鍨嬫柟娉曚腑甯︿竴涓猅褰㈠弬
     static <T> void test(Collection<? extends T> from, Collection<T> to) {
         for (T ele : from) {
             to.add(ele);
@@ -15,7 +15,7 @@ public class RightTest {
     public static void main(String[] args) {
         List<Object> ao = new ArrayList<>();
         List<String> as = new ArrayList<>();
-        // 下面代码完全正常
+        // 涓嬮潰浠ｇ爜瀹屽叏姝ｅ父
         test(as, ao);
     }
 }

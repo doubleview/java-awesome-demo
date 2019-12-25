@@ -5,7 +5,7 @@ import java.util.TreeSet;
 
 public class TreeSetTest {
     public static void main(String[] args) {
-        // ComparatorµÄÊµ¼ÊÀàĞÍÊÇTreeSetµÄÔªËØÀàĞÍµÄ¸¸Àà£¬Âú×ãÒªÇó
+        // Comparatorçš„å®é™…ç±»å‹æ˜¯TreeSetçš„å…ƒç´ ç±»å‹çš„çˆ¶ç±»ï¼Œæ»¡è¶³è¦æ±‚
         TreeSet<String> ts1 = new TreeSet<>(
                 new Comparator<Object>() {
                     public int compare(Object fst, Object snd) {
@@ -15,7 +15,7 @@ public class TreeSetTest {
                 });
         ts1.add("hello");
         ts1.add("wa");
-        // ComparatorµÄÊµ¼ÊÀàĞÍÊÇTreeSetÔªËØµÄÀàĞÍ£¬Âú×ãÒªÇó
+        // Comparatorçš„å®é™…ç±»å‹æ˜¯TreeSetå…ƒç´ çš„ç±»å‹ï¼Œæ»¡è¶³è¦æ±‚
         TreeSet<String> ts2 = new TreeSet<>(
                 new Comparator<String>() {
                     public int compare(String first, String second) {

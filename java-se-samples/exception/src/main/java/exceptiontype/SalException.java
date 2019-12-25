@@ -8,7 +8,7 @@ public class SalException extends Exception {
         super(msg);
     }
 
-    // 创建一个可以接受Throwable参数的构造器
+    // 鍒涘缓涓�涓彲浠ユ帴鍙桾hrowable鍙傛暟鐨勬瀯閫犲櫒
     public SalException(Throwable t) {
         super(t);
     }

@@ -4,14 +4,14 @@ package inital.operate;
 public class BitOperatorTest {
     public static void main(String[] args) {
 //		System.out.println(2.5 & 3.0);
-        System.out.println(5 & 9); // ½«Êä³ö1
-        System.out.println(5 | 9); // ½«Êä³ö13
-        System.out.println(~-5); // ½«Êä³ö4
-        System.out.println(5 ^ 9); // ½«Êä³ö12
-        System.out.println(5 << 2); // Êä³ö20
-        System.out.println(-5 << 2); // Êä³ö-20
-        System.out.println(-5 >> 2); // Êä³ö-2
-        System.out.println(-5 >>> 2); // Êä³ö1073741822
+        System.out.println(5 & 9); // å°†è¾“å‡º1
+        System.out.println(5 | 9); // å°†è¾“å‡º13
+        System.out.println(~-5); // å°†è¾“å‡º4
+        System.out.println(5 ^ 9); // å°†è¾“å‡º12
+        System.out.println(5 << 2); // è¾“å‡º20
+        System.out.println(-5 << 2); // è¾“å‡º-20
+        System.out.println(-5 >> 2); // è¾“å‡º-2
+        System.out.println(-5 >>> 2); // è¾“å‡º1073741822
         System.out.println(Integer.toBinaryString(-5 >>> 2));
     }
 }

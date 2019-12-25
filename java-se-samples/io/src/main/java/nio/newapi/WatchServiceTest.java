@@ -4,22 +4,22 @@ import java.nio.file.*;
 
 public class WatchServiceTest {
     public static void main(String[] args) throws Exception {
-        // »ñÈ¡ÎÄ¼şÏµÍ³µÄWatchService¶ÔÏó
+        // è·å–æ–‡ä»¶ç³»ç»Ÿçš„WatchServiceå¯¹è±¡
         WatchService watchService = FileSystems.getDefault().newWatchService();
-        // Îªf:ÅÌ¸ùÂ·¾¶×¢²á¼àÌı
+        // ä¸ºf:ç›˜æ ¹è·¯å¾„æ³¨å†Œç›‘å¬
         Paths.get("F:/").register(watchService
                 , StandardWatchEventKinds.ENTRY_CREATE
                 , StandardWatchEventKinds.ENTRY_MODIFY
                 , StandardWatchEventKinds.ENTRY_DELETE);
         while (true) {
-            // »ñÈ¡ÏÂÒ»¸öÎÄ¼ş¸Ä¶¯ÊÂ¼ş
-            WatchKey key = watchService.take();    //¢Ù
+            // è·å–ä¸‹ä¸€ä¸ªæ–‡ä»¶æ”¹åŠ¨äº‹ä»¶
+            WatchKey key = watchService.take();    //â‘ 
             for (WatchEvent<?> event : key.pollEvents()) {
-                System.out.println(event.context() + " ÎÄ¼ş·¢ÉúÁË " + event.kind() + "ÊÂ¼ş£¡");
+                System.out.println(event.context() + " æ–‡ä»¶å‘ç”Ÿäº† " + event.kind() + "äº‹ä»¶ï¼");
             }
-            // ÖØÉèWatchKey
+            // é‡è®¾WatchKey
             boolean valid = key.reset();
-            // Èç¹ûÖØÉèÊ§°Ü£¬ÍË³ö¼àÌı
+            // å¦‚æœé‡è®¾å¤±è´¥ï¼Œé€€å‡ºç›‘å¬
             if (!valid) {
                 break;
             }

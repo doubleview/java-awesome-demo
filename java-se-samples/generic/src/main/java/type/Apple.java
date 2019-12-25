@@ -10,9 +10,9 @@ public class Apple<T extends Number> {
     public static void main(String[] args) {
         Apple<Integer> ai = new Apple<>();
         Apple<Double> ad = new Apple<>();
-        // ÏÂÃæ´úÂë½«ÒıÆğ±àÒëÒì³££¬ÏÂÃæ´úÂëÊÔÍ¼°ÑStringÀàĞÍ´«¸øTĞÎ²Î
-        // µ«String²»ÊÇNumberµÄ×ÓÀàĞÍ£¬ËùÒÔÒı·¢±àÒë´íÎó
-        //Apple<String> as = new Apple<>();        // ¢Ù
+        // ä¸‹é¢ä»£ç å°†å¼•èµ·ç¼–è¯‘å¼‚å¸¸ï¼Œä¸‹é¢ä»£ç è¯•å›¾æŠŠStringç±»å‹ä¼ ç»™Tå½¢å‚
+        // ä½†Stringä¸æ˜¯Numberçš„å­ç±»å‹ï¼Œæ‰€ä»¥å¼•å‘ç¼–è¯‘é”™è¯¯
+        //Apple<String> as = new Apple<>();        // â‘ 
 
         List<String>[] lists = new ArrayList[10];
 

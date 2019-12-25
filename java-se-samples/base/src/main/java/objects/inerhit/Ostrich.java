@@ -2,20 +2,20 @@ package objects.inerhit;
 
 
 public class Ostrich extends Bird {
-    // ÖØĞ´BirdÀàµÄfly()·½·¨
+    // é‡å†™Birdç±»çš„fly()æ–¹æ³•
     public void fly() {
-        System.out.println("ÎÒÖ»ÄÜÔÚµØÉÏ±¼ÅÜ...");
+        System.out.println("æˆ‘åªèƒ½åœ¨åœ°ä¸Šå¥”è·‘...");
     }
 
     public void callOverridedMethod() {
-        // ÔÚ×ÓÀà·½·¨ÖĞÍ¨¹ısuperÀ´ÏÔÊ½µ÷ÓÃ¸¸Àà±»¸²¸ÇµÄ·½·¨¡£
+        // åœ¨å­ç±»æ–¹æ³•ä¸­é€šè¿‡superæ¥æ˜¾å¼è°ƒç”¨çˆ¶ç±»è¢«è¦†ç›–çš„æ–¹æ³•ã€‚
         super.fly();
     }
 
     public static void main(String[] args) {
-        // ´´½¨Ostrich¶ÔÏó
+        // åˆ›å»ºOstrichå¯¹è±¡
         Ostrich os = new Ostrich();
-        // Ö´ĞĞOstrich¶ÔÏóµÄfly()·½·¨£¬½«Êä³ö"ÎÒÖ»ÄÜÔÚµØÉÏ±¼ÅÜ..."
+        // æ‰§è¡ŒOstrichå¯¹è±¡çš„fly()æ–¹æ³•ï¼Œå°†è¾“å‡º"æˆ‘åªèƒ½åœ¨åœ°ä¸Šå¥”è·‘..."
         os.fly();
     }
 }

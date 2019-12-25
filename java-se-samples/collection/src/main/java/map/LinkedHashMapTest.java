@@ -5,10 +5,10 @@ import java.util.LinkedHashMap;
 public class LinkedHashMapTest {
     public static void main(String[] args) {
         LinkedHashMap scores = new LinkedHashMap();
-        scores.put("ÓïÎÄ", 80);
-        scores.put("Ó¢ÎÄ", 82);
-        scores.put("ÊýÑ§", 76);
-        // µ÷ÓÃforEach·½·¨±éÀúscoresÀïµÄËùÓÐkey-value¶Ô
+        scores.put("è¯­æ–‡", 80);
+        scores.put("è‹±æ–‡", 82);
+        scores.put("æ•°å­¦", 76);
+        // è°ƒç”¨forEachæ–¹æ³•éåŽ†scoresé‡Œçš„æ‰€æœ‰key-valueå¯¹
         scores.forEach((key, value) -> System.out.println(key + "-->" + value));
     }
 }

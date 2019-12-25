@@ -7,13 +7,13 @@ import java.util.function.IntUnaryOperator;
 public class ArraysTest2 {
     public static void main(String[] args) {
         int[] arr1 = new int[]{3, -4, 25, 16, 30, 18};
-        // ¶ÔÊı×éarr1½øĞĞ²¢·¢ÅÅĞò
+        // å¯¹æ•°ç»„arr1è¿›è¡Œå¹¶å‘æ’åº
         Arrays.parallelSort(arr1);
         System.out.println(Arrays.toString(arr1));
         int[] arr2 = new int[]{3, -4, 25, 16, 30, 18};
         Arrays.parallelPrefix(arr2, new IntBinaryOperator() {
-            // left´ú±íÊı×éÖĞÇ°Ò»¸öËùË÷Òı´¦µÄÔªËØ£¬¼ÆËãµÚÒ»¸öÔªËØÊ±£¬leftÎª1
-            // right´ú±íÊı×éÖĞµ±Ç°Ë÷Òı´¦µÄÔªËØ
+            // leftä»£è¡¨æ•°ç»„ä¸­å‰ä¸€ä¸ªæ‰€ç´¢å¼•å¤„çš„å…ƒç´ ï¼Œè®¡ç®—ç¬¬ä¸€ä¸ªå…ƒç´ æ—¶ï¼Œleftä¸º1
+            // rightä»£è¡¨æ•°ç»„ä¸­å½“å‰ç´¢å¼•å¤„çš„å…ƒç´ 
             public int applyAsInt(int left, int right) {
                 return left * right;
             }
@@ -21,7 +21,7 @@ public class ArraysTest2 {
         System.out.println(Arrays.toString(arr2));
         int[] arr3 = new int[5];
         Arrays.parallelSetAll(arr3, new IntUnaryOperator() {
-            // operand´ú±íÕıÔÚ¼ÆËãµÄÔªËØË÷Òı
+            // operandä»£è¡¨æ­£åœ¨è®¡ç®—çš„å…ƒç´ ç´¢å¼•
             public int applyAsInt(int operand) {
                 return operand * 5;
             }

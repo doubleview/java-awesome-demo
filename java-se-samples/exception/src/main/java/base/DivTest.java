@@ -7,15 +7,15 @@ public class DivTest {
             int a = Integer.parseInt(args[0]);
             int b = Integer.parseInt(args[1]);
             int c = a / b;
-            System.out.println("ÄúÊäÈëµÄÁ½¸öÊıÏà³ıµÄ½á¹ûÊÇ£º" + c);
+            System.out.println("æ‚¨è¾“å…¥çš„ä¸¤ä¸ªæ•°ç›¸é™¤çš„ç»“æœæ˜¯ï¼š" + c);
         } catch (IndexOutOfBoundsException ie) {
-            System.out.println("Êı×éÔ½½ç£ºÔËĞĞ³ÌĞòÊ±ÊäÈëµÄ²ÎÊı¸öÊı²»¹»");
+            System.out.println("æ•°ç»„è¶Šç•Œï¼šè¿è¡Œç¨‹åºæ—¶è¾“å…¥çš„å‚æ•°ä¸ªæ•°ä¸å¤Ÿ");
         } catch (NumberFormatException ne) {
-            System.out.println("Êı×Ö¸ñÊ½Òì³££º³ÌĞòÖ»ÄÜ½ÓÊÜÕûÊı²ÎÊı");
+            System.out.println("æ•°å­—æ ¼å¼å¼‚å¸¸ï¼šç¨‹åºåªèƒ½æ¥å—æ•´æ•°å‚æ•°");
         } catch (ArithmeticException ae) {
-            System.out.println("ËãÊõÒì³£");
+            System.out.println("ç®—æœ¯å¼‚å¸¸");
         } catch (Exception e) {
-            System.out.println("Î´ÖªÒì³£");
+            System.out.println("æœªçŸ¥å¼‚å¸¸");
         }
     }
 }

@@ -3,18 +3,18 @@ package inital.operate;
 
 public class ThreeTest {
     public static void main(String[] args) {
-        String str = 5 > 3 ? "5´óÓÚ3" : "5²»´óÓÚ3";
-        System.out.println(str); // Êä³ö"5´óÓÚ3"
+        String str = 5 > 3 ? "5å¤§äºŽ3" : "5ä¸å¤§äºŽ3";
+        System.out.println(str); // è¾“å‡º"5å¤§äºŽ3"
         String str2 = null;
         if (5 > 3) {
-            str2 = "5´óÓÚ3";
+            str2 = "5å¤§äºŽ3";
         } else {
-            str2 = "5²»´óÓÚ3";
+            str2 = "5ä¸å¤§äºŽ3";
         }
         int a = 11;
         int b = 12;
-        // ÈýÄ¿ÔËËã·ûÖ§³ÖÇ¶Ì×
+        // ä¸‰ç›®è¿ç®—ç¬¦æ”¯æŒåµŒå¥—
         System.out.println(a > b ?
-                "a´óÓÚb" : (a < b ? "aÐ¡ÓÚb" : "aµÈÓÚb"));
+                "aå¤§äºŽb" : (a < b ? "aå°äºŽb" : "aç­‰äºŽb"));
     }
 }

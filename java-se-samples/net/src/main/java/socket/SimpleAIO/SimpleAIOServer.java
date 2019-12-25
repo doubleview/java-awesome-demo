@@ -10,18 +10,18 @@ public class SimpleAIOServer {
     static final int PORT = 30000;
 
     public static void main(String[] args) throws Exception {
-        try (// ¢Ù´´½¨AsynchronousServerSocketChannel¶ÔÏó¡£
+        try (// â‘ åˆ›å»ºAsynchronousServerSocketChannelå¯¹è±¡ã€‚
                 AsynchronousServerSocketChannel serverChannel =
                         AsynchronousServerSocketChannel.open()) {
-            // ¢ÚÖ¸¶¨ÔÚÖ¸¶¨µØÖ·¡¢¶Ë¿Ú¼àÌı¡£
+            // â‘¡æŒ‡å®šåœ¨æŒ‡å®šåœ°å€ã€ç«¯å£ç›‘å¬ã€‚
             serverChannel.bind(new InetSocketAddress(PORT));
             while (true) {
-                // ¢Û²ÉÓÃÑ­»·½ÓÊÜÀ´×Ô¿Í»§¶ËµÄÁ¬½Ó
+                // â‘¢é‡‡ç”¨å¾ªç¯æ¥å—æ¥è‡ªå®¢æˆ·ç«¯çš„è¿æ¥
                 Future<AsynchronousSocketChannel> future = serverChannel.accept();
-                // »ñÈ¡Á¬½ÓÍê³Éºó·µ»ØµÄAsynchronousSocketChannel
+                // è·å–è¿æ¥å®Œæˆåè¿”å›çš„AsynchronousSocketChannel
                 AsynchronousSocketChannel socketChannel = future.get();
-                // Ö´ĞĞÊä³ö¡£
-                socketChannel.write(ByteBuffer.wrap("»¶Ó­ÄãÀ´×ÔAIOµÄÊÀ½ç£¡".getBytes("UTF-8"))).get();
+                // æ‰§è¡Œè¾“å‡ºã€‚
+                socketChannel.write(ByteBuffer.wrap("æ¬¢è¿ä½ æ¥è‡ªAIOçš„ä¸–ç•Œï¼".getBytes("UTF-8"))).get();
             }
         }
     }

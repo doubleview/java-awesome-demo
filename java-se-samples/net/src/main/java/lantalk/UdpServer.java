@@ -6,44 +6,44 @@ import java.net.DatagramSocket;
 
 public class UdpServer {
     public static final int PORT = 30000;
-    // ¶¨ÒåÃ¿¸öÊı¾İ±¨µÄ×î´ó´óĞ¡Îª4K
+    // å®šä¹‰æ¯ä¸ªæ•°æ®æŠ¥çš„æœ€å¤§å¤§å°ä¸º4K
     private static final int DATA_LEN = 4096;
-    // ¶¨Òå½ÓÊÕÍøÂçÊı¾İµÄ×Ö½ÚÊı×é
+    // å®šä¹‰æ¥æ”¶ç½‘ç»œæ•°æ®çš„å­—èŠ‚æ•°ç»„
     byte[] inBuff = new byte[DATA_LEN];
-    // ÒÔÖ¸¶¨×Ö½ÚÊı×é´´½¨×¼±¸½ÓÊÜÊı¾İµÄDatagramPacket¶ÔÏó
+    // ä»¥æŒ‡å®šå­—èŠ‚æ•°ç»„åˆ›å»ºå‡†å¤‡æ¥å—æ•°æ®çš„DatagramPacketå¯¹è±¡
     private DatagramPacket inPacket =
             new DatagramPacket(inBuff, inBuff.length);
-    // ¶¨ÒåÒ»¸öÓÃÓÚ·¢ËÍµÄDatagramPacket¶ÔÏó
+    // å®šä¹‰ä¸€ä¸ªç”¨äºå‘é€çš„DatagramPacketå¯¹è±¡
     private DatagramPacket outPacket;
-    // ¶¨ÒåÒ»¸ö×Ö·û´®Êı×é£¬·şÎñÆ÷·¢ËÍ¸ÃÊı×éµÄµÄÔªËØ
+    // å®šä¹‰ä¸€ä¸ªå­—ç¬¦ä¸²æ•°ç»„ï¼ŒæœåŠ¡å™¨å‘é€è¯¥æ•°ç»„çš„çš„å…ƒç´ 
     String[] books = new String[]
             {
-                    "Java¿ª·¢",
-                    "ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½",
-                    "Android¿ª·¢",
-                    "Ajax¿ª·¢"
+                    "Javaå¼€å‘",
+                    "è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜",
+                    "Androidå¼€å‘",
+                    "Ajaxå¼€å‘"
             };
 
     public void init() throws IOException {
         try (
-                // ´´½¨DatagramSocket¶ÔÏó
+                // åˆ›å»ºDatagramSocketå¯¹è±¡
                 DatagramSocket socket = new DatagramSocket(PORT)) {
-            // ²ÉÓÃÑ­»·½ÓÊÜÊı¾İ
+            // é‡‡ç”¨å¾ªç¯æ¥å—æ•°æ®
             for (int i = 0; i < 1000; i++) {
-                // ¶ÁÈ¡SocketÖĞµÄÊı¾İ£¬¶Áµ½µÄÊı¾İ·ÅÈëinPacket·â×°µÄÊı×éÀï¡£
+                // è¯»å–Socketä¸­çš„æ•°æ®ï¼Œè¯»åˆ°çš„æ•°æ®æ”¾å…¥inPacketå°è£…çš„æ•°ç»„é‡Œã€‚
                 socket.receive(inPacket);
-                // ÅĞ¶ÏinPacket.getData()ºÍinBuffÊÇ·ñÊÇÍ¬Ò»¸öÊı×é
+                // åˆ¤æ–­inPacket.getData()å’ŒinBuffæ˜¯å¦æ˜¯åŒä¸€ä¸ªæ•°ç»„
                 System.out.println(inBuff == inPacket.getData());
-                // ½«½ÓÊÕµ½µÄÄÚÈİ×ª³É×Ö·û´®ºóÊä³ö
+                // å°†æ¥æ”¶åˆ°çš„å†…å®¹è½¬æˆå­—ç¬¦ä¸²åè¾“å‡º
                 System.out.println(new String(inBuff
                         , 0, inPacket.getLength()));
-                // ´Ó×Ö·û´®Êı×éÖĞÈ¡³öÒ»¸öÔªËØ×÷Îª·¢ËÍµÄÊı¾İ
+                // ä»å­—ç¬¦ä¸²æ•°ç»„ä¸­å–å‡ºä¸€ä¸ªå…ƒç´ ä½œä¸ºå‘é€çš„æ•°æ®
                 byte[] sendData = books[i % 4].getBytes();
-                // ÒÔÖ¸¶¨×Ö½ÚÊı×é×÷Îª·¢ËÍÊı¾İ¡¢ÒÔ¸Õ½ÓÊÜµ½µÄDatagramPacketµÄ
-                // Ô´SocketAddress×÷ÎªÄ¿±êSocketAddress´´½¨DatagramPacket¡£
+                // ä»¥æŒ‡å®šå­—èŠ‚æ•°ç»„ä½œä¸ºå‘é€æ•°æ®ã€ä»¥åˆšæ¥å—åˆ°çš„DatagramPacketçš„
+                // æºSocketAddressä½œä¸ºç›®æ ‡SocketAddressåˆ›å»ºDatagramPacketã€‚
                 outPacket = new DatagramPacket(sendData
                         , sendData.length, inPacket.getSocketAddress());
-                // ·¢ËÍÊı¾İ
+                // å‘é€æ•°æ®
                 socket.send(outPacket);
             }
         }

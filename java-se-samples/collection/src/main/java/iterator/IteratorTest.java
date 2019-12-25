@@ -6,23 +6,23 @@ import java.util.Iterator;
 
 public class IteratorTest {
     public static void main(String[] args) {
-        // ´´½¨¼¯ºÏ¡¢Ìí¼ÓÔªËØµÄ´úÂëÓëÇ°Ò»¸ö³ÌĞòÏàÍ¬
+        // åˆ›å»ºé›†åˆã€æ·»åŠ å…ƒç´ çš„ä»£ç ä¸å‰ä¸€ä¸ªç¨‹åºç›¸åŒ
         Collection books = new HashSet();
-        books.add("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-        books.add("Java¿ª·¢");
-        books.add("Android¿ª·¢");
-        // »ñÈ¡books¼¯ºÏ¶ÔÓ¦µÄµü´úÆ÷
+        books.add("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+        books.add("Javaå¼€å‘");
+        books.add("Androidå¼€å‘");
+        // è·å–booksé›†åˆå¯¹åº”çš„è¿­ä»£å™¨
         Iterator it = books.iterator();
         while (it.hasNext()) {
-            // it.next()·½·¨·µ»ØµÄÊı¾İÀàĞÍÊÇObjectÀàĞÍ£¬Òò´ËĞèÒªÇ¿ÖÆÀàĞÍ×ª»»
+            // it.next()æ–¹æ³•è¿”å›çš„æ•°æ®ç±»å‹æ˜¯Objectç±»å‹ï¼Œå› æ­¤éœ€è¦å¼ºåˆ¶ç±»å‹è½¬æ¢
             String book = (String) it.next();
             System.out.println(book);
-            if (book.equals("Java¿ª·¢")) {
-                // ´Ó¼¯ºÏÖĞÉ¾³ıÉÏÒ»´Înext·½·¨·µ»ØµÄÔªËØ
+            if (book.equals("Javaå¼€å‘")) {
+                // ä»é›†åˆä¸­åˆ é™¤ä¸Šä¸€æ¬¡nextæ–¹æ³•è¿”å›çš„å…ƒç´ 
                 it.remove();
             }
-            // ¶Ôbook±äÁ¿¸³Öµ£¬²»»á¸Ä±ä¼¯ºÏÔªËØ±¾Éí
-            book = "²âÊÔ×Ö·û´®";   //¢Ù
+            // å¯¹bookå˜é‡èµ‹å€¼ï¼Œä¸ä¼šæ”¹å˜é›†åˆå…ƒç´ æœ¬èº«
+            book = "æµ‹è¯•å­—ç¬¦ä¸²";   //â‘ 
         }
         System.out.println(books);
     }

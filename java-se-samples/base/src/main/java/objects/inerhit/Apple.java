@@ -3,12 +3,12 @@ package objects.inerhit;
 
 public class Apple extends Fruit {
     public static void main(String[] args) {
-        // ´´½¨Apple¶ÔÏó
+        // é’æ¶˜ç¼“Appleç€µç¡…è–„
         Apple a = new Apple();
-        // Apple¶ÔÏó±¾ÉíÃ»ÓĞweight³ÉÔ±±äÁ¿
-        // ÒòÎªAppleµÄ¸¸ÀàÓĞweight³ÉÔ±±äÁ¿£¬Ò²¿ÉÒÔ·ÃÎÊApple¶ÔÏóµÄweight³ÉÔ±±äÁ¿
+        // Appleç€µç¡…è–„éˆî„ƒéŸ©å¨Œâ„ƒæ¹weighté´æ„¬æ†³é™æ©€å™º
+        // é¥çŠ±è´ŸAppleé¨å‹­åŸ—ç»«ç»˜æ¹weighté´æ„¬æ†³é™æ©€å™ºé”›å±¼ç¯ƒé™îˆ™äº’ç’å—æ£¶Appleç€µç¡…è–„é¨å‰‹eighté´æ„¬æ†³é™æ©€å™º
         a.weight = 56;
-        // µ÷ÓÃApple¶ÔÏóµÄinfo()·½·¨
+        // ç’‹å†ªæ•¤Appleç€µç¡…è–„é¨åˆ¬nfo()é‚è§„ç¡¶
         a.info();
     }
 }

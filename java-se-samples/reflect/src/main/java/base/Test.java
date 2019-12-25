@@ -3,14 +3,14 @@ package base;
 
 public class Test {
     static {
-        // Ê¹ÓÃ¾²Ì¬³õÊ¼»¯¿éÎª±äÁ¿bÖ¸¶¨³ö³õÊ¼Öµ
+        // ä½¿ç”¨é™æ€åˆå§‹åŒ–å—ä¸ºå˜é‡bæŒ‡å®šå‡ºåˆå§‹å€¼
         b = 6;
         System.out.println("----------");
     }
 
-    // ÉùÃ÷±äÁ¿aÊ±Ö¸¶¨³õÊ¼Öµ
+    // å£°æ˜å˜é‡aæ—¶æŒ‡å®šåˆå§‹å€¼
     static int a = 5;
-    static int b = 9;         // ¢Ù
+    static int b = 9;         // â‘ 
     static int c;
 
     public static void main(String[] args) {

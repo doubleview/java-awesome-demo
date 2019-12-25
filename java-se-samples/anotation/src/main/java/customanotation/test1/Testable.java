@@ -5,10 +5,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-// 使用JDK的元数据Annotation：Retention
+// 浣跨敤JDK鐨勫厓鏁版嵁Annotation锛歊etention
 @Retention(RetentionPolicy.RUNTIME)
-// 使用JDK的元数据Annotation：Target
+// 浣跨敤JDK鐨勫厓鏁版嵁Annotation锛歍arget
 @Target(ElementType.METHOD)
-// 定义一个标记注解，不包含任何成员变量，即不可传入元数据
+// 瀹氫箟涓�涓爣璁版敞瑙ｏ紝涓嶅寘鍚换浣曟垚鍛樺彉閲忥紝鍗充笉鍙紶鍏ュ厓鏁版嵁
 public @interface Testable {
 }

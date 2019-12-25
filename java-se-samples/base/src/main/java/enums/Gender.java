@@ -3,7 +3,7 @@ package enums;
 /**/
 public enum Gender {
     MALE, FEMALE;
-    // ¶¨ÒåÒ»¸öpublicĞŞÊÎµÄÊµÀı±äÁ¿
+    // å®šä¹‰ä¸€ä¸ªpublicä¿®é¥°çš„å®ä¾‹å˜é‡
     public String name;
 }
 

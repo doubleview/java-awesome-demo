@@ -13,8 +13,8 @@ class Person2 {
         this.idStr = idStr;
     }
 
-    // ´Ë´¦Ê¡ÂÔnameºÍidStrµÄsetterºÍgetter·½·¨¡£
-    // nameµÄsetterºÍgetter·½·¨
+    // æ­¤å¤„çœç•¥nameå’ŒidStrçš„setterå’Œgetteræ–¹æ³•ã€‚
+    // nameçš„setterå’Œgetteræ–¹æ³•
     public void setName(String name) {
         this.name = name;
     }
@@ -23,7 +23,7 @@ class Person2 {
         return this.name;
     }
 
-    // idStrµÄsetterºÍgetter·½·¨
+    // idStrçš„setterå’Œgetteræ–¹æ³•
     public void setIdStr(String idStr) {
         this.idStr = idStr;
     }
@@ -32,15 +32,15 @@ class Person2 {
         return this.idStr;
     }
 
-    // ÖØĞ´equals()·½·¨£¬Ìá¹©×Ô¶¨ÒåµÄÏàµÈ±ê×¼
+    // é‡å†™equals()æ–¹æ³•ï¼Œæä¾›è‡ªå®šä¹‰çš„ç›¸ç­‰æ ‡å‡†
     public boolean equals(Object obj) {
-        // Èç¹ûÁ½¸ö¶ÔÏóÎªÍ¬Ò»¸ö¶ÔÏó
+        // å¦‚æœä¸¤ä¸ªå¯¹è±¡ä¸ºåŒä¸€ä¸ªå¯¹è±¡
         if (this == obj)
             return true;
-        // Ö»ÓĞµ±objÊÇPerson¶ÔÏó
+        // åªæœ‰å½“objæ˜¯Personå¯¹è±¡
         if (obj != null && obj.getClass() == Person.class) {
             Person2 personObj = (Person2) obj;
-            // ²¢ÇÒµ±Ç°¶ÔÏóµÄidStrÓëobj¶ÔÏóµÄidStrÏàµÈ²Å¿ÉÅĞ¶ÏÁ½¸ö¶ÔÏóÏàµÈ
+            // å¹¶ä¸”å½“å‰å¯¹è±¡çš„idSträ¸objå¯¹è±¡çš„idStrç›¸ç­‰æ‰å¯åˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡ç›¸ç­‰
             if (this.getIdStr().equals(personObj.getIdStr())) {
                 return true;
             }
@@ -51,14 +51,14 @@ class Person2 {
 
 public class OverrideEqualsRight {
     public static void main(String[] args) {
-        Person2 p1 = new Person2("ËïÎò¿Õ", "12343433433");
-        Person2 p2 = new Person2("ËïĞĞÕß", "12343433433");
-        Person2 p3 = new Person2("ËïÎò·¹", "99933433");
-        // p1ºÍp2µÄidStrÏàµÈ£¬ËùÒÔÊä³ötrue
-        System.out.println("p1ºÍp2ÊÇ·ñÏàµÈ£¿"
+        Person2 p1 = new Person2("å­™æ‚Ÿç©º", "12343433433");
+        Person2 p2 = new Person2("å­™è¡Œè€…", "12343433433");
+        Person2 p3 = new Person2("å­™æ‚Ÿé¥­", "99933433");
+        // p1å’Œp2çš„idStrç›¸ç­‰ï¼Œæ‰€ä»¥è¾“å‡ºtrue
+        System.out.println("p1å’Œp2æ˜¯å¦ç›¸ç­‰ï¼Ÿ"
                 + p1.equals(p2));
-        // p2ºÍp3µÄidStr²»ÏàµÈ£¬ËùÒÔÊä³öfalse
-        System.out.println("p2ºÍp3ÊÇ·ñÏàµÈ£¿"
+        // p2å’Œp3çš„idSträ¸ç›¸ç­‰ï¼Œæ‰€ä»¥è¾“å‡ºfalse
+        System.out.println("p2å’Œp3æ˜¯å¦ç›¸ç­‰ï¼Ÿ"
                 + p2.equals(p3));
     }
 }

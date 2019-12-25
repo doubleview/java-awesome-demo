@@ -2,23 +2,23 @@ package objects.method;
 
 public class OverloadVarargs {
     public void test(String msg) {
-        System.out.println("Ö»ÓĞÒ»¸ö×Ö·û´®²ÎÊıµÄtest·½·¨ ");
+        System.out.println("åªæœ‰ä¸€ä¸ªå­—ç¬¦ä¸²å‚æ•°çš„testæ–¹æ³• ");
     }
 
-    // ÒòÎªÇ°ÃæÒÑ¾­ÓĞÁËÒ»¸ötest()·½·¨£¬test()·½·¨ÀïÓĞÒ»¸ö×Ö·û´®²ÎÊı¡£
-    // ´Ë´¦µÄ³¤¶È¿É±äĞÎ²ÎÀï²»°üº¬Ò»¸ö×Ö·û´®²ÎÊıµÄĞÎÊ½
+    // å› ä¸ºå‰é¢å·²ç»æœ‰äº†ä¸€ä¸ªtest()æ–¹æ³•ï¼Œtest()æ–¹æ³•é‡Œæœ‰ä¸€ä¸ªå­—ç¬¦ä¸²å‚æ•°ã€‚
+    // æ­¤å¤„çš„é•¿åº¦å¯å˜å½¢å‚é‡Œä¸åŒ…å«ä¸€ä¸ªå­—ç¬¦ä¸²å‚æ•°çš„å½¢å¼
     public void test(String... books) {
-        System.out.println("****ĞÎ²Î³¤¶È¿É±äµÄtest·½·¨****");
+        System.out.println("****å½¢å‚é•¿åº¦å¯å˜çš„testæ–¹æ³•****");
     }
 
     public static void main(String[] args) {
         OverloadVarargs olv = new OverloadVarargs();
-        // ÏÂÃæÁ½´Îµ÷ÓÃ½«Ö´ĞĞµÚ¶ş¸ötest()·½·¨
+        // ä¸‹é¢ä¸¤æ¬¡è°ƒç”¨å°†æ‰§è¡Œç¬¬äºŒä¸ªtest()æ–¹æ³•
         olv.test();
         olv.test("aa", "bb");
-        // ÏÂÃæ½«Ö´ĞĞµÚÒ»¸ötest()·½·¨
+        // ä¸‹é¢å°†æ‰§è¡Œç¬¬ä¸€ä¸ªtest()æ–¹æ³•
         olv.test("aa");
-        // ÏÂÃæµ÷ÓÃ½«Ö´ĞĞµÚ¶ş¸ötest()·½·¨
+        // ä¸‹é¢è°ƒç”¨å°†æ‰§è¡Œç¬¬äºŒä¸ªtest()æ–¹æ³•
         olv.test(new String[]{"aa"});
     }
 }

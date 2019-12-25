@@ -5,30 +5,30 @@ import java.util.concurrent.FutureTask;
 
 public class ThirdThread {
     public static void main(String[] args) {
-        // ´´½¨Callable¶ÔÏó
+        // åˆ›å»ºCallableå¯¹è±¡
         ThirdThread rt = new ThirdThread();
-        // ÏÈÊ¹ÓÃLambda±í´ïÊ½´´½¨Callable<Integer>¶ÔÏó
-        // Ê¹ÓÃFutureTaskÀ´°ü×°Callable¶ÔÏó
+        // å…ˆä½¿ç”¨Lambdaè¡¨è¾¾å¼åˆ›å»ºCallable<Integer>å¯¹è±¡
+        // ä½¿ç”¨FutureTaskæ¥åŒ…è£…Callableå¯¹è±¡
         FutureTask<Integer> task = new FutureTask<Integer>(() -> {
             int i = 0;
             for (; i < 100; i++) {
                 System.out.println(Thread.currentThread().getName()
-                        + " µÄÑ­»·±äÁ¿iµÄÖµ£º" + i);
+                        + " çš„å¾ªç¯å˜é‡içš„å€¼ï¼š" + i);
             }
-            // call()·½·¨¿ÉÒÔÓĞ·µ»ØÖµ
+            // call()æ–¹æ³•å¯ä»¥æœ‰è¿”å›å€¼
             return i;
         });
         for (int i = 0; i < 100; i++) {
             System.out.println(Thread.currentThread().getName()
-                    + " µÄÑ­»·±äÁ¿iµÄÖµ£º" + i);
+                    + " çš„å¾ªç¯å˜é‡içš„å€¼ï¼š" + i);
             if (i == 20) {
-                // ÊµÖÊ»¹ÊÇÒÔCallable¶ÔÏóÀ´´´½¨¡¢²¢Æô¶¯Ïß³Ì
-                new Thread(task, "ÓĞ·µ»ØÖµµÄÏß³Ì").start();
+                // å®è´¨è¿˜æ˜¯ä»¥Callableå¯¹è±¡æ¥åˆ›å»ºã€å¹¶å¯åŠ¨çº¿ç¨‹
+                new Thread(task, "æœ‰è¿”å›å€¼çš„çº¿ç¨‹").start();
             }
         }
         try {
-            // »ñÈ¡Ïß³Ì·µ»ØÖµ
-            System.out.println("×ÓÏß³ÌµÄ·µ»ØÖµ£º" + task.get());
+            // è·å–çº¿ç¨‹è¿”å›å€¼
+            System.out.println("å­çº¿ç¨‹çš„è¿”å›å€¼ï¼š" + task.get());
         } catch (Exception ex) {
             ex.printStackTrace();
         }

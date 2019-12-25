@@ -11,7 +11,7 @@ public class StringReg {
                         "Java represses oracular expressions"
                 };
         for (String msg : msgs) {
-            System.out.println(msg.replaceFirst("re\\w*", "¹ş¹ş:)"));
+            System.out.println(msg.replaceFirst("re\\w*", "éå æ±:)"));
             System.out.println(Arrays.toString(msg.split(" ")));
         }
     }

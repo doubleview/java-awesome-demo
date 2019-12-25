@@ -11,24 +11,24 @@ import java.nio.charset.CharsetDecoder;
 public class ReadFile {
     public static void main(String[] args) throws IOException {
         try (
-                // ´´½¨ÎÄ¼şÊäÈëÁ÷
+                // åˆ›å»ºæ–‡ä»¶è¾“å…¥æµ
                 FileInputStream fis = new FileInputStream("ReadFile.java");
-                // ´´½¨Ò»¸öFileChannel
-                FileChannel fcin = fis.getChannel()) {//ÓÃÓÚÖØ¸´È¡Ë®
-            // ¶¨ÒåÒ»¸öByteBuffer¶ÔÏó£¬
+                // åˆ›å»ºä¸€ä¸ªFileChannel
+                FileChannel fcin = fis.getChannel()) {//ç”¨äºé‡å¤å–æ°´
+            // å®šä¹‰ä¸€ä¸ªByteBufferå¯¹è±¡ï¼Œ
             ByteBuffer bbuff = ByteBuffer.allocate(256);
-            // ½«FileChannelÖĞÊı¾İ·ÅÈëByteBufferÖĞ
+            // å°†FileChannelä¸­æ•°æ®æ”¾å…¥ByteBufferä¸­
             while (fcin.read(bbuff) != -1) {
-                // Ëø¶¨BufferµÄ¿Õ°×Çø
+                // é”å®šBufferçš„ç©ºç™½åŒº
                 bbuff.flip();
-                // ´´½¨Charset¶ÔÏó
+                // åˆ›å»ºCharsetå¯¹è±¡
                 Charset charset = Charset.forName("GBK");
-                // ´´½¨½âÂëÆ÷(CharsetDecoder)¶ÔÏó
+                // åˆ›å»ºè§£ç å™¨(CharsetDecoder)å¯¹è±¡
                 CharsetDecoder decoder = charset.newDecoder();
-                // ½«ByteBufferµÄÄÚÈİ×ªÂë
+                // å°†ByteBufferçš„å†…å®¹è½¬ç 
                 CharBuffer cbuff = decoder.decode(bbuff);
                 System.out.print(cbuff);
-                // ½«Buffer³õÊ¼»¯£¬ÎªÏÂÒ»´Î¶ÁÈ¡Êı¾İ×ö×¼±¸
+                // å°†Bufferåˆå§‹åŒ–ï¼Œä¸ºä¸‹ä¸€æ¬¡è¯»å–æ•°æ®åšå‡†å¤‡
                 bbuff.clear();
             }
         }

@@ -9,15 +9,15 @@ class Foo {
 
 public class GenericConstructor {
     public static void main(String[] args) {
-        // ·ºÐÍ¹¹ÔìÆ÷ÖÐµÄT²ÎÊýÎªString¡£
-        new Foo("Java¿ª·¢");
-        // ·ºÐÍ¹¹ÔìÆ÷ÖÐµÄT²ÎÊýÎªInteger¡£
+        // æ³›åž‹æž„é€ å™¨ä¸­çš„Tå‚æ•°ä¸ºStringã€‚
+        new Foo("Javaå¼€å‘");
+        // æ³›åž‹æž„é€ å™¨ä¸­çš„Tå‚æ•°ä¸ºIntegerã€‚
         new Foo(200);
-        // ÏÔÊ½Ö¸¶¨·ºÐÍ¹¹ÔìÆ÷ÖÐµÄT²ÎÊýÎªString£¬
-        // ´«¸øFoo¹¹ÔìÆ÷µÄÊµ²ÎÒ²ÊÇString¶ÔÏó£¬ÍêÈ«ÕýÈ·¡£
-        new <String>Foo("Android¿ª·¢");
-        // ÏÔÊ½Ö¸¶¨·ºÐÍ¹¹ÔìÆ÷ÖÐµÄT²ÎÊýÎªString£¬
-        // µ«´«¸øFoo¹¹ÔìÆ÷µÄÊµ²ÎÊÇDouble¶ÔÏó£¬ÏÂÃæ´úÂë³ö´í
+        // æ˜¾å¼æŒ‡å®šæ³›åž‹æž„é€ å™¨ä¸­çš„Tå‚æ•°ä¸ºStringï¼Œ
+        // ä¼ ç»™Fooæž„é€ å™¨çš„å®žå‚ä¹Ÿæ˜¯Stringå¯¹è±¡ï¼Œå®Œå…¨æ­£ç¡®ã€‚
+        new <String>Foo("Androidå¼€å‘");
+        // æ˜¾å¼æŒ‡å®šæ³›åž‹æž„é€ å™¨ä¸­çš„Tå‚æ•°ä¸ºStringï¼Œ
+        // ä½†ä¼ ç»™Fooæž„é€ å™¨çš„å®žå‚æ˜¯Doubleå¯¹è±¡ï¼Œä¸‹é¢ä»£ç å‡ºé”™
         //new <String>Foo(12.3);
     }
 }

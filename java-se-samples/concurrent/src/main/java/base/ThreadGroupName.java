@@ -1,7 +1,7 @@
 package base;
 
 /**
- * 线程组的用法
+ * 绾跨▼缁勭殑鐢ㄦ硶
  */
 public class ThreadGroupName implements Runnable {
 

@@ -9,8 +9,8 @@ public class SleepTest {
 
     {
         for (int i = 0; i < 10; i++) {
-            System.out.println("µ±Ç°Ê±¼ä: " + new Date());
-            // µ÷ÓÃsleep·½·¨ÈÃµ±Ç°Ïß³ÌÔÝÍ£1s¡£
+            System.out.println("å½“å‰æ—¶é—´: " + new Date());
+            // è°ƒç”¨sleepæ–¹æ³•è®©å½“å‰çº¿ç¨‹æš‚åœ1sã€‚
             Thread.sleep(1000);
         }
     }

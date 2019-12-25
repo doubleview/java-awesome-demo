@@ -8,8 +8,8 @@ class Err {
 public class TreeSetErrorTest {
     public static void main(String[] args) {
         TreeSet ts = new TreeSet();
-        // ÏòTreeSet¼¯ºÏÖĞÌí¼ÓÁ½¸öErr¶ÔÏó
+        // å‘TreeSeté›†åˆä¸­æ·»åŠ ä¸¤ä¸ªErrå¯¹è±¡
         ts.add(new Err());
-        ts.add(new Err());  //¢Ù
+        ts.add(new Err());  //â‘ 
     }
 }

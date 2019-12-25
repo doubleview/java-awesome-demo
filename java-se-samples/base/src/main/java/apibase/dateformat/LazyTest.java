@@ -9,13 +9,13 @@ public class LazyTest {
     public static void main(String[] args) {
         Calendar cal = Calendar.getInstance();
         cal.set(2003, 7, 31);  //2003-8-31
-        // ½«ÔÂ·İÉèÎª9£¬µ«9ÔÂ31ÈÕ²»´æÔÚ¡£
-        // c£¬ÏµÍ³½«»á°Ñcal×Ô¶¯µ÷Õûµ½10ÔÂ1ÈÕ¡£
+        // å°†æœˆä»½è®¾ä¸º9ï¼Œä½†9æœˆ31æ—¥ä¸å­˜åœ¨ã€‚
+        // cï¼Œç³»ç»Ÿå°†ä¼šæŠŠcalè‡ªåŠ¨è°ƒæ•´åˆ°10æœˆ1æ—¥ã€‚
         cal.set(MONTH, 8);
-        // ÏÂÃæ´úÂëÊä³ö10ÔÂ1ÈÕ
-        System.out.println(cal.getTime());    //¢Ù
-        // ÉèÖÃDATE×Ö¶ÎÎª5
-        cal.set(DATE, 5);    //¢Ú
-        System.out.println(cal.getTime());    //¢Û
+        // ä¸‹é¢ä»£ç è¾“å‡º10æœˆ1æ—¥
+        System.out.println(cal.getTime());    //â‘ 
+        // è®¾ç½®DATEå­—æ®µä¸º5
+        cal.set(DATE, 5);    //â‘¡
+        System.out.println(cal.getTime());    //â‘¢
     }
 }

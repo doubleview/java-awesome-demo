@@ -16,12 +16,14 @@
         <module>velocity</module>
         <module>json</module>
         <module>guava</module>
-        <module>netty</module>
         <module>rxjava</module>
         <module>netty</module>
         <module>cglib</module>
         <module>hystrix</module>
         <module>spring</module>
+        <module>lucene</module>
+        <module>apache-commons</module>
+        <module>zookeeper</module>
     </modules>
 
     <properties>
@@ -34,6 +36,17 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>compile</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
         </dependency>
     </dependencies>
 

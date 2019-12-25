@@ -5,20 +5,20 @@ import java.util.WeakHashMap;
 public class WeakHashMapTest {
     public static void main(String[] args) {
         WeakHashMap whm = new WeakHashMap();
-        // ½«WeakHashMapÖĞÌí¼ÓÈı¸ökey-value¶Ô£¬
-        // Èı¸ökey¶¼ÊÇÄäÃû×Ö·û´®¶ÔÏó£¨Ã»ÓĞÆäËûÒıÓÃ£©
-        whm.put(new String("ÓïÎÄ"), new String("Á¼ºÃ"));
-        whm.put(new String("ÊıÑ§"), new String("¼°¸ñ"));
-        whm.put(new String("Ó¢ÎÄ"), new String("ÖĞµÈ"));
-        //½« WeakHashMapÖĞÌí¼ÓÒ»¸ökey-value¶Ô£¬
-        // ¸ÃkeyÊÇÒ»¸öÏµÍ³»º´æµÄ×Ö·û´®¶ÔÏó¡£
-        whm.put("java", new String("ÖĞµÈ"));    // ¢Ù
-        // Êä³öwhm¶ÔÏó£¬½«¿´µ½4¸ökey-value¶Ô¡£
+        // å°†WeakHashMapä¸­æ·»åŠ ä¸‰ä¸ªkey-valueå¯¹ï¼Œ
+        // ä¸‰ä¸ªkeyéƒ½æ˜¯åŒ¿åå­—ç¬¦ä¸²å¯¹è±¡ï¼ˆæ²¡æœ‰å…¶ä»–å¼•ç”¨ï¼‰
+        whm.put(new String("è¯­æ–‡"), new String("è‰¯å¥½"));
+        whm.put(new String("æ•°å­¦"), new String("åŠæ ¼"));
+        whm.put(new String("è‹±æ–‡"), new String("ä¸­ç­‰"));
+        //å°† WeakHashMapä¸­æ·»åŠ ä¸€ä¸ªkey-valueå¯¹ï¼Œ
+        // è¯¥keyæ˜¯ä¸€ä¸ªç³»ç»Ÿç¼“å­˜çš„å­—ç¬¦ä¸²å¯¹è±¡ã€‚
+        whm.put("java", new String("ä¸­ç­‰"));    // â‘ 
+        // è¾“å‡ºwhmå¯¹è±¡ï¼Œå°†çœ‹åˆ°4ä¸ªkey-valueå¯¹ã€‚
         System.out.println(whm);
-        // Í¨ÖªÏµÍ³Á¢¼´½øĞĞÀ¬»ø»ØÊÕ
+        // é€šçŸ¥ç³»ç»Ÿç«‹å³è¿›è¡Œåƒåœ¾å›æ”¶
         System.gc();
         System.runFinalization();
-        // Í¨³£Çé¿öÏÂ£¬½«Ö»¿´µ½Ò»¸ökey-value¶Ô¡£
+        // é€šå¸¸æƒ…å†µä¸‹ï¼Œå°†åªçœ‹åˆ°ä¸€ä¸ªkey-valueå¯¹ã€‚
         System.out.println(whm);
     }
 }

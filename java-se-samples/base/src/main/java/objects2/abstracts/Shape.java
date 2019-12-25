@@ -3,28 +3,28 @@ package objects2.abstracts;
 
 public abstract class Shape {
     {
-        System.out.println("Ö´ĞĞShapeµÄ³õÊ¼»¯¿é...");
+        System.out.println("æ‰§è¡ŒShapeçš„åˆå§‹åŒ–å—...");
     }
 
     private String color;
 
-    // ¶¨ÒåÒ»¸ö¼ÆËãÖÜ³¤µÄ³éÏó·½·¨
+    // å®šä¹‰ä¸€ä¸ªè®¡ç®—å‘¨é•¿çš„æŠ½è±¡æ–¹æ³•
     public abstract double calPerimeter();
 
-    // ¶¨ÒåÒ»¸ö·µ»ØĞÎ×´µÄ³éÏó·½·¨
+    // å®šä¹‰ä¸€ä¸ªè¿”å›å½¢çŠ¶çš„æŠ½è±¡æ–¹æ³•
     public abstract String getType();
 
-    // ¶¨ÒåShapeµÄ¹¹ÔìÆ÷£¬¸Ã¹¹ÔìÆ÷²¢²»ÊÇÓÃÓÚ´´½¨Shape¶ÔÏó£¬
-    // ¶øÊÇÓÃÓÚ±»×ÓÀàµ÷ÓÃ
+    // å®šä¹‰Shapeçš„æ„é€ å™¨ï¼Œè¯¥æ„é€ å™¨å¹¶ä¸æ˜¯ç”¨äºåˆ›å»ºShapeå¯¹è±¡ï¼Œ
+    // è€Œæ˜¯ç”¨äºè¢«å­ç±»è°ƒç”¨
     public Shape() {
     }
 
     public Shape(String color) {
-        System.out.println("Ö´ĞĞShapeµÄ¹¹ÔìÆ÷...");
+        System.out.println("æ‰§è¡ŒShapeçš„æ„é€ å™¨...");
         this.color = color;
     }
 
-    // Ê¡ÂÔcolorµÄsetterºÍgetter·½·¨
+    // çœç•¥colorçš„setterå’Œgetteræ–¹æ³•
     public void setColor(String color) {
         this.color = color;
     }

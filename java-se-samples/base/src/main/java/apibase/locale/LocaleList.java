@@ -4,11 +4,11 @@ import java.util.Locale;
 
 public class LocaleList {
     public static void main(String[] args) {
-        // ·µ»ØJavaËùÖ§³ÖµÄÈ«²¿¹ú¼ÒºÍÓïÑÔµÄÊı×é
+        // è¿”å›Javaæ‰€æ”¯æŒçš„å…¨éƒ¨å›½å®¶å’Œè¯­è¨€çš„æ•°ç»„
         Locale[] localeList = Locale.getAvailableLocales();
-        // ±éÀúÊı×éµÄÃ¿¸öÔªËØ£¬ÒÀ´Î»ñÈ¡ËùÖ§³ÖµÄ¹ú¼ÒºÍÓïÑÔ
+        // éå†æ•°ç»„çš„æ¯ä¸ªå…ƒç´ ï¼Œä¾æ¬¡è·å–æ‰€æ”¯æŒçš„å›½å®¶å’Œè¯­è¨€
         for (int i = 0; i < localeList.length; i++) {
-            // Êä³ö³öËùÖ§³ÖµÄ¹ú¼ÒºÍÓïÑÔ
+            // è¾“å‡ºå‡ºæ‰€æ”¯æŒçš„å›½å®¶å’Œè¯­è¨€
             System.out.println(localeList[i].getDisplayCountry()
                     + "=" + localeList[i].getCountry() + " "
                     + localeList[i].getDisplayLanguage()

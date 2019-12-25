@@ -10,12 +10,12 @@ public class ErrorUtils {
 
 
     public static void faultyMethod(List<String>... listStrArray) {
-        // JavaÓïÑÔ²»ÔÊĞí´´½¨·ºĞÍÊı×é£¬Òò´ËlistArrayÖ»ÄÜ±»µ±³ÉList[]´¦Àí
-        // ´ËÊ±Ïàµ±ÓÚ°ÑList<String>¸³¸øÁËList£¬ÒÑ¾­·¢ÉúÁË¡°²Á³ı¡±
+        // Javaè¯­è¨€ä¸å…è®¸åˆ›å»ºæ³›å‹æ•°ç»„ï¼Œå› æ­¤listArrayåªèƒ½è¢«å½“æˆList[]å¤„ç†
+        // æ­¤æ—¶ç›¸å½“äºæŠŠList<String>èµ‹ç»™äº†Listï¼Œå·²ç»å‘ç”Ÿäº†â€œæ“¦é™¤â€
         List[] listArray = listStrArray;
         List<Integer> myList = new ArrayList<>();
         myList.add(new Random().nextInt(100));
-        // °ÑlistArrayµÄµÚÒ»¸öÔªËØ¸³ÎªmyList
+        // æŠŠlistArrayçš„ç¬¬ä¸€ä¸ªå…ƒç´ èµ‹ä¸ºmyList
         listArray[0] = myList;
         Integer i = (Integer) listArray[0].get(0);
         System.out.println(i);

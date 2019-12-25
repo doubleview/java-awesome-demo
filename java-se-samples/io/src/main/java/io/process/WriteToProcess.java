@@ -7,34 +7,34 @@ import java.util.Scanner;
 
 public class WriteToProcess {
     public static void main(String[] args) throws IOException {
-        // ÔËĞĞjava ReadStandardÃüÁî£¬·µ»ØÔËĞĞ¸ÃÃüÁîµÄ×Ó½ø³Ì
+        // è¿è¡Œjava ReadStandardå‘½ä»¤ï¼Œè¿”å›è¿è¡Œè¯¥å‘½ä»¤çš„å­è¿›ç¨‹
         Process p = Runtime.getRuntime().exec("java ReadStandard");
         try (
-                // ÒÔp½ø³ÌµÄÊä³öÁ÷´´½¨PrintStream¶ÔÏó
-                // Õâ¸öÊä³öÁ÷¶Ô±¾³ÌĞòÊÇÊä³öÁ÷£¬¶Ôp½ø³ÌÔòÊÇÊäÈëÁ÷
+                // ä»¥pè¿›ç¨‹çš„è¾“å‡ºæµåˆ›å»ºPrintStreamå¯¹è±¡
+                // è¿™ä¸ªè¾“å‡ºæµå¯¹æœ¬ç¨‹åºæ˜¯è¾“å‡ºæµï¼Œå¯¹pè¿›ç¨‹åˆ™æ˜¯è¾“å…¥æµ
                 PrintStream ps = new PrintStream(p.getOutputStream())) {
-            // ÏòReadStandard³ÌĞòĞ´ÈëÄÚÈİ£¬ÕâĞ©ÄÚÈİ½«±»ReadStandard¶ÁÈ¡
-            ps.println("ÆÕÍ¨×Ö·û´®");
+            // å‘ReadStandardç¨‹åºå†™å…¥å†…å®¹ï¼Œè¿™äº›å†…å®¹å°†è¢«ReadStandardè¯»å–
+            ps.println("æ™®é€šå­—ç¬¦ä¸²");
             ps.println(new WriteToProcess());
         }
     }
 }
 
-// ¶¨ÒåÒ»¸öReadStandardÀà£¬¸ÃÀà¿ÉÒÔ½ÓÊÜ±ê×¼ÊäÈë£¬
-// ²¢½«±ê×¼ÊäÈëĞ´Èëout.txtÎÄ¼ş¡£
+// å®šä¹‰ä¸€ä¸ªReadStandardç±»ï¼Œè¯¥ç±»å¯ä»¥æ¥å—æ ‡å‡†è¾“å…¥ï¼Œ
+// å¹¶å°†æ ‡å‡†è¾“å…¥å†™å…¥out.txtæ–‡ä»¶ã€‚
 class ReadStandard {
     public static void main(String[] args) {
         try (
-                // Ê¹ÓÃSystem.in´´½¨Scanner¶ÔÏó£¬ÓÃÓÚ»ñÈ¡±ê×¼ÊäÈë
+                // ä½¿ç”¨System.inåˆ›å»ºScannerå¯¹è±¡ï¼Œç”¨äºè·å–æ ‡å‡†è¾“å…¥
                 Scanner sc = new Scanner(System.in);
                 PrintStream ps = new PrintStream(
                         new FileOutputStream("out.txt"))) {
-            // Ôö¼ÓÏÂÃæÒ»ĞĞ½«Ö»°Ñ»Ø³µ×÷Îª·Ö¸ô·û
+            // å¢åŠ ä¸‹é¢ä¸€è¡Œå°†åªæŠŠå›è½¦ä½œä¸ºåˆ†éš”ç¬¦
             sc.useDelimiter("\n");
-            // ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÊäÈëÏî
+            // åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä¸ªè¾“å…¥é¡¹
             while (sc.hasNext()) {
-                // Êä³öÊäÈëÏî
-                ps.println("¼üÅÌÊäÈëµÄÄÚÈİÊÇ£º" + sc.next());
+                // è¾“å‡ºè¾“å…¥é¡¹
+                ps.println("é”®ç›˜è¾“å…¥çš„å†…å®¹æ˜¯ï¼š" + sc.next());
             }
         } catch (IOException ioe) {
             ioe.printStackTrace();

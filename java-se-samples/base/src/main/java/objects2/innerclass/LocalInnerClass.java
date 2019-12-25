@@ -3,19 +3,19 @@ package objects2.innerclass;
 
 public class LocalInnerClass {
     public static void main(String[] args) {
-        // ¶¨Òå¾Ö²¿ÄÚ²¿Àà
+        // å®šä¹‰å±€éƒ¨å†…éƒ¨ç±»
         class InnerBase {
             int a;
         }
-        // ¶¨Òå¾Ö²¿ÄÚ²¿ÀàµÄ×ÓÀà
+        // å®šä¹‰å±€éƒ¨å†…éƒ¨ç±»çš„å­ç±»
         class InnerSub extends InnerBase {
             int b;
         }
-        // ´´½¨¾Ö²¿ÄÚ²¿ÀàµÄ¶ÔÏó
+        // åˆ›å»ºå±€éƒ¨å†…éƒ¨ç±»çš„å¯¹è±¡
         InnerSub is = new InnerSub();
         is.a = 5;
         is.b = 8;
-        System.out.println("InnerSub¶ÔÏóµÄaºÍbÊµÀı±äÁ¿ÊÇ£º"
+        System.out.println("InnerSubå¯¹è±¡çš„aå’Œbå®ä¾‹å˜é‡æ˜¯ï¼š"
                 + is.a + "," + is.b);
     }
 }

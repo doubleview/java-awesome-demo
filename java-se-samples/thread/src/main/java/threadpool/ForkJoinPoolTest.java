@@ -4,14 +4,14 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.TimeUnit;
 
-// ¼Ì³ĞRecursiveActionÀ´ÊµÏÖ"¿É·Ö½â"µÄÈÎÎñ
+// ç»§æ‰¿RecursiveActionæ¥å®ç°"å¯åˆ†è§£"çš„ä»»åŠ¡
 class PrintTask extends RecursiveAction {
-    // Ã¿¸ö¡°Ğ¡ÈÎÎñ¡±Ö»×î¶àÖ»´òÓ¡50¸öÊı
+    // æ¯ä¸ªâ€œå°ä»»åŠ¡â€åªæœ€å¤šåªæ‰“å°50ä¸ªæ•°
     private static final int THRESHOLD = 50;
     private int start;
     private int end;
 
-    // ´òÓ¡´Óstartµ½endµÄÈÎÎñ
+    // æ‰“å°ä»startåˆ°endçš„ä»»åŠ¡
     public PrintTask(int start, int end) {
         this.start = start;
         this.end = end;
@@ -19,19 +19,19 @@ class PrintTask extends RecursiveAction {
 
     @Override
     protected void compute() {
-        // µ±endÓëstartÖ®¼äµÄ²îĞ¡ÓÚTHRESHOLDÊ±£¬¿ªÊ¼´òÓ¡
+        // å½“endä¸startä¹‹é—´çš„å·®å°äºTHRESHOLDæ—¶ï¼Œå¼€å§‹æ‰“å°
         if (end - start < THRESHOLD) {
             for (int i = start; i < end; i++) {
                 System.out.println(Thread.currentThread().getName()
-                        + "µÄiÖµ£º" + i);
+                        + "çš„iå€¼ï¼š" + i);
             }
         } else {
-            // Èç¹ûµ±endÓëstartÖ®¼äµÄ²î´óÓÚTHRESHOLDÊ±£¬¼´Òª´òÓ¡µÄÊı³¬¹ı50¸ö
-            // ½«´óÈÎÎñ·Ö½â³ÉÁ½¸öĞ¡ÈÎÎñ¡£
+            // å¦‚æœå½“endä¸startä¹‹é—´çš„å·®å¤§äºTHRESHOLDæ—¶ï¼Œå³è¦æ‰“å°çš„æ•°è¶…è¿‡50ä¸ª
+            // å°†å¤§ä»»åŠ¡åˆ†è§£æˆä¸¤ä¸ªå°ä»»åŠ¡ã€‚
             int middle = (start + end) / 2;
             PrintTask left = new PrintTask(start, middle);
             PrintTask right = new PrintTask(middle, end);
-            // ²¢ĞĞÖ´ĞĞÁ½¸ö¡°Ğ¡ÈÎÎñ¡±
+            // å¹¶è¡Œæ‰§è¡Œä¸¤ä¸ªâ€œå°ä»»åŠ¡â€
             left.fork();
             right.fork();
         }
@@ -41,10 +41,10 @@ class PrintTask extends RecursiveAction {
 public class ForkJoinPoolTest {
     public static void main(String[] args) throws Exception {
         ForkJoinPool pool = new ForkJoinPool();
-        // Ìá½»¿É·Ö½âµÄPrintTaskÈÎÎñ
+        // æäº¤å¯åˆ†è§£çš„PrintTaskä»»åŠ¡
         pool.submit(new PrintTask(0, 300));
         pool.awaitTermination(2, TimeUnit.SECONDS);
-        // ¹Ø±ÕÏß³Ì³Ø
+        // å…³é—­çº¿ç¨‹æ± 
         pool.shutdown();
     }
 }

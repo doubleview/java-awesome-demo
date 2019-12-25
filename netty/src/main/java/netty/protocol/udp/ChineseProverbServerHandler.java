@@ -27,8 +27,7 @@ import io.netty.util.internal.ThreadLocalRandom;
  * @version 1.0
  * @date 2014年2月14日
  */
-public class ChineseProverbServerHandler extends
-    SimpleChannelInboundHandler<DatagramPacket> {
+public class ChineseProverbServerHandler extends SimpleChannelInboundHandler<DatagramPacket> {
 
     // 谚语列表
     private static final String[] DICTIONARY = {"只要功夫深，铁棒磨成针。",
@@ -41,20 +40,16 @@ public class ChineseProverbServerHandler extends
     }
 
     @Override
-    public void messageReceived(ChannelHandlerContext ctx, DatagramPacket packet)
-        throws Exception {
+    public void messageReceived(ChannelHandlerContext ctx, DatagramPacket packet) throws Exception {
         String req = packet.content().toString(CharsetUtil.UTF_8);
         System.out.println(req);
         if ("谚语字典查询?".equals(req)) {
-            ctx.writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer(
-                "谚语查询结果: " + nextQuote(), CharsetUtil.UTF_8), packet
-                .sender()));
+            ctx.writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer("谚语查询结果: " + nextQuote(), CharsetUtil.UTF_8), packet.sender()));
         }
     }
 
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
-        throws Exception {
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         ctx.close();
         cause.printStackTrace();
     }

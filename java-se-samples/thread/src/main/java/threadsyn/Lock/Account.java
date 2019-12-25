@@ -3,22 +3,22 @@ package threadsyn.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Account {
-    // ¶¨ÒåËø¶ÔÏó
+    // å®šä¹‰é”å¯¹è±¡
     private final ReentrantLock lock = new ReentrantLock();
-    // ·â×°ÕË»§±àºÅ¡¢ÕË»§Óà¶îµÄÁ½¸ö³ÉÔ±±äÁ¿
+    // å°è£…è´¦æˆ·ç¼–å·ã€è´¦æˆ·ä½™é¢çš„ä¸¤ä¸ªæˆå‘˜å˜é‡
     private String accountNo;
     private double balance;
 
     public Account() {
     }
 
-    // ¹¹ÔìÆ÷
+    // æ„é€ å™¨
     public Account(String accountNo, double balance) {
         this.accountNo = accountNo;
         this.balance = balance;
     }
 
-    // accountNoµÄsetterºÍgetter·½·¨
+    // accountNoçš„setterå’Œgetteræ–¹æ³•
     public void setAccountNo(String accountNo) {
         this.accountNo = accountNo;
     }
@@ -27,40 +27,40 @@ public class Account {
         return this.accountNo;
     }
 
-    // Òò´ËÕË»§Óà¶î²»ÔÊĞíËæ±ãĞŞ¸Ä£¬ËùÒÔÖ»ÎªbalanceÌá¹©getter·½·¨£¬
+    // å› æ­¤è´¦æˆ·ä½™é¢ä¸å…è®¸éšä¾¿ä¿®æ”¹ï¼Œæ‰€ä»¥åªä¸ºbalanceæä¾›getteræ–¹æ³•ï¼Œ
     public double getBalance() {
         return this.balance;
     }
 
-    // Ìá¹©Ò»¸öÏß³Ì°²È«draw()·½·¨À´Íê³ÉÈ¡Ç®²Ù×÷
+    // æä¾›ä¸€ä¸ªçº¿ç¨‹å®‰å…¨draw()æ–¹æ³•æ¥å®Œæˆå–é’±æ“ä½œ
     public void draw(double drawAmount) {
-        // ¼ÓËø
+        // åŠ é”
         lock.lock();
         try {
-            // ÕË»§Óà¶î´óÓÚÈ¡Ç®ÊıÄ¿
+            // è´¦æˆ·ä½™é¢å¤§äºå–é’±æ•°ç›®
             if (balance >= drawAmount) {
-                // ÍÂ³ö³®Æ±
+                // åå‡ºé’ç¥¨
                 System.out.println(Thread.currentThread().getName()
-                        + "È¡Ç®³É¹¦£¡ÍÂ³ö³®Æ±:" + drawAmount);
+                        + "å–é’±æˆåŠŸï¼åå‡ºé’ç¥¨:" + drawAmount);
                 try {
                     Thread.sleep(1);
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
-                // ĞŞ¸ÄÓà¶î
+                // ä¿®æ”¹ä½™é¢
                 balance -= drawAmount;
-                System.out.println("\tÓà¶îÎª: " + balance);
+                System.out.println("\tä½™é¢ä¸º: " + balance);
             } else {
                 System.out.println(Thread.currentThread().getName()
-                        + "È¡Ç®Ê§°Ü£¡Óà¶î²»×ã£¡");
+                        + "å–é’±å¤±è´¥ï¼ä½™é¢ä¸è¶³ï¼");
             }
         } finally {
-            // ĞŞ¸ÄÍê³É£¬ÊÍ·ÅËø
+            // ä¿®æ”¹å®Œæˆï¼Œé‡Šæ”¾é”
             lock.unlock();
         }
     }
 
-    // ÏÂÃæÁ½¸ö·½·¨¸ù¾İaccountNoÀ´ÖØĞ´hashCode()ºÍequals()·½·¨
+    // ä¸‹é¢ä¸¤ä¸ªæ–¹æ³•æ ¹æ®accountNoæ¥é‡å†™hashCode()å’Œequals()æ–¹æ³•
     public int hashCode() {
         return accountNo.hashCode();
     }

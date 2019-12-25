@@ -5,19 +5,19 @@ import java.util.ArrayDeque;
 public class ArrayDequeStack {
     public static void main(String[] args) {
         ArrayDeque stack = new ArrayDeque();
-        // ÒÀ´Î½«Èı¸öÔªËØpushÈë"Õ»"
-        stack.push("Java¿ª·¢");
-        stack.push("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-        stack.push("Android¿ª·¢");
-        // Êä³ö£º[Android¿ª·¢, ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½, Java¿ª·¢]
+        // ä¾æ¬¡å°†ä¸‰ä¸ªå…ƒç´ pushå…¥"æ ˆ"
+        stack.push("Javaå¼€å‘");
+        stack.push("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+        stack.push("Androidå¼€å‘");
+        // è¾“å‡ºï¼š[Androidå¼€å‘, è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜, Javaå¼€å‘]
         System.out.println(stack);
-        // ·ÃÎÊµÚÒ»¸öÔªËØ£¬µ«²¢²»½«Æäpop³ö"Õ»"£¬Êä³ö£ºAndroid¿ª·¢
+        // è®¿é—®ç¬¬ä¸€ä¸ªå…ƒç´ ï¼Œä½†å¹¶ä¸å°†å…¶popå‡º"æ ˆ"ï¼Œè¾“å‡ºï¼šAndroidå¼€å‘
         System.out.println(stack.peek());
-        // ÒÀÈ»Êä³ö£º[Android¿ª·¢, Java¿ª·¢, ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½]
+        // ä¾ç„¶è¾“å‡ºï¼š[Androidå¼€å‘, Javaå¼€å‘, è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜]
         System.out.println(stack);
-        // pop³öµÚÒ»¸öÔªËØ£¬Êä³ö£ºAndroid¿ª·¢
+        // popå‡ºç¬¬ä¸€ä¸ªå…ƒç´ ï¼Œè¾“å‡ºï¼šAndroidå¼€å‘
         System.out.println(stack.pop());
-        // Êä³ö£º[ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½, Java¿ª·¢]
+        // è¾“å‡ºï¼š[è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜, Javaå¼€å‘]
         System.out.println(stack);
     }
 }

@@ -1,18 +1,18 @@
 package base.threadgroup;
 
-// ¶¨Òå×Ô¼ºµÄÒì³£´¦ÀíÆ÷
+// å®šä¹‰è‡ªå·±çš„å¼‚å¸¸å¤„ç†å™¨
 class MyExHandler implements Thread.UncaughtExceptionHandler {
-    // ÊµÏÖuncaughtException·½·¨£¬¸Ã·½·¨½«´¦ÀíÏß³ÌµÄÎ´´¦ÀíÒì³£
+    // å®ç°uncaughtExceptionæ–¹æ³•ï¼Œè¯¥æ–¹æ³•å°†å¤„ç†çº¿ç¨‹çš„æœªå¤„ç†å¼‚å¸¸
     public void uncaughtException(Thread t, Throwable e) {
-        System.out.println(t + " Ïß³Ì³öÏÖÁËÒì³££º" + e);
+        System.out.println(t + " çº¿ç¨‹å‡ºç°äº†å¼‚å¸¸ï¼š" + e);
     }
 }
 
 public class ExHandler {
     public static void main(String[] args) {
-        // ÉèÖÃÖ÷Ïß³ÌµÄÒì³£´¦ÀíÆ÷
+        // è®¾ç½®ä¸»çº¿ç¨‹çš„å¼‚å¸¸å¤„ç†å™¨
         Thread.currentThread().setUncaughtExceptionHandler(new MyExHandler());
-        int a = 5 / 0;     // ¢Ù
-        System.out.println("³ÌĞòÕı³£½áÊø£¡");
+        int a = 5 / 0;     // â‘ 
+        System.out.println("ç¨‹åºæ­£å¸¸ç»“æŸï¼");
     }
 }

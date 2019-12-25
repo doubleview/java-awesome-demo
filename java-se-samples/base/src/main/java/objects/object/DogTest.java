@@ -3,9 +3,9 @@ package objects.object;
 
 public class DogTest {
     public static void main(String[] args) {
-        // ´´½¨Dog¶ÔÏó
+        // é’æ¶˜ç¼“Dogç€µç¡…è–„
         Dog dog = new Dog();
-        // µ÷ÓÃDog¶ÔÏóµÄrun()·½·¨
+        // ç’‹å†ªæ•¤Dogç€µç¡…è–„é¨å‰…un()é‚è§„ç¡¶
         dog.run();
     }
 }

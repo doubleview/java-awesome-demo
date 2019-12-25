@@ -6,7 +6,7 @@ public class Circle extends Shape {
     private double radius;
 
     {
-        System.out.println("Ö´ĞĞCircleµÄ³õÊ¼»¯¿é");
+        System.out.println("æ‰§è¡ŒCircleçš„åˆå§‹åŒ–å—");
     }
 
     public Circle(String color, double radius) {
@@ -18,19 +18,19 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    // ÖØĞ´ShapeÀàµÄµÄ¼ÆËãÖÜ³¤µÄ³éÏó·½·¨
+    // é‡å†™Shapeç±»çš„çš„è®¡ç®—å‘¨é•¿çš„æŠ½è±¡æ–¹æ³•
     public double calPerimeter() {
         return 2 * Math.PI * radius;
     }
 
-    // ÖØĞ´ShapeÀàµÄµÄ·µ»ØĞÎ×´µÄ³éÏó·½·¨
+    // é‡å†™Shapeç±»çš„çš„è¿”å›å½¢çŠ¶çš„æŠ½è±¡æ–¹æ³•
     public String getType() {
-        return getColor() + "Ô²ĞÎ";
+        return getColor() + "åœ†å½¢";
     }
 
     public static void main(String[] args) {
-        Shape s1 = new Triangle("ºÚÉ«", 3, 4, 5);
-        Shape s2 = new Circle("»ÆÉ«", 3);
+        Shape s1 = new Triangle("é»‘è‰²", 3, 4, 5);
+        Shape s2 = new Circle("é»„è‰²", 3);
         System.out.println(s1.getType());
         System.out.println(s1.calPerimeter());
         System.out.println(s2.getType());

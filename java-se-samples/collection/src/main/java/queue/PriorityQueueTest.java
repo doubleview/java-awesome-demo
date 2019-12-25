@@ -5,14 +5,14 @@ import java.util.PriorityQueue;
 public class PriorityQueueTest {
     public static void main(String[] args) {
         PriorityQueue pq = new PriorityQueue();
-        // ÏÂÃæ´úÂëÒÀ´ÎÏòpqÖĞ¼ÓÈëËÄ¸öÔªËØ
+        // ä¸‹é¢ä»£ç ä¾æ¬¡å‘pqä¸­åŠ å…¥å››ä¸ªå…ƒç´ 
         pq.offer(6);
         pq.offer(-3);
         pq.offer(20);
         pq.offer(18);
-        // Êä³öpq¶ÓÁĞ£¬²¢²»ÊÇ°´ÔªËØµÄ¼ÓÈëË³ĞòÅÅÁĞ
-        System.out.println(pq); // Êä³ö[-3, 6, 20, 18]
-        // ·ÃÎÊ¶ÓÁĞµÚÒ»¸öÔªËØ£¬ÆäÊµ¾ÍÊÇ¶ÓÁĞÖĞ×îĞ¡µÄÔªËØ£º-3
+        // è¾“å‡ºpqé˜Ÿåˆ—ï¼Œå¹¶ä¸æ˜¯æŒ‰å…ƒç´ çš„åŠ å…¥é¡ºåºæ’åˆ—
+        System.out.println(pq); // è¾“å‡º[-3, 6, 20, 18]
+        // è®¿é—®é˜Ÿåˆ—ç¬¬ä¸€ä¸ªå…ƒç´ ï¼Œå…¶å®å°±æ˜¯é˜Ÿåˆ—ä¸­æœ€å°çš„å…ƒç´ ï¼š-3
         System.out.println(pq.poll());
     }
 }

@@ -11,15 +11,15 @@ class A {
 public class ListTest2 {
     public static void main(String[] args) {
         List books = new ArrayList();
-        books.add(new String("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½"));
-        books.add(new String("·è¿ñJava½²Òå"));
-        books.add(new String("·è¿ñAndroid½²Òå"));
+        books.add(new String("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜"));
+        books.add(new String("ç–¯ç‹‚Javaè®²ä¹‰"));
+        books.add(new String("ç–¯ç‹‚Androidè®²ä¹‰"));
         System.out.println(books);
-        // É¾³ı¼¯ºÏÖĞA¶ÔÏó£¬½«µ¼ÖÂµÚÒ»¸öÔªËØ±»É¾³ı
-        books.remove(new A());     // ¢Ù
+        // åˆ é™¤é›†åˆä¸­Aå¯¹è±¡ï¼Œå°†å¯¼è‡´ç¬¬ä¸€ä¸ªå…ƒç´ è¢«åˆ é™¤
+        books.remove(new A());     // â‘ 
         System.out.println(books);
-        // É¾³ı¼¯ºÏÖĞA¶ÔÏó£¬ÔÙ´ÎÉ¾³ı¼¯ºÏÖĞµÚÒ»¸öÔªËØ
-        books.remove(new A());     // ¢Ú
+        // åˆ é™¤é›†åˆä¸­Aå¯¹è±¡ï¼Œå†æ¬¡åˆ é™¤é›†åˆä¸­ç¬¬ä¸€ä¸ªå…ƒç´ 
+        books.remove(new A());     // â‘¡
         System.out.println(books);
     }
 }

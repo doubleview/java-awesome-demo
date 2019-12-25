@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * ThreadLocal 实例
+ * ThreadLocal 瀹炰緥
  */
 public class ThreadLocalDemo implements Runnable {
 

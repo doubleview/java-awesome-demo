@@ -16,17 +16,17 @@ class MyUtil<E> {
 
 public class InferenceTest {
     public static void main(String[] args) {
-        // ¿ÉÒÔÍ¨¹ý·½·¨¸³ÖµµÄÄ¿±ê²ÎÊýÀ´ÍÆ¶ÏÀàÐÍ²ÎÊýÎªString
+        // å¯ä»¥é€šè¿‡æ–¹æ³•èµ‹å€¼çš„ç›®æ ‡å‚æ•°æ¥æŽ¨æ–­ç±»åž‹å‚æ•°ä¸ºString
         MyUtil<String> ls = MyUtil.nil();
-        // ÎÞÐèÊ¹ÓÃÏÂÃæÓï¾äÔÚµ÷ÓÃnil()·½·¨Ê±Ö¸¶¨ÀàÐÍ²ÎÊýµÄÀàÐÍ
+        // æ— éœ€ä½¿ç”¨ä¸‹é¢è¯­å¥åœ¨è°ƒç”¨nil()æ–¹æ³•æ—¶æŒ‡å®šç±»åž‹å‚æ•°çš„ç±»åž‹
         MyUtil<String> mu = MyUtil.nil();
-        // ¿Éµ÷ÓÃcons·½·¨ËùÐèµÄ²ÎÊýÀàÐÍÀ´ÍÆ¶ÏÀàÐÍ²ÎÊýÎªInteger
+        // å¯è°ƒç”¨consæ–¹æ³•æ‰€éœ€çš„å‚æ•°ç±»åž‹æ¥æŽ¨æ–­ç±»åž‹å‚æ•°ä¸ºInteger
         MyUtil.cons(42, MyUtil.nil());
-        // ÎÞÐèÊ¹ÓÃÏÂÃæÓï¾äÔÚµ÷ÓÃnil()·½·¨Ê±Ö¸¶¨ÀàÐÍ²ÎÊýµÄÀàÐÍ
+        // æ— éœ€ä½¿ç”¨ä¸‹é¢è¯­å¥åœ¨è°ƒç”¨nil()æ–¹æ³•æ—¶æŒ‡å®šç±»åž‹å‚æ•°çš„ç±»åž‹
         MyUtil.cons(42, MyUtil.nil());
 
-        // Ï£ÍûÏµÍ³ÄÜÍÆ¶Ï³öµ÷ÓÃnil()·½·¨ÀàÐÍ²ÎÊýÎªStringÀàÐÍ£¬
-        // µ«Êµ¼ÊÉÏJava 8ÒÀÈ»ÍÆ¶Ï²»³öÀ´£¬ËùÒÔÏÂÃæ´úÂë±¨´í
+        // å¸Œæœ›ç³»ç»Ÿèƒ½æŽ¨æ–­å‡ºè°ƒç”¨nil()æ–¹æ³•ç±»åž‹å‚æ•°ä¸ºStringç±»åž‹ï¼Œ
+        // ä½†å®žé™…ä¸ŠJava 8ä¾ç„¶æŽ¨æ–­ä¸å‡ºæ¥ï¼Œæ‰€ä»¥ä¸‹é¢ä»£ç æŠ¥é”™
 //		String s = MyUtil.nil().head();
         String s = MyUtil.<String>nil().head();
     }

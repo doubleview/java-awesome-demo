@@ -2,14 +2,14 @@ package objects2.innerclass;
 
 
 public class StaticTest {
-    // ����һ���Ǿ�̬���ڲ��࣬��һ������
+    // 定义一个非静态的内部类，是一个空类
     private class In {
     }
 
-    // �ⲿ��ľ�̬����
+    // 外部类的静态方法
     public static void main(String[] args) {
-        // ����������������쳣����Ϊ��̬��Ա��main()������
-        // �޷����ʷǾ�̬��Ա��In�ࣩ
+        // 下面代码引发编译异常，因为静态成员（main()方法）
+        // 无法访问非静态成员（In类）
         //new In();
     }
 }

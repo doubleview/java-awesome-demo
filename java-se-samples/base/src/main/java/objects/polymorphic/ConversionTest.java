@@ -7,19 +7,19 @@ public class ConversionTest {
         long l = (long) d;
         System.out.println(l);
         int in = 5;
-        // ÊÔÍ¼°ÑÒ»¸öÊýÖµÀàÐÍµÄ±äÁ¿×ª»»ÎªbooleanÀàÐÍ£¬ÏÂÃæ´úÂë±àÒë³ö´í
-        // ±àÒëÊ±ºò»áÌáÊ¾: ²»¿É×ª»»µÄÀàÐÍ
+        // è¯•å›¾æŠŠä¸€ä¸ªæ•°å€¼ç±»åž‹çš„å˜é‡è½¬æ¢ä¸ºbooleanç±»åž‹ï¼Œä¸‹é¢ä»£ç ç¼–è¯‘å‡ºé”™
+        // ç¼–è¯‘æ—¶å€™ä¼šæç¤º: ä¸å¯è½¬æ¢çš„ç±»åž‹
         // boolean b = (boolean)in;
         Object obj = "Hello";
-        // obj±äÁ¿µÄ±àÒëÀàÐÍÎªObject£¬ObjectÓëString´æÔÚ¼Ì³Ð¹ØÏµ£¬¿ÉÒÔÇ¿ÖÆÀàÐÍ×ª»»
-        // ¶øÇÒobj±äÁ¿Êµ¼ÊÉÏÀàÐÍÊÇStringÀàÐÍ£¬ËùÒÔÔËÐÐÊ±Ò²¿ÉÍ¨¹ý
+        // objå˜é‡çš„ç¼–è¯‘ç±»åž‹ä¸ºObjectï¼ŒObjectä¸ŽStringå­˜åœ¨ç»§æ‰¿å…³ç³»ï¼Œå¯ä»¥å¼ºåˆ¶ç±»åž‹è½¬æ¢
+        // è€Œä¸”objå˜é‡å®žé™…ä¸Šç±»åž‹æ˜¯Stringç±»åž‹ï¼Œæ‰€ä»¥è¿è¡Œæ—¶ä¹Ÿå¯é€šè¿‡
         String objStr = (String) obj;
         System.out.println(objStr);
-        // ¶¨ÒåÒ»¸öobjPri±äÁ¿£¬±àÒëÀàÐÍÎªObject£¬Êµ¼ÊÀàÐÍÎªInteger
+        // å®šä¹‰ä¸€ä¸ªobjPriå˜é‡ï¼Œç¼–è¯‘ç±»åž‹ä¸ºObjectï¼Œå®žé™…ç±»åž‹ä¸ºInteger
         Object objPri = new Integer(5);
-        // objPri±äÁ¿µÄ±àÒëÊ±ÀàÐÍÎªObject£¬objPriµÄÔËÐÐÊ±ÀàÐÍÎªInteger£¬ObjectÓëInteger´æÔÚ¼Ì³Ð¹ØÏµ
-        // ¿ÉÒÔÇ¿ÖÆÀàÐÍ×ª»»£¬¶øobjPri±äÁ¿Êµ¼ÊÉÏÀàÐÍÊÇIntegerÀàÐÍ£¬
-        // ËùÒÔÏÂÃæ´úÂëÔËÐÐÊ±Òý·¢ClassCastExceptionÒì³£
+        // objPriå˜é‡çš„ç¼–è¯‘æ—¶ç±»åž‹ä¸ºObjectï¼ŒobjPriçš„è¿è¡Œæ—¶ç±»åž‹ä¸ºIntegerï¼ŒObjectä¸ŽIntegerå­˜åœ¨ç»§æ‰¿å…³ç³»
+        // å¯ä»¥å¼ºåˆ¶ç±»åž‹è½¬æ¢ï¼Œè€ŒobjPriå˜é‡å®žé™…ä¸Šç±»åž‹æ˜¯Integerç±»åž‹ï¼Œ
+        // æ‰€ä»¥ä¸‹é¢ä»£ç è¿è¡Œæ—¶å¼•å‘ClassCastExceptionå¼‚å¸¸
         String str = (String) objPri;
     }
 }

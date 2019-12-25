@@ -17,6 +17,7 @@ import java.util.Set;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.testng.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * RequestMappingHandlerMapping 205L

@@ -5,17 +5,17 @@ import java.io.FileOutputStream;
 
 public class ThrowTest2 {
     public static void main(String[] args)
-        // Java 6ÈÏÎª¢ÙºÅ´úÂë¿ÉÄÜÅ×³öException£¬
-        // ËùÒÔ´Ë´¦ÉùÃ÷Å×³öException
+        // Java 6è®¤ä¸ºâ‘ å·ä»£ç å¯èƒ½æŠ›å‡ºExceptionï¼Œ
+        // æ‰€ä»¥æ­¤å¤„å£°æ˜æŠ›å‡ºException
 //		throws Exception
-        // Java 7»á¼ì²é¢ÙºÅ´úÂë¿ÉÄÜÅ×³öÒì³£µÄÊµ¼ÊÀàĞÍ£¬
-        // Òò´Ë´Ë´¦Ö»ĞèÉùÃ÷Å×³öFileNotFoundException¼´¿É¡£
+        // Java 7ä¼šæ£€æŸ¥â‘ å·ä»£ç å¯èƒ½æŠ›å‡ºå¼‚å¸¸çš„å®é™…ç±»å‹ï¼Œ
+        // å› æ­¤æ­¤å¤„åªéœ€å£°æ˜æŠ›å‡ºFileNotFoundExceptionå³å¯ã€‚
             throws FileNotFoundException {
         try {
             new FileOutputStream("a.txt");
         } catch (Exception ex) {
             ex.printStackTrace();
-            throw ex;        // ¢Ù
+            throw ex;        // â‘ 
         }
     }
 }

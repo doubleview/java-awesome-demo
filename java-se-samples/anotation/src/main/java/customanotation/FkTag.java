@@ -2,13 +2,13 @@ package customanotation;
 
 import java.lang.annotation.*;
 
-// Ö¸¶¨¸Ã×¢½âĞÅÏ¢»á±£Áôµ½ÔËĞĞÊ±
+// æŒ‡å®šè¯¥æ³¨è§£ä¿¡æ¯ä¼šä¿ç•™åˆ°è¿è¡Œæ—¶
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @Repeatable(FkTags.class)
 public @interface FkTag {
-    // Îª¸Ã×¢½â¶¨Òå2¸ö³ÉÔ±±äÁ¿
-    String name() default "Èí¼ş";
+    // ä¸ºè¯¥æ³¨è§£å®šä¹‰2ä¸ªæˆå‘˜å˜é‡
+    String name() default "è½¯ä»¶";
 
     int age();
 }

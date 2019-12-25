@@ -1,17 +1,17 @@
 package enums;
 
 public class Season {
-    // °ÑSeasonÀà¶¨Òå³É²»¿É±äµÄ£¬½«Æä³ÉÔ±±äÁ¿Ò²¶¨Òå³ÉfinalµÄ
+    // æŠŠSeasonç±»å®šä¹‰æˆä¸å¯å˜çš„ï¼Œå°†å…¶æˆå‘˜å˜é‡ä¹Ÿå®šä¹‰æˆfinalçš„
     private final String name;
     private final String desc;
     public static final Season SPRING
-            = new Season("´ºÌì", "³Ã´ºÌ¤Çà");
+            = new Season("æ˜¥å¤©", "è¶æ˜¥è¸é’");
     public static final Season SUMMER
-            = new Season("ÏÄÌì", "ÏÄÈÕÑ×Ñ×");
+            = new Season("å¤å¤©", "å¤æ—¥ç‚ç‚");
     public static final Season FALL
-            = new Season("ÇïÌì", "Çï¸ßÆøË¬");
+            = new Season("ç§‹å¤©", "ç§‹é«˜æ°”çˆ½");
     public static final Season WINTER
-            = new Season("¶¬Ìì", "Î§Â¯ÉÍÑ©");
+            = new Season("å†¬å¤©", "å›´ç‚‰èµé›ª");
 
     public static Season getSeason(int seasonNum) {
         switch (seasonNum) {
@@ -28,13 +28,13 @@ public class Season {
         }
     }
 
-    // ½«¹¹ÔìÆ÷¶¨Òå³Éprivate·ÃÎÊÈ¨ÏŞ
+    // å°†æ„é€ å™¨å®šä¹‰æˆprivateè®¿é—®æƒé™
     private Season(String name, String desc) {
         this.name = name;
         this.desc = desc;
     }
 
-    // Ö»ÎªnameºÍdescÌá¹©getter·½·¨
+    // åªä¸ºnameå’Œdescæä¾›getteræ–¹æ³•
     public String getName() {
         return this.name;
     }

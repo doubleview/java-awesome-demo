@@ -2,12 +2,12 @@ package objects2.finals;
 
 
 public class FinalErrorTest {
-    // ¶¨ÒåÒ»¸öfinalĞŞÊÎµÄÊµÀı±äÁ¿
-    // ÏµÍ³²»»á¶Ôfinal³ÉÔ±±äÁ¿½øĞĞÄ¬ÈÏ³õÊ¼»¯
+    // å®šä¹‰ä¸€ä¸ªfinalä¿®é¥°çš„å®ä¾‹å˜é‡
+    // ç³»ç»Ÿä¸ä¼šå¯¹finalæˆå‘˜å˜é‡è¿›è¡Œé»˜è®¤åˆå§‹åŒ–
     final int age;
 
     {
-        // ageÃ»ÓĞ³õÊ¼»¯£¬ËùÒÔ´Ë´¦´úÂë½«ÒıÆğ´íÎó¡£
+        // ageæ²¡æœ‰åˆå§‹åŒ–ï¼Œæ‰€ä»¥æ­¤å¤„ä»£ç å°†å¼•èµ·é”™è¯¯ã€‚
         //System.out.println(age);
         age = 6;
         System.out.println(age);

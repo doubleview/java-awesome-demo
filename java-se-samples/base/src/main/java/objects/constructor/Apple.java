@@ -8,17 +8,17 @@ public class Apple {
     public Apple() {
     }
 
-    // 两个参数的构造器
+    // 涓や釜鍙傛暟鐨勬瀯閫犲櫒
     public Apple(String name, String color) {
         this.name = name;
         this.color = color;
     }
 
-    // 三个参数的构造器
+    // 涓変釜鍙傛暟鐨勬瀯閫犲櫒
     public Apple(String name, String color, double weight) {
-        // 通过this调用另一个重载的构造器的初始化代码
+        // 閫氳繃this璋冪敤鍙︿竴涓噸杞界殑鏋勯�犲櫒鐨勫垵濮嬪寲浠ｇ爜
         this(name, color);
-        // 下面this引用该构造器正在初始化的Java对象
+        // 涓嬮潰this寮曠敤璇ユ瀯閫犲櫒姝ｅ湪鍒濆鍖栫殑Java瀵硅薄
         this.weight = weight;
     }
 }

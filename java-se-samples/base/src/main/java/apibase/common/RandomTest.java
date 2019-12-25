@@ -6,25 +6,25 @@ import java.util.Random;
 public class RandomTest {
     public static void main(String[] args) {
         Random rand = new Random();
-        System.out.println("rand.nextBoolean()£º"
+        System.out.println("rand.nextBoolean()ï¼š"
                 + rand.nextBoolean());
         byte[] buffer = new byte[16];
         rand.nextBytes(buffer);
         System.out.println(Arrays.toString(buffer));
-        // Éú³É0.0~1.0Ö®¼äµÄÎ±Ëæ»údoubleÊı
-        System.out.println("rand.nextDouble()£º"
+        // ç”Ÿæˆ0.0~1.0ä¹‹é—´çš„ä¼ªéšæœºdoubleæ•°
+        System.out.println("rand.nextDouble()ï¼š"
                 + rand.nextDouble());
-        // Éú³É0.0~1.0Ö®¼äµÄÎ±Ëæ»úfloatÊı
-        System.out.println("rand.nextFloat()£º"
+        // ç”Ÿæˆ0.0~1.0ä¹‹é—´çš„ä¼ªéšæœºfloatæ•°
+        System.out.println("rand.nextFloat()ï¼š"
                 + rand.nextFloat());
-        // Éú³ÉÆ½¾ùÖµÊÇ 0.0£¬±ê×¼²îÊÇ 1.0µÄÎ±¸ßË¹Êı
-        System.out.println("rand.nextGaussian()£º"
+        // ç”Ÿæˆå¹³å‡å€¼æ˜¯ 0.0ï¼Œæ ‡å‡†å·®æ˜¯ 1.0çš„ä¼ªé«˜æ–¯æ•°
+        System.out.println("rand.nextGaussian()ï¼š"
                 + rand.nextGaussian());
-        // Éú³ÉÒ»¸ö´¦ÓÚintÕûÊıÈ¡Öµ·¶Î§µÄÎ±Ëæ»úÕûÊı
-        System.out.println("rand.nextInt()£º" + rand.nextInt());
-        // Éú³É0~26Ö®¼äµÄÎ±Ëæ»úÕûÊı
-        System.out.println("rand.nextInt(26)£º" + rand.nextInt(26));
-        // Éú³ÉÒ»¸ö´¦ÓÚlongÕûÊıÈ¡Öµ·¶Î§µÄÎ±Ëæ»úÕûÊı
-        System.out.println("rand.nextLong()£º" + rand.nextLong());
+        // ç”Ÿæˆä¸€ä¸ªå¤„äºintæ•´æ•°å–å€¼èŒƒå›´çš„ä¼ªéšæœºæ•´æ•°
+        System.out.println("rand.nextInt()ï¼š" + rand.nextInt());
+        // ç”Ÿæˆ0~26ä¹‹é—´çš„ä¼ªéšæœºæ•´æ•°
+        System.out.println("rand.nextInt(26)ï¼š" + rand.nextInt(26));
+        // ç”Ÿæˆä¸€ä¸ªå¤„äºlongæ•´æ•°å–å€¼èŒƒå›´çš„ä¼ªéšæœºæ•´æ•°
+        System.out.println("rand.nextLong()ï¼š" + rand.nextLong());
     }
 }

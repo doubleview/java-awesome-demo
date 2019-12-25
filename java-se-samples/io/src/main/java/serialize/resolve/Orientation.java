@@ -13,7 +13,7 @@ public class Orientation
         this.value = value;
     }
 
-    // 为枚举类增加readResolve()方法
+    // 涓烘灇涓剧被澧炲姞readResolve()鏂规硶
     private Object readResolve() throws ObjectStreamException {
         if (value == 1) {
             return HORIZONTAL;

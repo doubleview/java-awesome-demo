@@ -7,7 +7,7 @@ public class AddCommand implements Command {
         for (int tmp : target) {
             sum += tmp;
         }
-        System.out.println("Êý×éÔªËØµÄ×ÜºÍÊÇ:" + sum);
+        System.out.println("æ•°ç»„å…ƒç´ çš„æ€»å’Œæ˜¯:" + sum);
     }
 }
 

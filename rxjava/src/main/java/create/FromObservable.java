@@ -34,8 +34,6 @@ public class FromObservable {
 
         Observable.from(Arrays.asList(1 , 2 , 3 , 4)).subscribe(integer -> System.out.println("onNext:"+integer),
             throwable -> System.out.println("error : " + throwable.getMessage()), () -> System.out.println("completed"));
-
-
     }
 
 

@@ -4,14 +4,14 @@ public class CommandTest {
     public static void main(String[] args) {
         ProcessArray pa = new ProcessArray();
         int[] array = {3, -4, 6, 4};
-        // ´¦ÀíÊı×é£¬¾ßÌå´¦ÀíĞĞÎªÈ¡¾öÓÚÄäÃûÄÚ²¿Àà
+        // å¤„ç†æ•°ç»„ï¼Œå…·ä½“å¤„ç†è¡Œä¸ºå–å†³äºåŒ¿åå†…éƒ¨ç±»
         pa.process(array, new Command() {
             public void process(int[] target) {
                 int sum = 0;
                 for (int tmp : target) {
                     sum += tmp;
                 }
-                System.out.println("Êı×éÔªËØµÄ×ÜºÍÊÇ:" + sum);
+                System.out.println("æ•°ç»„å…ƒç´ çš„æ€»å’Œæ˜¯:" + sum);
             }
         });
     }

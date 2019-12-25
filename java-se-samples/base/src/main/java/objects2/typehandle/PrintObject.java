@@ -11,9 +11,9 @@ class Person {
 
 public class PrintObject {
     public static void main(String[] args) {
-        // ´´½¨Ò»¸öPerson¶ÔÏó£¬½«Ö®¸³¸øp±äÁ¿
-        Person p = new Person("ËïÎò¿Õ");
-        // ´òÓ¡pËùÒıÓÃµÄPerson¶ÔÏó
+        // åˆ›å»ºä¸€ä¸ªPersonå¯¹è±¡ï¼Œå°†ä¹‹èµ‹ç»™på˜é‡
+        Person p = new Person("å­™æ‚Ÿç©º");
+        // æ‰“å°pæ‰€å¼•ç”¨çš„Personå¯¹è±¡
         System.out.println(p);
     }
 }

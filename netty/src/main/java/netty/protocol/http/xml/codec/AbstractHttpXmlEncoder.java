@@ -34,16 +34,14 @@ import org.jibx.runtime.IMarshallingContext;
  * @version 1.0
  * @date 2014年3月1日
  */
-public abstract class AbstractHttpXmlEncoder<T> extends
-    MessageToMessageEncoder<T> {
+public abstract class AbstractHttpXmlEncoder<T> extends MessageToMessageEncoder<T> {
 
     IBindingFactory factory = null;
     StringWriter writer = null;
     final static String CHARSET_NAME = "UTF-8";
     final static Charset UTF_8 = Charset.forName(CHARSET_NAME);
 
-    protected ByteBuf encode0(ChannelHandlerContext ctx, Object body)
-        throws Exception {
+    protected ByteBuf encode0(ChannelHandlerContext ctx, Object body) throws Exception {
         factory = BindingDirectory.getFactory(body.getClass());
         writer = new StringWriter();
         IMarshallingContext mctx = factory.createMarshallingContext();

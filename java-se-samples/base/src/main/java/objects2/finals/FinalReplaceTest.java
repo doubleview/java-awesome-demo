@@ -3,14 +3,14 @@ package objects2.finals;
 
 public class FinalReplaceTest {
     public static void main(String[] args) {
-        // ÏÂÃæ¶¨ÒåÁË4¸öfinal¡°ºê±äÁ¿¡±
+        // ä¸‹é¢å®šä¹‰äº†4ä¸ªfinalâ€œå®å˜é‡â€
         final int a = 5 + 2;
         final double b = 1.2 / 3;
         final String str = "" + "Java";
-        final String book = "Java¿ª·¢£º" + 99.0;
-        // ÏÂÃæµÄbook2±äÁ¿µÄÖµÒòÎªµ÷ÓÃÁË·½·¨£¬ËùÒÔÎŞ·¨ÔÚ±àÒëÊ±±»È·¶¨ÏÂÀ´
-        final String book2 = "Java¿ª·¢£º" + String.valueOf(99.0);  //¢Ù
-        System.out.println(book == "Java¿ª·¢£º99.0");
-        System.out.println(book2 == "Java¿ª·¢£º99.0");
+        final String book = "Javaå¼€å‘ï¼š" + 99.0;
+        // ä¸‹é¢çš„book2å˜é‡çš„å€¼å› ä¸ºè°ƒç”¨äº†æ–¹æ³•ï¼Œæ‰€ä»¥æ— æ³•åœ¨ç¼–è¯‘æ—¶è¢«ç¡®å®šä¸‹æ¥
+        final String book2 = "Javaå¼€å‘ï¼š" + String.valueOf(99.0);  //â‘ 
+        System.out.println(book == "Javaå¼€å‘ï¼š99.0");
+        System.out.println(book2 == "Javaå¼€å‘ï¼š99.0");
     }
 }

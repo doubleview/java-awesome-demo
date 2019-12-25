@@ -3,14 +3,14 @@ package inital.conversion;
 public class NarrowConversion {
     public static void main(String[] args) {
         int iValue = 233;
-        // Ç¿ÖÆ°ÑÒ»¸öintÀàĞÍµÄÖµ×ª»»ÎªbyteÀàĞÍµÄÖµ
+        // å¼ºåˆ¶æŠŠä¸€ä¸ªintç±»å‹çš„å€¼è½¬æ¢ä¸ºbyteç±»å‹çš„å€¼
         byte bValue = (byte) iValue;
-        // ½«Êä³ö-23
+        // å°†è¾“å‡º-23
         System.out.println(bValue);
         double dValue = 3.98;
-        // Ç¿ÖÆ°ÑÒ»¸ödoubleÀàĞÍµÄÖµ×ª»»Îªint
+        // å¼ºåˆ¶æŠŠä¸€ä¸ªdoubleç±»å‹çš„å€¼è½¬æ¢ä¸ºint
         int tol = (int) dValue;
-        // ½«Êä³ö3
+        // å°†è¾“å‡º3
         System.out.println(tol);
     }
 }

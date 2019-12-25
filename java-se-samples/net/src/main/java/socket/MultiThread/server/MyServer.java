@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class MyServer {
-    // ¶¨Òå±£´æËùÓĞSocketµÄArrayList£¬²¢½«Æä°ü×°ÎªÏß³Ì°²È«µÄ
+    // å®šä¹‰ä¿å­˜æ‰€æœ‰Socketçš„ArrayListï¼Œå¹¶å°†å…¶åŒ…è£…ä¸ºçº¿ç¨‹å®‰å…¨çš„
     public static List<Socket> socketList
             = Collections.synchronizedList(new ArrayList<>());
 
@@ -16,10 +16,10 @@ public class MyServer {
             throws IOException {
         ServerSocket ss = new ServerSocket(30000);
         while (true) {
-            // ´ËĞĞ´úÂë»á×èÈû£¬½«Ò»Ö±µÈ´ı±ğÈËµÄÁ¬½Ó
+            // æ­¤è¡Œä»£ç ä¼šé˜»å¡ï¼Œå°†ä¸€ç›´ç­‰å¾…åˆ«äººçš„è¿æ¥
             Socket s = ss.accept();
             socketList.add(s);
-            // Ã¿µ±¿Í»§¶ËÁ¬½ÓºóÆô¶¯Ò»ÌõServerThreadÏß³ÌÎª¸Ã¿Í»§¶Ë·şÎñ
+            // æ¯å½“å®¢æˆ·ç«¯è¿æ¥åå¯åŠ¨ä¸€æ¡ServerThreadçº¿ç¨‹ä¸ºè¯¥å®¢æˆ·ç«¯æœåŠ¡
             new Thread(new ServerThread(s)).start();
         }
     }

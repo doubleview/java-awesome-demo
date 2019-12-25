@@ -5,21 +5,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AnnotationTest {
-    private JFrame mainWin = new JFrame("Ê¹ÓÃ×¢½â°ó¶¨ÊÂ¼ş¼àÌıÆ÷");
-    // Ê¹ÓÃAnnotationÎªok°´Å¥°ó¶¨ÊÂ¼ş¼àÌıÆ÷
+    private JFrame mainWin = new JFrame("ä½¿ç”¨æ³¨è§£ç»‘å®šäº‹ä»¶ç›‘å¬å™¨");
+    // ä½¿ç”¨Annotationä¸ºokæŒ‰é’®ç»‘å®šäº‹ä»¶ç›‘å¬å™¨
     @ActionListenerFor(listener = OkListener.class)
-    private JButton ok = new JButton("È·¶¨");
-    // Ê¹ÓÃAnnotationÎªcancel°´Å¥°ó¶¨ÊÂ¼ş¼àÌıÆ÷
+    private JButton ok = new JButton("ç¡®å®š");
+    // ä½¿ç”¨Annotationä¸ºcancelæŒ‰é’®ç»‘å®šäº‹ä»¶ç›‘å¬å™¨
     @ActionListenerFor(listener = CancelListener.class)
-    private JButton cancel = new JButton("È¡Ïû");
+    private JButton cancel = new JButton("å–æ¶ˆ");
 
     public void init() {
-        // ³õÊ¼»¯½çÃæµÄ·½·¨
+        // åˆå§‹åŒ–ç•Œé¢çš„æ–¹æ³•
         JPanel jp = new JPanel();
         jp.add(ok);
         jp.add(cancel);
         mainWin.add(jp);
-        ActionListenerInstaller.processAnnotations(this);     // ¢Ù
+        ActionListenerInstaller.processAnnotations(this);     // â‘ 
         mainWin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainWin.pack();
         mainWin.setVisible(true);
@@ -30,16 +30,16 @@ public class AnnotationTest {
     }
 }
 
-// ¶¨Òåok°´Å¥µÄÊÂ¼ş¼àÌıÆ÷ÊµÏÖÀà
+// å®šä¹‰okæŒ‰é’®çš„äº‹ä»¶ç›‘å¬å™¨å®ç°ç±»
 class OkListener implements ActionListener {
     public void actionPerformed(ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "µ¥»÷ÁËÈ·ÈÏ°´Å¥");
+        JOptionPane.showMessageDialog(null, "å•å‡»äº†ç¡®è®¤æŒ‰é’®");
     }
 }
 
-// ¶¨Òåcancel°´Å¥µÄÊÂ¼ş¼àÌıÆ÷ÊµÏÖÀà
+// å®šä¹‰cancelæŒ‰é’®çš„äº‹ä»¶ç›‘å¬å™¨å®ç°ç±»
 class CancelListener implements ActionListener {
     public void actionPerformed(ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "µ¥»÷ÁËÈ¡Ïû°´Å¥");
+        JOptionPane.showMessageDialog(null, "å•å‡»äº†å–æ¶ˆæŒ‰é’®");
     }
 }

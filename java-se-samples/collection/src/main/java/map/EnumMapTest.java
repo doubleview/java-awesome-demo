@@ -8,10 +8,10 @@ enum Season {
 
 public class EnumMapTest {
     public static void main(String[] args) {
-        // ´´½¨EnumMap¶ÔÏó£¬¸ÃEnumMapµÄËùÓĞkey¶¼ÊÇSeasonÃ¶¾ÙÀàµÄÃ¶¾ÙÖµ
+        // åˆ›å»ºEnumMapå¯¹è±¡ï¼Œè¯¥EnumMapçš„æ‰€æœ‰keyéƒ½æ˜¯Seasonæšä¸¾ç±»çš„æšä¸¾å€¼
         EnumMap enumMap = new EnumMap(Season.class);
-        enumMap.put(Season.SUMMER, "ÏÄÈÕÑ×Ñ×");
-        enumMap.put(Season.SPRING, "´ºÅ¯»¨¿ª");
+        enumMap.put(Season.SUMMER, "å¤æ—¥ç‚ç‚");
+        enumMap.put(Season.SPRING, "æ˜¥æš–èŠ±å¼€");
         System.out.println(enumMap);
     }
 }

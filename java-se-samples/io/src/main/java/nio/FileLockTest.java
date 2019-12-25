@@ -8,13 +8,13 @@ public class FileLockTest {
     public static void main(String[] args) throws Exception {
 
         try (
-                // Ê¹ÓÃFileOutputStream»ñÈ¡FileChannel
+                // ä½¿ç”¨FileOutputStreamè·å–FileChannel
                 FileChannel channel = new FileOutputStream("a.txt").getChannel()) {
-            // Ê¹ÓÃ·Ç×èÈûÊ½·½Ê½¶ÔÖ¸¶¨ÎÄ¼ş¼ÓËø
+            // ä½¿ç”¨éé˜»å¡å¼æ–¹å¼å¯¹æŒ‡å®šæ–‡ä»¶åŠ é”
             FileLock lock = channel.tryLock();
-            // ³ÌĞòÔİÍ£10s
+            // ç¨‹åºæš‚åœ10s
             Thread.sleep(10000);
-            // ÊÍ·ÅËø
+            // é‡Šæ”¾é”
             lock.release();
         }
     }

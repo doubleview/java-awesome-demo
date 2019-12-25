@@ -6,11 +6,11 @@ import java.io.RandomAccessFile;
 public class AppendContent {
     public static void main(String[] args) {
         try (
-                //ÒÔ¶Á¡¢Ğ´·½Ê½´ò¿ªÒ»¸öRandomAccessFile¶ÔÏó
+                //ä»¥è¯»ã€å†™æ–¹å¼æ‰“å¼€ä¸€ä¸ªRandomAccessFileå¯¹è±¡
                 RandomAccessFile raf = new RandomAccessFile("out.txt", "rw")) {
-            //½«¼ÇÂ¼Ö¸ÕëÒÆ¶¯µ½out.txtÎÄ¼şµÄ×îºó
+            //å°†è®°å½•æŒ‡é’ˆç§»åŠ¨åˆ°out.txtæ–‡ä»¶çš„æœ€å
             raf.seek(raf.length());
-            raf.write("×·¼ÓµÄÄÚÈİ£¡\r\n".getBytes());
+            raf.write("è¿½åŠ çš„å†…å®¹ï¼\r\n".getBytes());
         } catch (IOException ex) {
             ex.printStackTrace();
         }

@@ -8,10 +8,10 @@ import java.io.ObjectOutputStream;
 public class ResolveTest {
     public static void main(String[] args) {
         try (
-                // ´´½¨Ò»¸öObjectOutputStreamÊäÈëÁ÷
+                // åˆ›å»ºä¸€ä¸ªObjectOutputStreamè¾“å…¥æµ
                 ObjectOutputStream oos = new ObjectOutputStream(
                         new FileOutputStream("transient.txt"));
-                // ´´½¨Ò»¸öObjectInputStreamÊäÈëÁ÷
+                // åˆ›å»ºä¸€ä¸ªObjectInputStreamè¾“å…¥æµ
                 ObjectInputStream ois = new ObjectInputStream(
                         new FileInputStream("transient.txt"))) {
             oos.writeObject(Orientation.HORIZONTAL);

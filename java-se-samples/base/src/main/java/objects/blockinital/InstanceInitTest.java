@@ -2,16 +2,16 @@ package objects.blockinital;
 
 
 public class InstanceInitTest {
-    // ÏÈÖ´ĞĞ³õÊ¼»¯¿é½«aÊµÀı±äÁ¿¸³ÖµÎª6
+    // å…ˆæ‰§è¡Œåˆå§‹åŒ–å—å°†aå®ä¾‹å˜é‡èµ‹å€¼ä¸º6
     {
         a = 6;
     }
 
-    // ÔÙÖ´ĞĞ½«aÊµÀı±äÁ¿¸³ÖµÎª9
+    // å†æ‰§è¡Œå°†aå®ä¾‹å˜é‡èµ‹å€¼ä¸º9
     int a = 9;
 
     public static void main(String[] args) {
-        // ÏÂÃæ´úÂë½«Êä³ö9¡£
+        // ä¸‹é¢ä»£ç å°†è¾“å‡º9ã€‚
         System.out.println(new InstanceInitTest().a);
     }
 }

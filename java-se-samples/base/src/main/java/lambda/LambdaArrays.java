@@ -8,12 +8,12 @@ public class LambdaArrays {
         Arrays.parallelSort(arr1, (o1, o2) -> o1.length() - o2.length());
         System.out.println(Arrays.toString(arr1));
         int[] arr2 = new int[]{3, -4, 25, 16, 30, 18};
-        // left´ú±íÊý×éÖÐÇ°Ò»¸öËùË÷Òý´¦µÄÔªËØ£¬¼ÆËãµÚÒ»¸öÔªËØÊ±£¬leftÎª1
-        // right´ú±íÊý×éÖÐµ±Ç°Ë÷Òý´¦µÄÔªËØ
+        // leftä»£è¡¨æ•°ç»„ä¸­å‰ä¸€ä¸ªæ‰€ç´¢å¼•å¤„çš„å…ƒç´ ï¼Œè®¡ç®—ç¬¬ä¸€ä¸ªå…ƒç´ æ—¶ï¼Œleftä¸º1
+        // rightä»£è¡¨æ•°ç»„ä¸­å½“å‰ç´¢å¼•å¤„çš„å…ƒç´ 
         Arrays.parallelPrefix(arr2, (left, right) -> left * right);
         System.out.println(Arrays.toString(arr2));
         long[] arr3 = new long[5];
-        // operand´ú±íÕýÔÚ¼ÆËãµÄÔªËØË÷Òý
+        // operandä»£è¡¨æ­£åœ¨è®¡ç®—çš„å…ƒç´ ç´¢å¼•
         Arrays.parallelSetAll(arr3, operand -> operand * 5);
         System.out.println(Arrays.toString(arr3));
     }

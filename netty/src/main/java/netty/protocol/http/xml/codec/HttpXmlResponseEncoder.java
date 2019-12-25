@@ -32,18 +32,16 @@ import java.util.List;
  * @version 1.0
  * @date 2014年3月1日
  */
-public class HttpXmlResponseEncoder extends
-    AbstractHttpXmlEncoder<HttpXmlResponse> {
+public class HttpXmlResponseEncoder extends AbstractHttpXmlEncoder<HttpXmlResponse> {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see
      * io.netty.handler.codec.MessageToMessageEncoder#encode(io.netty.channel
      * .ChannelHandlerContext, java.lang.Object, java.util.List)
      */
-    protected void encode(ChannelHandlerContext ctx, HttpXmlResponse msg,
-        List<Object> out) throws Exception {
+    protected void encode(ChannelHandlerContext ctx, HttpXmlResponse msg, List<Object> out) throws Exception {
         ByteBuf body = encode0(ctx, msg.getResult());
         FullHttpResponse response = msg.getHttpResponse();
         if (response == null) {

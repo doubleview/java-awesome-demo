@@ -3,14 +3,14 @@ package base;
 @FunctionalInterface
 public interface FunInterface {
     static void foo() {
-        System.out.println("fooÀà·½·¨");
+        System.out.println("fooç±»æ–¹æ³•");
     }
 
     default void bar() {
-        System.out.println("barÄ¬ÈÏ·½·¨");
+        System.out.println("baré»˜è®¤æ–¹æ³•");
     }
 
-    void test(); // Ö»¶¨ÒåÒ»¸ö³éÏó·½·¨
+    void test(); // åªå®šä¹‰ä¸€ä¸ªæŠ½è±¡æ–¹æ³•
 
     //void abc();
 }

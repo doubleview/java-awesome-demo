@@ -9,21 +9,21 @@ interface Product {
 
 public class AnonymousTest {
     public void test(Product p) {
-        System.out.println("¹ºÂòÁËÒ»¸ö" + p.getName()
-                + "£¬»¨µôÁË" + p.getPrice());
+        System.out.println("è´­ä¹°äº†ä¸€ä¸ª" + p.getName()
+                + "ï¼ŒèŠ±æ‰äº†" + p.getPrice());
     }
 
     public static void main(String[] args) {
         AnonymousTest ta = new AnonymousTest();
-        // µ÷ÓÃtest()·½·¨Ê±£¬ĞèÒª´«ÈëÒ»¸öProduct²ÎÊı£¬
-        // ´Ë´¦´«ÈëÆäÄäÃûÊµÏÖÀàµÄÊµÀı
+        // è°ƒç”¨test()æ–¹æ³•æ—¶ï¼Œéœ€è¦ä¼ å…¥ä¸€ä¸ªProductå‚æ•°ï¼Œ
+        // æ­¤å¤„ä¼ å…¥å…¶åŒ¿åå®ç°ç±»çš„å®ä¾‹
         ta.test(new Product() {
             public double getPrice() {
                 return 567.8;
             }
 
             public String getName() {
-                return "AGPÏÔ¿¨";
+                return "AGPæ˜¾å¡";
             }
         });
     }

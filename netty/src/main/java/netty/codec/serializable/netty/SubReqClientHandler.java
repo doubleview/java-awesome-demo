@@ -17,8 +17,7 @@ package netty.codec.serializable.netty;
 
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-
-import com.phei.netty.codec.pojo.SubscribeReq;
+import netty.codec.pojo.SubscribeReq;
 
 /**
  * @author lilinfeng
@@ -52,8 +51,7 @@ public class SubReqClientHandler extends ChannelHandlerAdapter {
     }
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg)
-        throws Exception {
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("Receive server response : [" + msg + "]");
     }
 

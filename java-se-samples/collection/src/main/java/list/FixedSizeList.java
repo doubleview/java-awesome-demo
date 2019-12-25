@@ -4,14 +4,14 @@ import java.util.*;
 public class FixedSizeList {
 
 	public static void main(String[] args) {
-		List fixedList = Arrays.asList("疯狂Java讲义"
-			, "轻量级Java EE企业应用实战");
-		// 获取fixedList的实现类，将输出Arrays$ArrayList
+		List fixedList = Arrays.asList("鐤媯Java璁蹭箟"
+			, "杞婚噺绾ava EE浼佷笟搴旂敤瀹炴垬");
+		// 鑾峰彇fixedList鐨勫疄鐜扮被锛屽皢杈撳嚭Arrays$ArrayList
 		System.out.println(fixedList.getClass());
-		// 使用方法引用遍历集合元素
+		// 浣跨敤鏂规硶寮曠敤閬嶅巻闆嗗悎鍏冪礌
 		fixedList.forEach(System.out::println);
-		// 试图增加、删除元素都会引发UnsupportedOperationException异常
-		fixedList.add("疯狂Android讲义");
-		fixedList.remove("疯狂Java讲义");
+		// 璇曞浘澧炲姞銆佸垹闄ゅ厓绱犻兘浼氬紩鍙慤nsupportedOperationException寮傚父
+		fixedList.add("鐤媯Android璁蹭箟");
+		fixedList.remove("鐤媯Java璁蹭箟");
 	}
 }

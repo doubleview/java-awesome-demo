@@ -33,8 +33,7 @@ import org.jibx.runtime.IUnmarshallingContext;
  * @version 1.0
  * @date 2014年3月1日
  */
-public abstract class AbstractHttpXmlDecoder<T> extends
-    MessageToMessageDecoder<T> {
+public abstract class AbstractHttpXmlDecoder<T> extends MessageToMessageDecoder<T> {
 
     private IBindingFactory factory;
     private StringReader reader;
@@ -52,8 +51,7 @@ public abstract class AbstractHttpXmlDecoder<T> extends
         this.isPrint = isPrint;
     }
 
-    protected Object decode0(ChannelHandlerContext arg0, ByteBuf body)
-        throws Exception {
+    protected Object decode0(ChannelHandlerContext arg0, ByteBuf body) throws Exception {
         factory = BindingDirectory.getFactory(clazz);
         String content = body.toString(UTF_8);
         if (isPrint) {
@@ -76,8 +74,7 @@ public abstract class AbstractHttpXmlDecoder<T> extends
      */
     @Skip
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
-        throws Exception {
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         // 释放资源
         if (reader != null) {
             reader.close();

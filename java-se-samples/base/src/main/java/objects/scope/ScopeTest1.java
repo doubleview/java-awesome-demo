@@ -1,7 +1,7 @@
 package objects.scope;
 
 public class ScopeTest1 {
-    // 定义一个类成员变量作为循环变量
+    // 瀹氫箟涓�涓被鎴愬憳鍙橀噺浣滀负寰幆鍙橀噺
     static int i;
 
     public static void main(String[] args) {

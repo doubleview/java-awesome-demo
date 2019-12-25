@@ -9,8 +9,8 @@ public class FinallyFlowTest {
 
     public static boolean test() {
         try {
-            // 因为finally块中包含了return语句
-            // 所以下面的return语句失去作用
+            // 鍥犱负finally鍧椾腑鍖呭惈浜唕eturn璇彞
+            // 鎵�浠ヤ笅闈㈢殑return璇彞澶卞幓浣滅敤
             return true;
         } finally {
             return false;

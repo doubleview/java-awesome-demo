@@ -7,15 +7,15 @@ import java.io.IOException;
 public class FileOutputStreamTest {
     public static void main(String[] args) {
         try (
-                // ´´½¨×Ö½ÚÊäÈëÁ÷
+                // åˆ›å»ºå­—èŠ‚è¾“å…¥æµ
                 FileInputStream fis = new FileInputStream("FileOutputStreamTest.java");
-                // ´´½¨×Ö½ÚÊä³öÁ÷
+                // åˆ›å»ºå­—èŠ‚è¾“å‡ºæµ
                 FileOutputStream fos = new FileOutputStream("newFile.txt")) {
             byte[] bbuf = new byte[32];
             int hasRead = 0;
-            // Ñ­»·´ÓÊäÈëÁ÷ÖÐÈ¡³öÊý¾Ý
+            // å¾ªçŽ¯ä»Žè¾“å…¥æµä¸­å–å‡ºæ•°æ®
             while ((hasRead = fis.read(bbuf)) > 0) {
-                // Ã¿¶ÁÈ¡Ò»´Î£¬¼´Ð´ÈëÎÄ¼þÊä³öÁ÷£¬¶ÁÁË¶àÉÙ£¬¾ÍÐ´¶àÉÙ¡£
+                // æ¯è¯»å–ä¸€æ¬¡ï¼Œå³å†™å…¥æ–‡ä»¶è¾“å‡ºæµï¼Œè¯»äº†å¤šå°‘ï¼Œå°±å†™å¤šå°‘ã€‚
                 fos.write(bbuf, 0, hasRead);
             }
         } catch (IOException ioe) {

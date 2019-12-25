@@ -6,25 +6,25 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 public class FileVisitorTest {
     public static void main(String[] args) throws Exception {
-        // ±éÀúg:\publish\codes\15Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼şºÍ×ÓÄ¿Â¼
+        // éå†g:\publish\codes\15ç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶å’Œå­ç›®å½•
         Files.walkFileTree(Paths.get("g:", "publish", "codes", "15")
                 , new SimpleFileVisitor<Path>() {
-                    // ·ÃÎÊÎÄ¼şÊ±ºò´¥·¢¸Ã·½·¨
+                    // è®¿é—®æ–‡ä»¶æ—¶å€™è§¦å‘è¯¥æ–¹æ³•
                     @Override
                     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-                        System.out.println("ÕıÔÚ·ÃÎÊ" + file + "ÎÄ¼ş");
-                        // ÕÒµ½ÁËFileInputStreamTest.javaÎÄ¼ş
+                        System.out.println("æ­£åœ¨è®¿é—®" + file + "æ–‡ä»¶");
+                        // æ‰¾åˆ°äº†FileInputStreamTest.javaæ–‡ä»¶
                         if (file.endsWith("FileInputStreamTest.java")) {
-                            System.out.println("--ÒÑ¾­ÕÒµ½Ä¿±êÎÄ¼ş--");
+                            System.out.println("--å·²ç»æ‰¾åˆ°ç›®æ ‡æ–‡ä»¶--");
                             return FileVisitResult.TERMINATE;
                         }
                         return FileVisitResult.CONTINUE;
                     }
 
-                    // ¿ªÊ¼·ÃÎÊÄ¿Â¼Ê±´¥·¢¸Ã·½·¨
+                    // å¼€å§‹è®¿é—®ç›®å½•æ—¶è§¦å‘è¯¥æ–¹æ³•
                     @Override
                     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-                        System.out.println("ÕıÔÚ·ÃÎÊ£º" + dir + " Â·¾¶");
+                        System.out.println("æ­£åœ¨è®¿é—®ï¼š" + dir + " è·¯å¾„");
                         return FileVisitResult.CONTINUE;
                     }
                 });

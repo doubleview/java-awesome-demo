@@ -6,22 +6,22 @@ import java.util.Iterator;
 public class HashMapErrorTest {
     public static void main(String[] args) {
         HashMap ht = new HashMap();
-        // ´Ë´¦µÄAÀàÓëÇ°Ò»¸ö³ÌĞòµÄAÀàÊÇÍ¬Ò»¸öÀà
-        ht.put(new A(60000), "Java¿ª·¢");
-        ht.put(new A(87563), "ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-        // »ñµÃHashtableµÄkey Set¼¯ºÏ¶ÔÓ¦µÄIteratorµü´úÆ÷
+        // æ­¤å¤„çš„Aç±»ä¸å‰ä¸€ä¸ªç¨‹åºçš„Aç±»æ˜¯åŒä¸€ä¸ªç±»
+        ht.put(new A(60000), "Javaå¼€å‘");
+        ht.put(new A(87563), "è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+        // è·å¾—Hashtableçš„key Seté›†åˆå¯¹åº”çš„Iteratorè¿­ä»£å™¨
         Iterator it = ht.keySet().iterator();
-        // È¡³öMapÖĞµÚÒ»¸ökey£¬²¢ĞŞ¸ÄËüµÄcountÖµ
+        // å–å‡ºMapä¸­ç¬¬ä¸€ä¸ªkeyï¼Œå¹¶ä¿®æ”¹å®ƒçš„countå€¼
         A first = (A) it.next();
-        first.count = 87563;   // ¢Ù
-        // Êä³ö{A@1560b=Java¿ª·¢, A@1560b=ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½}
+        first.count = 87563;   // â‘ 
+        // è¾“å‡º{A@1560b=Javaå¼€å‘, A@1560b=è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜}
         System.out.println(ht);
-        // Ö»ÄÜÉ¾³ıÃ»ÓĞ±»ĞŞ¸Ä¹ıµÄkeyËù¶ÔÓ¦µÄkey-value¶Ô
+        // åªèƒ½åˆ é™¤æ²¡æœ‰è¢«ä¿®æ”¹è¿‡çš„keyæ‰€å¯¹åº”çš„key-valueå¯¹
         ht.remove(new A(87563));
         System.out.println(ht);
-        // ÎŞ·¨»ñÈ¡Ê£ÏÂµÄvalue£¬ÏÂÃæÁ½ĞĞ´úÂë¶¼½«Êä³önull¡£
-        System.out.println(ht.get(new A(87563)));   // ¢Ú Êä³önull
-        System.out.println(ht.get(new A(60000)));   // ¢Û Êä³önull
+        // æ— æ³•è·å–å‰©ä¸‹çš„valueï¼Œä¸‹é¢ä¸¤è¡Œä»£ç éƒ½å°†è¾“å‡ºnullã€‚
+        System.out.println(ht.get(new A(87563)));   // â‘¡ è¾“å‡ºnull
+        System.out.println(ht.get(new A(60000)));   // â‘¢ è¾“å‡ºnull
     }
 }
 

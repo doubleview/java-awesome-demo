@@ -5,14 +5,14 @@ import java.util.HashSet;
 
 public class PredicateTest {
     public static void main(String[] args) {
-        // ´´½¨Ò»¸ö¼¯ºÏ
+        // åˆ›å»ºä¸€ä¸ªé›†åˆ
         Collection books = new HashSet();
-        books.add(new String("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½"));
-        books.add(new String("Java¿ª·¢"));
-        books.add(new String("iOS¿ª·¢"));
-        books.add(new String("Ajax¿ª·¢"));
-        books.add(new String("Android¿ª·¢"));
-        // Ê¹ÓÃLambda±í´ïÊ½£¨Ä¿±êÀàÐÍÊÇPredicate£©¹ýÂË¼¯ºÏ
+        books.add(new String("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®žæˆ˜"));
+        books.add(new String("Javaå¼€å‘"));
+        books.add(new String("iOSå¼€å‘"));
+        books.add(new String("Ajaxå¼€å‘"));
+        books.add(new String("Androidå¼€å‘"));
+        // ä½¿ç”¨Lambdaè¡¨è¾¾å¼ï¼ˆç›®æ ‡ç±»åž‹æ˜¯Predicateï¼‰è¿‡æ»¤é›†åˆ
         books.removeIf(ele -> ((String) ele).length() > 10);
         books.removeIf(ele -> ((String) ele).contains("Java"));
         books.forEach(System.out::println);

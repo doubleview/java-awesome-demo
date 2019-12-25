@@ -14,14 +14,14 @@ public class Sub extends Base {
     public String color;
 
     public Sub(double size, String name, String color) {
-        // Í¨¹ısuperµ÷ÓÃÀ´µ÷ÓÃ¸¸Àà¹¹ÔìÆ÷µÄ³õÊ¼»¯¹ı³Ì
+        // é€šè¿‡superè°ƒç”¨æ¥è°ƒç”¨çˆ¶ç±»æ„é€ å™¨çš„åˆå§‹åŒ–è¿‡ç¨‹
         super(size, name);
         this.color = color;
     }
 
     public static void main(String[] args) {
-        Sub s = new Sub(5.6, "²âÊÔ¶ÔÏó", "ºìÉ«");
-        // Êä³öSub¶ÔÏóµÄÈı¸öÊµÀı±äÁ¿
+        Sub s = new Sub(5.6, "æµ‹è¯•å¯¹è±¡", "çº¢è‰²");
+        // è¾“å‡ºSubå¯¹è±¡çš„ä¸‰ä¸ªå®ä¾‹å˜é‡
         System.out.println(s.size + "--" + s.name
                 + "--" + s.color);
     }

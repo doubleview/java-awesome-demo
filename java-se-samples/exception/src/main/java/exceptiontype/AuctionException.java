@@ -1,12 +1,12 @@
 package exceptiontype;
 
 public class AuctionException extends Exception {
-    // ÎŞ²ÎÊıµÄ¹¹ÔìÆ÷
+    // æ— å‚æ•°çš„æ„é€ å™¨
     public AuctionException() {
-    }       //¢Ù
+    }       //â‘ 
 
-    // ´øÒ»¸ö×Ö·û´®²ÎÊıµÄ¹¹ÔìÆ÷
-    public AuctionException(String msg)    //¢Ú
+    // å¸¦ä¸€ä¸ªå­—ç¬¦ä¸²å‚æ•°çš„æ„é€ å™¨
+    public AuctionException(String msg)    //â‘¡
     {
         super(msg);
     }

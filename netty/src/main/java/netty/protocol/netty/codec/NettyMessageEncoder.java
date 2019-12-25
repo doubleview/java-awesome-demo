@@ -18,19 +18,17 @@ package netty.protocol.netty.codec;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
+import netty.protocol.netty.struct.NettyMessage;
 
 import java.io.IOException;
 import java.util.Map;
-
-import com.phei.netty.protocol.netty.struct.NettyMessage;
 
 /**
  * @author Lilinfeng
  * @version 1.0
  * @date 2014年3月14日
  */
-public final class NettyMessageEncoder extends
-    MessageToByteEncoder<NettyMessage> {
+public final class NettyMessageEncoder extends MessageToByteEncoder<NettyMessage> {
 
     MarshallingEncoder marshallingEncoder;
 
@@ -39,8 +37,7 @@ public final class NettyMessageEncoder extends
     }
 
     @Override
-    protected void encode(ChannelHandlerContext ctx, NettyMessage msg,
-        ByteBuf sendBuf) throws Exception {
+    protected void encode(ChannelHandlerContext ctx, NettyMessage msg, ByteBuf sendBuf) throws Exception {
         if (msg == null || msg.getHeader() == null) {
             throw new Exception("The encode message is null");
         }
@@ -53,8 +50,7 @@ public final class NettyMessageEncoder extends
         String key = null;
         byte[] keyArray = null;
         Object value = null;
-        for (Map.Entry<String, Object> param : msg.getHeader().getAttachment()
-            .entrySet()) {
+        for (Map.Entry<String, Object> param : msg.getHeader().getAttachment().entrySet()) {
             key = param.getKey();
             keyArray = key.getBytes("UTF-8");
             sendBuf.writeInt(keyArray.length);

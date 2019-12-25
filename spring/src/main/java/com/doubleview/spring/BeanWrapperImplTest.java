@@ -11,8 +11,9 @@ import java.beans.PropertyEditorSupport;
 import java.util.List;
 import java.util.Map;
 
-import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 
 /**

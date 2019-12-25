@@ -4,24 +4,24 @@ package objects2.java8wrap;
 public class UnsignedTest {
     public static void main(String[] args) {
         byte b = -3;
-        // ½«byteÀàĞÍµÄ-3×ª»»ÎªÎŞ·ûºÅÕûÊı¡£
-        System.out.println("byteÀàĞÍµÄ-3¶ÔÓ¦µÄÎŞ·ûºÅÕûÊı£º"
-                + Byte.toUnsignedInt(b)); // Êä³ö253
+        // å°†byteç±»å‹çš„-3è½¬æ¢ä¸ºæ— ç¬¦å·æ•´æ•°ã€‚
+        System.out.println("byteç±»å‹çš„-3å¯¹åº”çš„æ— ç¬¦å·æ•´æ•°ï¼š"
+                + Byte.toUnsignedInt(b)); // è¾“å‡º253
 
         System.out.println(Integer.MAX_VALUE);
-        // Ö¸¶¨Ê¹ÓÃ16½øÖÆ½âÎöÎŞ·ûºÅÕûÊı
+        // æŒ‡å®šä½¿ç”¨16è¿›åˆ¶è§£ææ— ç¬¦å·æ•´æ•°
         int val = Integer.parseUnsignedInt("ffffffff", 16);
-        System.out.println(val); // Êä³ö171
+        System.out.println(val); // è¾“å‡º171
 
         System.out.println(Integer.parseUnsignedInt("2147483648"));
 
-        // ½«-12×ª»»ÎªÎŞ·ûºÅintĞÍ£¬È»ºó×ª»»Îª16½øÖÆµÄ×Ö·û´®
-        System.out.println(Integer.toUnsignedString(-12, 16)); // Êä³öfffffff4
+        // å°†-12è½¬æ¢ä¸ºæ— ç¬¦å·intå‹ï¼Œç„¶åè½¬æ¢ä¸º16è¿›åˆ¶çš„å­—ç¬¦ä¸²
+        System.out.println(Integer.toUnsignedString(-12, 16)); // è¾“å‡ºfffffff4
         System.out.println(Integer.toUnsignedString(-2147483648));
-        // ½«Á½¸öÊı×ª»»ÎªÎŞ·ûºÅÕûÊıºóÏà³ı
-        // ½«Á½¸öÊı×ª»»ÎªÎŞ·ûºÅÕûÊıºóÏà³ı
+        // å°†ä¸¤ä¸ªæ•°è½¬æ¢ä¸ºæ— ç¬¦å·æ•´æ•°åç›¸é™¤
+        // å°†ä¸¤ä¸ªæ•°è½¬æ¢ä¸ºæ— ç¬¦å·æ•´æ•°åç›¸é™¤
         System.out.println(Integer.divideUnsigned(-2, 3));
-        // ½«Á½¸öÊı×ª»»ÎªÎŞ·ûºÅÕûÊıÏà³ıºóÇóÓà
+        // å°†ä¸¤ä¸ªæ•°è½¬æ¢ä¸ºæ— ç¬¦å·æ•´æ•°ç›¸é™¤åæ±‚ä½™
         System.out.println(Integer.remainderUnsigned(-2, 7));
         System.out.println(Long.MAX_VALUE);
         System.out.println(Long.toUnsignedString(-9223372036854775808l));

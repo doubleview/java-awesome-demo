@@ -19,40 +19,40 @@ interface YourTest {
 
 public class MethodRefer {
     public static void main(String[] args) {
-        // ÏÂÃæ´úÂëÊ¹ÓÃLambda±í´ïÊ½´´½¨Converter¶ÔÏó
+        // ä¸‹é¢ä»£ç ä½¿ç”¨Lambdaè¡¨è¾¾å¼åˆ›å»ºConverterå¯¹è±¡
         Converter converter1 = from -> Integer.valueOf(from);
-        // ·½·¨ÒýÓÃ´úÌæLambda±í´ïÊ½£ºÒýÓÃÀà·½·¨¡£
-        // º¯ÊýÊ½½Ó¿ÚÖÐ±»ÊµÏÖ·½·¨µÄÈ«²¿²ÎÊý´«¸ø¸ÃÀà·½·¨×÷Îª²ÎÊý¡£
+        // æ–¹æ³•å¼•ç”¨ä»£æ›¿Lambdaè¡¨è¾¾å¼ï¼šå¼•ç”¨ç±»æ–¹æ³•ã€‚
+        // å‡½æ•°å¼æŽ¥å£ä¸­è¢«å®žçŽ°æ–¹æ³•çš„å…¨éƒ¨å‚æ•°ä¼ ç»™è¯¥ç±»æ–¹æ³•ä½œä¸ºå‚æ•°ã€‚
         converter1 = Integer::valueOf;
         Integer val = converter1.convert("99");
-        System.out.println(val); // Êä³öÕûÊý99
+        System.out.println(val); // è¾“å‡ºæ•´æ•°99
 
 
-        // ÏÂÃæ´úÂëÊ¹ÓÃLambda±í´ïÊ½´´½¨Converter¶ÔÏó
+        // ä¸‹é¢ä»£ç ä½¿ç”¨Lambdaè¡¨è¾¾å¼åˆ›å»ºConverterå¯¹è±¡
         Converter converter2 = from -> "fkit.org".indexOf(from);
-        // ·½·¨ÒýÓÃ´úÌæLambda±í´ïÊ½£ºÒýÓÃÌØ¶¨¶ÔÏóµÄÊµÀý·½·¨¡£
-        // º¯ÊýÊ½½Ó¿ÚÖÐ±»ÊµÏÖ·½·¨µÄÈ«²¿²ÎÊý´«¸ø¸Ã·½·¨×÷Îª²ÎÊý¡£
+        // æ–¹æ³•å¼•ç”¨ä»£æ›¿Lambdaè¡¨è¾¾å¼ï¼šå¼•ç”¨ç‰¹å®šå¯¹è±¡çš„å®žä¾‹æ–¹æ³•ã€‚
+        // å‡½æ•°å¼æŽ¥å£ä¸­è¢«å®žçŽ°æ–¹æ³•çš„å…¨éƒ¨å‚æ•°ä¼ ç»™è¯¥æ–¹æ³•ä½œä¸ºå‚æ•°ã€‚
         converter2 = "fkit.org"::indexOf;
         Integer value = converter2.convert("it");
-        System.out.println(value); // Êä³ö2
+        System.out.println(value); // è¾“å‡º2
 
 
-        // ÏÂÃæ´úÂëÊ¹ÓÃLambda±í´ïÊ½´´½¨MyTest¶ÔÏó
+        // ä¸‹é¢ä»£ç ä½¿ç”¨Lambdaè¡¨è¾¾å¼åˆ›å»ºMyTestå¯¹è±¡
         MyTest mt = (a, b, c) -> a.substring(b, c);
-        // ·½·¨ÒýÓÃ´úÌæLambda±í´ïÊ½£ºÒýÓÃÄ³Àà¶ÔÏóµÄÊµÀý·½·¨¡£
-        // º¯ÊýÊ½½Ó¿ÚÖÐ±»ÊµÏÖ·½·¨µÄµÚÒ»¸ö²ÎÊý×÷Îªµ÷ÓÃÕß£¬
-        // ºóÃæµÄ²ÎÊýÈ«²¿´«¸ø¸Ã·½·¨×÷Îª²ÎÊý¡£
+        // æ–¹æ³•å¼•ç”¨ä»£æ›¿Lambdaè¡¨è¾¾å¼ï¼šå¼•ç”¨æŸç±»å¯¹è±¡çš„å®žä¾‹æ–¹æ³•ã€‚
+        // å‡½æ•°å¼æŽ¥å£ä¸­è¢«å®žçŽ°æ–¹æ³•çš„ç¬¬ä¸€ä¸ªå‚æ•°ä½œä¸ºè°ƒç”¨è€…ï¼Œ
+        // åŽé¢çš„å‚æ•°å…¨éƒ¨ä¼ ç»™è¯¥æ–¹æ³•ä½œä¸ºå‚æ•°ã€‚
         mt = String::substring;
         String str = mt.test("Java I Love you", 2, 9);
-        System.out.println(str); // Êä³ö:va I Lo
+        System.out.println(str); // è¾“å‡º:va I Lo
 
 
-        // ÏÂÃæ´úÂëÊ¹ÓÃLambda±í´ïÊ½´´½¨YourTest¶ÔÏó
+        // ä¸‹é¢ä»£ç ä½¿ç”¨Lambdaè¡¨è¾¾å¼åˆ›å»ºYourTestå¯¹è±¡
         YourTest yt = (String a) -> new JFrame(a);
-        // ¹¹ÔìÆ÷ÒýÓÃ´úÌæLambda±í´ïÊ½¡£
-        // º¯ÊýÊ½½Ó¿ÚÖÐ±»ÊµÏÖ·½·¨µÄÈ«²¿²ÎÊý´«¸ø¸Ã¹¹ÔìÆ÷×÷Îª²ÎÊý¡£
+        // æž„é€ å™¨å¼•ç”¨ä»£æ›¿Lambdaè¡¨è¾¾å¼ã€‚
+        // å‡½æ•°å¼æŽ¥å£ä¸­è¢«å®žçŽ°æ–¹æ³•çš„å…¨éƒ¨å‚æ•°ä¼ ç»™è¯¥æž„é€ å™¨ä½œä¸ºå‚æ•°ã€‚
         yt = JFrame::new;
-        JFrame jf = yt.win("ÎÒµÄ´°¿Ú");
+        JFrame jf = yt.win("æˆ‘çš„çª—å£");
         jf.setVisible(true);
         System.out.println(jf);
     }

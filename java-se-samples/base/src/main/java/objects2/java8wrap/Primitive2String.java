@@ -3,22 +3,22 @@ package objects2.java8wrap;
 public class Primitive2String {
     public static void main(String[] args) {
         String intStr = "123";
-        // °ÑÒ»¸öÌØ¶¨×Ö·û´®×ª»»³Éint±äÁ¿
+        // é¶å©ç«´æ¶“î†å£’ç€¹æ°¬ç“§ç»—ï¸¿è¦†æî„å´²é´æ‘nté™æ©€å™º
         int it1 = Integer.parseInt(intStr);
         int it2 = new Integer(intStr);
         System.out.println(it2);
         String floatStr = "4.56";
-        // °ÑÒ»¸öÌØ¶¨×Ö·û´®×ª»»³Éfloat±äÁ¿
+        // é¶å©ç«´æ¶“î†å£’ç€¹æ°¬ç“§ç»—ï¸¿è¦†æî„å´²é´æŒloaté™æ©€å™º
         float ft1 = Float.parseFloat(floatStr);
         float ft2 = new Float(floatStr);
         System.out.println(ft2);
-        // °ÑÒ»¸öfloat±äÁ¿×ª»»³ÉString±äÁ¿
+        // é¶å©ç«´æ¶“çŒ£loaté™æ©€å™ºæî„å´²é´æ€±tringé™æ©€å™º
         String ftStr = String.valueOf(2.345f);
         System.out.println(ftStr);
-        // °ÑÒ»¸ödouble±äÁ¿×ª»»³ÉString±äÁ¿
+        // é¶å©ç«´æ¶“çŒŸoubleé™æ©€å™ºæî„å´²é´æ€±tringé™æ©€å™º
         String dbStr = String.valueOf(3.344);
         System.out.println(dbStr);
-        // °ÑÒ»¸öboolean±äÁ¿×ª»»³ÉString±äÁ¿
+        // é¶å©ç«´æ¶“çŒ™ooleané™æ©€å™ºæî„å´²é´æ€±tringé™æ©€å™º
         String boolStr = String.valueOf(true);
         System.out.println(boolStr.toUpperCase());
     }

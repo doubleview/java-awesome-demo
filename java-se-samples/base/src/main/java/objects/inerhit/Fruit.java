@@ -4,8 +4,8 @@ public class Fruit {
     public double weight;
 
     public void info() {
-        System.out.println("ÎÒÊÇÒ»¸öË®¹û£¡ÖØ"
-                + weight + "g£¡");
+        System.out.println("æˆ‘æ˜¯ä¸€ä¸ªæ°´æœï¼é‡"
+                + weight + "gï¼");
     }
 }
 

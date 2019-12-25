@@ -4,7 +4,7 @@ public class ExecTest {
     public static void main(String[] args)
             throws Exception {
         Runtime rt = Runtime.getRuntime();
-        // ÔËĞĞ¼ÇÊÂ±¾³ÌĞò
+        // è¿è¡Œè®°äº‹æœ¬ç¨‹åº
         rt.exec("notepad.exe");
     }
 }

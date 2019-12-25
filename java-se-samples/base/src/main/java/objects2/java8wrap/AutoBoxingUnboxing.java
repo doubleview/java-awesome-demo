@@ -3,14 +3,14 @@ package objects2.java8wrap;
 
 public class AutoBoxingUnboxing {
     public static void main(String[] args) {
-        // Ö±½Ó°ÑÒ»¸ö»ù±¾ÀàĞÍ±äÁ¿¸³¸øInteger¶ÔÏó
+        // ç›´æ¥æŠŠä¸€ä¸ªåŸºæœ¬ç±»å‹å˜é‡èµ‹ç»™Integerå¯¹è±¡
         Integer inObj = 5;
-        // Ö±½Ó°ÑÒ»¸öbooleanÀàĞÍ±äÁ¿¸³¸øÒ»¸öObjectÀàĞÍµÄ±äÁ¿
+        // ç›´æ¥æŠŠä¸€ä¸ªbooleanç±»å‹å˜é‡èµ‹ç»™ä¸€ä¸ªObjectç±»å‹çš„å˜é‡
         Object boolObj = true;
-        // Ö±½Ó°ÑÒ»¸öInteger¶ÔÏó¸³¸øintÀàĞÍµÄ±äÁ¿
+        // ç›´æ¥æŠŠä¸€ä¸ªIntegerå¯¹è±¡èµ‹ç»™intç±»å‹çš„å˜é‡
         int it = inObj;
         if (boolObj instanceof Boolean) {
-            // ÏÈ°ÑObject¶ÔÏóÇ¿ÖÆÀàĞÍ×ª»»ÎªBooleanÀàĞÍ£¬ÔÙ¸³¸øboolean±äÁ¿
+            // å…ˆæŠŠObjectå¯¹è±¡å¼ºåˆ¶ç±»å‹è½¬æ¢ä¸ºBooleanç±»å‹ï¼Œå†èµ‹ç»™booleanå˜é‡
             boolean b = (Boolean) boolObj;
             System.out.println(b);
         }

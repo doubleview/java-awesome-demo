@@ -3,15 +3,15 @@ package objects2.java8wrap;
 public class WrapperClassCompare {
     public static void main(String[] args) {
         Integer a = new Integer(6);
-        // Êä³ötrue
-        System.out.println("6µÄ°ü×°ÀàÊµÀıÊÇ·ñ´óÓÚ5.0" + (a > 5.0));
-        System.out.println("±È½Ï2¸ö°ü×°ÀàµÄÊµÀıÊÇ·ñÏàµÈ£º" + (new Integer(2) == new Integer(2))); // Êä³öfalse
-        // Í¨¹ı×Ô¶¯×°Ïä£¬ÔÊĞí°Ñ»ù±¾ÀàĞÍÖµ¸³Öµ¸ø°ü×°ÀàµÄÊµÀı
+        // æˆæ’³åš­true
+        System.out.println("6é¨å‹«å¯˜ç‘å‘¯è¢«ç€¹ç‚°ç·¥é„îˆšæƒæ¾¶Ñ‚ç°¬5.0" + (a > 5.0));
+        System.out.println("å§£æ—‡ç·2æ¶“î„å¯˜ç‘å‘¯è¢«é¨å‹«ç–„æ¸šå¬«æ§¸éšï¸¾æµ‰ç»›å¤›ç´°" + (new Integer(2) == new Integer(2))); // æˆæ’³åš­false
+        // é–«æ°³ç¹ƒé‘·î„å§©ç‘å‘¯î†ˆé”›å±½å‘ç’å‘Šå¦¸é©çƒ˜æ¹°ç»«è¯²ç€·éŠè‰°ç¥´éŠè‚©ç²°é–å‘°î—Šç»«è¤æ®‘ç€¹ç‚°ç·¥
         Integer ina = 2;
         Integer inb = 2;
-        System.out.println("Á½¸ö2×Ô¶¯×°ÏäºóÊÇ·ñÏàµÈ£º" + (ina == inb)); // Êä³ötrue
+        System.out.println("æ¶“ã‚„é‡œ2é‘·î„å§©ç‘å‘¯î†ˆéšåº¢æ§¸éšï¸¾æµ‰ç»›å¤›ç´°" + (ina == inb)); // æˆæ’³åš­true
         Integer biga = 128;
         Integer bigb = 128;
-        System.out.println("Á½¸ö128×Ô¶¯×°ÏäºóÊÇ·ñÏàµÈ£º" + (biga == bigb)); // Êä³öfalse
+        System.out.println("æ¶“ã‚„é‡œ128é‘·î„å§©ç‘å‘¯î†ˆéšåº¢æ§¸éšï¸¾æµ‰ç»›å¤›ç´°" + (biga == bigb)); // æˆæ’³åš­false
     }
 }

@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class ErrorTest {
-    // ÉùÃ÷Ò»¸ö·ºĞÍ·½·¨£¬¸Ã·ºĞÍ·½·¨ÖĞ´øÒ»¸öTÀàĞÍĞÎ²Î
+    // å£°æ˜ä¸€ä¸ªæ³›å‹æ–¹æ³•ï¼Œè¯¥æ³›å‹æ–¹æ³•ä¸­å¸¦ä¸€ä¸ªTç±»å‹å½¢å‚
     static <T> void test(Collection<T> from, Collection<T> to) {
         for (T ele : from) {
             to.add(ele);
@@ -15,7 +15,7 @@ public class ErrorTest {
     public static void main(String[] args) {
         List<Object> as = new ArrayList<>();
         List<String> ao = new ArrayList<>();
-        // ÏÂÃæ´úÂë½«²úÉú±àÒë´íÎó
+        // ä¸‹é¢ä»£ç å°†äº§ç”Ÿç¼–è¯‘é”™è¯¯
         //test(as, ao);
     }
 }

@@ -18,13 +18,12 @@ package netty.protocol.netty.codec;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
+import netty.protocol.netty.struct.Header;
+import netty.protocol.netty.struct.NettyMessage;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.phei.netty.protocol.netty.struct.Header;
-import com.phei.netty.protocol.netty.struct.NettyMessage;
 
 /**
  * @author Lilinfeng
@@ -35,15 +34,13 @@ public class NettyMessageDecoder extends LengthFieldBasedFrameDecoder {
 
     MarshallingDecoder marshallingDecoder;
 
-    public NettyMessageDecoder(int maxFrameLength, int lengthFieldOffset,
-        int lengthFieldLength) throws IOException {
+    public NettyMessageDecoder(int maxFrameLength, int lengthFieldOffset, int lengthFieldLength) throws IOException {
         super(maxFrameLength, lengthFieldOffset, lengthFieldLength);
         marshallingDecoder = new MarshallingDecoder();
     }
 
     @Override
-    protected Object decode(ChannelHandlerContext ctx, ByteBuf in)
-        throws Exception {
+    protected Object decode(ChannelHandlerContext ctx, ByteBuf in) throws Exception {
         ByteBuf frame = (ByteBuf) super.decode(ctx, in);
         if (frame == null) {
             return null;

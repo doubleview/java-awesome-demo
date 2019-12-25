@@ -13,7 +13,7 @@ class Name {
         this.lastName = lastName;
     }
 
-    // Ê¡ÂÔfirstName¡¢lastNameµÄsetterºÍgetter·½·¨
+    // çœç•¥firstNameã€lastNameçš„setterå’Œgetteræ–¹æ³•
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -43,13 +43,13 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Name n = new Name("Îò¿Õ", "Ëï");
+        Name n = new Name("æ‚Ÿç©º", "å­™");
         Person p = new Person(n);
-        // Person¶ÔÏóµÄnameµÄfirstNameÖµÎª"Îò¿Õ"
+        // Personå¯¹è±¡çš„nameçš„firstNameå€¼ä¸º"æ‚Ÿç©º"
         System.out.println(p.getName().getFirstName());
-        // ¸Ä±äPerson¶ÔÏónameµÄfirstNameÖµ
-        n.setFirstName("°Ë½ä");
-        // Person¶ÔÏóµÄnameµÄfirstNameÖµ±»¸ÄÎª"°Ë½ä"
+        // æ”¹å˜Personå¯¹è±¡nameçš„firstNameå€¼
+        n.setFirstName("å…«æˆ’");
+        // Personå¯¹è±¡çš„nameçš„firstNameå€¼è¢«æ”¹ä¸º"å…«æˆ’"
         System.out.println(p.getName().getFirstName());
     }
 }

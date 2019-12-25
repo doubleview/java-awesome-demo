@@ -6,8 +6,8 @@ import java.util.TreeSet;
 public class TreeSetErrorTest2 {
     public static void main(String[] args) {
         TreeSet ts = new TreeSet();
-        // ÏòTreeSet¼¯ºÏÖĞÌí¼ÓÁ½¸ö¶ÔÏó
-        ts.add(new String("Java¿ª·¢"));
-        ts.add(new Date());   // ¢Ù
+        // å‘TreeSeté›†åˆä¸­æ·»åŠ ä¸¤ä¸ªå¯¹è±¡
+        ts.add(new String("Javaå¼€å‘"));
+        ts.add(new Date());   // â‘ 
     }
 }

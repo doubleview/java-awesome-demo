@@ -5,10 +5,10 @@ import java.util.SortedMap;
 
 public class CharsetTest {
     public static void main(String[] args) {
-        // 获取Java支持的全部字符集
+        // 鑾峰彇Java鏀寔鐨勫叏閮ㄥ瓧绗﹂泦
         SortedMap<String, Charset> map = Charset.availableCharsets();
         for (String alias : map.keySet()) {
-            // 输出字符集的别名和对应的Charset对象
+            // 杈撳嚭瀛楃闆嗙殑鍒悕鍜屽搴旂殑Charset瀵硅薄
             System.out.println(alias + "----->" + map.get(alias));
         }
     }

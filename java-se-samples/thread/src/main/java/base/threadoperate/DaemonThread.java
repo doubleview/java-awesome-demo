@@ -2,7 +2,7 @@ package base.threadoperate;
 
 
 public class DaemonThread extends Thread {
-    // ¶¨ÒåºóÌ¨Ïß³ÌµÄÏß³ÌÖ´ĞĞÌåÓëÆÕÍ¨Ïß³ÌÃ»ÓĞÈÎºÎÇø±ğ
+    // å®šä¹‰åå°çº¿ç¨‹çš„çº¿ç¨‹æ‰§è¡Œä½“ä¸æ™®é€šçº¿ç¨‹æ²¡æœ‰ä»»ä½•åŒºåˆ«
     public void run() {
         for (int i = 0; i < 1000; i++) {
             System.out.println(getName() + "  " + i);
@@ -11,15 +11,15 @@ public class DaemonThread extends Thread {
 
     public static void main(String[] args) {
         DaemonThread t = new DaemonThread();
-        // ½«´ËÏß³ÌÉèÖÃ³ÉºóÌ¨Ïß³Ì
+        // å°†æ­¤çº¿ç¨‹è®¾ç½®æˆåå°çº¿ç¨‹
         t.setDaemon(true);
-        // Æô¶¯ºóÌ¨Ïß³Ì
+        // å¯åŠ¨åå°çº¿ç¨‹
         t.start();
         for (int i = 0; i < 10; i++) {
             System.out.println(Thread.currentThread().getName()
                     + "  " + i);
         }
-        // -----³ÌĞòÖ´ĞĞµ½´Ë´¦£¬Ç°Ì¨Ïß³Ì£¨mainÏß³Ì£©½áÊø------
-        // ºóÌ¨Ïß³ÌÒ²Ó¦¸ÃËæÖ®½áÊø
+        // -----ç¨‹åºæ‰§è¡Œåˆ°æ­¤å¤„ï¼Œå‰å°çº¿ç¨‹ï¼ˆmainçº¿ç¨‹ï¼‰ç»“æŸ------
+        // åå°çº¿ç¨‹ä¹Ÿåº”è¯¥éšä¹‹ç»“æŸ
     }
 }

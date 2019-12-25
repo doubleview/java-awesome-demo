@@ -6,7 +6,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 /**
- * 异步CompletableFuture
+ * 寮傛CompletableFuture
  */
 public class AsynDemo {
 
@@ -25,7 +25,7 @@ public class AsynDemo {
     }
 
     /**
-     * 异步流式处理
+     * 寮傛娴佸紡澶勭悊
      * @throws ExecutionException
      * @throws InterruptedException
      */
@@ -38,7 +38,7 @@ public class AsynDemo {
 
 
     /**
-     * 异常处理
+     * 寮傚父澶勭悊
      */
     @Test
     public void handleException() throws ExecutionException, InterruptedException {
@@ -54,7 +54,7 @@ public class AsynDemo {
 
 
     /**
-     * 组合多个CompletableFuture
+     * 缁勫悎澶氫釜CompletableFuture
      */
     @Test
     public void unionCompletableFuture() throws ExecutionException, InterruptedException {
@@ -66,7 +66,7 @@ public class AsynDemo {
     }
 
     /**
-     * 组合多个CompletableFuture
+     * 缁勫悎澶氫釜CompletableFuture
      */
     @Test
     public void combineCompletableFuture() throws ExecutionException, InterruptedException {

@@ -4,11 +4,11 @@ public class BooleanTest {
     public static void main(String[] args) {
         boolean b1 = true;
         boolean b2 = false;
-        // ÏÂÃæ´úÂë½«³öÏÖ´íÎó£º×Ö·û´®²»ÄÜÖ±½Ó±ä³ÉbooleanĞÍµÄÖµ
+        // ä¸‹é¢ä»£ç å°†å‡ºç°é”™è¯¯ï¼šå­—ç¬¦ä¸²ä¸èƒ½ç›´æ¥å˜æˆbooleanå‹çš„å€¼
         // boolean b3 = "true";
-        // Ê¹ÓÃbooleanºÍ×Ö·û´®½øĞĞÁ¬½ÓÔËËã£¬boolean»á×Ô¶¯×ª»»³É×Ö·û´®
+        // ä½¿ç”¨booleanå’Œå­—ç¬¦ä¸²è¿›è¡Œè¿æ¥è¿ç®—ï¼Œbooleanä¼šè‡ªåŠ¨è½¬æ¢æˆå­—ç¬¦ä¸²
         String str = true + "";
-        // ÏÂÃæ½«Êä³ötrue
+        // ä¸‹é¢å°†è¾“å‡ºtrue
         System.out.println(str);
     }
 }

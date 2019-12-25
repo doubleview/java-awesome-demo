@@ -2,21 +2,21 @@ package objects.inerhit;
 
 
 class Parent {
-    public String tag = "Java¿ª·¢";         //¢Ù
+    public String tag = "Javaå¼€å‘";         //â‘ 
 }
 
 class Derived extends Parent {
-    // ¶¨ÒåÒ»¸öË½ÓĞµÄtagÊµÀı±äÁ¿À´Òş²Ø¸¸ÀàµÄtagÊµÀı±äÁ¿
-    private String tag = "ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½";         //¢Ú
+    // å®šä¹‰ä¸€ä¸ªç§æœ‰çš„tagå®ä¾‹å˜é‡æ¥éšè—çˆ¶ç±»çš„tagå®ä¾‹å˜é‡
+    private String tag = "è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜";         //â‘¡
 }
 
 public class HideTest {
     public static void main(String[] args) {
         Derived d = new Derived();
-        // ³ÌĞò²»¿É·ÃÎÊdµÄË½ÓĞ±äÁ¿tag£¬ËùÒÔÏÂÃæÓï¾ä½«ÒıÆğ±àÒë´íÎó
-        // System.out.println(d.tag);         //¢Û
-        // ½«d±äÁ¿ÏÔÊ½µØÏòÉÏ×ªĞÍÎªParentºó£¬¼´¿É·ÃÎÊtagÊµÀı±äÁ¿
-        // ³ÌĞò½«Êä³ö£º¡°Java¿ª·¢¡±
-        System.out.println(((Parent) d).tag);         //¢Ü
+        // ç¨‹åºä¸å¯è®¿é—®dçš„ç§æœ‰å˜é‡tagï¼Œæ‰€ä»¥ä¸‹é¢è¯­å¥å°†å¼•èµ·ç¼–è¯‘é”™è¯¯
+        // System.out.println(d.tag);         //â‘¢
+        // å°†då˜é‡æ˜¾å¼åœ°å‘ä¸Šè½¬å‹ä¸ºParentåï¼Œå³å¯è®¿é—®tagå®ä¾‹å˜é‡
+        // ç¨‹åºå°†è¾“å‡ºï¼šâ€œJavaå¼€å‘â€
+        System.out.println(((Parent) d).tag);         //â‘£
     }
 }

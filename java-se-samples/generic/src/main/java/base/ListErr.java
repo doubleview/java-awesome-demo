@@ -5,12 +5,12 @@ import java.util.List;
 
 public class ListErr {
     public static void main(String[] args) {
-        // ´´½¨Ò»¸öÖ»Ïë±£´æ×Ö·û´®µÄList¼¯ºÏ
+        // åˆ›å»ºä¸€ä¸ªåªæƒ³ä¿å­˜å­—ç¬¦ä¸²çš„Listé›†åˆ
         List strList = new ArrayList();
-        strList.add("Java¿ª·¢");
-        strList.add("Android¿ª·¢");
-        // "²»Ð¡ÐÄ"°ÑÒ»¸öInteger¶ÔÏó"¶ª½ø"ÁË¼¯ºÏ
-        strList.add(5);     // ¢Ù
-        strList.forEach(str -> System.out.println(((String) str).length())); // ¢Ú
+        strList.add("Javaå¼€å‘");
+        strList.add("Androidå¼€å‘");
+        // "ä¸å°å¿ƒ"æŠŠä¸€ä¸ªIntegerå¯¹è±¡"ä¸¢è¿›"äº†é›†åˆ
+        strList.add(5);     // â‘ 
+        strList.forEach(str -> System.out.println(((String) str).length())); // â‘¡
     }
 }

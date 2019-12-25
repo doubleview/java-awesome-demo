@@ -5,18 +5,18 @@ import java.util.HashSet;
 
 public class ForeachTest {
     public static void main(String[] args) {
-        // ´´½¨¼¯ºÏ¡¢Ìí¼ÓÔªËØµÄ´úÂëÓëÇ°Ò»¸ö³ÌĞòÏàÍ¬
+        // åˆ›å»ºé›†åˆã€æ·»åŠ å…ƒç´ çš„ä»£ç ä¸å‰ä¸€ä¸ªç¨‹åºç›¸åŒ
         Collection books = new HashSet();
-        books.add(new String("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½"));
-        books.add(new String("Java¿ª·¢"));
-        books.add(new String("Android¿ª·¢"));
+        books.add(new String("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜"));
+        books.add(new String("Javaå¼€å‘"));
+        books.add(new String("Androidå¼€å‘"));
         for (Object obj : books) {
-            // ´Ë´¦µÄbook±äÁ¿Ò²²»ÊÇ¼¯ºÏÔªËØ±¾Éí
+            // æ­¤å¤„çš„bookå˜é‡ä¹Ÿä¸æ˜¯é›†åˆå…ƒç´ æœ¬èº«
             String book = (String) obj;
             System.out.println(book);
-            if (book.equals("Android¿ª·¢")) {
-                // ÏÂÃæ´úÂë»áÒı·¢ConcurrentModificationExceptionÒì³£
-                books.remove(book);     //¢Ù
+            if (book.equals("Androidå¼€å‘")) {
+                // ä¸‹é¢ä»£ç ä¼šå¼•å‘ConcurrentModificationExceptionå¼‚å¸¸
+                books.remove(book);     //â‘ 
             }
         }
         System.out.println(books);

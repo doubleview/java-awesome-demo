@@ -3,15 +3,15 @@ package apibase.locale;
 import java.util.ListResourceBundle;
 
 public class myMess_zh_CN extends ListResourceBundle {
-    // ¶¨Òå×ÊÔ´
+    // å®šä¹‰èµ„æº
     private final Object myData[][] =
             {
-                    {"msg", "{0}£¬ÄãºÃ£¡½ñÌìµÄÈÕÆÚÊÇ{1}"}
+                    {"msg", "{0}ï¼Œä½ å¥½ï¼ä»Šå¤©çš„æ—¥æœŸæ˜¯{1}"}
             };
 
-    // ÖØĞ´·½·¨getContents()
+    // é‡å†™æ–¹æ³•getContents()
     public Object[][] getContents() {
-        // ¸Ã·½·¨·µ»Ø×ÊÔ´µÄkey-value¶Ô
+        // è¯¥æ–¹æ³•è¿”å›èµ„æºçš„key-valueå¯¹
         return myData;
     }
 }

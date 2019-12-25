@@ -6,19 +6,19 @@ import java.util.Properties;
 
 public class SystemTest {
     public static void main(String[] args) throws Exception {
-        // »ñÈ¡ÏµÍ³ËùÓĞµÄ»·¾³±äÁ¿
+        // è·å–ç³»ç»Ÿæ‰€æœ‰çš„ç¯å¢ƒå˜é‡
         Map<String, String> env = System.getenv();
         for (String name : env.keySet()) {
             System.out.println(name + " ---> " + env.get(name));
         }
-        // »ñÈ¡Ö¸¶¨»·¾³±äÁ¿µÄÖµ
+        // è·å–æŒ‡å®šç¯å¢ƒå˜é‡çš„å€¼
         System.out.println(System.getenv("JAVA_HOME"));
-        // »ñÈ¡ËùÓĞµÄÏµÍ³ÊôĞÔ
+        // è·å–æ‰€æœ‰çš„ç³»ç»Ÿå±æ€§
         Properties props = System.getProperties();
-        // ½«ËùÓĞÏµÍ³ÊôĞÔ±£´æµ½props.txtÎÄ¼şÖĞ
+        // å°†æ‰€æœ‰ç³»ç»Ÿå±æ€§ä¿å­˜åˆ°props.txtæ–‡ä»¶ä¸­
         props.store(new FileOutputStream("props.txt")
                 , "System Properties");
-        // Êä³öÌØ¶¨µÄÏµÍ³ÊôĞÔ
+        // è¾“å‡ºç‰¹å®šçš„ç³»ç»Ÿå±æ€§
         System.out.println(System.getProperty("os.name"));
     }
 }

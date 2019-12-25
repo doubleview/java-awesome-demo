@@ -1,9 +1,9 @@
 package metaanotation;
 
 public class MyTest {
-    // 使用@Test修饰info方法
+    // 浣跨敤@Test淇グinfo鏂规硶
     @Testable
     public void info() {
-        System.out.println("info方法...");
+        System.out.println("info鏂规硶...");
     }
 }

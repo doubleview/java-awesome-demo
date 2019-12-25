@@ -10,21 +10,21 @@ public class SimpleAIOClient {
 
     public static void main(String[] args)
             throws Exception {
-        // ÓÃÓÚ¶ÁÈ¡Êı¾İµÄByteBuffer¡£
+        // ç”¨äºè¯»å–æ•°æ®çš„ByteBufferã€‚
         ByteBuffer buff = ByteBuffer.allocate(1024);
         Charset utf = Charset.forName("utf-8");
         try (
-                // ¢Ù´´½¨AsynchronousSocketChannel¶ÔÏó
+                // â‘ åˆ›å»ºAsynchronousSocketChannelå¯¹è±¡
                 AsynchronousSocketChannel clientChannel = AsynchronousSocketChannel.open()) {
-            // ¢ÚÁ¬½ÓÔ¶³Ì·şÎñÆ÷
-            clientChannel.connect(new InetSocketAddress("127.0.0.1", PORT)).get();     // ¢Ü
+            // â‘¡è¿æ¥è¿œç¨‹æœåŠ¡å™¨
+            clientChannel.connect(new InetSocketAddress("127.0.0.1", PORT)).get();     // â‘£
             buff.clear();
-            // ¢Û´ÓclientChannelÖĞ¶ÁÈ¡Êı¾İ
-            clientChannel.read(buff).get();     // ¢İ
+            // â‘¢ä»clientChannelä¸­è¯»å–æ•°æ®
+            clientChannel.read(buff).get();     // â‘¤
             buff.flip();
-            // ½«buffÖĞÄÚÈİ×ª»»Îª×Ö·û´®
+            // å°†buffä¸­å†…å®¹è½¬æ¢ä¸ºå­—ç¬¦ä¸²
             String content = utf.decode(buff).toString();
-            System.out.println("·şÎñÆ÷ĞÅÏ¢£º" + content);
+            System.out.println("æœåŠ¡å™¨ä¿¡æ¯ï¼š" + content);
         }
     }
 }

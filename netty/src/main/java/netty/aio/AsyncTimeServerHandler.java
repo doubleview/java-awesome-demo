@@ -51,7 +51,6 @@ public class AsyncTimeServerHandler implements Runnable {
      */
     @Override
     public void run() {
-
         latch = new CountDownLatch(1);
         doAccept();
         try {
@@ -62,8 +61,7 @@ public class AsyncTimeServerHandler implements Runnable {
     }
 
     public void doAccept() {
-        asynchronousServerSocketChannel.accept(this,
-            new AcceptCompletionHandler());
+        asynchronousServerSocketChannel.accept(this, new AcceptCompletionHandler());
     }
 
 }

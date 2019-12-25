@@ -2,14 +2,14 @@ package base;
 
 public class Fruit {
     public void info() {
-        System.out.println("水果的info方法...");
+        System.out.println("姘存灉鐨刬nfo鏂规硶...");
     }
 }
 
 class Apple extends Fruit {
-    // 使用@Override指定下面方法必须重写父类方法
+    // 浣跨敤@Override鎸囧畾涓嬮潰鏂规硶蹇呴』閲嶅啓鐖剁被鏂规硶
     //@Override
     public void inf0() {
-        System.out.println("苹果重写水果的info方法...");
+        System.out.println("鑻规灉閲嶅啓姘存灉鐨刬nfo鏂规硶...");
     }
 }

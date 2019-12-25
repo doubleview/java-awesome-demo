@@ -1,6 +1,5 @@
 package com.doubleview.spring;
 
-import com.enniu.cloud.services.gcpfeed.controller.comment.CommentSuggestController;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -41,19 +40,19 @@ public class UriComponentsBuilderTest {
         assertEquals(uriComponents.toUriString(), "http://api.u51.com/gcp-feed/api/v1/feeds?name=胡家三少&feedType=1&feedId=1111");
     }
 
-    @Test
-    public void mvcUriComponentsBuilderTest() {
-        UriComponentsBuilder baseUrlBuilder = UriComponentsBuilder.fromUriString("http://api.u51.com");
-
-        UriComponents uriComponents = MvcUriComponentsBuilder.relativeTo(baseUrlBuilder)
-                .withMethodName(CommentSuggestController.class, "getAllCommentInFeed", 100L, 1, 1000L, 1, 0, 20, 0L)
-                .build();
-
-        assertEquals(uriComponents.toUriString(), "http://api.u51.com/gcp-feed/api/v1/me/1/feeds/1000/comments?sortBy=1&pageIndex=0&pageSize=20&publishTime=0");
-
-        uriComponents = MvcUriComponentsBuilder.relativeTo(baseUrlBuilder)
-                .withMethodCall(MvcUriComponentsBuilder.on(CommentSuggestController.class).getAllCommentInFeed(100L, 1, 1000L, 1, 0, 20, 0L))
-                .build();
-        assertEquals(uriComponents.toUriString(), "http://api.u51.com/gcp-feed/api/v1/me/1/feeds/1000/comments?sortBy=1&pageIndex=0&pageSize=20&publishTime=0");
-    }
+//    @Test
+//    public void mvcUriComponentsBuilderTest() {
+//        UriComponentsBuilder baseUrlBuilder = UriComponentsBuilder.fromUriString("http://api.u51.com");
+//
+//        UriComponents uriComponents = MvcUriComponentsBuilder.relativeTo(baseUrlBuilder)
+//                .withMethodName(CommentSuggestController.class, "getAllCommentInFeed", 100L, 1, 1000L, 1, 0, 20, 0L)
+//                .build();
+//
+//        assertEquals(uriComponents.toUriString(), "http://api.u51.com/gcp-feed/api/v1/me/1/feeds/1000/comments?sortBy=1&pageIndex=0&pageSize=20&publishTime=0");
+//
+//        uriComponents = MvcUriComponentsBuilder.relativeTo(baseUrlBuilder)
+//                .withMethodCall(MvcUriComponentsBuilder.on(CommentSuggestController.class).getAllCommentInFeed(100L, 1, 1000L, 1, 0, 20, 0L))
+//                .build();
+//        assertEquals(uriComponents.toUriString(), "http://api.u51.com/gcp-feed/api/v1/me/1/feeds/1000/comments?sortBy=1&pageIndex=0&pageSize=20&publishTime=0");
+//    }
 }

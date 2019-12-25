@@ -11,67 +11,67 @@ public class ServerThread extends Thread {
     BufferedReader br = null;
     PrintStream ps = null;
 
-    // ¶¨ÒåÒ»¸ö¹¹ÔìÆ÷£¬ÓÃÓÚ½ÓÊÕÒ»¸öSocketÀ´´´½¨ServerThreadÏß³Ì
+    // å®šä¹‰ä¸€ä¸ªæ„é€ å™¨ï¼Œç”¨äºæ¥æ”¶ä¸€ä¸ªSocketæ¥åˆ›å»ºServerThreadçº¿ç¨‹
     public ServerThread(Socket socket) {
         this.socket = socket;
     }
 
     public void run() {
         try {
-            // »ñÈ¡¸ÃSocket¶ÔÓ¦µÄÊäÈëÁ÷
+            // è·å–è¯¥Socketå¯¹åº”çš„è¾“å…¥æµ
             br = new BufferedReader(new InputStreamReader(socket
                     .getInputStream()));
-            // »ñÈ¡¸ÃSocket¶ÔÓ¦µÄÊä³öÁ÷
+            // è·å–è¯¥Socketå¯¹åº”çš„è¾“å‡ºæµ
             ps = new PrintStream(socket.getOutputStream());
             String line = null;
             while ((line = br.readLine()) != null) {
-                // Èç¹û¶Áµ½µÄĞĞÒÔBaiduProtocol.USER_ROUND¿ªÊ¼£¬²¢ÒÔÆä½áÊø£¬
-                // ¿ÉÒÔÈ·¶¨¶Áµ½µÄÊÇÓÃ»§µÇÂ¼µÄÓÃ»§Ãû
+                // å¦‚æœè¯»åˆ°çš„è¡Œä»¥BaiduProtocol.USER_ROUNDå¼€å§‹ï¼Œå¹¶ä»¥å…¶ç»“æŸï¼Œ
+                // å¯ä»¥ç¡®å®šè¯»åˆ°çš„æ˜¯ç”¨æˆ·ç™»å½•çš„ç”¨æˆ·å
                 if (line.startsWith(BaiduProtocol.USER_ROUND)
                         && line.endsWith(BaiduProtocol.USER_ROUND)) {
-                    // µÃµ½ÕæÊµÏûÏ¢
+                    // å¾—åˆ°çœŸå®æ¶ˆæ¯
                     String userName = getRealMsg(line);
-                    // Èç¹ûÓÃ»§ÃûÖØ¸´
+                    // å¦‚æœç”¨æˆ·åé‡å¤
                     if (Server.clients.map.containsKey(userName)) {
-                        System.out.println("ÖØ¸´");
+                        System.out.println("é‡å¤");
                         ps.println(BaiduProtocol.NAME_REP);
                     } else {
-                        System.out.println("³É¹¦");
+                        System.out.println("æˆåŠŸ");
                         ps.println(BaiduProtocol.LOGIN_SUCCESS);
                         Server.clients.put(userName, ps);
                     }
                 }
-                // Èç¹û¶Áµ½µÄĞĞÒÔBaiduProtocol.PRIVATE_ROUND¿ªÊ¼£¬²¢ÒÔÆä½áÊø£¬
-                // ¿ÉÒÔÈ·¶¨ÊÇË½ÁÄĞÅÏ¢£¬Ë½ÁÄĞÅÏ¢Ö»ÏòÌØ¶¨µÄÊä³öÁ÷·¢ËÍ
+                // å¦‚æœè¯»åˆ°çš„è¡Œä»¥BaiduProtocol.PRIVATE_ROUNDå¼€å§‹ï¼Œå¹¶ä»¥å…¶ç»“æŸï¼Œ
+                // å¯ä»¥ç¡®å®šæ˜¯ç§èŠä¿¡æ¯ï¼Œç§èŠä¿¡æ¯åªå‘ç‰¹å®šçš„è¾“å‡ºæµå‘é€
                 else if (line.startsWith(BaiduProtocol.PRIVATE_ROUND)
                         && line.endsWith(BaiduProtocol.PRIVATE_ROUND)) {
-                    // µÃµ½ÕæÊµÏûÏ¢
+                    // å¾—åˆ°çœŸå®æ¶ˆæ¯
                     String userAndMsg = getRealMsg(line);
-                    // ÒÔSPLIT_SIGN·Ö¸î×Ö·û´®£¬Ç°°ëÊÇË½ÁÄÓÃ»§£¬ºó°ëÊÇÁÄÌìĞÅÏ¢
+                    // ä»¥SPLIT_SIGNåˆ†å‰²å­—ç¬¦ä¸²ï¼Œå‰åŠæ˜¯ç§èŠç”¨æˆ·ï¼ŒååŠæ˜¯èŠå¤©ä¿¡æ¯
                     String user = userAndMsg.split(BaiduProtocol.SPLIT_SIGN)[0];
                     String msg = userAndMsg.split(BaiduProtocol.SPLIT_SIGN)[1];
-                    // »ñÈ¡Ë½ÁÄÓÃ»§¶ÔÓ¦µÄÊä³öÁ÷£¬²¢·¢ËÍË½ÁÄĞÅÏ¢
+                    // è·å–ç§èŠç”¨æˆ·å¯¹åº”çš„è¾“å‡ºæµï¼Œå¹¶å‘é€ç§èŠä¿¡æ¯
                     Server.clients.map.get(user).println(Server.clients
-                            .getKeyByValue(ps) + "ÇÄÇÄµØ¶ÔÄãËµ£º" + msg);
+                            .getKeyByValue(ps) + "æ‚„æ‚„åœ°å¯¹ä½ è¯´ï¼š" + msg);
                 }
-                // ¹«ÁÄÒªÏòÃ¿¸öSocket·¢ËÍ
+                // å…¬èŠè¦å‘æ¯ä¸ªSocketå‘é€
                 else {
-                    // µÃµ½ÕæÊµÏûÏ¢
+                    // å¾—åˆ°çœŸå®æ¶ˆæ¯
                     String msg = getRealMsg(line);
-                    // ±éÀúclientsÖĞµÄÃ¿¸öÊä³öÁ÷
+                    // éå†clientsä¸­çš„æ¯ä¸ªè¾“å‡ºæµ
                     for (PrintStream clientPs : Server.clients.valueSet()) {
                         clientPs.println(Server.clients.getKeyByValue(ps)
-                                + "Ëµ£º" + msg);
+                                + "è¯´ï¼š" + msg);
                     }
                 }
             }
         }
-        // ²¶×½µ½Òì³£ºó£¬±íÃ÷¸ÃSocket¶ÔÓ¦µÄ¿Í»§¶ËÒÑ¾­³öÏÖÁËÎÊÌâ
-        // ËùÒÔ³ÌĞò½«Æä¶ÔÓ¦µÄÊä³öÁ÷´ÓMapÖĞÉ¾³ı
+        // æ•æ‰åˆ°å¼‚å¸¸åï¼Œè¡¨æ˜è¯¥Socketå¯¹åº”çš„å®¢æˆ·ç«¯å·²ç»å‡ºç°äº†é—®é¢˜
+        // æ‰€ä»¥ç¨‹åºå°†å…¶å¯¹åº”çš„è¾“å‡ºæµä»Mapä¸­åˆ é™¤
         catch (IOException e) {
             Server.clients.removeByValue(ps);
             System.out.println(Server.clients.map.size());
-            // ¹Ø±ÕÍøÂç¡¢IO×ÊÔ´
+            // å…³é—­ç½‘ç»œã€IOèµ„æº
             try {
                 if (br != null) {
                     br.close();
@@ -88,7 +88,7 @@ public class ServerThread extends Thread {
         }
     }
 
-    // ½«¶Áµ½µÄÄÚÈİÈ¥µôÇ°ºóµÄĞ­Òé×Ö·û£¬»Ö¸´³ÉÕæÊµÊı¾İ
+    // å°†è¯»åˆ°çš„å†…å®¹å»æ‰å‰åçš„åè®®å­—ç¬¦ï¼Œæ¢å¤æˆçœŸå®æ•°æ®
     private String getRealMsg(String line) {
         return line.substring(BaiduProtocol.PROTOCOL_LEN
                 , line.length() - BaiduProtocol.PROTOCOL_LEN);

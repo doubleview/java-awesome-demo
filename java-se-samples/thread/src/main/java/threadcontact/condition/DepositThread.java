@@ -1,9 +1,9 @@
 package threadcontact.condition;
 
 public class DepositThread extends Thread {
-    // Ä£ÄâÓÃ»§ÕË»§
+    // æ¨¡æ‹Ÿç”¨æˆ·è´¦æˆ·
     private Account account;
-    // µ±Ç°È¡Ç®Ïß³ÌËùÏ£Íû´æ¿îµÄÇ®Êı
+    // å½“å‰å–é’±çº¿ç¨‹æ‰€å¸Œæœ›å­˜æ¬¾çš„é’±æ•°
     private double depositAmount;
 
     public DepositThread(String name, Account account
@@ -13,7 +13,7 @@ public class DepositThread extends Thread {
         this.depositAmount = depositAmount;
     }
 
-    // ÖØ¸´100´ÎÖ´ĞĞ´æ¿î²Ù×÷
+    // é‡å¤100æ¬¡æ‰§è¡Œå­˜æ¬¾æ“ä½œ
     public void run() {
         for (int i = 0; i < 100; i++) {
             account.deposit(depositAmount);

@@ -1,23 +1,23 @@
 package objects.blockinital;
 
 public class Person {
-    // ÏÂÃæ¶¨ÒåÒ»¸ö³õÊ¼»¯¿é
+    // ä¸‹é¢å®šä¹‰ä¸€ä¸ªåˆå§‹åŒ–å—
     {
         int a = 6;
         if (a > 4) {
-            System.out.println("Person³õÊ¼»¯¿é£º¾Ö²¿±äÁ¿aµÄÖµ´óÓÚ4");
+            System.out.println("Personåˆå§‹åŒ–å—ï¼šå±€éƒ¨å˜é‡açš„å€¼å¤§äº4");
         }
-        System.out.println("PersonµÄ³õÊ¼»¯¿é");
+        System.out.println("Personçš„åˆå§‹åŒ–å—");
     }
 
-    // ¶¨ÒåµÚ¶ş¸ö³õÊ¼»¯¿é
+    // å®šä¹‰ç¬¬äºŒä¸ªåˆå§‹åŒ–å—
     {
-        System.out.println("PersonµÄµÚ¶ş¸ö³õÊ¼»¯¿é");
+        System.out.println("Personçš„ç¬¬äºŒä¸ªåˆå§‹åŒ–å—");
     }
 
-    // ¶¨ÒåÎŞ²ÎÊıµÄ¹¹ÔìÆ÷
+    // å®šä¹‰æ— å‚æ•°çš„æ„é€ å™¨
     public Person() {
-        System.out.println("PersonÀàµÄÎŞ²ÎÊı¹¹ÔìÆ÷");
+        System.out.println("Personç±»çš„æ— å‚æ•°æ„é€ å™¨");
     }
 
     public static void main(String[] args) {

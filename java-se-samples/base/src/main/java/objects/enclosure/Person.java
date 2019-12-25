@@ -2,15 +2,15 @@ package objects.enclosure;
 
 
 public class Person {
-    // Ê¹ÓÃprivateÐÞÊÎ³ÉÔ±±äÁ¿£¬½«ÕâÐ©³ÉÔ±±äÁ¿Òþ²ØÆðÀ´
+    // ä½¿ç”¨privateä¿®é¥°æˆå‘˜å˜é‡ï¼Œå°†è¿™äº›æˆå‘˜å˜é‡éšè—èµ·æ¥
     private String name;
     private int age;
 
-    // Ìá¹©·½·¨À´²Ù×÷name³ÉÔ±±äÁ¿
+    // æä¾›æ–¹æ³•æ¥æ“ä½œnameæˆå‘˜å˜é‡
     public void setName(String name) {
-        // Ö´ÐÐºÏÀíÐÔÐ£Ñé£¬ÒªÇóÓÃ»§Ãû±ØÐëÔÚ2¡«6Î»Ö®¼ä
+        // æ‰§è¡Œåˆç†æ€§æ ¡éªŒï¼Œè¦æ±‚ç”¨æˆ·åå¿…é¡»åœ¨2ï½ž6ä½ä¹‹é—´
         if (name.length() > 6 || name.length() < 2) {
-            System.out.println("ÄúÉèÖÃµÄÈËÃû²»·ûºÏÒªÇó");
+            System.out.println("æ‚¨è®¾ç½®çš„äººåä¸ç¬¦åˆè¦æ±‚");
             return;
         } else {
             this.name = name;
@@ -21,11 +21,11 @@ public class Person {
         return this.name;
     }
 
-    // Ìá¹©·½·¨À´²Ù×÷age³ÉÔ±±äÁ¿
+    // æä¾›æ–¹æ³•æ¥æ“ä½œageæˆå‘˜å˜é‡
     public void setAge(int age) {
-        // Ö´ÐÐºÏÀíÐÔÐ£Ñé£¬ÒªÇóÓÃ»§ÄêÁä±ØÐëÔÚ0¡«100Ö®¼ä
+        // æ‰§è¡Œåˆç†æ€§æ ¡éªŒï¼Œè¦æ±‚ç”¨æˆ·å¹´é¾„å¿…é¡»åœ¨0ï½ž100ä¹‹é—´
         if (age > 100 || age < 0) {
-            System.out.println("ÄúÉèÖÃµÄÄêÁä²»ºÏ·¨");
+            System.out.println("æ‚¨è®¾ç½®çš„å¹´é¾„ä¸åˆæ³•");
             return;
         } else {
             this.age = age;

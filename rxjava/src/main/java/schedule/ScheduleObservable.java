@@ -43,6 +43,8 @@ public class ScheduleObservable {
                     System.out.println("onNext : " + s);
                 }
             });
+
+
         Thread.sleep(10*1000);
     }
 }

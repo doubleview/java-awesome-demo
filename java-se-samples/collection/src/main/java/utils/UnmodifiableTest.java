@@ -4,20 +4,20 @@ import java.util.*;
 
 public class UnmodifiableTest {
     public static void main(String[] args) {
-        // ´´½¨Ò»¸ö¿ÕµÄ¡¢²»¿É¸Ä±äµÄList¶ÔÏó
+        // åˆ›å»ºä¸€ä¸ªç©ºçš„ã€ä¸å¯æ”¹å˜çš„Listå¯¹è±¡
         List unmodifiableList = Collections.emptyList();
-        // ´´½¨Ò»¸öÖ»ÓĞÒ»¸öÔªËØ£¬ÇÒ²»¿É¸Ä±äµÄSet¶ÔÏó
-        Set unmodifiableSet = Collections.singleton("Java¿ª·¢");
-        // ´´½¨Ò»¸öÆÕÍ¨Map¶ÔÏó
+        // åˆ›å»ºä¸€ä¸ªåªæœ‰ä¸€ä¸ªå…ƒç´ ï¼Œä¸”ä¸å¯æ”¹å˜çš„Setå¯¹è±¡
+        Set unmodifiableSet = Collections.singleton("Javaå¼€å‘");
+        // åˆ›å»ºä¸€ä¸ªæ™®é€šMapå¯¹è±¡
         Map scores = new HashMap();
-        scores.put("ÓïÎÄ", 80);
+        scores.put("è¯­æ–‡", 80);
         scores.put("Java", 82);
-        // ·µ»ØÆÕÍ¨Map¶ÔÏó¶ÔÓ¦µÄ²»¿É±ä°æ±¾
+        // è¿”å›æ™®é€šMapå¯¹è±¡å¯¹åº”çš„ä¸å¯å˜ç‰ˆæœ¬
         Map unmodifiableMap = Collections.unmodifiableMap(scores);
-        // ÏÂÃæÈÎÒâÒ»ĞĞ´úÂë¶¼½«Òı·¢UnsupportedOperationExceptionÒì³£
-        unmodifiableList.add("²âÊÔÔªËØ");   //¢Ù
-        unmodifiableSet.add("²âÊÔÔªËØ");    //¢Ú
-        unmodifiableMap.put("ÓïÎÄ", 90);   //¢Û
+        // ä¸‹é¢ä»»æ„ä¸€è¡Œä»£ç éƒ½å°†å¼•å‘UnsupportedOperationExceptionå¼‚å¸¸
+        unmodifiableList.add("æµ‹è¯•å…ƒç´ ");   //â‘ 
+        unmodifiableSet.add("æµ‹è¯•å…ƒç´ ");    //â‘¡
+        unmodifiableMap.put("è¯­æ–‡", 90);   //â‘¢
     }
 }
 

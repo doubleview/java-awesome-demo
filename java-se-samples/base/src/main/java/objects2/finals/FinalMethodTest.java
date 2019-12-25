@@ -7,7 +7,7 @@ public class FinalMethodTest {
 }
 /*class Sub extends FinalMethodTest
 {
-	// ÏÂÃæ·½·¨¶¨Òå½«³öÏÖ±àÒë´íÎó£¬²»ÄÜÖØĞ´final·½·¨
+	// æ¶“å¬®æ½°é‚è§„ç¡¶ç€¹æ°«ç®Ÿçå——åš­éœæ‰®ç´ªç’‡æˆ¦æ•Šç’‡îˆ¤ç´æ¶“å¶ˆå…˜é–²å¶…å•“finalé‚è§„ç¡¶
 	//public void test(){}
 }*/
 

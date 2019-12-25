@@ -4,14 +4,14 @@ package objects2.finals;
 public class StringJoinTest {
     public static void main(String[] args) {
         String s1 = "Java";
-        // s2±äÁ¿ÒıÓÃµÄ×Ö·û´®¿ÉÒÔ±àÒëÊ±¾ÍÈ·¶¨³öÀ´£¬
-        // Òò´Ës2Ö±½ÓÒıÓÃ³£Á¿³ØÖĞÒÑÓĞµÄ"Java"×Ö·û´®
+        // s2å˜é‡å¼•ç”¨çš„å­—ç¬¦ä¸²å¯ä»¥ç¼–è¯‘æ—¶å°±ç¡®å®šå‡ºæ¥ï¼Œ
+        // å› æ­¤s2ç›´æ¥å¼•ç”¨å¸¸é‡æ± ä¸­å·²æœ‰çš„"Java"å­—ç¬¦ä¸²
         String s2 = "" + "Java";
         System.out.println(s1 == s2);
-        // ¶¨Òå2¸ö×Ö·û´®Ö±½ÓÁ¿
-        String str1 = "";     //¢Ù
-        String str2 = "Java";     //¢Ú
-        // ½«str1ºÍstr2½øĞĞÁ¬½ÓÔËËã
+        // å®šä¹‰2ä¸ªå­—ç¬¦ä¸²ç›´æ¥é‡
+        String str1 = "";     //â‘ 
+        String str2 = "Java";     //â‘¡
+        // å°†str1å’Œstr2è¿›è¡Œè¿æ¥è¿ç®—
         String s3 = str1 + str2;
         System.out.println(s1 == s3);
     }

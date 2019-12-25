@@ -2,11 +2,11 @@ package threadcontact.condition;
 
 public class DrawTest {
     public static void main(String[] args) {
-        // ´´½¨Ò»¸öÕË»§
+        // åˆ›å»ºä¸€ä¸ªè´¦æˆ·
         Account acct = new Account("1234567", 0);
-        new DrawThread("È¡Ç®Õß", acct, 800).start();
-        new DepositThread("´æ¿îÕß¼×", acct, 800).start();
-        new DepositThread("´æ¿îÕßÒÒ", acct, 800).start();
-        new DepositThread("´æ¿îÕß±û", acct, 800).start();
+        new DrawThread("å–é’±è€…", acct, 800).start();
+        new DepositThread("å­˜æ¬¾è€…ç”²", acct, 800).start();
+        new DepositThread("å­˜æ¬¾è€…ä¹™", acct, 800).start();
+        new DepositThread("å­˜æ¬¾è€…ä¸™", acct, 800).start();
     }
 }

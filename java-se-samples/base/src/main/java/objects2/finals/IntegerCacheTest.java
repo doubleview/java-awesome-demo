@@ -2,19 +2,19 @@ package objects2.finals;
 
 public class IntegerCacheTest {
     public static void main(String[] args) {
-        // Éú³ÉĞÂµÄInteger¶ÔÏó
+        // ç”Ÿæˆæ–°çš„Integerå¯¹è±¡
         Integer in1 = new Integer(6);
-        // Éú³ÉĞÂµÄInteger¶ÔÏó£¬²¢»º´æ¸Ã¶ÔÏó
+        // ç”Ÿæˆæ–°çš„Integerå¯¹è±¡ï¼Œå¹¶ç¼“å­˜è¯¥å¯¹è±¡
         Integer in2 = Integer.valueOf(6);
-        // Ö±½Ó´Ó»º´æÖĞÈ¡³öIneger¶ÔÏó
+        // ç›´æ¥ä»ç¼“å­˜ä¸­å–å‡ºInegerå¯¹è±¡
         Integer in3 = Integer.valueOf(6);
-        System.out.println(in1 == in2); // Êä³öfalse
-        System.out.println(in2 == in3); // Êä³ötrue
-        // ÓÉÓÚIntegerÖ»»º´æ-128~127Ö®¼äµÄÖµ£¬
-        // Òò´Ë200¶ÔÓ¦µÄInteger¶ÔÏóÃ»ÓĞ±»»º´æ¡£
+        System.out.println(in1 == in2); // è¾“å‡ºfalse
+        System.out.println(in2 == in3); // è¾“å‡ºtrue
+        // ç”±äºIntegeråªç¼“å­˜-128~127ä¹‹é—´çš„å€¼ï¼Œ
+        // å› æ­¤200å¯¹åº”çš„Integerå¯¹è±¡æ²¡æœ‰è¢«ç¼“å­˜ã€‚
         Integer in4 = Integer.valueOf(200);
         Integer in5 = Integer.valueOf(200);
-        System.out.println(in4 == in5); //Êä³öfalse
+        System.out.println(in4 == in5); //è¾“å‡ºfalse
     }
 }
 

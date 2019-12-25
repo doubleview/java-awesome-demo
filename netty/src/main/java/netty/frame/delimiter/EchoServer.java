@@ -49,13 +49,9 @@ public class EchoServer {
                 .handler(new LoggingHandler(LogLevel.INFO))
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
-                    public void initChannel(SocketChannel ch)
-                        throws Exception {
-                        ByteBuf delimiter = Unpooled.copiedBuffer("$_"
-                            .getBytes());
-                        ch.pipeline().addLast(
-                            new DelimiterBasedFrameDecoder(1024,
-                                delimiter));
+                    public void initChannel(SocketChannel ch) throws Exception {
+                        ByteBuf delimiter = Unpooled.copiedBuffer("$_".getBytes());
+                        ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1024, delimiter));
                         ch.pipeline().addLast(new StringDecoder());
                         ch.pipeline().addLast(new EchoServerHandler());
                     }

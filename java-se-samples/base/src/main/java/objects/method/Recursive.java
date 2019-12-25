@@ -8,13 +8,13 @@ public class Recursive {
         } else if (n == 1) {
             return 4;
         } else {
-            // ·½·¨ÖÐµ÷ÓÃËü×ÔÉí£¬¾ÍÊÇ·½·¨µÝ¹é
+            // æ–¹æ³•ä¸­è°ƒç”¨å®ƒè‡ªèº«ï¼Œå°±æ˜¯æ–¹æ³•é€’å½’
             return 2 * fn(n - 1) + fn(n - 2);
         }
     }
 
     public static void main(String[] args) {
-        // Êä³öfn(10)µÄ½á¹û
+        // è¾“å‡ºfn(10)çš„ç»“æžœ
         System.out.println(fn(10));
     }
 }

@@ -2,8 +2,8 @@ package objects.inerhit;
 
 
 public class Bird {
-    // BirdÀàµÄfly()·½·¨
+    // Birdç»«è¤æ®‘fly()é‚è§„ç¡¶
     public void fly() {
-        System.out.println("ÎÒÔÚÌì¿ÕÀï×ÔÓÉ×ÔÔÚµØ·ÉÏè...");
+        System.out.println("é´æˆæ¹ªæ¾¶â•ƒâ”–é–²å²ƒåšœé¢è¾«åšœé¦ã„¥æ¹´æ¤‹ç‚µç¹‘...");
     }
 }

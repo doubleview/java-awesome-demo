@@ -6,18 +6,18 @@ public class MultiExceptionTest {
             int a = Integer.parseInt(args[0]);
             int b = Integer.parseInt(args[1]);
             int c = a / b;
-            System.out.println("ÄúÊäÈëµÄÁ½¸öÊıÏà³ıµÄ½á¹ûÊÇ£º" + c);
+            System.out.println("æ‚¨è¾“å…¥çš„ä¸¤ä¸ªæ•°ç›¸é™¤çš„ç»“æœæ˜¯ï¼š" + c);
         } catch (IndexOutOfBoundsException | NumberFormatException
                 | ArithmeticException ie) {
-            System.out.println("³ÌĞò·¢ÉúÁËÊı×éÔ½½ç¡¢Êı×Ö¸ñÊ½Òì³£¡¢ËãÊõÒì³£Ö®Ò»");
-            // ²¶×½¶àÒì³£Ê±£¬Òì³£±äÁ¿Ä¬ÈÏÓĞfinalĞŞÊÎ£¬
-            // ËùÒÔÏÂÃæ´úÂëÓĞ´í£º
-            //ie = new ArithmeticException("test");  // ¢Ù
+            System.out.println("ç¨‹åºå‘ç”Ÿäº†æ•°ç»„è¶Šç•Œã€æ•°å­—æ ¼å¼å¼‚å¸¸ã€ç®—æœ¯å¼‚å¸¸ä¹‹ä¸€");
+            // æ•æ‰å¤šå¼‚å¸¸æ—¶ï¼Œå¼‚å¸¸å˜é‡é»˜è®¤æœ‰finalä¿®é¥°ï¼Œ
+            // æ‰€ä»¥ä¸‹é¢ä»£ç æœ‰é”™ï¼š
+            //ie = new ArithmeticException("test");  // â‘ 
         } catch (Exception e) {
-            System.out.println("Î´ÖªÒì³£");
-            // ²¶×½Ò»¸öÀàĞÍµÄÒì³£Ê±£¬Òì³£±äÁ¿Ã»ÓĞfinalĞŞÊÎ
-            // ËùÒÔÏÂÃæ´úÂëÍêÈ«ÕıÈ·¡£
-            e = new RuntimeException("test");    // ¢Ú
+            System.out.println("æœªçŸ¥å¼‚å¸¸");
+            // æ•æ‰ä¸€ä¸ªç±»å‹çš„å¼‚å¸¸æ—¶ï¼Œå¼‚å¸¸å˜é‡æ²¡æœ‰finalä¿®é¥°
+            // æ‰€ä»¥ä¸‹é¢ä»£ç å®Œå…¨æ­£ç¡®ã€‚
+            e = new RuntimeException("test");    // â‘¡
         }
     }
 }

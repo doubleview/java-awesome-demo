@@ -5,13 +5,13 @@ public class CommandTest2 {
     public static void main(String[] args) {
         ProcessArray pa = new ProcessArray();
         int[] array = {3, -4, 6, 4};
-        // ´¦ÀíÊý×é£¬¾ßÌå´¦ÀíÐÐÎªÈ¡¾öÓÚÄäÃûÄÚ²¿Àà
+        // å¤„ç†æ•°ç»„ï¼Œå…·ä½“å¤„ç†è¡Œä¸ºå–å†³äºŽåŒ¿åå†…éƒ¨ç±»
         pa.process(array, (int[] target) -> {
             int sum = 0;
             for (int tmp : target) {
                 sum += tmp;
             }
-            System.out.println("Êý×éÔªËØµÄ×ÜºÍÊÇ:" + sum);
+            System.out.println("æ•°ç»„å…ƒç´ çš„æ€»å’Œæ˜¯:" + sum);
         });
     }
 }

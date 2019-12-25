@@ -2,14 +2,14 @@ package socket.Senior.client;
 
 
 public interface BaiduProtocol {
-    // ¶¨ÒåÐ­Òé×Ö·û´®µÄ³¤¶È
+    // å®šä¹‰åè®®å­—ç¬¦ä¸²çš„é•¿åº¦
     int PROTOCOL_LEN = 2;
-    // ÏÂÃæÊÇÒ»Ð©Ð­Òé×Ö·û´®£¬·þÎñÆ÷ºÍ¿Í»§¶Ë½»»»µÄÐÅÏ¢
-    // ¶¼Ó¦¸ÃÔÚÇ°¡¢ºóÌí¼ÓÕâÖÖÌØÊâ×Ö·û´®¡£
-    String MSG_ROUND = "¡ì¦Ã";
-    String USER_ROUND = "¡Ç¡Æ";
+    // ä¸‹é¢æ˜¯ä¸€äº›åè®®å­—ç¬¦ä¸²ï¼ŒæœåŠ¡å™¨å’Œå®¢æˆ·ç«¯äº¤æ¢çš„ä¿¡æ¯
+    // éƒ½åº”è¯¥åœ¨å‰ã€åŽæ·»åŠ è¿™ç§ç‰¹æ®Šå­—ç¬¦ä¸²ã€‚
+    String MSG_ROUND = "Â§Î³";
+    String USER_ROUND = "âˆâˆ‘";
     String LOGIN_SUCCESS = "1";
     String NAME_REP = "-1";
-    String PRIVATE_ROUND = "¡ï¡¾";
-    String SPLIT_SIGN = "¡ù";
+    String PRIVATE_ROUND = "â˜…ã€";
+    String SPLIT_SIGN = "â€»";
 }

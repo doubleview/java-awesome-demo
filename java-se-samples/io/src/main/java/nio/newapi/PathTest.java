@@ -5,19 +5,19 @@ import java.nio.file.Paths;
 
 public class PathTest {
     public static void main(String[] args) throws Exception {
-        // ÒÔµ±Ç°Â·¾¶À´´´½¨Path¶ÔÏó
+        // ä»¥å½“å‰è·¯å¾„æ¥åˆ›å»ºPathå¯¹è±¡
         Path path = Paths.get(".");
-        System.out.println("pathÀï°üº¬µÄÂ·¾¶ÊıÁ¿£º" + path.getNameCount());
-        System.out.println("pathµÄ¸ùÂ·¾¶£º" + path.getRoot());
-        // »ñÈ¡path¶ÔÓ¦µÄ¾ø¶ÔÂ·¾¶¡£
+        System.out.println("pathé‡ŒåŒ…å«çš„è·¯å¾„æ•°é‡ï¼š" + path.getNameCount());
+        System.out.println("pathçš„æ ¹è·¯å¾„ï¼š" + path.getRoot());
+        // è·å–pathå¯¹åº”çš„ç»å¯¹è·¯å¾„ã€‚
         Path absolutePath = path.toAbsolutePath();
         System.out.println(absolutePath);
-        // »ñÈ¡¾ø¶ÔÂ·¾¶µÄ¸ùÂ·¾¶
-        System.out.println("absolutePathµÄ¸ùÂ·¾¶£º" + absolutePath.getRoot());
-        // »ñÈ¡¾ø¶ÔÂ·¾¶Ëù°üº¬µÄÂ·¾¶ÊıÁ¿
-        System.out.println("absolutePathÀï°üº¬µÄÂ·¾¶ÊıÁ¿£º" + absolutePath.getNameCount());
+        // è·å–ç»å¯¹è·¯å¾„çš„æ ¹è·¯å¾„
+        System.out.println("absolutePathçš„æ ¹è·¯å¾„ï¼š" + absolutePath.getRoot());
+        // è·å–ç»å¯¹è·¯å¾„æ‰€åŒ…å«çš„è·¯å¾„æ•°é‡
+        System.out.println("absolutePathé‡ŒåŒ…å«çš„è·¯å¾„æ•°é‡ï¼š" + absolutePath.getNameCount());
         System.out.println(absolutePath.getName(3));
-        // ÒÔ¶à¸öStringÀ´¹¹½¨Path¶ÔÏó
+        // ä»¥å¤šä¸ªStringæ¥æ„å»ºPathå¯¹è±¡
         Path path2 = Paths.get("g:", "publish", "codes");
         System.out.println(path2);
     }

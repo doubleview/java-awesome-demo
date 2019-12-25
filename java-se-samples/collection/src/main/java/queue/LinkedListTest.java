@@ -7,27 +7,27 @@ import java.util.LinkedList;
 public class LinkedListTest {
     public static void main(String[] args) {
         LinkedList books = new LinkedList();
-        // ½«×Ö·û´®ÔªËØ¼ÓÈë¶ÓÁĞµÄÎ²²¿
-        books.offer("Java¿ª·¢");
-        // ½«Ò»¸ö×Ö·û´®ÔªËØ¼ÓÈëÕ»µÄ¶¥²¿
-        books.push("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-        // ½«×Ö·û´®ÔªËØÌí¼Óµ½¶ÓÁĞµÄÍ·²¿£¨Ïàµ±ÓÚÕ»µÄ¶¥²¿£©
-        books.offerFirst("Android¿ª·¢");
-        // ÒÔListµÄ·½Ê½£¨°´Ë÷Òı·ÃÎÊµÄ·½Ê½£©À´±éÀú¼¯ºÏÔªËØ
+        // å°†å­—ç¬¦ä¸²å…ƒç´ åŠ å…¥é˜Ÿåˆ—çš„å°¾éƒ¨
+        books.offer("Javaå¼€å‘");
+        // å°†ä¸€ä¸ªå­—ç¬¦ä¸²å…ƒç´ åŠ å…¥æ ˆçš„é¡¶éƒ¨
+        books.push("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+        // å°†å­—ç¬¦ä¸²å…ƒç´ æ·»åŠ åˆ°é˜Ÿåˆ—çš„å¤´éƒ¨ï¼ˆç›¸å½“äºæ ˆçš„é¡¶éƒ¨ï¼‰
+        books.offerFirst("Androidå¼€å‘");
+        // ä»¥Listçš„æ–¹å¼ï¼ˆæŒ‰ç´¢å¼•è®¿é—®çš„æ–¹å¼ï¼‰æ¥éå†é›†åˆå…ƒç´ 
         for (int i = 0; i < books.size(); i++) {
-            System.out.println("±éÀúÖĞ£º" + books.get(i));
+            System.out.println("éå†ä¸­ï¼š" + books.get(i));
         }
-        // ·ÃÎÊ¡¢²¢²»É¾³ıÕ»¶¥µÄÔªËØ
+        // è®¿é—®ã€å¹¶ä¸åˆ é™¤æ ˆé¡¶çš„å…ƒç´ 
         System.out.println(books.peekFirst());
-        // ·ÃÎÊ¡¢²¢²»É¾³ı¶ÓÁĞµÄ×îºóÒ»¸öÔªËØ
+        // è®¿é—®ã€å¹¶ä¸åˆ é™¤é˜Ÿåˆ—çš„æœ€åä¸€ä¸ªå…ƒç´ 
         System.out.println(books.peekLast());
-        // ½«Õ»¶¥µÄÔªËØµ¯³ö¡°Õ»¡±
+        // å°†æ ˆé¡¶çš„å…ƒç´ å¼¹å‡ºâ€œæ ˆâ€
         System.out.println(books.pop());
-        // ÏÂÃæÊä³ö½«¿´µ½¶ÓÁĞÖĞµÚÒ»¸öÔªËØ±»É¾³ı
+        // ä¸‹é¢è¾“å‡ºå°†çœ‹åˆ°é˜Ÿåˆ—ä¸­ç¬¬ä¸€ä¸ªå…ƒç´ è¢«åˆ é™¤
         System.out.println(books);
-        // ·ÃÎÊ¡¢²¢É¾³ı¶ÓÁĞµÄ×îºóÒ»¸öÔªËØ
+        // è®¿é—®ã€å¹¶åˆ é™¤é˜Ÿåˆ—çš„æœ€åä¸€ä¸ªå…ƒç´ 
         System.out.println(books.pollLast());
-        // ÏÂÃæÊä³ö£º[ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½]
+        // ä¸‹é¢è¾“å‡ºï¼š[è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜]
         System.out.println(books);
     }
 }

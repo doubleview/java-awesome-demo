@@ -3,28 +3,28 @@ package objects2.java8interface;
 
 
 public interface Output {
-    // ½Ó¿ÚÀï¶¨ÒåµÄ³ÉÔ±±äÁ¿Ö»ÄÜÊÇ³£Á¿
+    // æ¥å£é‡Œå®šä¹‰çš„æˆå‘˜å˜é‡åªèƒ½æ˜¯å¸¸é‡
     int MAX_CACHE_LINE = 50;
 
-    // ½Ó¿ÚÀï¶¨ÒåµÄÆÕÍ¨·½·¨Ö»ÄÜÊÇpublicµÄ³éÏó·½·¨
+    // æ¥å£é‡Œå®šä¹‰çš„æ™®é€šæ–¹æ³•åªèƒ½æ˜¯publicçš„æŠ½è±¡æ–¹æ³•
     void out();
 
     void getData(String msg);
 
-    // ÔÚ½Ó¿ÚÖĞ¶¨ÒåÄ¬ÈÏ·½·¨£¬ĞèÒªÊ¹ÓÃdefaultĞŞÊÎ
+    // åœ¨æ¥å£ä¸­å®šä¹‰é»˜è®¤æ–¹æ³•ï¼Œéœ€è¦ä½¿ç”¨defaultä¿®é¥°
     default void print(String... msgs) {
         for (String msg : msgs) {
             System.out.println(msg);
         }
     }
 
-    // ÔÚ½Ó¿ÚÖĞ¶¨ÒåÄ¬ÈÏ·½·¨£¬ĞèÒªÊ¹ÓÃdefaultĞŞÊÎ
+    // åœ¨æ¥å£ä¸­å®šä¹‰é»˜è®¤æ–¹æ³•ï¼Œéœ€è¦ä½¿ç”¨defaultä¿®é¥°
     default void test() {
-        System.out.println("Ä¬ÈÏµÄtest()·½·¨");
+        System.out.println("é»˜è®¤çš„test()æ–¹æ³•");
     }
 
-    // ÔÚ½Ó¿ÚÖĞ¶¨ÒåÀà·½·¨£¬ĞèÒªÊ¹ÓÃstaticĞŞÊÎ
+    // åœ¨æ¥å£ä¸­å®šä¹‰ç±»æ–¹æ³•ï¼Œéœ€è¦ä½¿ç”¨staticä¿®é¥°
     static String staticTest() {
-        return "½Ó¿ÚÀïµÄÀà·½·¨";
+        return "æ¥å£é‡Œçš„ç±»æ–¹æ³•";
     }
 }

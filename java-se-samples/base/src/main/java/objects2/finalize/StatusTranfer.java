@@ -2,11 +2,11 @@ package objects2.finalize;
 
 public class StatusTranfer {
     public static void test() {
-        String a = new String("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½"); //¢Ù
-        a = new String("Java¿ª·¢");   //¢Ú
+        String a = new String("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜"); //â‘ 
+        a = new String("Javaå¼€å‘");   //â‘¡
     }
 
     public static void main(String[] args) {
-        test();     //¢Û
+        test();     //â‘¢
     }
 }

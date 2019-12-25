@@ -5,15 +5,15 @@ public class DivTest {
         double a = 5.2;
         double b = 3.1;
         double div = a / b;
-        // divµÄÖµ½«ÊÇ1.6774193548387097
+        // divçš„å€¼å°†æ˜¯1.6774193548387097
         System.out.println(div);
-        // Êä³öÕıÎŞÇî´ó£ºInfinity
-        System.out.println("5³ıÒÔ0.0µÄ½á¹ûÊÇ:" + 5 / 0.0);
-        // Êä³ö¸ºÎŞÇî´ó£º-Infinity
-        System.out.println("-5³ıÒÔ0.0µÄ½á¹ûÊÇ:" + -5 / 0.0);
-        // ÏÂÃæ´úÂë½«³öÏÖÒì³£
+        // è¾“å‡ºæ­£æ— ç©·å¤§ï¼šInfinity
+        System.out.println("5é™¤ä»¥0.0çš„ç»“æœæ˜¯:" + 5 / 0.0);
+        // è¾“å‡ºè´Ÿæ— ç©·å¤§ï¼š-Infinity
+        System.out.println("-5é™¤ä»¥0.0çš„ç»“æœæ˜¯:" + -5 / 0.0);
+        // ä¸‹é¢ä»£ç å°†å‡ºç°å¼‚å¸¸
         // java.lang.ArithmeticException: / by zero
-        System.out.println("-5³ıÒÔ0µÄ½á¹ûÊÇ::" + -5 / 0);
+        System.out.println("-5é™¤ä»¥0çš„ç»“æœæ˜¯::" + -5 / 0);
     }
 }
 

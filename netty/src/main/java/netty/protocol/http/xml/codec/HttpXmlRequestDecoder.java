@@ -35,8 +35,7 @@ import java.util.List;
  * @version 1.0
  * @date 2014年3月1日
  */
-public class HttpXmlRequestDecoder extends
-    AbstractHttpXmlDecoder<FullHttpRequest> {
+public class HttpXmlRequestDecoder extends AbstractHttpXmlDecoder<FullHttpRequest> {
 
     public HttpXmlRequestDecoder(Class<?> clazz) {
         this(clazz, false);
@@ -47,22 +46,17 @@ public class HttpXmlRequestDecoder extends
     }
 
     @Override
-    protected void decode(ChannelHandlerContext arg0, FullHttpRequest arg1,
-        List<Object> arg2) throws Exception {
+    protected void decode(ChannelHandlerContext arg0, FullHttpRequest arg1, List<Object> arg2) throws Exception {
         if (!arg1.getDecoderResult().isSuccess()) {
             sendError(arg0, BAD_REQUEST);
             return;
         }
-        HttpXmlRequest request = new HttpXmlRequest(arg1, decode0(arg0,
-            arg1.content()));
+        HttpXmlRequest request = new HttpXmlRequest(arg1, decode0(arg0, arg1.content()));
         arg2.add(request);
     }
 
-    private static void sendError(ChannelHandlerContext ctx,
-        HttpResponseStatus status) {
-        FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1,
-            status, Unpooled.copiedBuffer("Failure: " + status.toString()
-            + "\r\n", CharsetUtil.UTF_8));
+    private static void sendError(ChannelHandlerContext ctx, HttpResponseStatus status) {
+        FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1, status, Unpooled.copiedBuffer("Failure: " + status.toString() + "\r\n", CharsetUtil.UTF_8));
         response.headers().set(CONTENT_TYPE, "text/plain; charset=UTF-8");
         ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
     }

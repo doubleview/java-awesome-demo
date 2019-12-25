@@ -9,17 +9,17 @@ class Address {
     }
 }
 
-// ÊµÏÖCloneable½Ó¿Ú
+// å®ç°Cloneableæ¥å£
 class User implements Cloneable {
     int age;
     Address address;
 
     public User(int age) {
         this.age = age;
-        address = new Address("¹ãÖİÌìºÓ");
+        address = new Address("å¹¿å·å¤©æ²³");
     }
 
-    // Í¨¹ıµ÷ÓÃsuper.clone()À´ÊµÏÖclone()·½·¨
+    // é€šè¿‡è°ƒç”¨super.clone()æ¥å®ç°clone()æ–¹æ³•
     public User clone()
             throws CloneNotSupportedException {
         return (User) super.clone();
@@ -30,11 +30,11 @@ public class CloneTest {
     public static void main(String[] args)
             throws CloneNotSupportedException {
         User u1 = new User(29);
-        // cloneµÃµ½u1¶ÔÏóµÄ¸±±¾¡£
+        // cloneå¾—åˆ°u1å¯¹è±¡çš„å‰¯æœ¬ã€‚
         User u2 = u1.clone();
-        // ÅĞ¶Ïu1¡¢u2ÊÇ·ñÏàÍ¬
-        System.out.println(u1 == u2);      //¢Ù
-        // ÅĞ¶Ïu1¡¢u2µÄaddressÊÇ·ñÏàÍ¬
-        System.out.println(u1.address == u2.address);     //¢Ú
+        // åˆ¤æ–­u1ã€u2æ˜¯å¦ç›¸åŒ
+        System.out.println(u1 == u2);      //â‘ 
+        // åˆ¤æ–­u1ã€u2çš„addressæ˜¯å¦ç›¸åŒ
+        System.out.println(u1.address == u2.address);     //â‘¡
     }
 }

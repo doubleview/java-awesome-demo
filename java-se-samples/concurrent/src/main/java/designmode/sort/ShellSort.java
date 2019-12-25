@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * 希尔排序
+ * 甯屽皵鎺掑簭
  */
 public class ShellSort {
 

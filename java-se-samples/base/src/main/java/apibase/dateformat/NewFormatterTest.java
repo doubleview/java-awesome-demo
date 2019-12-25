@@ -7,20 +7,20 @@ import java.time.format.FormatStyle;
 public class NewFormatterTest {
     public static void main(String[] args) {
         DateTimeFormatter[] formatters = new DateTimeFormatter[]{
-                // Ö±½ÓÊ¹ÓÃ³£Á¿´´½¨DateTimeFormatter¸ñÊ½Æ÷
+                // ç›´æ¥ä½¿ç”¨å¸¸é‡åˆ›å»ºDateTimeFormatteræ ¼å¼å™¨
                 DateTimeFormatter.ISO_LOCAL_DATE,
                 DateTimeFormatter.ISO_LOCAL_TIME,
                 DateTimeFormatter.ISO_LOCAL_DATE_TIME,
-                // Ê¹ÓÃ±¾µØ»¯µÄ²»Í¬·ç¸ñÀ´´´½¨DateTimeFormatter¸ñÊ½Æ÷
+                // ä½¿ç”¨æœ¬åœ°åŒ–çš„ä¸åŒé£æ ¼æ¥åˆ›å»ºDateTimeFormatteræ ¼å¼å™¨
                 DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL, FormatStyle.MEDIUM),
                 DateTimeFormatter.ofLocalizedTime(FormatStyle.LONG),
-                // ¸ù¾İÄ£Ê½×Ö·û´®À´´´½¨DateTimeFormatter¸ñÊ½Æ÷
+                // æ ¹æ®æ¨¡å¼å­—ç¬¦ä¸²æ¥åˆ›å»ºDateTimeFormatteræ ¼å¼å™¨
                 DateTimeFormatter.ofPattern("Gyyyy%%MMM%%dd HH:mm:ss")
         };
         LocalDateTime date = LocalDateTime.now();
-        // ÒÀ´ÎÊ¹ÓÃ²»Í¬µÄ¸ñÊ½Æ÷¶ÔLocalDateTime½øĞĞ¸ñÊ½»¯
+        // ä¾æ¬¡ä½¿ç”¨ä¸åŒçš„æ ¼å¼å™¨å¯¹LocalDateTimeè¿›è¡Œæ ¼å¼åŒ–
         for (int i = 0; i < formatters.length; i++) {
-            // ÏÂÃæÁ½ĞĞ´úÂëµÄ×÷ÓÃÏàÍ¬
+            // ä¸‹é¢ä¸¤è¡Œä»£ç çš„ä½œç”¨ç›¸åŒ
             System.out.println(date.format(formatters[i]));
             System.out.println(formatters[i].format(date));
         }

@@ -36,22 +36,22 @@ public class HashSetTest2 {
         hs.add(new R1(-3));
         hs.add(new R1(9));
         hs.add(new R1(-2));
-        // ´òÓ¡HashSet¼¯ºÏ£¬¼¯ºÏÔªËØÃ»ÓĞÖØ¸´
+        // æ‰“å°HashSeté›†åˆï¼Œé›†åˆå…ƒç´ æ²¡æœ‰é‡å¤
         System.out.println(hs);
-        // È¡³öµÚÒ»¸öÔªËØ
+        // å–å‡ºç¬¬ä¸€ä¸ªå…ƒç´ 
         Iterator it = hs.iterator();
         R1 first = (R1) it.next();
-        // ÎªµÚÒ»¸öÔªËØµÄcountÊµÀı±äÁ¿¸³Öµ
-        first.count = -3;     // ¢Ù
-        // ÔÙ´ÎÊä³öHashSet¼¯ºÏ£¬¼¯ºÏÔªËØÓĞÖØ¸´ÔªËØ
+        // ä¸ºç¬¬ä¸€ä¸ªå…ƒç´ çš„countå®ä¾‹å˜é‡èµ‹å€¼
+        first.count = -3;     // â‘ 
+        // å†æ¬¡è¾“å‡ºHashSeté›†åˆï¼Œé›†åˆå…ƒç´ æœ‰é‡å¤å…ƒç´ 
         System.out.println(hs);
-        // É¾³ıcountÎª-3µÄR¶ÔÏó
-        hs.remove(new R1(-3));    // ¢Ú
-        // ¿ÉÒÔ¿´µ½±»É¾³ıÁËÒ»¸öRÔªËØ
+        // åˆ é™¤countä¸º-3çš„Rå¯¹è±¡
+        hs.remove(new R1(-3));    // â‘¡
+        // å¯ä»¥çœ‹åˆ°è¢«åˆ é™¤äº†ä¸€ä¸ªRå…ƒç´ 
         System.out.println(hs);
-        System.out.println("hsÊÇ·ñ°üº¬countÎª-3µÄR¶ÔÏó£¿"
-                + hs.contains(new R1(-3))); // Êä³öfalse
-        System.out.println("hsÊÇ·ñ°üº¬countÎª-2µÄR¶ÔÏó£¿"
-                + hs.contains(new R1(-2))); // Êä³öfalse
+        System.out.println("hsæ˜¯å¦åŒ…å«countä¸º-3çš„Rå¯¹è±¡ï¼Ÿ"
+                + hs.contains(new R1(-3))); // è¾“å‡ºfalse
+        System.out.println("hsæ˜¯å¦åŒ…å«countä¸º-2çš„Rå¯¹è±¡ï¼Ÿ"
+                + hs.contains(new R1(-2))); // è¾“å‡ºfalse
     }
 }

@@ -37,10 +37,8 @@ public class HttpXmlResponseDecoder extends
     }
 
     @Override
-    protected void decode(ChannelHandlerContext ctx,
-        DefaultFullHttpResponse msg, List<Object> out) throws Exception {
-        HttpXmlResponse resHttpXmlResponse = new HttpXmlResponse(msg, decode0(
-            ctx, msg.content()));
+    protected void decode(ChannelHandlerContext ctx, DefaultFullHttpResponse msg, List<Object> out) throws Exception {
+        HttpXmlResponse resHttpXmlResponse = new HttpXmlResponse(msg, decode0(ctx, msg.content()));
         out.add(resHttpXmlResponse);
     }
 

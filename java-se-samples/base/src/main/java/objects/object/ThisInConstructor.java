@@ -1,20 +1,20 @@
 package objects.object;
 
 public class ThisInConstructor {
-    // ¶¨ÒåÒ»¸öÃûÎªfooµÄ³ÉÔ±±äÁ¿
+    // å®šä¹‰ä¸€ä¸ªåä¸ºfooçš„æˆå‘˜å˜é‡
     public int foo;
 
     public ThisInConstructor() {
-        // ÔÚ¹¹ÔìÆ÷Àï¶¨ÒåÒ»¸öfoo±äÁ¿
+        // åœ¨æž„é€ å™¨é‡Œå®šä¹‰ä¸€ä¸ªfooå˜é‡
         int foo = 0;
-        // Ê¹ÓÃthis´ú±í¸Ã¹¹ÔìÆ÷ÕýÔÚ³õÊ¼»¯µÄ¶ÔÏó
-        // ÏÂÃæµÄ´úÂë½«»á°Ñ¸Ã¹¹ÔìÆ÷ÕýÔÚ³õÊ¼»¯µÄ¶ÔÏóµÄfoo³ÉÔ±±äÁ¿ÉèÎª6¡£
+        // ä½¿ç”¨thisä»£è¡¨è¯¥æž„é€ å™¨æ­£åœ¨åˆå§‹åŒ–çš„å¯¹è±¡
+        // ä¸‹é¢çš„ä»£ç å°†ä¼šæŠŠè¯¥æž„é€ å™¨æ­£åœ¨åˆå§‹åŒ–çš„å¯¹è±¡çš„fooæˆå‘˜å˜é‡è®¾ä¸º6ã€‚
         this.foo = 6;
     }
 
     public static void main(String[] args) {
-        // ËùÓÐÊ¹ÓÃThisInConstructor´´½¨µÄ¶ÔÏóµÄfoo³ÉÔ±±äÁ¿
-        // ¶¼½«±»ÉèÎª6£¬ËùÒÔÏÂÃæ´úÂë½«Êä³ö6¡£
+        // æ‰€æœ‰ä½¿ç”¨ThisInConstructoråˆ›å»ºçš„å¯¹è±¡çš„fooæˆå‘˜å˜é‡
+        // éƒ½å°†è¢«è®¾ä¸º6ï¼Œæ‰€ä»¥ä¸‹é¢ä»£ç å°†è¾“å‡º6ã€‚
         System.out.println(new ThisInConstructor().foo);
     }
 }

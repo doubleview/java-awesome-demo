@@ -1,13 +1,13 @@
 package base;
 
 public class Apple<T> {
-    // 使用T类型形参定义实例变量
+    // 浣跨敤T绫诲瀷褰㈠弬瀹氫箟瀹炰緥鍙橀噺
     private T info;
 
     public Apple() {
     }
 
-    // 下面方法中使用T类型形参来定义构造器
+    // 涓嬮潰鏂规硶涓娇鐢═绫诲瀷褰㈠弬鏉ュ畾涔夋瀯閫犲櫒
     public Apple(T info) {
         this.info = info;
     }
@@ -21,10 +21,10 @@ public class Apple<T> {
     }
 
     public static void main(String[] args) {
-        // 由于传给T形参的是String，所以构造器参数只能是String
-        Apple<String> a1 = new Apple<>("苹果");
+        // 鐢变簬浼犵粰T褰㈠弬鐨勬槸String锛屾墍浠ユ瀯閫犲櫒鍙傛暟鍙兘鏄疭tring
+        Apple<String> a1 = new Apple<>("鑻规灉");
         System.out.println(a1.getInfo());
-        // 由于传给T形参的是Double，所以构造器参数只能是Double或double
+        // 鐢变簬浼犵粰T褰㈠弬鐨勬槸Double锛屾墍浠ユ瀯閫犲櫒鍙傛暟鍙兘鏄疍ouble鎴杁ouble
         Apple<Double> a2 = new Apple<>(5.67);
         System.out.println(a2.getInfo());
     }

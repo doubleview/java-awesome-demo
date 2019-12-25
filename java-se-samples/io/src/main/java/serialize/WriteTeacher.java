@@ -7,13 +7,13 @@ import java.io.ObjectOutputStream;
 public class WriteTeacher {
     public static void main(String[] args) {
         try (
-                // ´´½¨Ò»¸öObjectOutputStreamÊä³öÁ÷
+                // åˆ›å»ºä¸€ä¸ªObjectOutputStreamè¾“å‡ºæµ
                 ObjectOutputStream oos = new ObjectOutputStream(
                         new FileOutputStream("teacher.txt"))) {
-            Person per = new Person("ËïÎò¿Õ", 500);
-            Teacher t1 = new Teacher("ÌÆÉ®", per);
-            Teacher t2 = new Teacher("ÆĞÌá×æÊ¦", per);
-            // ÒÀ´Î½«ËÄ¸ö¶ÔÏóĞ´ÈëÊä³öÁ÷
+            Person per = new Person("å­™æ‚Ÿç©º", 500);
+            Teacher t1 = new Teacher("å”åƒ§", per);
+            Teacher t2 = new Teacher("è©æç¥–å¸ˆ", per);
+            // ä¾æ¬¡å°†å››ä¸ªå¯¹è±¡å†™å…¥è¾“å‡ºæµ
             oos.writeObject(t1);
             oos.writeObject(t2);
             oos.writeObject(per);

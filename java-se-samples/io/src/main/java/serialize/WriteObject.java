@@ -7,11 +7,11 @@ import java.io.ObjectOutputStream;
 public class WriteObject {
     public static void main(String[] args) {
         try (
-                // ´´½¨Ò»¸öObjectOutputStreamÊä³öÁ÷
+                // åˆ›å»ºä¸€ä¸ªObjectOutputStreamè¾“å‡ºæµ
                 ObjectOutputStream oos = new ObjectOutputStream(
                         new FileOutputStream("object.txt"))) {
-            Person per = new Person("ËïÎò¿Õ", 500);
-            // ½«per¶ÔÏóĞ´ÈëÊä³öÁ÷
+            Person per = new Person("å­™æ‚Ÿç©º", 500);
+            // å°†perå¯¹è±¡å†™å…¥è¾“å‡ºæµ
             oos.writeObject(per);
         } catch (IOException ex) {
             ex.printStackTrace();

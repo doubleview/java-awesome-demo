@@ -8,16 +8,16 @@ import java.net.Socket;
 public class MyClient {
     public static void main(String[] args) throws Exception {
         Socket s = new Socket("127.0.0.1", 30000);
-        // ¿Í»§¶ËÆô¶¯ClientThreadÏß³Ì²»¶Ï¶ÁÈ¡À´×Ô·şÎñÆ÷µÄÊı¾İ
-        new Thread(new ClientThread(s)).start();   // ¢Ù
-        // »ñÈ¡¸ÃSocket¶ÔÓ¦µÄÊä³öÁ÷
+        // å®¢æˆ·ç«¯å¯åŠ¨ClientThreadçº¿ç¨‹ä¸æ–­è¯»å–æ¥è‡ªæœåŠ¡å™¨çš„æ•°æ®
+        new Thread(new ClientThread(s)).start();   // â‘ 
+        // è·å–è¯¥Socketå¯¹åº”çš„è¾“å‡ºæµ
         PrintStream ps = new PrintStream(s.getOutputStream());
         String line = null;
-        // ²»¶Ï¶ÁÈ¡¼üÅÌÊäÈë
+        // ä¸æ–­è¯»å–é”®ç›˜è¾“å…¥
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
         while ((line = br.readLine()) != null) {
-            // ½«ÓÃ»§µÄ¼üÅÌÊäÈëÄÚÈİĞ´ÈëSocket¶ÔÓ¦µÄÊä³öÁ÷
+            // å°†ç”¨æˆ·çš„é”®ç›˜è¾“å…¥å†…å®¹å†™å…¥Socketå¯¹åº”çš„è¾“å‡ºæµ
             ps.println(line);
         }
     }

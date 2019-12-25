@@ -3,13 +3,13 @@ package objects.object;
 
 public class StaticAccessNonStatic {
     public void info() {
-        System.out.println("¼òµ¥µÄinfo·½·¨");
+        System.out.println("ç®€å•çš„infoæ–¹æ³•");
     }
 
     public static void main(String[] args) {
-        // ÒòÎªmain()·½·¨ÊÇ¾²Ì¬·½·¨£¬¶øinfo()ÊÇ·Ç¾²Ì¬·½·¨£¬
-        // µ÷ÓÃmain()·½·¨µÄÊÇ¸ÃÀà±¾Éí£¬¶ø²»ÊÇ¸ÃÀàµÄÊµÀı£¬
-        // Òò´ËÊ¡ÂÔµÄthisÎŞ·¨Ö¸ÏòÓĞĞ§µÄ¶ÔÏó
+        // å› ä¸ºmain()æ–¹æ³•æ˜¯é™æ€æ–¹æ³•ï¼Œè€Œinfo()æ˜¯éé™æ€æ–¹æ³•ï¼Œ
+        // è°ƒç”¨main()æ–¹æ³•çš„æ˜¯è¯¥ç±»æœ¬èº«ï¼Œè€Œä¸æ˜¯è¯¥ç±»çš„å®ä¾‹ï¼Œ
+        // å› æ­¤çœç•¥çš„thisæ— æ³•æŒ‡å‘æœ‰æ•ˆçš„å¯¹è±¡
         // info();
     }
 }

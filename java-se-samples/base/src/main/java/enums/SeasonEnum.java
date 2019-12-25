@@ -2,6 +2,6 @@ package enums;
 
 
 public enum SeasonEnum {
-    // ÔÚµÚÒ»ÐÐÁÐ³ö4¸öÃ¶¾ÙÊµÀý
+    // åœ¨ç¬¬ä¸€è¡Œåˆ—å‡º4ä¸ªæžšä¸¾å®žä¾‹
     SPRING, SUMMER, FALL, WINTER
 }

@@ -46,12 +46,8 @@ public class SubReqServer {
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     public void initChannel(SocketChannel ch) {
-                        ch.pipeline().addLast(
-                            MarshallingCodeCFactory
-                                .buildMarshallingDecoder());
-                        ch.pipeline().addLast(
-                            MarshallingCodeCFactory
-                                .buildMarshallingEncoder());
+                        ch.pipeline().addLast(MarshallingCodeCFactory.buildMarshallingDecoder());
+                        ch.pipeline().addLast(MarshallingCodeCFactory.buildMarshallingEncoder());
                         ch.pipeline().addLast(new SubReqServerHandler());
                     }
                 });

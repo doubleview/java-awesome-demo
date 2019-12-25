@@ -10,12 +10,12 @@ public class EnumSetTest2 {
         c.clear();
         c.add(Season.FALL);
         c.add(Season.SPRING);
-        // ¸´ÖÆCollection¼¯ºÏÖĞËùÓĞÔªËØÀ´´´½¨EnumSet¼¯ºÏ
-        EnumSet enumSet = EnumSet.copyOf(c);   // ¢Ù
-        System.out.println(enumSet); // Êä³ö[SPRING,FALL]
-        c.add("Java¿ª·¢");
-        c.add("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-        // ÏÂÃæ´úÂë³öÏÖÒì³££ºÒòÎªc¼¯ºÏÀïµÄÔªËØ²»ÊÇÈ«²¿¶¼ÎªÃ¶¾ÙÖµ
-        enumSet = EnumSet.copyOf(c);  // ¢Ú
+        // å¤åˆ¶Collectioné›†åˆä¸­æ‰€æœ‰å…ƒç´ æ¥åˆ›å»ºEnumSeté›†åˆ
+        EnumSet enumSet = EnumSet.copyOf(c);   // â‘ 
+        System.out.println(enumSet); // è¾“å‡º[SPRING,FALL]
+        c.add("Javaå¼€å‘");
+        c.add("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+        // ä¸‹é¢ä»£ç å‡ºç°å¼‚å¸¸ï¼šå› ä¸ºcé›†åˆé‡Œçš„å…ƒç´ ä¸æ˜¯å…¨éƒ¨éƒ½ä¸ºæšä¸¾å€¼
+        enumSet = EnumSet.copyOf(c);  // â‘¡
     }
 }

@@ -1,16 +1,16 @@
 package metaanotation;
 
 
-// Ê¹ÓÃ@InheritableĞŞÊÎµÄBaseÀà
+// ä½¿ç”¨@Inheritableä¿®é¥°çš„Baseç±»
 @Inheritable
 class Base {
 }
 
-// TestInheritableÀàÖ»ÊÇ¼Ì³ĞÁËBaseÀà£¬
-// ²¢Î´Ö±½ÓÊ¹ÓÃ@Inheritable AnnotiationĞŞÊÎ
+// TestInheritableç±»åªæ˜¯ç»§æ‰¿äº†Baseç±»ï¼Œ
+// å¹¶æœªç›´æ¥ä½¿ç”¨@Inheritable Annotiationä¿®é¥°
 public class InheritableTest extends Base {
     public static void main(String[] args) {
-        // ´òÓ¡TestInheritableÀàÊÇ·ñ¾ßÓĞ@InheritableĞŞÊÎ
+        // æ‰“å°TestInheritableç±»æ˜¯å¦å…·æœ‰@Inheritableä¿®é¥°
         System.out.println(InheritableTest.class
                 .isAnnotationPresent(Inheritable.class));
     }

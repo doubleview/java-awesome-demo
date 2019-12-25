@@ -4,7 +4,7 @@ package designmode.sort;
 public class OddEvenSortDemo {
 
     /**
-     * 串行奇偶交换
+     * 涓茶濂囧伓浜ゆ崲
      *
      * @param arr
      */

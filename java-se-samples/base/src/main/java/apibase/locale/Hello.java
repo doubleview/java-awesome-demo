@@ -5,12 +5,12 @@ import java.util.ResourceBundle;
 
 public class Hello {
     public static void main(String[] args) {
-        // È¡µÃÏµÍ³Ä¬ÈÏµÄ¹ú¼Ò/ÓïÑÔ»·¾³
+        // å–å¾—ç³»ç»Ÿé»˜è®¤çš„å›½å®¶/è¯­è¨€ç¯å¢ƒ
         Locale myLocale = Locale.getDefault(Locale.Category.FORMAT);
-        // ¸ù¾İÖ¸¶¨¹ú¼Ò/ÓïÑÔ»·¾³¼ÓÔØ×ÊÔ´ÎÄ¼ş
+        // æ ¹æ®æŒ‡å®šå›½å®¶/è¯­è¨€ç¯å¢ƒåŠ è½½èµ„æºæ–‡ä»¶
         ResourceBundle bundle = ResourceBundle
                 .getBundle("mess", myLocale);
-        // ´òÓ¡´Ó×ÊÔ´ÎÄ¼şÖĞÈ¡µÃµÄÏûÏ¢
+        // æ‰“å°ä»èµ„æºæ–‡ä»¶ä¸­å–å¾—çš„æ¶ˆæ¯
         System.out.println(bundle.getString("hello"));
     }
 }

@@ -3,13 +3,13 @@ package objects.scope;
 
 public class MethodLocalVariableTest {
     public static void main(String[] args) {
-        // ¶¨ÒåÒ»¸ö·½·¨¾Ö²¿±äÁ¿a
+        // å®šä¹‰ä¸€ä¸ªæ–¹æ³•å±€éƒ¨å˜é‡a
         int a;
-        // ÏÂÃæ´úÂë½«³öÏÖ´íÎó£¬ÒòÎªa±äÁ¿»¹Î´³õÊ¼»¯
-        // System.out.println("·½·¨¾Ö²¿±äÁ¿aµÄÖµ£º" + a);
-        // Îªa±äÁ¿¸³³õÊ¼Öµ£¬Ò²¾ÍÊÇ½øĞĞ³õÊ¼»¯
+        // ä¸‹é¢ä»£ç å°†å‡ºç°é”™è¯¯ï¼Œå› ä¸ºaå˜é‡è¿˜æœªåˆå§‹åŒ–
+        // System.out.println("æ–¹æ³•å±€éƒ¨å˜é‡açš„å€¼ï¼š" + a);
+        // ä¸ºaå˜é‡èµ‹åˆå§‹å€¼ï¼Œä¹Ÿå°±æ˜¯è¿›è¡Œåˆå§‹åŒ–
         a = 5;
-        System.out.println("·½·¨¾Ö²¿±äÁ¿aµÄÖµ£º" + a);
+        System.out.println("æ–¹æ³•å±€éƒ¨å˜é‡açš„å€¼ï¼š" + a);
     }
 }
 

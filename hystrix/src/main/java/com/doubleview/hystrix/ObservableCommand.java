@@ -26,7 +26,7 @@ public class ObservableCommand extends HystrixCommand<String> {
     }
 
     public static void main(String[] args) {
-        Observable<String> fs = new HelloWorldCommand("World").observe();
+        Observable<String> fs = new ObservableCommand("World").observe();
         fs.subscribe(s -> System.out.println("result = " + s));
 
         fs.subscribe(new Observer<String>() {

@@ -2,10 +2,10 @@ package base;
 
 
 public class A2 extends Apple {
-    // ÖØĞ´¸¸ÀàµÄ·½·¨
+    // é‡å†™çˆ¶ç±»çš„æ–¹æ³•
     public String getInfo() {
-        // super.getInfo()·½·¨·µ»ØÖµÊÇObjectÀàĞÍ£¬
-        // ËùÒÔ¼ÓtoString()²Å·µ»ØStringÀàĞÍ
+        // super.getInfo()æ–¹æ³•è¿”å›å€¼æ˜¯Objectç±»å‹ï¼Œ
+        // æ‰€ä»¥åŠ toString()æ‰è¿”å›Stringç±»å‹
         return super.getInfo().toString();
     }
 }

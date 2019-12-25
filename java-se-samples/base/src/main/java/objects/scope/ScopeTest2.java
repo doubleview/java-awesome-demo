@@ -2,7 +2,7 @@ package objects.scope;
 
 public class ScopeTest2 {
     public static void main(String[] args) {
-        // ¶¨ÒåÒ»¸ö·½·¨¾Ö²¿±äÁ¿×÷ÎªÑ­»·±äÁ¿
+        // å®šä¹‰ä¸€ä¸ªæ–¹æ³•å±€éƒ¨å˜é‡ä½œä¸ºå¾ªç¯å˜é‡
         int i;
         for (i = 0; i < 10; i++) {
             System.out.println("Hello");

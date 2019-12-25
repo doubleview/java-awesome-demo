@@ -5,27 +5,27 @@ import java.awt.event.ActionListener;
 import java.lang.reflect.Field;
 
 public class ActionListenerInstaller {
-    // ´¦ÀíAnnotationµÄ·½·¨£¬ÆäÖĞobjÊÇ°üº¬AnnotationµÄ¶ÔÏó
+    // å¤„ç†Annotationçš„æ–¹æ³•ï¼Œå…¶ä¸­objæ˜¯åŒ…å«Annotationçš„å¯¹è±¡
     public static void processAnnotations(Object obj) {
         try {
-            // »ñÈ¡obj¶ÔÏóµÄÀà
+            // è·å–objå¯¹è±¡çš„ç±»
             Class<?> cl = obj.getClass();
-            // »ñÈ¡Ö¸¶¨obj¶ÔÏóµÄËùÓĞ³ÉÔ±±äÁ¿£¬²¢±éÀúÃ¿¸ö³ÉÔ±±äÁ¿
+            // è·å–æŒ‡å®šobjå¯¹è±¡çš„æ‰€æœ‰æˆå‘˜å˜é‡ï¼Œå¹¶éå†æ¯ä¸ªæˆå‘˜å˜é‡
             for (Field f : cl.getDeclaredFields()) {
-                // ½«¸Ã³ÉÔ±±äÁ¿ÉèÖÃ³É¿É×ÔÓÉ·ÃÎÊ¡£
+                // å°†è¯¥æˆå‘˜å˜é‡è®¾ç½®æˆå¯è‡ªç”±è®¿é—®ã€‚
                 f.setAccessible(true);
-                // »ñÈ¡¸Ã³ÉÔ±±äÁ¿ÉÏActionListenerForÀàĞÍµÄAnnotation
+                // è·å–è¯¥æˆå‘˜å˜é‡ä¸ŠActionListenerForç±»å‹çš„Annotation
                 ActionListenerFor a = f.getAnnotation(ActionListenerFor.class);
-                // »ñÈ¡³ÉÔ±±äÁ¿fµÄÖµ
+                // è·å–æˆå‘˜å˜é‡fçš„å€¼
                 Object fObj = f.get(obj);
-                // Èç¹ûfÊÇAbstractButtonµÄÊµÀı£¬ÇÒa²»Îªnull
+                // å¦‚æœfæ˜¯AbstractButtonçš„å®ä¾‹ï¼Œä¸”aä¸ä¸ºnull
                 if (a != null && fObj != null && fObj instanceof AbstractButton) {
-                    // »ñÈ¡a×¢½âÀïµÄlistnerÔªÊı¾İ£¨ËüÊÇÒ»¸ö¼àÌıÆ÷Àà£©
+                    // è·å–aæ³¨è§£é‡Œçš„listnerå…ƒæ•°æ®ï¼ˆå®ƒæ˜¯ä¸€ä¸ªç›‘å¬å™¨ç±»ï¼‰
                     Class<? extends ActionListener> listenerClazz = a.listener();
-                    // Ê¹ÓÃ·´ÉäÀ´´´½¨listnerÀàµÄ¶ÔÏó
+                    // ä½¿ç”¨åå°„æ¥åˆ›å»ºlistnerç±»çš„å¯¹è±¡
                     ActionListener al = listenerClazz.newInstance();
                     AbstractButton ab = (AbstractButton) fObj;
-                    // Îªab°´Å¥Ìí¼ÓÊÂ¼ş¼àÌıÆ÷
+                    // ä¸ºabæŒ‰é’®æ·»åŠ äº‹ä»¶ç›‘å¬å™¨
                     ab.addActionListener(al);
                 }
             }

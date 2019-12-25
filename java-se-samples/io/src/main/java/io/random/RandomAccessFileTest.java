@@ -8,16 +8,16 @@ public class RandomAccessFileTest {
         try (
                 RandomAccessFile raf = new RandomAccessFile(
                         "RandomAccessFileTest.java", "r")) {
-            // ��ȡRandomAccessFile�����ļ�ָ���λ�ã���ʼλ����0
-            System.out.println("RandomAccessFile���ļ�ָ��ĳ�ʼλ�ã�" + raf.getFilePointer());
-            // �ƶ�raf���ļ���¼ָ���λ��
+            // 获取RandomAccessFile对象文件指针的位置，初始位置是0
+            System.out.println("RandomAccessFile的文件指针的初始位置：" + raf.getFilePointer());
+            // 移动raf的文件记录指针的位置
             raf.seek(300);
             byte[] bbuf = new byte[1024];
-            // ���ڱ���ʵ�ʶ�ȡ���ֽ���
+            // 用于保存实际读取的字节数
             int hasRead = 0;
-            // ʹ��ѭ�����ظ���ȡˮ������
+            // 使用循环来重复“取水”过程
             while ((hasRead = raf.read(bbuf)) > 0) {
-                // ȡ������Ͳ����ˮ�Σ��ֽڣ������ֽ�����ת�����ַ������룡
+                // 取出“竹筒”中水滴（字节），将字节数组转换成字符串输入！
                 System.out.print(new String(bbuf, 0, hasRead));
             }
         } catch (IOException ex) {

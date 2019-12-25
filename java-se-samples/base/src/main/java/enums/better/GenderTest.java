@@ -3,10 +3,10 @@ package enums.better;
 public class GenderTest {
     public static void main(String[] args) {
         Gender g = Gender.valueOf("FEMALE");
-        g.setName("Å®");
-        System.out.println(g + "´ú±í:" + g.getName());
-        // ´ËÊ±ÉèÖÃnameÖµÊ±½«»áÌáÊ¾²ÎÊı´íÎó¡£
-        g.setName("ÄĞ");
-        System.out.println(g + "´ú±í:" + g.getName());
+        g.setName("å¥³");
+        System.out.println(g + "ä»£è¡¨:" + g.getName());
+        // æ­¤æ—¶è®¾ç½®nameå€¼æ—¶å°†ä¼šæç¤ºå‚æ•°é”™è¯¯ã€‚
+        g.setName("ç”·");
+        System.out.println(g + "ä»£è¡¨:" + g.getName());
     }
 }

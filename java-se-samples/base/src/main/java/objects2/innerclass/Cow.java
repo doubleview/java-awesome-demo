@@ -4,7 +4,7 @@ package objects2.innerclass;
 public class Cow {
     private double weight;
 
-    // Íâ²¿ÀàµÄÁ½¸öÖØÔØµÄ¹¹ÔìÆ÷
+    // å¤–éƒ¨ç±»çš„ä¸¤ä¸ªé‡è½½çš„æ„é€ å™¨
     public Cow() {
     }
 
@@ -12,13 +12,13 @@ public class Cow {
         this.weight = weight;
     }
 
-    // ¶¨ÒåÒ»¸ö·Ç¾²Ì¬ÄÚ²¿Àà
+    // å®šä¹‰ä¸€ä¸ªéé™æ€å†…éƒ¨ç±»
     private class CowLeg {
-        // ·Ç¾²Ì¬ÄÚ²¿ÀàµÄÁ½¸öÊµÀı±äÁ¿
+        // éé™æ€å†…éƒ¨ç±»çš„ä¸¤ä¸ªå®ä¾‹å˜é‡
         private double length;
         private String color;
 
-        // ·Ç¾²Ì¬ÄÚ²¿ÀàµÄÁ½¸öÖØÔØµÄ¹¹ÔìÆ÷
+        // éé™æ€å†…éƒ¨ç±»çš„ä¸¤ä¸ªé‡è½½çš„æ„é€ å™¨
         public CowLeg() {
         }
 
@@ -27,7 +27,7 @@ public class Cow {
             this.color = color;
         }
 
-        // ÏÂÃæÊ¡ÂÔlength¡¢colorµÄsetterºÍgetter·½·¨
+        // ä¸‹é¢çœç•¥lengthã€colorçš„setterå’Œgetteræ–¹æ³•
         public void setLength(double length) {
             this.length = length;
         }
@@ -44,16 +44,16 @@ public class Cow {
             return this.color;
         }
 
-        // ·Ç¾²Ì¬ÄÚ²¿ÀàµÄÊµÀı·½·¨
+        // éé™æ€å†…éƒ¨ç±»çš„å®ä¾‹æ–¹æ³•
         public void info() {
-            System.out.println("µ±Ç°Å£ÍÈÑÕÉ«ÊÇ£º" + color + ", ¸ß£º" + length);
-            // Ö±½Ó·ÃÎÊÍâ²¿ÀàµÄprivateĞŞÊÎµÄ³ÉÔ±±äÁ¿
-            System.out.println("±¾Å£ÍÈËùÔÚÄÌÅ£ÖØ£º" + weight);   //¢Ù
+            System.out.println("å½“å‰ç‰›è…¿é¢œè‰²æ˜¯ï¼š" + color + ", é«˜ï¼š" + length);
+            // ç›´æ¥è®¿é—®å¤–éƒ¨ç±»çš„privateä¿®é¥°çš„æˆå‘˜å˜é‡
+            System.out.println("æœ¬ç‰›è…¿æ‰€åœ¨å¥¶ç‰›é‡ï¼š" + weight);   //â‘ 
         }
     }
 
     public void test() {
-        CowLeg cl = new CowLeg(1.12, "ºÚ°×Ïà¼ä");
+        CowLeg cl = new CowLeg(1.12, "é»‘ç™½ç›¸é—´");
         cl.info();
     }
 

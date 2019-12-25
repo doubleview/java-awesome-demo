@@ -5,13 +5,13 @@ import java.io.InputStreamReader;
 
 public class KeyboardInTest {
     public static void main(String[] args) throws Exception {
-        // ÒÔSystem.in½ÚµãÁ÷Îª»ù´¡£¬´´½¨Ò»¸öBufferedReader¶ÔÏó
+        // ä»¥System.inèŠ‚ç‚¹æµä¸ºåŸºç¡€ï¼Œåˆ›å»ºä¸€ä¸ªBufferedReaderå¯¹è±¡
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
         String line = null;
-        // ÖğĞĞ¶ÁÈ¡¼üÅÌÊäÈë
+        // é€è¡Œè¯»å–é”®ç›˜è¾“å…¥
         while ((line = br.readLine()) != null) {
-            System.out.println("ÓÃ»§¼üÅÌÊäÈëÊÇ:" + line);
+            System.out.println("ç”¨æˆ·é”®ç›˜è¾“å…¥æ˜¯:" + line);
         }
     }
 }

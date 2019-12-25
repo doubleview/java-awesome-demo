@@ -6,8 +6,8 @@ import java.util.*;
 public class ListIteratorTest {
     public static void main(String[] args) {
         String[] books = {
-                "·è¿ñJava½²Òå", "·è¿ñiOS½²Òå",
-                "ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½"
+                "ç–¯ç‹‚Javaè®²ä¹‰", "ç–¯ç‹‚iOSè®²ä¹‰",
+                "è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜"
         };
         List bookList = new ArrayList();
         for (int i = 0; i < books.length; i++) {
@@ -16,9 +16,9 @@ public class ListIteratorTest {
         ListIterator lit = bookList.listIterator();
         while (lit.hasNext()) {
             System.out.println(lit.next());
-            lit.add("-------·Ö¸ô·û-------");
+            lit.add("-------åˆ†éš”ç¬¦-------");
         }
-        System.out.println("=======ÏÂÃæ¿ªÊ¼·´Ïòµü´ú=======");
+        System.out.println("=======ä¸‹é¢å¼€å§‹åå‘è¿­ä»£=======");
         while (lit.hasPrevious()) {
             System.out.println(lit.previous());
         }

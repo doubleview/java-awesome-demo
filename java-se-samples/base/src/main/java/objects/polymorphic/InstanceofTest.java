@@ -3,23 +3,23 @@ package objects.polymorphic;
 
 public class InstanceofTest {
     public static void main(String[] args) {
-        // ÉùÃ÷helloÊ±Ê¹ÓÃObjectÀà£¬ÔòhelloµÄ±àÒëÀàĞÍÊÇObject£¬
-        // ObjectÊÇËùÓĞÀàµÄ¸¸Àà, µ«hello±äÁ¿µÄÊµ¼ÊÀàĞÍÊÇString
+        // å£°æ˜helloæ—¶ä½¿ç”¨Objectç±»ï¼Œåˆ™helloçš„ç¼–è¯‘ç±»å‹æ˜¯Objectï¼Œ
+        // Objectæ˜¯æ‰€æœ‰ç±»çš„çˆ¶ç±», ä½†helloå˜é‡çš„å®é™…ç±»å‹æ˜¯String
         Object hello = "Hello";
-        // StringÓëObjectÀà´æÔÚ¼Ì³Ğ¹ØÏµ£¬¿ÉÒÔ½øĞĞinstanceofÔËËã¡£·µ»Øtrue¡£
-        System.out.println("×Ö·û´®ÊÇ·ñÊÇObjectÀàµÄÊµÀı£º"
+        // Stringä¸Objectç±»å­˜åœ¨ç»§æ‰¿å…³ç³»ï¼Œå¯ä»¥è¿›è¡Œinstanceofè¿ç®—ã€‚è¿”å›trueã€‚
+        System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Objectç±»çš„å®ä¾‹ï¼š"
                 + (hello instanceof Object));
-        System.out.println("×Ö·û´®ÊÇ·ñÊÇStringÀàµÄÊµÀı£º"
-                + (hello instanceof String)); // ·µ»Øtrue¡£
-        // MathÓëObjectÀà´æÔÚ¼Ì³Ğ¹ØÏµ£¬¿ÉÒÔ½øĞĞinstanceofÔËËã¡£·µ»Øfalse¡£
-        System.out.println("×Ö·û´®ÊÇ·ñÊÇMathÀàµÄÊµÀı£º"
+        System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Stringç±»çš„å®ä¾‹ï¼š"
+                + (hello instanceof String)); // è¿”å›trueã€‚
+        // Mathä¸Objectç±»å­˜åœ¨ç»§æ‰¿å…³ç³»ï¼Œå¯ä»¥è¿›è¡Œinstanceofè¿ç®—ã€‚è¿”å›falseã€‚
+        System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Mathç±»çš„å®ä¾‹ï¼š"
                 + (hello instanceof Math));
-        // StringÊµÏÖÁËComparable½Ó¿Ú£¬ËùÒÔ·µ»Øtrue¡£
-        System.out.println("×Ö·û´®ÊÇ·ñÊÇComparable½Ó¿ÚµÄÊµÀı£º"
+        // Stringå®ç°äº†Comparableæ¥å£ï¼Œæ‰€ä»¥è¿”å›trueã€‚
+        System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Comparableæ¥å£çš„å®ä¾‹ï¼š"
                 + (hello instanceof Comparable));
         String a = "Hello";
-//		// StringÀàÓëMathÀàÃ»ÓĞ¼Ì³Ğ¹ØÏµ£¬ËùÒÔÏÂÃæ´úÂë±àÒëÎŞ·¨Í¨¹ı
-//		System.out.println("×Ö·û´®ÊÇ·ñÊÇMathÀàµÄÊµÀı£º"
+//		// Stringç±»ä¸Mathç±»æ²¡æœ‰ç»§æ‰¿å…³ç³»ï¼Œæ‰€ä»¥ä¸‹é¢ä»£ç ç¼–è¯‘æ— æ³•é€šè¿‡
+//		System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Mathç±»çš„å®ä¾‹ï¼š"
 //			+ (a instanceof Math));
     }
 }

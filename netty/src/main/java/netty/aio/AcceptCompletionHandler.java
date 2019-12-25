@@ -24,12 +24,11 @@ import java.nio.channels.CompletionHandler;
  * @version 1.0
  * @date 2014年2月16日
  */
-public class AcceptCompletionHandler implements
-    CompletionHandler<AsynchronousSocketChannel, AsyncTimeServerHandler> {
+public class AcceptCompletionHandler implements CompletionHandler<AsynchronousSocketChannel, AsyncTimeServerHandler> {
 
     @Override
-    public void completed(AsynchronousSocketChannel result,
-        AsyncTimeServerHandler attachment) {
+    public void completed(AsynchronousSocketChannel result, AsyncTimeServerHandler attachment) {
+        System.out.println("current thread : " + Thread.currentThread().getName());
         attachment.asynchronousServerSocketChannel.accept(attachment, this);
         ByteBuffer buffer = ByteBuffer.allocate(1024);
         result.read(buffer, buffer, new ReadCompletionHandler(result));

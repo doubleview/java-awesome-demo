@@ -2,7 +2,7 @@ package customanotation.test1;
 
 
 public class MyTest {
-    // Ê¹ÓÃ@Testable×¢½âÖ¸¶¨¸Ã·½·¨ÊÇ¿É²âÊÔµÄ
+    // ä½¿ç”¨@Testableæ³¨è§£æŒ‡å®šè¯¥æ–¹æ³•æ˜¯å¯æµ‹è¯•çš„
     @Testable
     public static void m1() {
     }
@@ -10,16 +10,16 @@ public class MyTest {
     public static void m2() {
     }
 
-    // Ê¹ÓÃ@Testable×¢½âÖ¸¶¨¸Ã·½·¨ÊÇ¿É²âÊÔµÄ
+    // ä½¿ç”¨@Testableæ³¨è§£æŒ‡å®šè¯¥æ–¹æ³•æ˜¯å¯æµ‹è¯•çš„
     @Testable
     public static void m3() {
-        throw new IllegalArgumentException("²ÎÊı³ö´íÁË£¡");
+        throw new IllegalArgumentException("å‚æ•°å‡ºé”™äº†ï¼");
     }
 
     public static void m4() {
     }
 
-    // Ê¹ÓÃ@Testable×¢½âÖ¸¶¨¸Ã·½·¨ÊÇ¿É²âÊÔµÄ
+    // ä½¿ç”¨@Testableæ³¨è§£æŒ‡å®šè¯¥æ–¹æ³•æ˜¯å¯æµ‹è¯•çš„
     @Testable
     public static void m5() {
     }
@@ -27,10 +27,10 @@ public class MyTest {
     public static void m6() {
     }
 
-    // Ê¹ÓÃ@Testable×¢½âÖ¸¶¨¸Ã·½·¨ÊÇ¿É²âÊÔµÄ
+    // ä½¿ç”¨@Testableæ³¨è§£æŒ‡å®šè¯¥æ–¹æ³•æ˜¯å¯æµ‹è¯•çš„
     @Testable
     public static void m7() {
-        throw new RuntimeException("³ÌĞòÒµÎñ³öÏÖÒì³££¡");
+        throw new RuntimeException("ç¨‹åºä¸šåŠ¡å‡ºç°å¼‚å¸¸ï¼");
     }
 
     public static void m8() {

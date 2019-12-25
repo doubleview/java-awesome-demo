@@ -2,9 +2,9 @@ package objects2.innerclass;
 
 
 public class SubClass extends Out.In {
-    //显示定义SubClass的构造器
+    //閺勫墽銇氱�规矮绠烻ubClass閻ㄥ嫭鐎柅鐘叉珤
     public SubClass(Out out) {
-        //通过传入的Out对象显式调用In的构造器
+        //闁俺绻冩导鐘插弳閻ㄥ嚠ut鐎电钖勯弰鎯х础鐠嬪啰鏁n閻ㄥ嫭鐎柅鐘叉珤
         out.super("hello");
     }
 }

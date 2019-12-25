@@ -6,47 +6,47 @@ import java.awt.event.ActionEvent;
 import java.awt.event.InputEvent;
 import java.net.InetSocketAddress;
 
-// ¶¨Òå½»Ì¸µÄ¶Ô»°¿ò
+// å®šä¹‰äº¤è°ˆçš„å¯¹è¯æ¡†
 public class ChatFrame extends JDialog {
-    // ÁÄÌìĞÅÏ¢Çø
+    // èŠå¤©ä¿¡æ¯åŒº
     JTextArea msgArea = new JTextArea(12, 45);
-    // ÁÄÌìÊäÈëÇø
+    // èŠå¤©è¾“å…¥åŒº
     JTextField chatField = new JTextField(30);
-    // ·¢ËÍÁÄÌìĞÅÏ¢µÄ°´Å¥
-    JButton sendBn = new JButton("·¢ËÍ");
-    // ¸Ã½»Ì¸´°¿Ú¶ÔÓ¦µÄÓÃ»§
+    // å‘é€èŠå¤©ä¿¡æ¯çš„æŒ‰é’®
+    JButton sendBn = new JButton("å‘é€");
+    // è¯¥äº¤è°ˆçª—å£å¯¹åº”çš„ç”¨æˆ·
     UserInfo user;
 
-    // ¹¹ÔìÆ÷£¬ÓÃÓÚ³õÊ¼»¯½»Ì¸¶Ô»°¿òµÄ½çÃæ
+    // æ„é€ å™¨ï¼Œç”¨äºåˆå§‹åŒ–äº¤è°ˆå¯¹è¯æ¡†çš„ç•Œé¢
     public ChatFrame(LanTalk parent, final UserInfo user) {
-        super(parent, "ºÍ" + user.getName() + "ÁÄÌìÖĞ", false);
+        super(parent, "å’Œ" + user.getName() + "èŠå¤©ä¸­", false);
         this.user = user;
         msgArea.setEditable(false);
         add(new JScrollPane(msgArea));
         JPanel buttom = new JPanel();
-        buttom.add(new JLabel("ÊäÈëĞÅÏ¢£º"));
+        buttom.add(new JLabel("è¾“å…¥ä¿¡æ¯ï¼š"));
         buttom.add(chatField);
         buttom.add(sendBn);
         add(buttom, BorderLayout.SOUTH);
-        // ·¢ËÍÏûÏ¢µÄAction£¬ActionÊÇActionListenerµÄ×Ó½Ó¿Ú
+        // å‘é€æ¶ˆæ¯çš„Actionï¼ŒActionæ˜¯ActionListenerçš„å­æ¥å£
         Action sendAction = new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent evt) {
                 InetSocketAddress dest = (InetSocketAddress) user.getAddress();
-                // ÔÚÁÄÓÑÁĞ±íÖĞ£¬ËùÓĞÈËÏîµÄSocketAddressÊÇnull
-                // Õâ±íÃ÷ÊÇÏòËùÓĞÈË·¢ËÍÏûÏ¢
+                // åœ¨èŠå‹åˆ—è¡¨ä¸­ï¼Œæ‰€æœ‰äººé¡¹çš„SocketAddressæ˜¯null
+                // è¿™è¡¨æ˜æ˜¯å‘æ‰€æœ‰äººå‘é€æ¶ˆæ¯
                 if (dest == null) {
                     LoginFrame.comUtil.broadCast(chatField.getText());
-                    msgArea.setText("Äú¶Ô´ó¼ÒËµ£º"
+                    msgArea.setText("æ‚¨å¯¹å¤§å®¶è¯´ï¼š"
                             + chatField.getText() + "\n" + msgArea.getText());
                 }
-                // ÏòË½ÈË·¢ËÍĞÅÏ¢
+                // å‘ç§äººå‘é€ä¿¡æ¯
                 else {
-                    // »ñÈ¡·¢ËÍÏûÏ¢µÄÄ¿µÄ
+                    // è·å–å‘é€æ¶ˆæ¯çš„ç›®çš„
                     dest = new InetSocketAddress(dest.getHostName(),
                             dest.getPort() + 1);
                     LoginFrame.comUtil.sendSingle(chatField.getText(), dest);
-                    msgArea.setText("Äú¶Ô" + user.getName() + "Ëµ£º"
+                    msgArea.setText("æ‚¨å¯¹" + user.getName() + "è¯´ï¼š"
                             + chatField.getText() + "\n" + msgArea.getText());
 
                 }
@@ -54,15 +54,15 @@ public class ChatFrame extends JDialog {
             }
         };
         sendBn.addActionListener(sendAction);
-        // ½«Ctrl+Enter¼üºÍ"send"¹ØÁª
+        // å°†Ctrl+Enteré”®å’Œ"send"å…³è”
         chatField.getInputMap().put(KeyStroke.getKeyStroke('\n'
                 , InputEvent.CTRL_MASK), "send");
-        // ½«"send"ÓësendAction¹ØÁª
+        // å°†"send"ä¸sendActionå…³è”
         chatField.getActionMap().put("send", sendAction);
         pack();
     }
 
-    // ¶¨ÒåÏòÁÄÌìÇøÓòÌí¼ÓÏûÏ¢µÄ·½·¨
+    // å®šä¹‰å‘èŠå¤©åŒºåŸŸæ·»åŠ æ¶ˆæ¯çš„æ–¹æ³•
     public void addString(String msg) {
         msgArea.setText(msg + "\n" + msgArea.getText());
     }

@@ -5,22 +5,22 @@ public class ConstructorOverload {
     public String name;
     public int count;
 
-    // Ìá¹©ÎŞ²ÎÊıµÄ¹¹ÔìÆ÷
+    // æä¾›æ— å‚æ•°çš„æ„é€ å™¨
     public ConstructorOverload() {
     }
 
-    // Ìá¹©´øÁ½¸ö²ÎÊıµÄ¹¹ÔìÆ÷£¬
-    // ¶Ô¸Ã¹¹ÔìÆ÷·µ»ØµÄ¶ÔÏóÖ´ĞĞ³õÊ¼»¯
+    // æä¾›å¸¦ä¸¤ä¸ªå‚æ•°çš„æ„é€ å™¨ï¼Œ
+    // å¯¹è¯¥æ„é€ å™¨è¿”å›çš„å¯¹è±¡æ‰§è¡Œåˆå§‹åŒ–
     public ConstructorOverload(String name, int count) {
         this.name = name;
         this.count = count;
     }
 
     public static void main(String[] args) {
-        // Í¨¹ıÎŞ²ÎÊı¹¹ÔìÆ÷´´½¨ConstructorOverload¶ÔÏó
+        // é€šè¿‡æ— å‚æ•°æ„é€ å™¨åˆ›å»ºConstructorOverloadå¯¹è±¡
         ConstructorOverload oc1 = new ConstructorOverload();
-        // Í¨¹ıÓĞ²ÎÊı¹¹ÔìÆ÷´´½¨ConstructorOverload¶ÔÏó
-        ConstructorOverload oc2 = new ConstructorOverload("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½", 300000);
+        // é€šè¿‡æœ‰å‚æ•°æ„é€ å™¨åˆ›å»ºConstructorOverloadå¯¹è±¡
+        ConstructorOverload oc2 = new ConstructorOverload("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜", 300000);
         System.out.println(oc1.name + " " + oc1.count);
         System.out.println(oc2.name + " " + oc2.count);
     }

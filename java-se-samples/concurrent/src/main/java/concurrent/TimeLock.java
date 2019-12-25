@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * ReentrantLock 的锁申请等待限时
+ * ReentrantLock 鐨勯攣鐢宠绛夊緟闄愭椂
  */
 public class TimeLock implements Runnable {
 

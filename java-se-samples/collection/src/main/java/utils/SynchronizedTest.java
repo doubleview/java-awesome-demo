@@ -4,7 +4,7 @@ import java.util.*;
 
 public class SynchronizedTest {
     public static void main(String[] args) {
-        // 下面程序创建了四个线程安全的集合对象
+        // 涓嬮潰绋嬪簭鍒涘缓浜嗗洓涓嚎绋嬪畨鍏ㄧ殑闆嗗悎瀵硅薄
         Collection c = Collections.synchronizedCollection(new ArrayList());
         List list = Collections.synchronizedList(new ArrayList());
         Set s = Collections.synchronizedSet(new HashSet());

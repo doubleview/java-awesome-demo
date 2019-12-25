@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 
 /**
- * 基于无锁机制的Vector
+ * 鍩轰簬鏃犻攣鏈哄埗鐨刅ector
  * @param <E>
  */
 public class LockFreeVector<E> {
@@ -60,7 +60,7 @@ public class LockFreeVector<E> {
     }
 
     /**
-     * 加入数据
+     * 鍔犲叆鏁版嵁
      * @param e
      */
     public void push_back(E e) {
@@ -83,7 +83,7 @@ public class LockFreeVector<E> {
     }
 
     /**
-     * 获得数据
+     * 鑾峰緱鏁版嵁
      * @param index
      * @return
      */

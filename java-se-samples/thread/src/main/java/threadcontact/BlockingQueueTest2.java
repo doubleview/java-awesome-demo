@@ -18,15 +18,15 @@ class Producer extends Thread {
                         "Spring"
                 };
         for (int i = 0; i < 999999999; i++) {
-            System.out.println(getName() + "Éú²úÕß×¼±¸Éú²ú¼¯ºÏÔªËØ£¡");
+            System.out.println(getName() + "ç”Ÿäº§è€…å‡†å¤‡ç”Ÿäº§é›†åˆå…ƒç´ ï¼");
             try {
                 Thread.sleep(200);
-                // ³¢ÊÔ·ÅÈëÔªËØ£¬Èç¹û¶ÓÁĞÒÑÂú£¬Ïß³Ì±»×èÈû
+                // å°è¯•æ”¾å…¥å…ƒç´ ï¼Œå¦‚æœé˜Ÿåˆ—å·²æ»¡ï¼Œçº¿ç¨‹è¢«é˜»å¡
                 bq.put(strArr[i % 3]);
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-            System.out.println(getName() + "Éú²úÍê³É£º" + bq);
+            System.out.println(getName() + "ç”Ÿäº§å®Œæˆï¼š" + bq);
         }
     }
 }
@@ -40,28 +40,28 @@ class Consumer extends Thread {
 
     public void run() {
         while (true) {
-            System.out.println(getName() + "Ïû·ÑÕß×¼±¸Ïû·Ñ¼¯ºÏÔªËØ£¡");
+            System.out.println(getName() + "æ¶ˆè´¹è€…å‡†å¤‡æ¶ˆè´¹é›†åˆå…ƒç´ ï¼");
             try {
                 Thread.sleep(200);
-                // ³¢ÊÔÈ¡³öÔªËØ£¬Èç¹û¶ÓÁĞÒÑ¿Õ£¬Ïß³Ì±»×èÈû
+                // å°è¯•å–å‡ºå…ƒç´ ï¼Œå¦‚æœé˜Ÿåˆ—å·²ç©ºï¼Œçº¿ç¨‹è¢«é˜»å¡
                 bq.take();
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-            System.out.println(getName() + "Ïû·ÑÍê³É£º" + bq);
+            System.out.println(getName() + "æ¶ˆè´¹å®Œæˆï¼š" + bq);
         }
     }
 }
 
 public class BlockingQueueTest2 {
     public static void main(String[] args) {
-        // ´´½¨Ò»¸öÈİÁ¿Îª1µÄBlockingQueue
+        // åˆ›å»ºä¸€ä¸ªå®¹é‡ä¸º1çš„BlockingQueue
         BlockingQueue<String> bq = new ArrayBlockingQueue<>(1);
-        // Æô¶¯3ÌõÉú²úÕßÏß³Ì
+        // å¯åŠ¨3æ¡ç”Ÿäº§è€…çº¿ç¨‹
         new Producer(bq).start();
         new Producer(bq).start();
         new Producer(bq).start();
-        // Æô¶¯Ò»ÌõÏû·ÑÕßÏß³Ì
+        // å¯åŠ¨ä¸€æ¡æ¶ˆè´¹è€…çº¿ç¨‹
         new Consumer(bq).start();
     }
 }

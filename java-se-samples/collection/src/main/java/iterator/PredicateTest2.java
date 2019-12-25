@@ -6,25 +6,25 @@ import java.util.function.Predicate;
 
 public class PredicateTest2 {
     public static void main(String[] args) {
-        // ´´½¨books¼¯ºÏ¡¢Îªbooks¼¯ºÏÌí¼ÓÔªËØµÄ´úÂëÓëÇ°Ò»¸ö³ÌĞòÏàÍ¬¡£
+        // åˆ›å»ºbooksé›†åˆã€ä¸ºbooksé›†åˆæ·»åŠ å…ƒç´ çš„ä»£ç ä¸å‰ä¸€ä¸ªç¨‹åºç›¸åŒã€‚
         Collection books = new HashSet();
-        books.add(new String("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½"));
-        books.add(new String("Java¿ª·¢"));
-        books.add(new String("iOS¿ª·¢"));
-        books.add(new String("Ajax¿ª·¢"));
-        books.add(new String("Android¿ª·¢"));
-        // Í³¼ÆÊéÃû°üº¬¡°¡±×Ó´®µÄÍ¼ÊéÊıÁ¿
+        books.add(new String("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜"));
+        books.add(new String("Javaå¼€å‘"));
+        books.add(new String("iOSå¼€å‘"));
+        books.add(new String("Ajaxå¼€å‘"));
+        books.add(new String("Androidå¼€å‘"));
+        // ç»Ÿè®¡ä¹¦ååŒ…å«â€œâ€å­ä¸²çš„å›¾ä¹¦æ•°é‡
         System.out.println(calAll(books, ele -> ((String) ele).contains("")));
-        // Í³¼ÆÊéÃû°üº¬¡°Java¡±×Ó´®µÄÍ¼ÊéÊıÁ¿
+        // ç»Ÿè®¡ä¹¦ååŒ…å«â€œJavaâ€å­ä¸²çš„å›¾ä¹¦æ•°é‡
         System.out.println(calAll(books, ele -> ((String) ele).contains("Java")));
-        // Í³¼ÆÊéÃû×Ö·û´®³¤¶È´óÓÚ10µÄÍ¼ÊéÊıÁ¿
+        // ç»Ÿè®¡ä¹¦åå­—ç¬¦ä¸²é•¿åº¦å¤§äº10çš„å›¾ä¹¦æ•°é‡
         System.out.println(calAll(books, ele -> ((String) ele).length() > 10));
     }
 
     public static int calAll(Collection books, Predicate p) {
         int total = 0;
         for (Object obj : books) {
-            // Ê¹ÓÃPredicateµÄtest()·½·¨ÅĞ¶Ï¸Ã¶ÔÏóÊÇ·ñÂú×ãPredicateÖ¸¶¨µÄÌõ¼ş
+            // ä½¿ç”¨Predicateçš„test()æ–¹æ³•åˆ¤æ–­è¯¥å¯¹è±¡æ˜¯å¦æ»¡è¶³PredicateæŒ‡å®šçš„æ¡ä»¶
             if (p.test(obj)) {
                 total++;
             }

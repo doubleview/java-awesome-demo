@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class MyUtils {
-    // ÏÂÃædest¼¯ºÏÔªËØÀàĞÍ±ØĞëÓësrc¼¯ºÏÔªËØÀàĞÍÏàÍ¬£¬»òÊÇÆä¸¸Àà
+    // ä¸‹é¢desté›†åˆå…ƒç´ ç±»å‹å¿…é¡»ä¸srcé›†åˆå…ƒç´ ç±»å‹ç›¸åŒï¼Œæˆ–æ˜¯å…¶çˆ¶ç±»
     public static <T> T copy(Collection<? super T> dest
             , Collection<T> src) {
         T last = null;
@@ -20,9 +20,9 @@ public class MyUtils {
         List<Number> ln = new ArrayList<>();
         List<Integer> li = new ArrayList<>();
         li.add(5);
-        // ´Ë´¦¿É×¼È·µÄÖªµÀ×îºóÒ»¸ö±»¸´ÖÆµÄÔªËØÊÇIntegerÀàĞÍ
-        // Óësrc¼¯ºÏÔªËØµÄÀàĞÍÏàÍ¬
-        Integer last = copy(ln, li);    // ¢Ù
+        // æ­¤å¤„å¯å‡†ç¡®çš„çŸ¥é“æœ€åä¸€ä¸ªè¢«å¤åˆ¶çš„å…ƒç´ æ˜¯Integerç±»å‹
+        // ä¸srcé›†åˆå…ƒç´ çš„ç±»å‹ç›¸åŒ
+        Integer last = copy(ln, li);    // â‘ 
         System.out.println(ln);
     }
 }

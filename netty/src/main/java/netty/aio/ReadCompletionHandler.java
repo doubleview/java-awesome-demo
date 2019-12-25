@@ -26,8 +26,7 @@ import java.nio.channels.CompletionHandler;
  * @version 1.0
  * @date 2014年2月16日
  */
-public class ReadCompletionHandler implements
-    CompletionHandler<Integer, ByteBuffer> {
+public class ReadCompletionHandler implements CompletionHandler<Integer, ByteBuffer> {
 
     private AsynchronousSocketChannel channel;
 
@@ -45,8 +44,7 @@ public class ReadCompletionHandler implements
         try {
             String req = new String(body, "UTF-8");
             System.out.println("The time server receive order : " + req);
-            String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(req) ? new java.util.Date(
-                System.currentTimeMillis()).toString() : "BAD ORDER";
+            String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(req) ? new java.util.Date(System.currentTimeMillis()).toString() : "BAD ORDER";
             doWrite(currentTime);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -59,8 +57,7 @@ public class ReadCompletionHandler implements
             ByteBuffer writeBuffer = ByteBuffer.allocate(bytes.length);
             writeBuffer.put(bytes);
             writeBuffer.flip();
-            channel.write(writeBuffer, writeBuffer,
-                new CompletionHandler<Integer, ByteBuffer>() {
+            channel.write(writeBuffer, writeBuffer, new CompletionHandler<Integer, ByteBuffer>() {
                     @Override
                     public void completed(Integer result, ByteBuffer buffer) {
                         // 如果没有发送完成，继续发送

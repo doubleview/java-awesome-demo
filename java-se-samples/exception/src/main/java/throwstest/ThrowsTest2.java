@@ -6,16 +6,16 @@ import java.io.IOException;
 public class ThrowsTest2 {
     public static void main(String[] args)
             throws Exception {
-        // ÒòÎªtest()·½·¨ÉùÃ÷Å×³öIOExceptionÒì³££¬
-        // ËùÒÔµ÷ÓÃ¸Ã·½·¨µÄ´úÂëÒªÃ´´¦ÓÚtry...catch¿éÖĞ£¬
-        // ÒªÃ´´¦ÓÚÁíÒ»¸ö´øthrowsÉùÃ÷Å×³öµÄ·½·¨ÖĞ¡£
+        // å› ä¸ºtest()æ–¹æ³•å£°æ˜æŠ›å‡ºIOExceptionå¼‚å¸¸ï¼Œ
+        // æ‰€ä»¥è°ƒç”¨è¯¥æ–¹æ³•çš„ä»£ç è¦ä¹ˆå¤„äºtry...catchå—ä¸­ï¼Œ
+        // è¦ä¹ˆå¤„äºå¦ä¸€ä¸ªå¸¦throwså£°æ˜æŠ›å‡ºçš„æ–¹æ³•ä¸­ã€‚
         test();
     }
 
     public static void test() throws IOException {
-        // ÒòÎªFileInputStreamµÄ¹¹ÔìÆ÷ÉùÃ÷Å×³öIOExceptionÒì³££¬
-        // ËùÒÔµ÷ÓÃFileInputStreamµÄ´úÂëÒªÃ´´¦ÓÚtry...catch¿éÖĞ£¬
-        // ÒªÃ´´¦ÓÚÁíÒ»¸ö´øthrowsÉùÃ÷Å×³öµÄ·½·¨ÖĞ¡£
+        // å› ä¸ºFileInputStreamçš„æ„é€ å™¨å£°æ˜æŠ›å‡ºIOExceptionå¼‚å¸¸ï¼Œ
+        // æ‰€ä»¥è°ƒç”¨FileInputStreamçš„ä»£ç è¦ä¹ˆå¤„äºtry...catchå—ä¸­ï¼Œ
+        // è¦ä¹ˆå¤„äºå¦ä¸€ä¸ªå¸¦throwså£°æ˜æŠ›å‡ºçš„æ–¹æ³•ä¸­ã€‚
         FileInputStream fis = new FileInputStream("a.txt");
     }
 }

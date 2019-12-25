@@ -7,12 +7,12 @@ public class BigDecimalTest {
         BigDecimal f1 = new BigDecimal("0.05");
         BigDecimal f2 = BigDecimal.valueOf(0.01);
         BigDecimal f3 = new BigDecimal(0.05);
-        System.out.println("Ê¹ÓÃString×÷ÎªBigDecimal¹¹ÔìÆ÷²ÎÊı£º");
+        System.out.println("ä½¿ç”¨Stringä½œä¸ºBigDecimalæ„é€ å™¨å‚æ•°ï¼š");
         System.out.println("0.05 + 0.01 = " + f1.add(f2));
         System.out.println("0.05 - 0.01 = " + f1.subtract(f2));
         System.out.println("0.05 * 0.01 = " + f1.multiply(f2));
         System.out.println("0.05 / 0.01 = " + f1.divide(f2));
-        System.out.println("Ê¹ÓÃdouble×÷ÎªBigDecimal¹¹ÔìÆ÷²ÎÊı£º");
+        System.out.println("ä½¿ç”¨doubleä½œä¸ºBigDecimalæ„é€ å™¨å‚æ•°ï¼š");
         System.out.println("0.05 + 0.01 = " + f3.add(f2));
         System.out.println("0.05 - 0.01 = " + f3.subtract(f2));
         System.out.println("0.05 * 0.01 = " + f3.multiply(f2));

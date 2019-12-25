@@ -1,10 +1,10 @@
 package type;
 
 
-// ¶¨ÒåShapeµÄ×ÓÀàRectangle
+// å®šä¹‰Shapeçš„å­ç±»Rectangle
 public class Rectangle extends Shape {
-    // ÊµÏÖ»­Í¼·½·¨£¬ÒÔ´òÓ¡×Ö·û´®À´Ä£Äâ»­Í¼·½·¨ÊµÏÖ
+    // å®ç°ç”»å›¾æ–¹æ³•ï¼Œä»¥æ‰“å°å­—ç¬¦ä¸²æ¥æ¨¡æ‹Ÿç”»å›¾æ–¹æ³•å®ç°
     public void draw(Canvas c) {
-        System.out.println("°ÑÒ»¸ö¾ØĞÎ»­ÔÚ»­²¼" + c + "ÉÏ");
+        System.out.println("æŠŠä¸€ä¸ªçŸ©å½¢ç”»åœ¨ç”»å¸ƒ" + c + "ä¸Š");
     }
 }

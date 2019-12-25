@@ -3,7 +3,7 @@ package objects2.finals;
 
 public class FinalLocalTest {
     public static void main(String[] args) {
-        // ¶¨ÒåÒ»¸öÆÕÍ¨¾Ö²¿±äÁ¿
+        // å®šä¹‰ä¸€ä¸ªæ™®é€šå±€éƒ¨å˜é‡
         final int a = 5;
         System.out.println(a);
     }

@@ -19,7 +19,7 @@ public class ReplaceTest {
             } else {
                 matcher.reset(msgs[i]);
             }
-            System.out.println(matcher.replaceAll("¹ş¹ş:)"));
+            System.out.println(matcher.replaceAll("éå æ±:)"));
         }
     }
 }

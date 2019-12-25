@@ -1,11 +1,11 @@
 package objects.object;
 
 public class Person {
-    // ÏÂÃæ¶¨ÒåÁËÁ½¸ö³ÉÔ±±äÁ¿
+    // ä¸‹é¢å®šä¹‰äº†ä¸¤ä¸ªæˆå‘˜å˜é‡
     public String name;
     public int age;
 
-    // ÏÂÃæ¶¨ÒåÁËÒ»¸ösay·½·¨
+    // ä¸‹é¢å®šä¹‰äº†ä¸€ä¸ªsayæ–¹æ³•
     public void say(String content) {
         System.out.println(content);
     }

@@ -5,12 +5,12 @@ import java.util.HashSet;
 
 public class CollectionEach {
     public static void main(String[] args) {
-        // ´´½¨Ò»¸ö¼¯ºÏ
+        // åˆ›å»ºä¸€ä¸ªé›†åˆ
         Collection books = new HashSet();
-        books.add("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-        books.add("Java¿ª·¢");
-        books.add("Android¿ª·¢");
-        // µ÷ÓÃforEach()·½·¨±éÀú¼¯ºÏ
+        books.add("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+        books.add("Javaå¼€å‘");
+        books.add("Androidå¼€å‘");
+        // è°ƒç”¨forEach()æ–¹æ³•éå†é›†åˆ
         books.forEach(System.out::println);
     }
 }

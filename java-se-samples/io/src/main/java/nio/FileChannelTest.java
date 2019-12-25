@@ -11,24 +11,24 @@ public class FileChannelTest {
     public static void main(String[] args) {
         File f = new File("FileChannelTest.java");
         try (
-                // ´´½¨FileInputStream£¬ÒÔ¸ÃÎÄ¼şÊäÈëÁ÷´´½¨FileChannel
+                // åˆ›å»ºFileInputStreamï¼Œä»¥è¯¥æ–‡ä»¶è¾“å…¥æµåˆ›å»ºFileChannel
                 FileChannel inChannel = new FileInputStream(f).getChannel();
-                // ÒÔÎÄ¼şÊä³öÁ÷´´½¨FileBuffer£¬ÓÃÒÔ¿ØÖÆÊä³ö
+                // ä»¥æ–‡ä»¶è¾“å‡ºæµåˆ›å»ºFileBufferï¼Œç”¨ä»¥æ§åˆ¶è¾“å‡º
                 FileChannel outChannel = new FileOutputStream("a.txt").getChannel()) {
-            // ½«FileChannelÀïµÄÈ«²¿Êı¾İÓ³Éä³ÉByteBuffer
+            // å°†FileChannelé‡Œçš„å…¨éƒ¨æ•°æ®æ˜ å°„æˆByteBuffer
             MappedByteBuffer buffer = inChannel.map(FileChannel
-                    .MapMode.READ_ONLY, 0, f.length());   // ¢Ù
-            // Ê¹ÓÃGBKµÄ×Ö·û¼¯À´´´½¨½âÂëÆ÷
+                    .MapMode.READ_ONLY, 0, f.length());   // â‘ 
+            // ä½¿ç”¨GBKçš„å­—ç¬¦é›†æ¥åˆ›å»ºè§£ç å™¨
             Charset charset = Charset.forName("GBK");
-            // Ö±½Ó½«bufferÀïµÄÊı¾İÈ«²¿Êä³ö
-            outChannel.write(buffer);     // ¢Ú
-            // ÔÙ´Îµ÷ÓÃbufferµÄclear()·½·¨£¬¸´Ô­limit¡¢positionµÄÎ»ÖÃ
+            // ç›´æ¥å°†bufferé‡Œçš„æ•°æ®å…¨éƒ¨è¾“å‡º
+            outChannel.write(buffer);     // â‘¡
+            // å†æ¬¡è°ƒç”¨bufferçš„clear()æ–¹æ³•ï¼Œå¤åŸlimitã€positionçš„ä½ç½®
             buffer.clear();
-            // ´´½¨½âÂëÆ÷(CharsetDecoder)¶ÔÏó
+            // åˆ›å»ºè§£ç å™¨(CharsetDecoder)å¯¹è±¡
             CharsetDecoder decoder = charset.newDecoder();
-            // Ê¹ÓÃ½âÂëÆ÷½«ByteBuffer×ª»»³ÉCharBuffer
+            // ä½¿ç”¨è§£ç å™¨å°†ByteBufferè½¬æ¢æˆCharBuffer
             CharBuffer charBuffer = decoder.decode(buffer);
-            // CharBufferµÄtoString·½·¨¿ÉÒÔ»ñÈ¡¶ÔÓ¦µÄ×Ö·û´®
+            // CharBufferçš„toStringæ–¹æ³•å¯ä»¥è·å–å¯¹åº”çš„å­—ç¬¦ä¸²
             System.out.println(charBuffer);
         } catch (IOException ex) {
             ex.printStackTrace();

@@ -22,8 +22,8 @@ public class MatchesTest {
                 matcher.reset(mail);
             }
 
-            String result = mail + (matcher.matches() ? "ÊÇ" : "²»ÊÇ")
-                    + "Ò»¸öÓĞĞ§µÄÓÊ¼şµØÖ·£¡";
+            String result = mail + (matcher.matches() ? "æ˜¯" : "ä¸æ˜¯")
+                    + "ä¸€ä¸ªæœ‰æ•ˆçš„é‚®ä»¶åœ°å€ï¼";
             System.out.println(result);
         }
     }

@@ -1,9 +1,9 @@
 package threadcontact.condition;
 
 public class DrawThread extends Thread {
-    // Ä£ÄâÓÃ»§ÕË»§
+    // æ¨¡æ‹Ÿç”¨æˆ·è´¦æˆ·
     private Account account;
-    // µ±Ç°È¡Ç®Ïß³ÌËùÏ£ÍûÈ¡µÄÇ®Êı
+    // å½“å‰å–é’±çº¿ç¨‹æ‰€å¸Œæœ›å–çš„é’±æ•°
     private double drawAmount;
 
     public DrawThread(String name, Account account
@@ -13,7 +13,7 @@ public class DrawThread extends Thread {
         this.drawAmount = drawAmount;
     }
 
-    // ÖØ¸´100´ÎÖ´ĞĞÈ¡Ç®²Ù×÷
+    // é‡å¤100æ¬¡æ‰§è¡Œå–é’±æ“ä½œ
     public void run() {
         for (int i = 0; i < 100; i++) {
             account.draw(drawAmount);

@@ -6,14 +6,14 @@ public class StaticInnerClassTest {
     private static int prop2 = 9;
 
     static class StaticInnerClass {
-        // ¾²Ì¬ÄÚ²¿ÀàÀï¿ÉÒÔ°üº¬¾²Ì¬³ÉÔ±
+        // é™æ€å†…éƒ¨ç±»é‡Œå¯ä»¥åŒ…å«é™æ€æˆå‘˜
         private static int age;
 
         public void accessOuterProp() {
-            // ÏÂÃæ´úÂë³öÏÖ´íÎó£º
-            // ¾²Ì¬ÄÚ²¿ÀàÎŞ·¨·ÃÎÊÍâ²¿ÀàµÄÊµÀı±äÁ¿
+            // ä¸‹é¢ä»£ç å‡ºç°é”™è¯¯ï¼š
+            // é™æ€å†…éƒ¨ç±»æ— æ³•è®¿é—®å¤–éƒ¨ç±»çš„å®ä¾‹å˜é‡
             //System.out.println(prop1);
-            // ÏÂÃæ´úÂëÕı³£
+            // ä¸‹é¢ä»£ç æ­£å¸¸
             System.out.println(prop2);
         }
     }

@@ -5,13 +5,13 @@ import java.util.regex.Pattern;
 
 public class StartEnd {
     public static void main(String[] args) {
-        // ´´½¨Ò»¸öPattern¶ÔÏó£¬²¢ÓÃËü½¨Á¢Ò»¸öMatcher¶ÔÏó
+        // åˆ›å»ºä¸€ä¸ªPatternå¯¹è±¡ï¼Œå¹¶ç”¨å®ƒå»ºç«‹ä¸€ä¸ªMatcherå¯¹è±¡
         String regStr = "Java is very easy!";
-        System.out.println("Ä¿±ê×Ö·û´®ÊÇ£º" + regStr);
+        System.out.println("ç›®æ ‡å­—ç¬¦ä¸²æ˜¯ï¼š" + regStr);
         Matcher m = Pattern.compile("\\w+").matcher(regStr);
         while (m.find()) {
-            System.out.println(m.group() + "×Ó´®µÄÆğÊ¼Î»ÖÃ£º"
-                    + m.start() + "£¬Æä½áÊøÎ»ÖÃ£º" + m.end());
+            System.out.println(m.group() + "å­ä¸²çš„èµ·å§‹ä½ç½®ï¼š"
+                    + m.start() + "ï¼Œå…¶ç»“æŸä½ç½®ï¼š" + m.end());
         }
     }
 }

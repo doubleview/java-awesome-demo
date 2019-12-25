@@ -8,18 +8,18 @@ public class PropertiesTest {
     public static void main(String[] args)
             throws Exception {
         Properties props = new Properties();
-        // ÏòPropertiesÖĞÔö¼ÓÊôĞÔ
+        // å‘Propertiesä¸­å¢åŠ å±æ€§
         props.setProperty("username", "yeeku");
         props.setProperty("password", "123456");
-        // ½«PropertiesÖĞµÄkey-value¶Ô±£´æµ½a.iniÎÄ¼şÖĞ
+        // å°†Propertiesä¸­çš„key-valueå¯¹ä¿å­˜åˆ°a.iniæ–‡ä»¶ä¸­
         props.store(new FileOutputStream("a.ini")
-                , "comment line");   //¢Ù
-        // ĞÂ½¨Ò»¸öProperties¶ÔÏó
+                , "comment line");   //â‘ 
+        // æ–°å»ºä¸€ä¸ªPropertieså¯¹è±¡
         Properties props2 = new Properties();
-        // ÏòPropertiesÖĞÔö¼ÓÊôĞÔ
+        // å‘Propertiesä¸­å¢åŠ å±æ€§
         props2.setProperty("gender", "male");
-        // ½«a.iniÎÄ¼şÖĞµÄkey-value¶Ô×·¼Óµ½props2ÖĞ
-        props2.load(new FileInputStream("a.ini"));   //¢Ú
+        // å°†a.iniæ–‡ä»¶ä¸­çš„key-valueå¯¹è¿½åŠ åˆ°props2ä¸­
+        props2.load(new FileInputStream("a.ini"));   //â‘¡
         System.out.println(props2);
     }
 }

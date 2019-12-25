@@ -2,18 +2,18 @@ package objects.object;
 
 
 public class Dog {
-    // ¶¨ÒåÒ»¸öjump()·½·¨
+    // å®šä¹‰ä¸€ä¸ªjump()æ–¹æ³•
     public void jump() {
-        System.out.println("ÕıÔÚÖ´ĞĞjump·½·¨");
+        System.out.println("æ­£åœ¨æ‰§è¡Œjumpæ–¹æ³•");
     }
 
-    // ¶¨ÒåÒ»¸örun()·½·¨£¬run()·½·¨ĞèÒª½èÖújump()·½·¨
+    // å®šä¹‰ä¸€ä¸ªrun()æ–¹æ³•ï¼Œrun()æ–¹æ³•éœ€è¦å€ŸåŠ©jump()æ–¹æ³•
     public void run() {
 //		Dog d = new Dog();
 //		d.jump();
-        // Ê¹ÓÃthisÒıÓÃµ÷ÓÃrun()·½·¨µÄ¶ÔÏó
+        // ä½¿ç”¨thiså¼•ç”¨è°ƒç”¨run()æ–¹æ³•çš„å¯¹è±¡
         this.jump();
-        System.out.println("ÕıÔÚÖ´ĞĞrun·½·¨");
+        System.out.println("æ­£åœ¨æ‰§è¡Œrunæ–¹æ³•");
     }
 }
 

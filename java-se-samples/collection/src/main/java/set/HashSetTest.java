@@ -2,21 +2,21 @@ package set;
 
 import java.util.HashSet;
 
-// 类A的equals方法总是返回true，但没有重写其hashCode()方法
+// 绫籄鐨別quals鏂规硶鎬绘槸杩斿洖true锛屼絾娌℃湁閲嶅啓鍏秇ashCode()鏂规硶
 class A {
     public boolean equals(Object obj) {
         return true;
     }
 }
 
-// 类B的hashCode()方法总是返回1，但没有重写其equals()方法
+// 绫籅鐨刪ashCode()鏂规硶鎬绘槸杩斿洖1锛屼絾娌℃湁閲嶅啓鍏秂quals()鏂规硶
 class B {
     public int hashCode() {
         return 1;
     }
 }
 
-// 类C的hashCode()方法总是返回2，且重写其equals()方法总是返回true
+// 绫籆鐨刪ashCode()鏂规硶鎬绘槸杩斿洖2锛屼笖閲嶅啓鍏秂quals()鏂规硶鎬绘槸杩斿洖true
 class C {
     public int hashCode() {
         return 2;
@@ -30,7 +30,7 @@ class C {
 public class HashSetTest {
     public static void main(String[] args) {
         HashSet books = new HashSet();
-        // 分别向books集合中添加两个A对象，两个B对象，两个C对象
+        // 鍒嗗埆鍚慴ooks闆嗗悎涓坊鍔犱袱涓狝瀵硅薄锛屼袱涓狟瀵硅薄锛屼袱涓狢瀵硅薄
         books.add(new A());
         books.add(new A());
         books.add(new B());

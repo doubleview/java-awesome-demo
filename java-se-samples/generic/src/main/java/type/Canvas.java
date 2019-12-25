@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Canvas {
-    //	// Í¬Ê±ÔÚ»­²¼ÉÏ»æÖÆ¶à¸öĞÎ×´
+    //	// åŒæ—¶åœ¨ç”»å¸ƒä¸Šç»˜åˆ¶å¤šä¸ªå½¢çŠ¶
 //	public void drawAll(List<Shape> shapes)
 //	{
 //		for (Shape s : shapes)
@@ -20,7 +20,7 @@ public class Canvas {
 //			s.draw(this);
 //		}
 //	}
-    // Í¬Ê±ÔÚ»­²¼ÉÏ»æÖÆ¶à¸öĞÎ×´£¬Ê¹ÓÃ±»ÏŞÖÆµÄ·ºĞÍÍ¨Åä·û
+    // åŒæ—¶åœ¨ç”»å¸ƒä¸Šç»˜åˆ¶å¤šä¸ªå½¢çŠ¶ï¼Œä½¿ç”¨è¢«é™åˆ¶çš„æ³›å‹é€šé…ç¬¦
     public void drawAll(List<? extends Shape> shapes) {
         for (Shape s : shapes) {
             s.draw(this);
@@ -30,8 +30,8 @@ public class Canvas {
     public static void main(String[] args) {
         List<Circle> circleList = new ArrayList<Circle>();
         Canvas c = new Canvas();
-        // ÓÉÓÚList<Circle>²¢²»ÊÇList<Shape>µÄ×ÓÀàĞÍ,
-        // ËùÒÔÏÂÃæ´úÂëÒı·¢±àÒë´íÎó
+        // ç”±äºList<Circle>å¹¶ä¸æ˜¯List<Shape>çš„å­ç±»å‹,
+        // æ‰€ä»¥ä¸‹é¢ä»£ç å¼•å‘ç¼–è¯‘é”™è¯¯
         c.drawAll(circleList);
     }
 }

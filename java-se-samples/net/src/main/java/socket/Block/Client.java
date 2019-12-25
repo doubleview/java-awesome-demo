@@ -8,14 +8,14 @@ import java.net.Socket;
 public class Client {
     public static void main(String[] args)
             throws IOException, InterruptedException {
-        Socket socket = new Socket("127.0.0.1", 30000);   // ¢Ù
-        // ½«Socket¶ÔÓ¦µÄÊäÈëÁ÷°ü×°³ÉBufferedReader
+        Socket socket = new Socket("127.0.0.1", 30000);   // â‘ 
+        // å°†Socketå¯¹åº”çš„è¾“å…¥æµåŒ…è£…æˆBufferedReader
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        // ½øĞĞÆÕÍ¨IO²Ù×÷
+        // è¿›è¡Œæ™®é€šIOæ“ä½œ
         Thread.sleep(3000);
         String line = br.readLine();
-        System.out.println("À´×Ô·şÎñÆ÷µÄÊı¾İ£º" + line);
-        // ¹Ø±ÕÊäÈëÁ÷¡¢socket
+        System.out.println("æ¥è‡ªæœåŠ¡å™¨çš„æ•°æ®ï¼š" + line);
+        // å…³é—­è¾“å…¥æµã€socket
         br.close();
         socket.close();
     }

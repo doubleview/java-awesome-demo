@@ -5,13 +5,13 @@ import java.util.LinkedHashSet;
 public class LinkedHashSetTest {
     public static void main(String[] args) {
         LinkedHashSet books = new LinkedHashSet();
-        books.add("Java¿ª·¢");
-        books.add("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
+        books.add("Javaå¼€å‘");
+        books.add("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
         System.out.println(books);
-        // É¾³ı Java¿ª·¢
-        books.remove("Java¿ª·¢");
-        // ÖØĞÂÌí¼Ó Java¿ª·¢
-        books.add("Java¿ª·¢");
+        // åˆ é™¤ Javaå¼€å‘
+        books.remove("Javaå¼€å‘");
+        // é‡æ–°æ·»åŠ  Javaå¼€å‘
+        books.add("Javaå¼€å‘");
         System.out.println(books);
     }
 }

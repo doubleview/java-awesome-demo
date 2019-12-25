@@ -2,11 +2,11 @@ package enums.best;
 
 
 public enum Gender {
-    // ´Ë´¦µÄÃ¶¾ÙÖµ±ØĞëµ÷ÓÃ¶ÔÓ¦¹¹ÔìÆ÷À´´´½¨
-    MALE("ÄĞ"), FEMALE("Å®");
+    // æ­¤å¤„çš„æšä¸¾å€¼å¿…é¡»è°ƒç”¨å¯¹åº”æ„é€ å™¨æ¥åˆ›å»º
+    MALE("ç”·"), FEMALE("å¥³");
     private final String name;
 
-    // Ã¶¾ÙÀàµÄ¹¹ÔìÆ÷Ö»ÄÜÊ¹ÓÃprivateĞŞÊÎ
+    // æšä¸¾ç±»çš„æ„é€ å™¨åªèƒ½ä½¿ç”¨privateä¿®é¥°
     Gender(String name) {
         this.name = name;
     }

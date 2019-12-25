@@ -4,8 +4,8 @@ package objects2.innerclass;
 public class InnerNoStatic {
     private class InnerClass {
         /*
-        ÏÂÃæÈı¸ö¾²Ì¬ÉùÃ÷¶¼½«Òı·¢ÈçÏÂ±àÒë´íÎó:
-		·Ç¾²Ì¬ÄÚ²¿Àà²»ÄÜÓĞ¾²Ì¬ÉùÃ÷
+        ä¸‹é¢ä¸‰ä¸ªé™æ€å£°æ˜éƒ½å°†å¼•å‘å¦‚ä¸‹ç¼–è¯‘é”™è¯¯:
+		éé™æ€å†…éƒ¨ç±»ä¸èƒ½æœ‰é™æ€å£°æ˜
 		*/
 /*		static
 		{

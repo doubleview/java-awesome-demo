@@ -25,14 +25,13 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.timeout.ReadTimeoutHandler;
-
-import java.io.IOException;
-
-import com.phei.netty.protocol.netty.NettyConstant;
-import com.phei.netty.protocol.netty.codec.NettyMessageDecoder;
-import com.phei.netty.protocol.netty.codec.NettyMessageEncoder;
+import netty.protocol.netty.NettyConstant;
+import netty.protocol.netty.codec.NettyMessageDecoder;
+import netty.protocol.netty.codec.NettyMessageEncoder;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.io.IOException;
 
 /**
  * @author Lilinfeng
@@ -53,23 +52,18 @@ public class NettyServer {
             .handler(new LoggingHandler(LogLevel.INFO))
             .childHandler(new ChannelInitializer<SocketChannel>() {
                 @Override
-                public void initChannel(SocketChannel ch)
-                    throws IOException {
-                    ch.pipeline().addLast(
-                        new NettyMessageDecoder(1024 * 1024, 4, 4));
+                public void initChannel(SocketChannel ch) throws IOException {
+                    ch.pipeline().addLast(new NettyMessageDecoder(1024 * 1024, 4, 4));
                     ch.pipeline().addLast(new NettyMessageEncoder());
-                    ch.pipeline().addLast("readTimeoutHandler",
-                        new ReadTimeoutHandler(50));
+                    ch.pipeline().addLast("readTimeoutHandler", new ReadTimeoutHandler(50));
                     ch.pipeline().addLast(new LoginAuthRespHandler());
-                    ch.pipeline().addLast("HeartBeatHandler",
-                        new HeartBeatRespHandler());
+                    ch.pipeline().addLast("HeartBeatHandler", new HeartBeatRespHandler());
                 }
             });
 
         // 绑定端口，同步等待成功
         b.bind(NettyConstant.REMOTEIP, NettyConstant.PORT).sync();
-        LOG.info("Netty server start ok : "
-            + (NettyConstant.REMOTEIP + " : " + NettyConstant.PORT));
+        LOG.info("Netty server start ok : " + (NettyConstant.REMOTEIP + " : " + NettyConstant.PORT));
     }
 
     public static void main(String[] args) throws Exception {

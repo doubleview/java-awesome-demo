@@ -7,19 +7,19 @@ import static java.util.Calendar.*;
 public class CalendarTest {
     public static void main(String[] args) {
         Calendar c = Calendar.getInstance();
-        // È¡³öÄê
+        // å–å‡ºå¹´
         System.out.println(c.get(YEAR));
-        // È¡³öÔÂ·Ý
+        // å–å‡ºæœˆä»½
         System.out.println(c.get(MONTH));
-        // È¡³öÈÕ
+        // å–å‡ºæ—¥
         System.out.println(c.get(DATE));
-        // ·Ö±ðÉèÖÃÄê¡¢ÔÂ¡¢ÈÕ¡¢Ð¡Ê±¡¢·ÖÖÓ¡¢Ãë
+        // åˆ†åˆ«è®¾ç½®å¹´ã€æœˆã€æ—¥ã€å°æ—¶ã€åˆ†é’Ÿã€ç§’
         c.set(2003, 10, 23, 12, 32, 23); //2003-11-23 12:32:23
         System.out.println(c.getTime());
-        // ½«CalendarµÄÄêÇ°ÍÆ1Äê
+        // å°†Calendarçš„å¹´å‰æŽ¨1å¹´
         c.add(YEAR, -1); //2002-11-23 12:32:23
         System.out.println(c.getTime());
-        // ½«CalendarµÄÔÂÇ°ÍÆ8¸öÔÂ
+        // å°†Calendarçš„æœˆå‰æŽ¨8ä¸ªæœˆ
         c.roll(MONTH, -8); //2002-03-23 12:32:23
         System.out.println(c.getTime());
 
@@ -32,22 +32,22 @@ public class CalendarTest {
 
         Calendar cal2 = Calendar.getInstance();
         cal2.set(2003, 7, 31, 0, 0, 0); // 2003-8-31
-        // ÒòÎª½øÎ»µ½ºóÔÂ·Ý¸ÄÎª2ÔÂ£¬2ÔÂÃ»ÓÐ31ÈÕ£¬×Ô¶¯±ä³É29ÈÕ
+        // å› ä¸ºè¿›ä½åˆ°åŽæœˆä»½æ”¹ä¸º2æœˆï¼Œ2æœˆæ²¡æœ‰31æ—¥ï¼Œè‡ªåŠ¨å˜æˆ29æ—¥
         cal2.add(MONTH, 6); // 2003-8-31 => 2004-2-29
         System.out.println(cal2.getTime());
 
 
         Calendar cal3 = Calendar.getInstance();
         cal3.set(2003, 7, 23, 0, 0, 0); //2003-8-23
-        // MONTH×Ö¶Î¡°½øÎ»¡±£¬µ«YEAR×Ö¶Î²¢²»Ôö¼Ó
+        // MONTHå­—æ®µâ€œè¿›ä½â€ï¼Œä½†YEARå­—æ®µå¹¶ä¸å¢žåŠ 
         cal3.roll(MONTH, 6); //2003-8-23 => 2003-2-23
         System.out.println(cal3.getTime());
 
 
         Calendar cal4 = Calendar.getInstance();
         cal4.set(2003, 7, 31, 0, 0, 0); //2003-8-31
-        // MONTH×Ö¶Î¡°½øÎ»¡±ºó±ä³É2£¬2ÔÂÃ»ÓÐ31ÈÕ£¬
-        // YEAR×Ö¶Î²»»á¸Ä±ä£¬2003Äê2ÔÂÖ»ÓÐ28Ìì
+        // MONTHå­—æ®µâ€œè¿›ä½â€åŽå˜æˆ2ï¼Œ2æœˆæ²¡æœ‰31æ—¥ï¼Œ
+        // YEARå­—æ®µä¸ä¼šæ”¹å˜ï¼Œ2003å¹´2æœˆåªæœ‰28å¤©
         cal4.roll(MONTH, 6); //2003-8-31 => 2003-2-28
         System.out.println(cal4.getTime());
     }

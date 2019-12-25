@@ -2,18 +2,18 @@ package apibase.system;
 
 public class IdentityHashCodeTest {
     public static void main(String[] args) {
-        // ÏÂÃæ³ÌĞòÖĞs1ºÍs2ÊÇÁ½¸ö²»Í¬¶ÔÏó
+        // ä¸‹é¢ç¨‹åºä¸­s1å’Œs2æ˜¯ä¸¤ä¸ªä¸åŒå¯¹è±¡
         String s1 = new String("Hello");
         String s2 = new String("Hello");
-        // StringÖØĞ´ÁËhashCode()·½·¨¡ª¡ª¸ÄÎª¸ù¾İ×Ö·ûĞòÁĞ¼ÆËãhashCodeÖµ£¬
-        // ÒòÎªs1ºÍs2µÄ×Ö·ûĞòÁĞÏàÍ¬£¬ËùÒÔËüÃÇµÄhashCode·½·¨·µ»ØÖµÏàÍ¬
+        // Stringé‡å†™äº†hashCode()æ–¹æ³•â€”â€”æ”¹ä¸ºæ ¹æ®å­—ç¬¦åºåˆ—è®¡ç®—hashCodeå€¼ï¼Œ
+        // å› ä¸ºs1å’Œs2çš„å­—ç¬¦åºåˆ—ç›¸åŒï¼Œæ‰€ä»¥å®ƒä»¬çš„hashCodeæ–¹æ³•è¿”å›å€¼ç›¸åŒ
         System.out.println(s1.hashCode() + "----" + s2.hashCode());
-        // s1ºÍs2ÊÇ²»Í¬µÄ×Ö·û´®¶ÔÏó£¬ËùÒÔËüÃÇµÄidentityHashCodeÖµ²»Í¬
+        // s1å’Œs2æ˜¯ä¸åŒçš„å­—ç¬¦ä¸²å¯¹è±¡ï¼Œæ‰€ä»¥å®ƒä»¬çš„identityHashCodeå€¼ä¸åŒ
         System.out.println(System.identityHashCode(s1)
                 + "----" + System.identityHashCode(s2));
         String s3 = "Java";
         String s4 = "Java";
-        // s3ºÍs4ÊÇÏàÍ¬µÄ×Ö·û´®¶ÔÏó£¬ËùÒÔËüÃÇµÄidentityHashCodeÖµÏàÍ¬
+        // s3å’Œs4æ˜¯ç›¸åŒçš„å­—ç¬¦ä¸²å¯¹è±¡ï¼Œæ‰€ä»¥å®ƒä»¬çš„identityHashCodeå€¼ç›¸åŒ
         System.out.println(System.identityHashCode(s3)
                 + "----" + System.identityHashCode(s4));
     }

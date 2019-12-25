@@ -7,26 +7,26 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;
 import java.util.List;
 
-// ¶¨ÒåÒ»¸ö¼òµ¥µÄType Annotation£¬²»´øÈÎºÎ³ÉÔ±±äÁ¿
+// å®šä¹‰ä¸€ä¸ªç®€å•çš„Type Annotationï¼Œä¸å¸¦ä»»ä½•æˆå‘˜å˜é‡
 @Target(ElementType.TYPE_USE)
 @interface NotNull {
 }
 
-// ¶¨ÒåÀàÊ±Ê¹ÓÃType Annotation
+// å®šä¹‰ç±»æ—¶ä½¿ç”¨Type Annotation
 @NotNull
 public class TypeAnnotationTest
-        implements @NotNull /* implementsÊ±Ê¹ÓÃType Annotation */ Serializable {
-    // ·½·¨ĞÎ²ÎÖĞÊ¹ÓÃType Annotation
-    // throwsÊ±Ê¹ÓÃType Annotation
+        implements @NotNull /* implementsæ—¶ä½¿ç”¨Type Annotation */ Serializable {
+    // æ–¹æ³•å½¢å‚ä¸­ä½¿ç”¨Type Annotation
+    // throwsæ—¶ä½¿ç”¨Type Annotation
     public static void main(@NotNull String[] args) throws FileNotFoundException {
         Object obj = "fkjava.org";
-        // Ç¿ÖÆÀàĞÍ×ª»»Ê±Ê¹ÓÃType Annotation
+        // å¼ºåˆ¶ç±»å‹è½¬æ¢æ—¶ä½¿ç”¨Type Annotation
         String str = (@NotNull String) obj;
-        // ´´½¨¶ÔÏóÊ±Ê¹ÓÃType Annotation
-        Object win = new @NotNull JFrame("Èí¼ş");
+        // åˆ›å»ºå¯¹è±¡æ—¶ä½¿ç”¨Type Annotation
+        Object win = new @NotNull JFrame("è½¯ä»¶");
     }
 
-    // ·ºĞÍÖĞÊ¹ÓÃType Annotation
+    // æ³›å‹ä¸­ä½¿ç”¨Type Annotation
     public void foo(List<@NotNull String> info) {
     }
 }

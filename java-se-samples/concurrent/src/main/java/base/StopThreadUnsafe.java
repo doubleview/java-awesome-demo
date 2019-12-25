@@ -2,7 +2,7 @@ package base;
 
 
 /**
- * 使用stop方法会导致线程立刻停止，并释放锁
+ * 浣跨敤stop鏂规硶浼氬鑷寸嚎绋嬬珛鍒诲仠姝紝骞堕噴鏀鹃攣
  */
 public class StopThreadUnsafe {
 

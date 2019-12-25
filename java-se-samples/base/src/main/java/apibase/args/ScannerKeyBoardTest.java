@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class ScannerKeyBoardTest {
     public static void main(String[] args) {
-        // System.in´ú±í±ê×¼ÊäÈë£¬¾ÍÊÇ¼üÅÌÊäÈë
+        // System.inä»£è¡¨æ ‡å‡†è¾“å…¥ï¼Œå°±æ˜¯é”®ç›˜è¾“å…¥
         Scanner sc = new Scanner(System.in);
-        // Ôö¼ÓÏÂÃæÒ»ĞĞ½«Ö»°Ñ»Ø³µ×÷Îª·Ö¸ô·û
+        // å¢åŠ ä¸‹é¢ä¸€è¡Œå°†åªæŠŠå›è½¦ä½œä¸ºåˆ†éš”ç¬¦
         // sc.useDelimiter("\n");
-        // ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÊäÈëÏî
+        // åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä¸ªè¾“å…¥é¡¹
         while (sc.hasNext()) {
-            // Êä³öÊäÈëÏî
-            System.out.println("¼üÅÌÊäÈëµÄÄÚÈİÊÇ£º" + sc.next());
+            // è¾“å‡ºè¾“å…¥é¡¹
+            System.out.println("é”®ç›˜è¾“å…¥çš„å†…å®¹æ˜¯ï¼š" + sc.next());
         }
 
     }

@@ -5,13 +5,13 @@ public class GcTest {
     public static void main(String[] args) {
         for (int i = 0; i < 4; i++) {
             new GcTest();
-            // ÏÂÃæÁ½ÐÐ´úÂëµÄ×÷ÓÃÍêÈ«ÏàÍ¬£¬Ç¿ÖÆÏµÍ³½øÐÐÀ¬»ø»ØÊÕ
+            // ä¸‹é¢ä¸¤è¡Œä»£ç çš„ä½œç”¨å®Œå…¨ç›¸åŒï¼Œå¼ºåˆ¶ç³»ç»Ÿè¿›è¡Œåžƒåœ¾å›žæ”¶
             // System.gc();
             Runtime.getRuntime().gc();
         }
     }
 
     public void finalize() {
-        System.out.println("ÏµÍ³ÕýÔÚÇåÀíGcTest¶ÔÏóµÄ×ÊÔ´...");
+        System.out.println("ç³»ç»Ÿæ­£åœ¨æ¸…ç†GcTestå¯¹è±¡çš„èµ„æº...");
     }
 }

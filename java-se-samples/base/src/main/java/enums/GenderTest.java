@@ -2,11 +2,11 @@ package enums;
 
 public class GenderTest {
     public static void main(String[] args) {
-        // Í¨¹ıEnumµÄvalueOf()·½·¨À´»ñÈ¡Ö¸¶¨Ã¶¾ÙÀàµÄÃ¶¾ÙÖµ
+        // é€šè¿‡Enumçš„valueOf()æ–¹æ³•æ¥è·å–æŒ‡å®šæšä¸¾ç±»çš„æšä¸¾å€¼
         Gender g = Enum.valueOf(Gender.class, "FEMALE");
-        // Ö±½ÓÎªÃ¶¾ÙÖµµÄnameÊµÀı±äÁ¿¸³Öµ
-        g.name = "Å®";
-        // Ö±½Ó·ÃÎÊÃ¶¾ÙÖµµÄnameÊµÀı±äÁ¿
-        System.out.println(g + "´ú±í:" + g.name);
+        // ç›´æ¥ä¸ºæšä¸¾å€¼çš„nameå®ä¾‹å˜é‡èµ‹å€¼
+        g.name = "å¥³";
+        // ç›´æ¥è®¿é—®æšä¸¾å€¼çš„nameå®ä¾‹å˜é‡
+        System.out.println(g + "ä»£è¡¨:" + g.name);
     }
 }

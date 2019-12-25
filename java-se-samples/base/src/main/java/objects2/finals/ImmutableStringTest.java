@@ -5,9 +5,9 @@ public class ImmutableStringTest {
     public static void main(String[] args) {
         String str1 = new String("Hello");
         String str2 = new String("Hello");
-        System.out.println(str1 == str2); // Êä³öfalse
-        System.out.println(str1.equals(str2)); // Êä³ötrue
-        // ÏÂÃæÁ½´ÎÊä³öµÄhashCodeÏàÍ¬
+        System.out.println(str1 == str2); // æˆæ’³åš­false
+        System.out.println(str1.equals(str2)); // æˆæ’³åš­true
+        // æ¶“å¬®æ½°æ¶“ã‚†î‚¼æˆæ’³åš­é¨åˆªashCodeé©ç¨¿æ‚“
         System.out.println(str1.hashCode());
         System.out.println(str2.hashCode());
     }

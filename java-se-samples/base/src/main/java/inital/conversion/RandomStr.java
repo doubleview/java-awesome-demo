@@ -2,16 +2,16 @@ package inital.conversion;
 
 public class RandomStr {
     public static void main(String[] args) {
-        // ¶¨ÒåÒ»¸ö¿Õ×Ö·û´®
+        // å®šä¹‰ä¸€ä¸ªç©ºå­—ç¬¦ä¸²
         String result = "";
-        // ½øÐÐ6´ÎÑ­»·
+        // è¿›è¡Œ6æ¬¡å¾ªçŽ¯
         for (int i = 0; i < 6; i++) {
-            // Éú³ÉÒ»¸ö97¡«122µÄintÐÍµÄÕûÊý
+            // ç”Ÿæˆä¸€ä¸ª97ï½ž122çš„intåž‹çš„æ•´æ•°
             int intVal = (int) (Math.random() * 26 + 97);
-            // ½«intValueÇ¿ÖÆ×ª»»ÎªcharºóÁ¬½Óµ½resultºóÃæ
+            // å°†intValueå¼ºåˆ¶è½¬æ¢ä¸ºcharåŽè¿žæŽ¥åˆ°resultåŽé¢
             result = result + (char) intVal;
         }
-        // Êä³öËæ»ú×Ö·û´®
+        // è¾“å‡ºéšæœºå­—ç¬¦ä¸²
         System.out.println(result);
     }
 }

@@ -6,7 +6,7 @@ public class PrivateFinalMethodTest {
 }
 
 class Sub extends PrivateFinalMethodTest {
-    // ÏÂÃæ·½·¨¶¨Òå½«²»»á³öÏÖÎÊÌâ
+    // ä¸‹é¢æ–¹æ³•å®šä¹‰å°†ä¸ä¼šå‡ºç°é—®é¢˜
     public void test() {
     }
 }

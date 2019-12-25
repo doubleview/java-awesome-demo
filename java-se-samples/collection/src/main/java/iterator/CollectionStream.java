@@ -5,29 +5,29 @@ import java.util.HashSet;
 
 public class CollectionStream {
     public static void main(String[] args) {
-        // ´´½¨books¼¯ºÏ¡¢Îªbooks¼¯ºÏÌí¼ÓÔªËØµÄ´úÂëÓë8.2.5Ğ¡½ÚµÄ³ÌĞòÏàÍ¬¡£
+        // åˆ›å»ºbooksé›†åˆã€ä¸ºbooksé›†åˆæ·»åŠ å…ƒç´ çš„ä»£ç ä¸8.2.5å°èŠ‚çš„ç¨‹åºç›¸åŒã€‚
         Collection books = new HashSet();
-        books.add(new String("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½"));
-        books.add(new String("Java¿ª·¢"));
-        books.add(new String("iOS¿ª·¢"));
-        books.add(new String("Ajax¿ª·¢"));
-        books.add(new String("Android¿ª·¢"));
-        // Í³¼ÆÊéÃû°üº¬¡°¡±×Ó´®µÄÍ¼ÊéÊıÁ¿
+        books.add(new String("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜"));
+        books.add(new String("Javaå¼€å‘"));
+        books.add(new String("iOSå¼€å‘"));
+        books.add(new String("Ajaxå¼€å‘"));
+        books.add(new String("Androidå¼€å‘"));
+        // ç»Ÿè®¡ä¹¦ååŒ…å«â€œâ€å­ä¸²çš„å›¾ä¹¦æ•°é‡
         System.out.println(books.stream()
                 .filter(ele -> ((String) ele).contains(""))
-                .count()); // Êä³ö4
-        // Í³¼ÆÊéÃû°üº¬¡°Java¡±×Ó´®µÄÍ¼ÊéÊıÁ¿
+                .count()); // è¾“å‡º4
+        // ç»Ÿè®¡ä¹¦ååŒ…å«â€œJavaâ€å­ä¸²çš„å›¾ä¹¦æ•°é‡
         System.out.println(books.stream()
                 .filter(ele -> ((String) ele).contains("Java"))
-                .count()); // Êä³ö2
-        // Í³¼ÆÊéÃû×Ö·û´®³¤¶È´óÓÚ10µÄÍ¼ÊéÊıÁ¿
+                .count()); // è¾“å‡º2
+        // ç»Ÿè®¡ä¹¦åå­—ç¬¦ä¸²é•¿åº¦å¤§äº10çš„å›¾ä¹¦æ•°é‡
         System.out.println(books.stream()
                 .filter(ele -> ((String) ele).length() > 10)
-                .count()); // Êä³ö2
-        // ÏÈµ÷ÓÃCollection¶ÔÏóµÄstream()·½·¨½«¼¯ºÏ×ª»»ÎªStream,
-        // ÔÙµ÷ÓÃStreamµÄmapToInt()·½·¨»ñÈ¡Ô­ÓĞµÄStream¶ÔÓ¦µÄIntStream
+                .count()); // è¾“å‡º2
+        // å…ˆè°ƒç”¨Collectionå¯¹è±¡çš„stream()æ–¹æ³•å°†é›†åˆè½¬æ¢ä¸ºStream,
+        // å†è°ƒç”¨Streamçš„mapToInt()æ–¹æ³•è·å–åŸæœ‰çš„Streamå¯¹åº”çš„IntStream
         books.stream().mapToInt(ele -> ((String) ele).length())
-                // µ÷ÓÃforEach()·½·¨±éÀúIntStreamÖĞÃ¿¸öÔªËØ
-                .forEach(System.out::println);// Êä³ö8  11  16  7  8
+                // è°ƒç”¨forEach()æ–¹æ³•éå†IntStreamä¸­æ¯ä¸ªå…ƒç´ 
+                .forEach(System.out::println);// è¾“å‡º8  11  16  7  8
     }
 }

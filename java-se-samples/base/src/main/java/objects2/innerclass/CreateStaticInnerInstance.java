@@ -2,11 +2,11 @@ package objects2.innerclass;
 
 
 class StaticOut {
-    // ¶¨ÒåÒ»¸ö¾²Ì¬ÄÚ²¿Àà£¬²»Ê¹ÓÃ·ÃÎÊ¿ØÖÆ·û£¬
-    // ¼´Í¬Ò»¸ö°üÖĞÆäËûÀà¿É·ÃÎÊ¸ÃÄÚ²¿Àà
+    // å®šä¹‰ä¸€ä¸ªé™æ€å†…éƒ¨ç±»ï¼Œä¸ä½¿ç”¨è®¿é—®æ§åˆ¶ç¬¦ï¼Œ
+    // å³åŒä¸€ä¸ªåŒ…ä¸­å…¶ä»–ç±»å¯è®¿é—®è¯¥å†…éƒ¨ç±»
     static class StaticIn {
         public StaticIn() {
-            System.out.println("¾²Ì¬ÄÚ²¿ÀàµÄ¹¹ÔìÆ÷");
+            System.out.println("é™æ€å†…éƒ¨ç±»çš„æ„é€ å™¨");
         }
     }
 }
@@ -14,10 +14,10 @@ class StaticOut {
 public class CreateStaticInnerInstance {
     public static void main(String[] args) {
         StaticOut.StaticIn in = new StaticOut.StaticIn();
-        //ÉÏÃæ´úÂë¿É¸ÄÎªÈçÏÂÁ½ĞĞ´úÂë£º
-        //Ê¹ÓÃOutterClass.InnerClassµÄĞÎÊ½¶¨ÒåÄÚ²¿Àà±äÁ¿
+        //ä¸Šé¢ä»£ç å¯æ”¹ä¸ºå¦‚ä¸‹ä¸¤è¡Œä»£ç ï¼š
+        //ä½¿ç”¨OutterClass.InnerClassçš„å½¢å¼å®šä¹‰å†…éƒ¨ç±»å˜é‡
         StaticOut.StaticIn in1;
-        //Í¨¹ınewÀ´µ÷ÓÃÄÚ²¿Àà¹¹ÔìÆ÷´´½¨¾²Ì¬ÄÚ²¿ÀàÊµÀı
+        //é€šè¿‡newæ¥è°ƒç”¨å†…éƒ¨ç±»æ„é€ å™¨åˆ›å»ºé™æ€å†…éƒ¨ç±»å®ä¾‹
         in1 = new StaticOut.StaticIn();
     }
 }

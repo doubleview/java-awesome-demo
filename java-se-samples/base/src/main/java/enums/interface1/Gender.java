@@ -2,23 +2,23 @@ package enums.interface1;
 
 
 public enum Gender implements GenderDesc {
-    // ´Ë´¦µÄÃ¶¾ÙÖµ±ØĞëµ÷ÓÃ¶ÔÓ¦¹¹ÔìÆ÷À´´´½¨
-    MALE("ÄĞ")
-            // »¨À¨ºÅ²¿·ÖÊµ¼ÊÉÏÊÇÒ»¸öÀàÌå²¿·Ö
+    // æ­¤å¤„çš„æšä¸¾å€¼å¿…é¡»è°ƒç”¨å¯¹åº”æ„é€ å™¨æ¥åˆ›å»º
+    MALE("ç”·")
+            // èŠ±æ‹¬å·éƒ¨åˆ†å®é™…ä¸Šæ˜¯ä¸€ä¸ªç±»ä½“éƒ¨åˆ†
             {
                 public void info() {
-                    System.out.println("Õâ¸öÃ¶¾ÙÖµ´ú±íÄĞĞÔ");
+                    System.out.println("è¿™ä¸ªæšä¸¾å€¼ä»£è¡¨ç”·æ€§");
                 }
             },
-    FEMALE("Å®") {
+    FEMALE("å¥³") {
         public void info() {
-            System.out.println("Õâ¸öÃ¶¾ÙÖµ´ú±íÅ®ĞÔ");
+            System.out.println("è¿™ä¸ªæšä¸¾å€¼ä»£è¡¨å¥³æ€§");
         }
     };
-    // ÆäËû²¿·ÖÓëcodes\06\6.9\best\Gender.javaÖĞµÄGenderÀàÍêÈ«ÏàÍ¬
+    // å…¶ä»–éƒ¨åˆ†ä¸codes\06\6.9\best\Gender.javaä¸­çš„Genderç±»å®Œå…¨ç›¸åŒ
     private final String name;
 
-    // Ã¶¾ÙÀàµÄ¹¹ÔìÆ÷Ö»ÄÜÊ¹ÓÃprivateĞŞÊÎ
+    // æšä¸¾ç±»çš„æ„é€ å™¨åªèƒ½ä½¿ç”¨privateä¿®é¥°
     Gender(String name) {
         this.name = name;
     }
@@ -27,9 +27,9 @@ public enum Gender implements GenderDesc {
         return this.name;
     }
 
-    // Ôö¼ÓÏÂÃæµÄinfo()·½·¨£¬ÊµÏÖGenderDesc½Ó¿Ú±ØĞëÊµÏÖµÄ·½·¨
+    // å¢åŠ ä¸‹é¢çš„info()æ–¹æ³•ï¼Œå®ç°GenderDescæ¥å£å¿…é¡»å®ç°çš„æ–¹æ³•
     public void info() {
         System.out.println(
-                "ÕâÊÇÒ»¸öÓÃÓÚÓÃÓÚ¶¨ÒåĞÔ±ğµÄÃ¶¾ÙÀà");
+                "è¿™æ˜¯ä¸€ä¸ªç”¨äºç”¨äºå®šä¹‰æ€§åˆ«çš„æšä¸¾ç±»");
     }
 }

@@ -4,7 +4,7 @@ import java.lang.annotation.*;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-// 定义Testable Annotation将被javadoc工具提取
+// 瀹氫箟Testable Annotation灏嗚javadoc宸ュ叿鎻愬彇
 @Documented
 public @interface Testable {
 }

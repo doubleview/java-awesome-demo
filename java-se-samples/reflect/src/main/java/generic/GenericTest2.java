@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * @author huchengchao.
  * @description:
- * @date: 2018-03-27 下午6:35
+ * @date: 2018-03-27 涓嬪崍6:35
  * @Copyright: 2016 Hangzhou Enniu Tech Ltd. All rights reserved.
  */
 public class GenericTest2 extends ArrayList<String>{

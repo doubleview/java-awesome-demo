@@ -9,16 +9,16 @@ import java.util.ArrayList;
 public class ReplaceTest {
     public static void main(String[] args) {
         try (
-                // ´´½¨Ò»¸öObjectOutputStreamÊä³öÁ÷
+                // åˆ›å»ºä¸€ä¸ªObjectOutputStreamè¾“å‡ºæµ
                 ObjectOutputStream oos = new ObjectOutputStream(
                         new FileOutputStream("replace.txt"));
-                // ´´½¨Ò»¸öObjectInputStreamÊäÈëÁ÷
+                // åˆ›å»ºä¸€ä¸ªObjectInputStreamè¾“å…¥æµ
                 ObjectInputStream ois = new ObjectInputStream(
                         new FileInputStream("replace.txt"))) {
-            Person per = new Person("ËïÎò¿Õ", 500);
-            // ÏµÍ³½«per¶ÔÏó×ª»»×Ö½ÚĞòÁĞ²¢Êä³ö
+            Person per = new Person("å­™æ‚Ÿç©º", 500);
+            // ç³»ç»Ÿå°†perå¯¹è±¡è½¬æ¢å­—èŠ‚åºåˆ—å¹¶è¾“å‡º
             oos.writeObject(per);
-            // ·´ĞòÁĞ»¯¶ÁÈ¡µÃµ½µÄÊÇArrayList
+            // ååºåˆ—åŒ–è¯»å–å¾—åˆ°çš„æ˜¯ArrayList
             ArrayList list = (ArrayList) ois.readObject();
             System.out.println(list);
         } catch (Exception ex) {

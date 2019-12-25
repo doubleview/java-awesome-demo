@@ -10,8 +10,8 @@ public class OverrideThrows {
 }
 
 class Sub extends OverrideThrows {
-    // ×ÓÀà·½·¨ÉùÃ÷Å×³öÁË±È¸¸Àà·½·¨¸ü´óµÄÒì³£
-    // ËùÒÔÏÂÃæ·½·¨³ö´í
+    // å­ç±»æ–¹æ³•å£°æ˜æŠ›å‡ºäº†æ¯”çˆ¶ç±»æ–¹æ³•æ›´å¤§çš„å¼‚å¸¸
+    // æ‰€ä»¥ä¸‹é¢æ–¹æ³•å‡ºé”™
 /*    public void test() throws Exception {
     }*/
 }

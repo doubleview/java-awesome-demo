@@ -23,6 +23,6 @@ public class PrintStackTraceTest {
     }
 
     public static void thirdMethod() {
-        throw new SelfException("×Ô¶¨ÒåÒì³£ĞÅÏ¢");
+        throw new SelfException("è‡ªå®šä¹‰å¼‚å¸¸ä¿¡æ¯");
     }
 }

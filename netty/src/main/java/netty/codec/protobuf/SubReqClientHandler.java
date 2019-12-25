@@ -43,8 +43,7 @@ public class SubReqClientHandler extends ChannelHandlerAdapter {
     }
 
     private SubscribeReqProto.SubscribeReq subReq(int i) {
-        SubscribeReqProto.SubscribeReq.Builder builder = SubscribeReqProto.SubscribeReq
-            .newBuilder();
+        SubscribeReqProto.SubscribeReq.Builder builder = SubscribeReqProto.SubscribeReq.newBuilder();
         builder.setSubReqID(i);
         builder.setUserName("Lilinfeng");
         builder.setProductName("Netty Book For Protobuf");
@@ -57,8 +56,7 @@ public class SubReqClientHandler extends ChannelHandlerAdapter {
     }
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg)
-        throws Exception {
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("Receive server response : [" + msg + "]");
     }
 

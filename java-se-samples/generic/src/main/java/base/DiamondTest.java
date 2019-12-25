@@ -7,20 +7,20 @@ import java.util.Map;
 
 public class DiamondTest {
     public static void main(String[] args) {
-        // Java×Ô¶¯ÍÆ¶Ï³öArrayListµÄ<>ÀïÓ¦¸ÃÊÇString
+        // Javaè‡ªåŠ¨æ¨æ–­å‡ºArrayListçš„<>é‡Œåº”è¯¥æ˜¯String
         List<String> books = new ArrayList<>();
-        books.add("Java¿ª·¢");
-        books.add("Android¿ª·¢");
-        // ±éÀúbooks¼¯ºÏ£¬¼¯ºÏÔªËØ¾ÍÊÇStringÀàĞÍ
+        books.add("Javaå¼€å‘");
+        books.add("Androidå¼€å‘");
+        // éå†booksé›†åˆï¼Œé›†åˆå…ƒç´ å°±æ˜¯Stringç±»å‹
         books.forEach(ele -> System.out.println(ele.length()));
-        // Java×Ô¶¯ÍÆ¶Ï³öHashMapµÄ<>ÀïÓ¦¸ÃÊÇString , List<String>
+        // Javaè‡ªåŠ¨æ¨æ–­å‡ºHashMapçš„<>é‡Œåº”è¯¥æ˜¯String , List<String>
         Map<String, List<String>> schoolsInfo = new HashMap<>();
-        // Java×Ô¶¯ÍÆ¶Ï³öArrayListµÄ<>ÀïÓ¦¸ÃÊÇString
+        // Javaè‡ªåŠ¨æ¨æ–­å‡ºArrayListçš„<>é‡Œåº”è¯¥æ˜¯String
         List<String> schools = new ArrayList<>();
-        schools.add("Ğ±ÔÂÈıĞÇ¶´");
-        schools.add("Î÷ÌìÈ¡¾­Â·");
-        schoolsInfo.put("ËïÎò¿Õ", schools);
-        // ±éÀúMapÊ±£¬MapµÄkeyÊÇStringÀàĞÍ£¬valueÊÇList<String>ÀàĞÍ
+        schools.add("æ–œæœˆä¸‰æ˜Ÿæ´");
+        schools.add("è¥¿å¤©å–ç»è·¯");
+        schoolsInfo.put("å­™æ‚Ÿç©º", schools);
+        // éå†Mapæ—¶ï¼ŒMapçš„keyæ˜¯Stringç±»å‹ï¼Œvalueæ˜¯List<String>ç±»å‹
         schoolsInfo.forEach((key, value) -> System.out.println(key + "-->" + value));
     }
 }

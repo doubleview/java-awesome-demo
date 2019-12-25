@@ -23,8 +23,8 @@ public enum Operation {
         }
     };
 
-    // ÎªÃ¶¾ÙÀà¶¨ÒåÒ»¸ö³éÏó·½·¨
-    // Õâ¸ö³éÏó·½·¨ÓÉ²»Í¬µÄÃ¶¾ÙÖµÌá¹©²»Í¬µÄÊµÏÖ
+    // ä¸ºæšä¸¾ç±»å®šä¹‰ä¸€ä¸ªæŠ½è±¡æ–¹æ³•
+    // è¿™ä¸ªæŠ½è±¡æ–¹æ³•ç”±ä¸åŒçš„æšä¸¾å€¼æä¾›ä¸åŒçš„å®ç°
     public abstract double eval(double x, double y);
 
     public static void main(String[] args) {

@@ -5,23 +5,23 @@ public class FinalizeTest {
     private static FinalizeTest ft = null;
 
     public void info() {
-        System.out.println("²âÊÔ×ÊÔ´ÇåÀíµÄfinalize·½·¨");
+        System.out.println("æµ‹è¯•èµ„æºæ¸…ç†çš„finalizeæ–¹æ³•");
     }
 
     public static void main(String[] args) throws Exception {
-        // ´´½¨FinalizeTest¶ÔÏóÁ¢¼´½øÈë¿É»Ö¸´×´Ì¬
+        // åˆ›å»ºFinalizeTestå¯¹è±¡ç«‹å³è¿›å…¥å¯æ¢å¤çŠ¶æ€
         new FinalizeTest();
-        // Í¨ÖªÏµÍ³½øĞĞ×ÊÔ´»ØÊÕ
-		System.gc();  //¢Ù
-        // Ç¿ÖÆÀ¬»ø»ØÊÕ»úÖÆµ÷ÓÃ¿É»Ö¸´¶ÔÏóµÄfinalize()·½·¨
-//		Runtime.getRuntime().runFinalization();   //¢Ú
-        System.runFinalization();   //¢Û
+        // é€šçŸ¥ç³»ç»Ÿè¿›è¡Œèµ„æºå›æ”¶
+		System.gc();  //â‘ 
+        // å¼ºåˆ¶åƒåœ¾å›æ”¶æœºåˆ¶è°ƒç”¨å¯æ¢å¤å¯¹è±¡çš„finalize()æ–¹æ³•
+//		Runtime.getRuntime().runFinalization();   //â‘¡
+        System.runFinalization();   //â‘¢
         ft.info();
     }
 
     public void finalize() {
-        System.out.println("Ö´ĞĞfinalize·½·¨");
-        // ÈÃtfÒıÓÃµ½ÊÔÍ¼»ØÊÕµÄ¿É»Ö¸´¶ÔÏó£¬¼´¿É»Ö¸´¶ÔÏóÖØĞÂ±ä³É¿É´ï
+        System.out.println("æ‰§è¡Œfinalizeæ–¹æ³•");
+        // è®©tfå¼•ç”¨åˆ°è¯•å›¾å›æ”¶çš„å¯æ¢å¤å¯¹è±¡ï¼Œå³å¯æ¢å¤å¯¹è±¡é‡æ–°å˜æˆå¯è¾¾
         ft = this;
     }
 }

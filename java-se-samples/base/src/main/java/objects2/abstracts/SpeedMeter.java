@@ -2,22 +2,22 @@ package objects2.abstracts;
 
 
 public abstract class SpeedMeter {
-    // ×ªËÙ
+    // è½¬é€Ÿ
     private double turnRate;
 
     public SpeedMeter() {
     }
 
-    // °Ñ·µ»Ø³µÂÖ°ë¾¶µÄ·½·¨¶¨Òå³É³éÏó·½·¨
+    // æŠŠè¿”å›è½¦è½®åŠå¾„çš„æ–¹æ³•å®šä¹‰æˆæŠ½è±¡æ–¹æ³•
     public abstract double getRadius();
 
     public void setTurnRate(double turnRate) {
         this.turnRate = turnRate;
     }
 
-    // ¶¨Òå¼ÆËãËÙ¶ÈµÄÍ¨ÓÃËã·¨
+    // å®šä¹‰è®¡ç®—é€Ÿåº¦çš„é€šç”¨ç®—æ³•
     public double getSpeed() {
-        // ËÙ¶ÈµÈÓÚ ³µÂÖ°ë¾¶ * 2 * PI * ×ªËÙ
+        // é€Ÿåº¦ç­‰äº è½¦è½®åŠå¾„ * 2 * PI * è½¬é€Ÿ
         return Math.PI * 2 * getRadius() * turnRate;
     }
 }

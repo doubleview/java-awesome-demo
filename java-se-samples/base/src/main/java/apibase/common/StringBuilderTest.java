@@ -5,21 +5,21 @@ public class StringBuilderTest {
 
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder();
-        // ×·¼Ó×Ö·û´®
+        // è¿½åŠ å­—ç¬¦ä¸²
         sb.append("java");//sb = "java"
-        // ²åÈë
+        // æ’å…¥
         sb.insert(0, "hello "); // sb="hello java"
-        // Ìæ»»
+        // æ›¿æ¢
         sb.replace(5, 6, ","); // sb="hello, java"
-        // É¾³ı
+        // åˆ é™¤
         sb.delete(5, 6); // sb="hellojava"
         System.out.println(sb);
-        // ·´×ª
+        // åè½¬
         sb.reverse(); // sb="avajolleh"
         System.out.println(sb);
-        System.out.println(sb.length()); // Êä³ö9
-        System.out.println(sb.capacity()); // Êä³ö16
-        // ¸Ä±äStringBuilderµÄ³¤¶È£¬½«Ö»±£ÁôÇ°Ãæ²¿·Ö
+        System.out.println(sb.length()); // è¾“å‡º9
+        System.out.println(sb.capacity()); // è¾“å‡º16
+        // æ”¹å˜StringBuilderçš„é•¿åº¦ï¼Œå°†åªä¿ç•™å‰é¢éƒ¨åˆ†
         sb.setLength(5); // sb="avajo"
         System.out.println(sb);
     }

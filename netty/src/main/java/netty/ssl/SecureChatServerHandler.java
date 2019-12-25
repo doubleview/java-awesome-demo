@@ -47,26 +47,15 @@ public class SecureChatServerHandler extends
         // the global channel
         // list so the channel received the messages from others.
         ctx.pipeline().get(SslHandler.class).handshakeFuture()
-            .addListener(new GenericFutureListener<Future<Channel>>() {
-                @Override
-                public void operationComplete(Future<Channel> future)
-                    throws Exception {
-                    ctx.writeAndFlush("Welcome to "
-                        + InetAddress.getLocalHost().getHostName()
-                        + " secure chat service!\n");
-                    ctx.writeAndFlush("Your session is protected by "
-                        + ctx.pipeline().get(SslHandler.class).engine()
-                        .getSession().getCipherSuite()
-                        + " cipher suite.\n");
-
-                    channels.add(ctx.channel());
-                }
+            .addListener((GenericFutureListener<Future<Channel>>) future -> {
+                ctx.writeAndFlush("Welcome to " + InetAddress.getLocalHost().getHostName() + " secure chat service!\n");
+                ctx.writeAndFlush("Your session is protected by " + ctx.pipeline().get(SslHandler.class).engine().getSession().getCipherSuite() + " cipher suite.\n");
+                channels.add(ctx.channel());
             });
     }
 
     @Override
-    public void messageReceived(ChannelHandlerContext ctx, String msg)
-        throws Exception {
+    public void messageReceived(ChannelHandlerContext ctx, String msg) throws Exception {
         // Send the received message to all channels but the current one.
         for (Channel c : channels) {
             if (c != ctx.channel()) {

@@ -7,7 +7,7 @@ import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 
 /**
- * ForkJoinTask线程池的使用
+ * ForkJoinTask绾跨▼姹犵殑浣跨敤
  */
 public class ForkJoinDemoTask extends RecursiveTask<Long> {
 

@@ -6,26 +6,26 @@ public class ProcessorTest {
     public static void process(String clazz) throws ClassNotFoundException {
         int passed = 0;
         int failed = 0;
-        // ±éÀúclazz¶ÔÓ¦µÄÀàÀïµÄËùÓĞ·½·¨
+        // éå†clazzå¯¹åº”çš„ç±»é‡Œçš„æ‰€æœ‰æ–¹æ³•
         for (Method m : Class.forName(clazz).getMethods()) {
-            // Èç¹û¸Ã·½·¨Ê¹ÓÃÁË@TestableĞŞÊÎ
+            // å¦‚æœè¯¥æ–¹æ³•ä½¿ç”¨äº†@Testableä¿®é¥°
             if (m.isAnnotationPresent(Testable.class)) {
                 try {
-                    // µ÷ÓÃm·½·¨
+                    // è°ƒç”¨mæ–¹æ³•
                     m.invoke(null);
-                    // ²âÊÔ³É¹¦£¬passed¼ÆÊıÆ÷¼Ó1
+                    // æµ‹è¯•æˆåŠŸï¼Œpassedè®¡æ•°å™¨åŠ 1
                     passed++;
                 } catch (Exception ex) {
-                    System.out.println("·½·¨" + m + "ÔËĞĞÊ§°Ü£¬Òì³££º" + ex.getCause());
-                    // ²âÊÔ³öÏÖÒì³££¬failed¼ÆÊıÆ÷¼Ó1
+                    System.out.println("æ–¹æ³•" + m + "è¿è¡Œå¤±è´¥ï¼Œå¼‚å¸¸ï¼š" + ex.getCause());
+                    // æµ‹è¯•å‡ºç°å¼‚å¸¸ï¼Œfailedè®¡æ•°å™¨åŠ 1
                     failed++;
                 }
             }
         }
-        // Í³¼Æ²âÊÔ½á¹û
-        System.out.println("¹²ÔËĞĞÁË:" + (passed + failed)
-                + "¸ö·½·¨£¬ÆäÖĞ£º\n" + "Ê§°ÜÁË:" + failed + "¸ö£¬\n"
-                + "³É¹¦ÁË:" + passed + "¸ö£¡");
+        // ç»Ÿè®¡æµ‹è¯•ç»“æœ
+        System.out.println("å…±è¿è¡Œäº†:" + (passed + failed)
+                + "ä¸ªæ–¹æ³•ï¼Œå…¶ä¸­ï¼š\n" + "å¤±è´¥äº†:" + failed + "ä¸ªï¼Œ\n"
+                + "æˆåŠŸäº†:" + passed + "ä¸ªï¼");
     }
 }
 

@@ -6,24 +6,24 @@ import java.util.Map;
 public class MapTest2 {
     public static void main(String[] args) {
         Map map = new HashMap();
-        // ³É¶Ô·ÅÈë¶à¸ökey-value¶Ô
-        map.put("Java¿ª·¢", 109);
-        map.put("iOS¿ª·¢", 99);
-        map.put("Ajax¿ª·¢", 79);
-        // ³¢ÊÔÌæ»»keyÎª"XML¿ª·¢"µÄvalue£¬ÓÉÓÚÔ­MapÖĞÃ»ÓĞ¶ÔÓ¦µÄkey£¬
-        // Òò´Ë¶ÔMapÃ»ÓĞ¸Ä±ä£¬²»»áÌí¼ÓĞÂµÄkey-value¶Ô
-        map.replace("XML¿ª·¢", 66);
+        // æˆå¯¹æ”¾å…¥å¤šä¸ªkey-valueå¯¹
+        map.put("Javaå¼€å‘", 109);
+        map.put("iOSå¼€å‘", 99);
+        map.put("Ajaxå¼€å‘", 79);
+        // å°è¯•æ›¿æ¢keyä¸º"XMLå¼€å‘"çš„valueï¼Œç”±äºåŸMapä¸­æ²¡æœ‰å¯¹åº”çš„keyï¼Œ
+        // å› æ­¤å¯¹Mapæ²¡æœ‰æ”¹å˜ï¼Œä¸ä¼šæ·»åŠ æ–°çš„key-valueå¯¹
+        map.replace("XMLå¼€å‘", 66);
         System.out.println(map);
-        // Ê¹ÓÃÔ­valueÓë²ÎÊı¼ÆËã³öÀ´µÄ½á¹û¸²¸ÇÔ­ÓĞµÄvalue
-        map.merge("iOS¿ª·¢", 10,
+        // ä½¿ç”¨åŸvalueä¸å‚æ•°è®¡ç®—å‡ºæ¥çš„ç»“æœè¦†ç›–åŸæœ‰çš„value
+        map.merge("iOSå¼€å‘", 10,
                 (oldVal, param) -> (Integer) oldVal + (Integer) param);
-        System.out.println(map); // "iOS¿ª·¢"µÄvalueÔö´óÁË10
-        // µ±keyÎª"Java"¶ÔÓ¦µÄvalueÎªnull£¨»ò²»´æÔÚÊ±£©£¬Ê¹ÓÃ¼ÆËãµÄ½á¹û×÷ÎªĞÂvalue
+        System.out.println(map); // "iOSå¼€å‘"çš„valueå¢å¤§äº†10
+        // å½“keyä¸º"Java"å¯¹åº”çš„valueä¸ºnullï¼ˆæˆ–ä¸å­˜åœ¨æ—¶ï¼‰ï¼Œä½¿ç”¨è®¡ç®—çš„ç»“æœä½œä¸ºæ–°value
         map.computeIfAbsent("Java", (key) -> ((String) key).length());
-        System.out.println(map); // mapÖĞÌí¼ÓÁË Java=4 Õâ×ékey-value¶Ô
-        // µ±keyÎª"Java"¶ÔÓ¦µÄvalue´æÔÚÊ±£¬Ê¹ÓÃ¼ÆËãµÄ½á¹û×÷ÎªĞÂvalue
+        System.out.println(map); // mapä¸­æ·»åŠ äº† Java=4 è¿™ç»„key-valueå¯¹
+        // å½“keyä¸º"Java"å¯¹åº”çš„valueå­˜åœ¨æ—¶ï¼Œä½¿ç”¨è®¡ç®—çš„ç»“æœä½œä¸ºæ–°value
         map.computeIfPresent("Java",
                 (key, value) -> (Integer) value * (Integer) value);
-        System.out.println(map); // mapÖĞ Java=4 ±ä³É Java=16
+        System.out.println(map); // mapä¸­ Java=4 å˜æˆ Java=16
     }
 }

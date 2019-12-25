@@ -5,20 +5,20 @@ import java.util.concurrent.Executors;
 
 public class ThreadPoolTest {
     public static void main(String[] args) throws Exception {
-        // ´´½¨×ã¹»µÄÏß³ÌÀ´Ö§³Ö4¸öCPU²¢ÐÐµÄÏß³Ì³Ø
-        // ´´½¨Ò»¸ö¾ßÓÐ¹Ì¶¨Ïß³ÌÊý£¨6£©µÄÏß³Ì³Ø
+        // åˆ›å»ºè¶³å¤Ÿçš„çº¿ç¨‹æ¥æ”¯æŒ4ä¸ªCPUå¹¶è¡Œçš„çº¿ç¨‹æ± 
+        // åˆ›å»ºä¸€ä¸ªå…·æœ‰å›ºå®šçº¿ç¨‹æ•°ï¼ˆ6ï¼‰çš„çº¿ç¨‹æ± 
         ExecutorService pool = Executors.newFixedThreadPool(6);
-        // Ê¹ÓÃLambda±í´ïÊ½´´½¨Runnable¶ÔÏó
+        // ä½¿ç”¨Lambdaè¡¨è¾¾å¼åˆ›å»ºRunnableå¯¹è±¡
         Runnable target = () -> {
             for (int i = 0; i < 100; i++) {
                 System.out.println(Thread.currentThread().getName()
-                        + "µÄiÖµÎª:" + i);
+                        + "çš„iå€¼ä¸º:" + i);
             }
         };
-        // ÏòÏß³Ì³ØÖÐÌá½»Á½¸öÏß³Ì
+        // å‘çº¿ç¨‹æ± ä¸­æäº¤ä¸¤ä¸ªçº¿ç¨‹
         pool.submit(target);
         pool.submit(target);
-        // ¹Ø±ÕÏß³Ì³Ø
+        // å…³é—­çº¿ç¨‹æ± 
         pool.shutdown();
     }
 }

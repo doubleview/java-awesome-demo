@@ -3,7 +3,7 @@ package inital.primitive;
 
 public class UnderscoreTest {
     public static void main(String[] args) {
-        // ¶¨ÒåÒ»¸ö32Î»µÄ¶ş½øÖÆÊı,×î¸ßÎ»ÊÇ·ûºÅÎ»¡£
+        // å®šä¹‰ä¸€ä¸ª32ä½çš„äºŒè¿›åˆ¶æ•°,æœ€é«˜ä½æ˜¯ç¬¦å·ä½ã€‚
         int binVal = 0B1000_0000_0000_0000_0000_0000_0000_0011;
         double pi = 3.14_15_92_65_36;
         System.out.println(binVal);

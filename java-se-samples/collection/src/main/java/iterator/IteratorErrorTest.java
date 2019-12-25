@@ -6,18 +6,18 @@ import java.util.Iterator;
 
 public class IteratorErrorTest {
     public static void main(String[] args) {
-        // ´´½¨¼¯ºÏ¡¢Ìí¼ÓÔªËØµÄ´úÂëÓëÇ°Ò»¸ö³ÌĞòÏàÍ¬
+        // åˆ›å»ºé›†åˆã€æ·»åŠ å…ƒç´ çš„ä»£ç ä¸å‰ä¸€ä¸ªç¨‹åºç›¸åŒ
         Collection books = new HashSet();
-        books.add("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-        books.add("Java¿ª·¢");
-        books.add("Android¿ª·¢");
-        // »ñÈ¡books¼¯ºÏ¶ÔÓ¦µÄµü´úÆ÷
+        books.add("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+        books.add("Javaå¼€å‘");
+        books.add("Androidå¼€å‘");
+        // è·å–booksé›†åˆå¯¹åº”çš„è¿­ä»£å™¨
         Iterator it = books.iterator();
         while (it.hasNext()) {
             String book = (String) it.next();
             System.out.println(book);
-            if (book.equals("Android¿ª·¢")) {
-                // Ê¹ÓÃIteratorµü´ú¹ı³ÌÖĞ£¬²»¿ÉĞŞ¸Ä¼¯ºÏÔªËØ,ÏÂÃæ´úÂëÒı·¢Òì³£
+            if (book.equals("Androidå¼€å‘")) {
+                // ä½¿ç”¨Iteratorè¿­ä»£è¿‡ç¨‹ä¸­ï¼Œä¸å¯ä¿®æ”¹é›†åˆå…ƒç´ ,ä¸‹é¢ä»£ç å¼•å‘å¼‚å¸¸
                 books.remove(book);
             }
         }

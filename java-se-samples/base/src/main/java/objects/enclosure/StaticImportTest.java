@@ -6,10 +6,10 @@ import static java.lang.System.out;
 
 public class StaticImportTest {
     public static void main(String[] args) {
-        // outÊÇjava.lang.SystemÀàµÄ¾²Ì¬³ÉÔ±±äÁ¿£¬´ú±í±ê×¼Êä³ö
-        // PIÊÇjava.lang.MathÀàµÄ¾²Ì¬³ÉÔ±±äÁ¿£¬±íÊ¾¦Ğ³£Á¿
+        // outæ˜¯java.lang.Systemç±»çš„é™æ€æˆå‘˜å˜é‡ï¼Œä»£è¡¨æ ‡å‡†è¾“å‡º
+        // PIæ˜¯java.lang.Mathç±»çš„é™æ€æˆå‘˜å˜é‡ï¼Œè¡¨ç¤ºÏ€å¸¸é‡
         out.println(PI);
-        // Ö±½Óµ÷ÓÃMathÀàµÄsqrt¾²Ì¬·½·¨
+        // ç›´æ¥è°ƒç”¨Mathç±»çš„sqrté™æ€æ–¹æ³•
         out.println(sqrt(256));
     }
 }

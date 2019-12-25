@@ -2,39 +2,39 @@ package threadsyn;
 
 class A {
     public synchronized void foo(B b) {
-        System.out.println("µ±Ç°Ïß³ÌÃû: " + Thread.currentThread().getName()
-                + " ½øÈëÁËAÊµÀıµÄfoo()·½·¨");     // ¢Ù
+        System.out.println("å½“å‰çº¿ç¨‹å: " + Thread.currentThread().getName()
+                + " è¿›å…¥äº†Aå®ä¾‹çš„foo()æ–¹æ³•");     // â‘ 
         try {
             Thread.sleep(200);
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
-        System.out.println("µ±Ç°Ïß³ÌÃû: " + Thread.currentThread().getName()
-                + " ÆóÍ¼µ÷ÓÃBÊµÀıµÄlast()·½·¨");    // ¢Û
+        System.out.println("å½“å‰çº¿ç¨‹å: " + Thread.currentThread().getName()
+                + " ä¼å›¾è°ƒç”¨Bå®ä¾‹çš„last()æ–¹æ³•");    // â‘¢
         b.last();
     }
 
     public synchronized void last() {
-        System.out.println("½øÈëÁËAÀàµÄlast()·½·¨ÄÚ²¿");
+        System.out.println("è¿›å…¥äº†Aç±»çš„last()æ–¹æ³•å†…éƒ¨");
     }
 }
 
 class B {
     public synchronized void bar(A a) {
-        System.out.println("µ±Ç°Ïß³ÌÃû: " + Thread.currentThread().getName()
-                + " ½øÈëÁËBÊµÀıµÄbar()·½·¨");   // ¢Ú
+        System.out.println("å½“å‰çº¿ç¨‹å: " + Thread.currentThread().getName()
+                + " è¿›å…¥äº†Bå®ä¾‹çš„bar()æ–¹æ³•");   // â‘¡
         try {
             Thread.sleep(200);
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
-        System.out.println("µ±Ç°Ïß³ÌÃû: " + Thread.currentThread().getName()
-                + " ÆóÍ¼µ÷ÓÃAÊµÀıµÄlast()·½·¨");  // ¢Ü
+        System.out.println("å½“å‰çº¿ç¨‹å: " + Thread.currentThread().getName()
+                + " ä¼å›¾è°ƒç”¨Aå®ä¾‹çš„last()æ–¹æ³•");  // â‘£
         a.last();
     }
 
     public synchronized void last() {
-        System.out.println("½øÈëÁËBÀàµÄlast()·½·¨ÄÚ²¿");
+        System.out.println("è¿›å…¥äº†Bç±»çš„last()æ–¹æ³•å†…éƒ¨");
     }
 }
 
@@ -43,24 +43,24 @@ public class DeadLock implements Runnable {
     B b = new B();
 
     public void init() {
-        Thread.currentThread().setName("Ö÷Ïß³Ì");
-        // µ÷ÓÃa¶ÔÏóµÄfoo·½·¨
+        Thread.currentThread().setName("ä¸»çº¿ç¨‹");
+        // è°ƒç”¨aå¯¹è±¡çš„fooæ–¹æ³•
         a.foo(b);
-        System.out.println("½øÈëÁËÖ÷Ïß³ÌÖ®ºó");
+        System.out.println("è¿›å…¥äº†ä¸»çº¿ç¨‹ä¹‹å");
     }
 
     public void run() {
-        Thread.currentThread().setName("¸±Ïß³Ì");
-        // µ÷ÓÃb¶ÔÏóµÄbar·½·¨
+        Thread.currentThread().setName("å‰¯çº¿ç¨‹");
+        // è°ƒç”¨bå¯¹è±¡çš„baræ–¹æ³•
         b.bar(a);
-        System.out.println("½øÈëÁË¸±Ïß³ÌÖ®ºó");
+        System.out.println("è¿›å…¥äº†å‰¯çº¿ç¨‹ä¹‹å");
     }
 
     public static void main(String[] args) {
         DeadLock dl = new DeadLock();
-        // ÒÔdlÎªtargetÆô¶¯ĞÂÏß³Ì
+        // ä»¥dlä¸ºtargetå¯åŠ¨æ–°çº¿ç¨‹
         new Thread(dl).start();
-        // µ÷ÓÃinit()·½·¨
+        // è°ƒç”¨init()æ–¹æ³•
         dl.init();
     }
 }

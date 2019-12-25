@@ -4,7 +4,7 @@ package concurrent;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 可重入锁
+ * 鍙噸鍏ラ攣
  */
 public class ReenterLock implements Runnable {
 

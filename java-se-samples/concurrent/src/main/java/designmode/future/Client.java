@@ -18,12 +18,12 @@ public class Client {
         Client client = new Client();
 
         Data data = client.request("name");
-        System.out.println("请求完毕");
+        System.out.println("璇锋眰瀹屾瘯");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("数据 = " + data.getResult());
+        System.out.println("鏁版嵁 = " + data.getResult());
     }
 }

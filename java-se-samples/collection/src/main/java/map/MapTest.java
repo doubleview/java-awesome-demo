@@ -6,28 +6,28 @@ import java.util.Map;
 public class MapTest {
     public static void main(String[] args) {
         Map map = new HashMap();
-        // ³É¶Ô·ÅÈë¶à¸ökey-value¶Ô
-        map.put("Java¿ª·¢", 109);
-        map.put("iOS¿ª·¢", 10);
-        map.put("Ajax¿ª·¢", 79);
-        // ¶à´Î·ÅÈëµÄkey-value¶ÔÖĞvalue¿ÉÒÔÖØ¸´
-        map.put("ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½", 99);
-        // ·ÅÈëÖØ¸´µÄkeyÊ±£¬ĞÂµÄvalue»á¸²¸ÇÔ­ÓĞµÄvalue
-        // Èç¹ûĞÂµÄvalue¸²¸ÇÁËÔ­ÓĞµÄvalue£¬¸Ã·½·¨·µ»Ø±»¸²¸ÇµÄvalue
-        System.out.println(map.put("iOS¿ª·¢", 99)); // Êä³ö10
-        System.out.println(map); // Êä³öµÄMap¼¯ºÏ°üº¬4¸ökey-value¶Ô
-        // ÅĞ¶ÏÊÇ·ñ°üº¬Ö¸¶¨key
-        System.out.println("ÊÇ·ñ°üº¬ÖµÎª iOS¿ª·¢ key£º"
-                + map.containsKey("iOS¿ª·¢")); // Êä³ötrue
-        // ÅĞ¶ÏÊÇ·ñ°üº¬Ö¸¶¨value
-        System.out.println("ÊÇ·ñ°üº¬ÖµÎª 99 value£º"
-                + map.containsValue(99)); // Êä³ötrue
-        // »ñÈ¡Map¼¯ºÏµÄËùÓĞkey×é³ÉµÄ¼¯ºÏ£¬Í¨¹ı±éÀúkeyÀ´ÊµÏÖ±éÀúËùÓĞkey-value¶Ô
+        // æˆå¯¹æ”¾å…¥å¤šä¸ªkey-valueå¯¹
+        map.put("Javaå¼€å‘", 109);
+        map.put("iOSå¼€å‘", 10);
+        map.put("Ajaxå¼€å‘", 79);
+        // å¤šæ¬¡æ”¾å…¥çš„key-valueå¯¹ä¸­valueå¯ä»¥é‡å¤
+        map.put("è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜", 99);
+        // æ”¾å…¥é‡å¤çš„keyæ—¶ï¼Œæ–°çš„valueä¼šè¦†ç›–åŸæœ‰çš„value
+        // å¦‚æœæ–°çš„valueè¦†ç›–äº†åŸæœ‰çš„valueï¼Œè¯¥æ–¹æ³•è¿”å›è¢«è¦†ç›–çš„value
+        System.out.println(map.put("iOSå¼€å‘", 99)); // è¾“å‡º10
+        System.out.println(map); // è¾“å‡ºçš„Mapé›†åˆåŒ…å«4ä¸ªkey-valueå¯¹
+        // åˆ¤æ–­æ˜¯å¦åŒ…å«æŒ‡å®škey
+        System.out.println("æ˜¯å¦åŒ…å«å€¼ä¸º iOSå¼€å‘ keyï¼š"
+                + map.containsKey("iOSå¼€å‘")); // è¾“å‡ºtrue
+        // åˆ¤æ–­æ˜¯å¦åŒ…å«æŒ‡å®švalue
+        System.out.println("æ˜¯å¦åŒ…å«å€¼ä¸º 99 valueï¼š"
+                + map.containsValue(99)); // è¾“å‡ºtrue
+        // è·å–Mapé›†åˆçš„æ‰€æœ‰keyç»„æˆçš„é›†åˆï¼Œé€šè¿‡éå†keyæ¥å®ç°éå†æ‰€æœ‰key-valueå¯¹
         for (Object key : map.keySet()) {
-            // map.get(key)·½·¨»ñÈ¡Ö¸¶¨key¶ÔÓ¦µÄvalue
+            // map.get(key)æ–¹æ³•è·å–æŒ‡å®škeyå¯¹åº”çš„value
             System.out.println(key + "-->" + map.get(key));
         }
-        map.remove("Ajax¿ª·¢"); // ¸ù¾İkeyÀ´É¾³ıkey-value¶Ô¡£
-        System.out.println(map); // Êä³ö½á¹û²»ÔÙ°üº¬ Ajax¿ª·¢=79 µÄkey-value¶Ô
+        map.remove("Ajaxå¼€å‘"); // æ ¹æ®keyæ¥åˆ é™¤key-valueå¯¹ã€‚
+        System.out.println(map); // è¾“å‡ºç»“æœä¸å†åŒ…å« Ajaxå¼€å‘=79 çš„key-valueå¯¹
     }
 }

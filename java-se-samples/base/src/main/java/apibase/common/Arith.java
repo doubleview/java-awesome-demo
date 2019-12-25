@@ -3,36 +3,36 @@ package apibase.common;
 import java.math.BigDecimal;
 
 public class Arith {
-    // Ä¬ÈÏ³ı·¨ÔËËã¾«¶È
+    // é»˜è®¤é™¤æ³•è¿ç®—ç²¾åº¦
     private static final int DEF_DIV_SCALE = 10;
 
-    // ¹¹ÔìÆ÷Ë½ÓĞ£¬ÈÃÕâ¸öÀà²»ÄÜÊµÀı»¯
+    // æ„é€ å™¨ç§æœ‰ï¼Œè®©è¿™ä¸ªç±»ä¸èƒ½å®ä¾‹åŒ–
     private Arith() {
     }
 
-    // Ìá¹©¾«È·µÄ¼Ó·¨ÔËËã¡£
+    // æä¾›ç²¾ç¡®çš„åŠ æ³•è¿ç®—ã€‚
     public static double add(double v1, double v2) {
         BigDecimal b1 = BigDecimal.valueOf(v1);
         BigDecimal b2 = BigDecimal.valueOf(v2);
         return b1.add(b2).doubleValue();
     }
 
-    // Ìá¹©¾«È·µÄ¼õ·¨ÔËËã¡£
+    // æä¾›ç²¾ç¡®çš„å‡æ³•è¿ç®—ã€‚
     public static double sub(double v1, double v2) {
         BigDecimal b1 = BigDecimal.valueOf(v1);
         BigDecimal b2 = BigDecimal.valueOf(v2);
         return b1.subtract(b2).doubleValue();
     }
 
-    // Ìá¹©¾«È·µÄ³Ë·¨ÔËËã¡£
+    // æä¾›ç²¾ç¡®çš„ä¹˜æ³•è¿ç®—ã€‚
     public static double mul(double v1, double v2) {
         BigDecimal b1 = BigDecimal.valueOf(v1);
         BigDecimal b2 = BigDecimal.valueOf(v2);
         return b1.multiply(b2).doubleValue();
     }
 
-    // Ìá¹©£¨Ïà¶Ô£©¾«È·µÄ³ı·¨ÔËËã£¬µ±·¢Éú³ı²»¾¡µÄÇé¿öÊ±.
-    // ¾«È·µ½Ğ¡ÊıµãÒÔºó10Î»µÄÊı×ÖËÄÉáÎåÈë¡£
+    // æä¾›ï¼ˆç›¸å¯¹ï¼‰ç²¾ç¡®çš„é™¤æ³•è¿ç®—ï¼Œå½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µæ—¶.
+    // ç²¾ç¡®åˆ°å°æ•°ç‚¹ä»¥å10ä½çš„æ•°å­—å››èˆäº”å…¥ã€‚
     public static double div(double v1, double v2) {
         BigDecimal b1 = BigDecimal.valueOf(v1);
         BigDecimal b2 = BigDecimal.valueOf(v2);

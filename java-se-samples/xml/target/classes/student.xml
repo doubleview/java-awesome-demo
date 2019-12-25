@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<student no="12345678">
+    <name>huchengchao</name>
+    <age>23</age>
+</student>
+<?hcc href='www.huchengchao.com'?>
+<!--this is a comment-->

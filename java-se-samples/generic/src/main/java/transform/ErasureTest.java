@@ -21,14 +21,14 @@ class Apple<T extends Number> {
 
 public class ErasureTest {
     public static void main(String[] args) {
-        Apple<Integer> a = new Apple<>(6);    // ¢Ù
-        // aµÄgetSize·½·¨·µ»ØInteger¶ÔÏó
+        Apple<Integer> a = new Apple<>(6);    // â‘ 
+        // açš„getSizeæ–¹æ³•è¿”å›Integerå¯¹è±¡
         Integer as = a.getSize();
-        // °Ña¶ÔÏó¸³¸øApple±äÁ¿£¬¶ªÊ§¼âÀ¨ºÅÀïµÄÀàĞÍĞÅÏ¢
-        Apple b = a;      // ¢Ú
-        // bÖ»ÖªµÀsizeµÄÀàĞÍÊÇNumber
+        // æŠŠaå¯¹è±¡èµ‹ç»™Appleå˜é‡ï¼Œä¸¢å¤±å°–æ‹¬å·é‡Œçš„ç±»å‹ä¿¡æ¯
+        Apple b = a;      // â‘¡
+        // båªçŸ¥é“sizeçš„ç±»å‹æ˜¯Number
         Number size1 = b.getSize();
-        // ÏÂÃæ´úÂëÒıÆğ±àÒë´íÎó
-        // Integer size2 = b.getSize();  // ¢Û
+        // ä¸‹é¢ä»£ç å¼•èµ·ç¼–è¯‘é”™è¯¯
+        // Integer size2 = b.getSize();  // â‘¢
     }
 }

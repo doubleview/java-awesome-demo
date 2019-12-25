@@ -3,7 +3,7 @@ package objects2.java8interface;
 public class PrintCommand implements Command {
     public void process(int[] target) {
         for (int tmp : target) {
-            System.out.println("µü´úÊä³öÄ¿±êÊı×éµÄÔªËØ:" + tmp);
+            System.out.println("è¿­ä»£è¾“å‡ºç›®æ ‡æ•°ç»„çš„å…ƒç´ :" + tmp);
         }
     }
 }

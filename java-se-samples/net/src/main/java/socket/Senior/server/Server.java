@@ -7,22 +7,22 @@ import java.net.Socket;
 
 public class Server {
     private static final int SERVER_PORT = 30000;
-    // Ê¹ÓÃbaiduMap¶ÔÏóÀ´±£´æÃ¿¸ö¿Í»§Ãû×ÖºÍ¶ÔÓ¦Êä³öÁ÷Ö®¼äµÄ¶ÔÓ¦¹ØÏµ¡£
+    // ä½¿ç”¨baiduMapå¯¹è±¡æ¥ä¿å­˜æ¯ä¸ªå®¢æˆ·åå­—å’Œå¯¹åº”è¾“å‡ºæµä¹‹é—´çš„å¯¹åº”å…³ç³»ã€‚
     public static BaiduMap<String, PrintStream> clients = new BaiduMap<>();
 
     public void init() {
-        try (// ½¨Á¢¼àÌıµÄServerSocket
+        try (// å»ºç«‹ç›‘å¬çš„ServerSocket
                 ServerSocket ss = new ServerSocket(SERVER_PORT)) {
-            // ²ÉÓÃËÀÑ­»·À´²»¶Ï½ÓÊÜÀ´×Ô¿Í»§¶ËµÄÇëÇó
+            // é‡‡ç”¨æ­»å¾ªç¯æ¥ä¸æ–­æ¥å—æ¥è‡ªå®¢æˆ·ç«¯çš„è¯·æ±‚
             while (true) {
                 Socket socket = ss.accept();
                 new ServerThread(socket).start();
             }
         }
-        // Èç¹ûÅ×³öÒì³£
+        // å¦‚æœæŠ›å‡ºå¼‚å¸¸
         catch (IOException ex) {
-            System.out.println("·şÎñÆ÷Æô¶¯Ê§°Ü£¬ÊÇ·ñ¶Ë¿Ú"
-                    + SERVER_PORT + "ÒÑ±»Õ¼ÓÃ£¿");
+            System.out.println("æœåŠ¡å™¨å¯åŠ¨å¤±è´¥ï¼Œæ˜¯å¦ç«¯å£"
+                    + SERVER_PORT + "å·²è¢«å ç”¨ï¼Ÿ");
         }
     }
 

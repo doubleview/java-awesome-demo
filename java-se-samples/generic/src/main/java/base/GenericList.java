@@ -5,13 +5,13 @@ import java.util.List;
 
 public class GenericList {
     public static void main(String[] args) {
-        // ´´½¨Ò»¸öÖ»Ïë±£´æ×Ö·û´®µÄList¼¯ºÏ
-        List<String> strList = new ArrayList<>();  // ¢Ù
-        strList.add("Java¿ª·¢");
-        strList.add("Android¿ª·¢");
-        // ÏÂÃæ´úÂë½«ÒıÆğ±àÒë´íÎó
-        //strList.add(5);    // ¢Ú
-        strList.forEach(str -> System.out.println(str.length())); // ¢Û
+        // åˆ›å»ºä¸€ä¸ªåªæƒ³ä¿å­˜å­—ç¬¦ä¸²çš„Listé›†åˆ
+        List<String> strList = new ArrayList<>();  // â‘ 
+        strList.add("Javaå¼€å‘");
+        strList.add("Androidå¼€å‘");
+        // ä¸‹é¢ä»£ç å°†å¼•èµ·ç¼–è¯‘é”™è¯¯
+        //strList.add(5);    // â‘¡
+        strList.forEach(str -> System.out.println(str.length())); // â‘¢
     }
 }
 

@@ -14,35 +14,35 @@ interface Addable {
 }
 
 public class LambdaQs {
-    // µ÷ÓÃ¸Ã·½·¨ÐèÒªEatable¶ÔÏó
+    // è°ƒç”¨è¯¥æ–¹æ³•éœ€è¦Eatableå¯¹è±¡
     public void eat(Eatable e) {
         System.out.println(e);
         e.taste();
     }
 
-    // µ÷ÓÃ¸Ã·½·¨ÐèÒªFlyable¶ÔÏó
+    // è°ƒç”¨è¯¥æ–¹æ³•éœ€è¦Flyableå¯¹è±¡
     public void drive(Flyable f) {
-        System.out.println("ÎÒÕýÔÚ¼ÝÊ»£º" + f);
-        f.fly("¡¾±Ì¿ÕÈçÏ´µÄÇçÈÕ¡¿");
+        System.out.println("æˆ‘æ­£åœ¨é©¾é©¶ï¼š" + f);
+        f.fly("ã€ç¢§ç©ºå¦‚æ´—çš„æ™´æ—¥ã€‘");
     }
 
-    // µ÷ÓÃ¸Ã·½·¨ÐèÒªAddable¶ÔÏó
+    // è°ƒç”¨è¯¥æ–¹æ³•éœ€è¦Addableå¯¹è±¡
     public void test(Addable add) {
-        System.out.println("5Óë3µÄºÍÎª£º" + add.add(5, 3));
+        System.out.println("5ä¸Ž3çš„å’Œä¸ºï¼š" + add.add(5, 3));
     }
 
     public static void main(String[] args) {
         LambdaQs lq = new LambdaQs();
-        // Lambda±í´ïÊ½µÄ´úÂë¿éÖ»ÓÐÒ»ÌõÓï¾ä£¬¿ÉÒÔÊ¡ÂÔ»¨À¨ºÅ¡£
-        lq.eat(() -> System.out.println("Æ»¹ûµÄÎ¶µÀ²»´í£¡"));
-        // Lambda±í´ïÊ½µÄÐÎ²ÎÁÐ±íÖ»ÓÐÒ»¸öÐÎ²Î£¬Ê¡ÂÔÔ²À¨ºÅ
+        // Lambdaè¡¨è¾¾å¼çš„ä»£ç å—åªæœ‰ä¸€æ¡è¯­å¥ï¼Œå¯ä»¥çœç•¥èŠ±æ‹¬å·ã€‚
+        lq.eat(() -> System.out.println("è‹¹æžœçš„å‘³é“ä¸é”™ï¼"));
+        // Lambdaè¡¨è¾¾å¼çš„å½¢å‚åˆ—è¡¨åªæœ‰ä¸€ä¸ªå½¢å‚ï¼Œçœç•¥åœ†æ‹¬å·
         lq.drive(weather ->
         {
-            System.out.println("½ñÌìÌìÆøÊÇ£º" + weather);
-            System.out.println("Ö±Éý»ú·ÉÐÐÆ½ÎÈ");
+            System.out.println("ä»Šå¤©å¤©æ°”æ˜¯ï¼š" + weather);
+            System.out.println("ç›´å‡æœºé£žè¡Œå¹³ç¨³");
         });
-        // Lambda±í´ïÊ½µÄ´úÂë¿éÖ»ÓÐÒ»ÌõÓï¾ä£¬Ê¡ÂÔ»¨À¨ºÅ
-        // ´úÂë¿éÖÐÖ»ÓÐÒ»ÌõÓï¾ä£¬¼´Ê¹¸Ã±í´ïÊ½ÐèÒª·µ»ØÖµ£¬Ò²¿ÉÒÔÊ¡ÂÔreturn¹Ø¼ü×Ö¡£
+        // Lambdaè¡¨è¾¾å¼çš„ä»£ç å—åªæœ‰ä¸€æ¡è¯­å¥ï¼Œçœç•¥èŠ±æ‹¬å·
+        // ä»£ç å—ä¸­åªæœ‰ä¸€æ¡è¯­å¥ï¼Œå³ä½¿è¯¥è¡¨è¾¾å¼éœ€è¦è¿”å›žå€¼ï¼Œä¹Ÿå¯ä»¥çœç•¥returnå…³é”®å­—ã€‚
         lq.test((a, b) -> a + b);
     }
 }

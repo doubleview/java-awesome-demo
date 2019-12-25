@@ -3,21 +3,21 @@ package inital.operate;
 
 public class AssignOperatorTest {
     public static void main(String[] args) {
-        String str = "Java"; // Îª±äÁ¿str¸³ÖµÎªJava
-        double pi = 3.14; // Îª±äÁ¿pi¸³ÖµÎª3.14
-        boolean visited = true; // Îª±äÁ¿visited¸³ÖµÎªtrue
-        String str2 = str; // ½«±äÁ¿strµÄÖµ¸³¸østr2
+        String str = "Java"; // ä¸ºå˜é‡strèµ‹å€¼ä¸ºJava
+        double pi = 3.14; // ä¸ºå˜é‡pièµ‹å€¼ä¸º3.14
+        boolean visited = true; // ä¸ºå˜é‡visitedèµ‹å€¼ä¸ºtrue
+        String str2 = str; // å°†å˜é‡strçš„å€¼èµ‹ç»™str2
         int a;
         int b;
         int c;
-        // Í¨¹ıÎªa, b , c¸³Öµ£¬Èı¸ö±äÁ¿µÄÖµ¶¼ÊÇ7
+        // é€šè¿‡ä¸ºa, b , cèµ‹å€¼ï¼Œä¸‰ä¸ªå˜é‡çš„å€¼éƒ½æ˜¯7
         a = b = c = 7;
-        // Êä³öÈı¸ö±äÁ¿µÄÖµ¡£
+        // è¾“å‡ºä¸‰ä¸ªå˜é‡çš„å€¼ã€‚
         System.out.println(a + "\n" + b + "\n" + c);
 
         double d1 = 12.34;
-        double d2 = d1 + 5; // ½«±í´ïÊ½µÄÖµ¸³¸ød2
-        System.out.println(d2); // Êä³öd2µÄÖµ£¬½«Êä³ö17.34
+        double d2 = d1 + 5; // å°†è¡¨è¾¾å¼çš„å€¼èµ‹ç»™d2
+        System.out.println(d2); // è¾“å‡ºd2çš„å€¼ï¼Œå°†è¾“å‡º17.34
 
     }
 }

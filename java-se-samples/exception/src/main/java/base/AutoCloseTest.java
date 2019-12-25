@@ -5,15 +5,15 @@ import java.io.*;
 public class AutoCloseTest {
     public static void main(String[] args) throws IOException {
         try (
-                // ÉùÃ÷¡¢³õÊ¼»¯Á½¸ö¿É¹Ø±ÕµÄ×ÊÔ´
-                // tryÓï¾ä»á×Ô¶¯¹Ø±ÕÕâÁ½¸ö×ÊÔ´¡£
+                // å£°æ˜ã€åˆå§‹åŒ–ä¸¤ä¸ªå¯å…³é—­çš„èµ„æº
+                // tryè¯­å¥ä¼šè‡ªåŠ¨å…³é—­è¿™ä¸¤ä¸ªèµ„æºã€‚
                 BufferedReader br = new BufferedReader(
                         new FileReader("AutoCloseTest.java"));
                 PrintStream ps = new PrintStream(new
                         FileOutputStream("a.txt"))) {
-            // Ê¹ÓÃÁ½¸ö×ÊÔ´
+            // ä½¿ç”¨ä¸¤ä¸ªèµ„æº
             System.out.println(br.readLine());
-            ps.println("×¯ÉúÏşÃÎÃÔºûµû");
+            ps.println("åº„ç”Ÿæ™“æ¢¦è¿·è´è¶");
         }
     }
 }

@@ -8,17 +8,17 @@ import java.net.Socket;
 public class Server {
     public static void main(String[] args)
             throws IOException {
-        // ´´½¨Ò»¸öServerSocket£¬ÓÃÓÚ¼àÌı¿Í»§¶ËSocketµÄÁ¬½ÓÇëÇó
+        // åˆ›å»ºä¸€ä¸ªServerSocketï¼Œç”¨äºç›‘å¬å®¢æˆ·ç«¯Socketçš„è¿æ¥è¯·æ±‚
         ServerSocket ss = new ServerSocket(30000);
-        // ²ÉÓÃÑ­»·²»¶Ï½ÓÊÜÀ´×Ô¿Í»§¶ËµÄÇëÇó
+        // é‡‡ç”¨å¾ªç¯ä¸æ–­æ¥å—æ¥è‡ªå®¢æˆ·ç«¯çš„è¯·æ±‚
         while (true) {
-            // Ã¿µ±½ÓÊÜµ½¿Í»§¶ËSocketµÄÇëÇó£¬·şÎñÆ÷¶ËÒ²¶ÔÓ¦²úÉúÒ»¸öSocket
+            // æ¯å½“æ¥å—åˆ°å®¢æˆ·ç«¯Socketçš„è¯·æ±‚ï¼ŒæœåŠ¡å™¨ç«¯ä¹Ÿå¯¹åº”äº§ç”Ÿä¸€ä¸ªSocket
             Socket s = ss.accept();
-            // ½«Socket¶ÔÓ¦µÄÊä³öÁ÷°ü×°³ÉPrintStream
+            // å°†Socketå¯¹åº”çš„è¾“å‡ºæµåŒ…è£…æˆPrintStream
             PrintStream ps = new PrintStream(s.getOutputStream());
-            // ½øĞĞÆÕÍ¨IO²Ù×÷
-            ps.println("ÄúºÃ£¬ÄúÊÕµ½ÁË·şÎñÆ÷µÄĞÂÄê×£¸££¡");
-            // ¹Ø±ÕÊä³öÁ÷£¬¹Ø±ÕSocket
+            // è¿›è¡Œæ™®é€šIOæ“ä½œ
+            ps.println("æ‚¨å¥½ï¼Œæ‚¨æ”¶åˆ°äº†æœåŠ¡å™¨çš„æ–°å¹´ç¥ç¦ï¼");
+            // å…³é—­è¾“å‡ºæµï¼Œå…³é—­Socket
             ps.close();
             s.close();
         }

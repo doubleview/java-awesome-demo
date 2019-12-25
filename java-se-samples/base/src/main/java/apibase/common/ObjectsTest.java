@@ -3,15 +3,15 @@ package apibase.common;
 import java.util.Objects;
 
 public class ObjectsTest {
-    // ¶¨ÒåÒ»¸öobj±äÁ¿£¬ËüµÄÄ¬ÈÏÖµÊÇnull
+    // å®šä¹‰ä¸€ä¸ªobjå˜é‡ï¼Œå®ƒçš„é»˜è®¤å€¼æ˜¯null
     static ObjectsTest obj;
 
     public static void main(String[] args) {
-        // Êä³öÒ»¸önull¶ÔÏóµÄhashCodeÖµ£¬Êä³ö0
+        // è¾“å‡ºä¸€ä¸ªnullå¯¹è±¡çš„hashCodeå€¼ï¼Œè¾“å‡º0
         System.out.println(Objects.hashCode(obj));
-        // Êä³öÒ»¸önull¶ÔÏóµÄtoString£¬Êä³önull
+        // è¾“å‡ºä¸€ä¸ªnullå¯¹è±¡çš„toStringï¼Œè¾“å‡ºnull
         System.out.println(Objects.toString(obj));
-        // ÒªÇóobj²»ÄÜÎªnull£¬Èç¹ûobjÎªnullÔòÒı·¢Òì³£
-        System.out.println(Objects.requireNonNull(obj, "obj²ÎÊı²»ÄÜÊÇnull£¡"));
+        // è¦æ±‚objä¸èƒ½ä¸ºnullï¼Œå¦‚æœobjä¸ºnullåˆ™å¼•å‘å¼‚å¸¸
+        System.out.println(Objects.requireNonNull(obj, "objå‚æ•°ä¸èƒ½æ˜¯nullï¼"));
     }
 }

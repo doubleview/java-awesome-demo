@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ActionListenerFor {
-    // ¶¨ÒåÒ»¸ö³ÉÔ±±äÁ¿£¬ÓÃÓÚÉèÖÃÔªÊı¾İ
-    // ¸Ãlistener³ÉÔ±±äÁ¿ÓÃÓÚ±£´æ¼àÌıÆ÷ÊµÏÖÀà
+    // å®šä¹‰ä¸€ä¸ªæˆå‘˜å˜é‡ï¼Œç”¨äºè®¾ç½®å…ƒæ•°æ®
+    // è¯¥listeneræˆå‘˜å˜é‡ç”¨äºä¿å­˜ç›‘å¬å™¨å®ç°ç±»
     Class<? extends ActionListener> listener();
 }

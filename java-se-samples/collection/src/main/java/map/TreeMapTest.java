@@ -13,7 +13,7 @@ class R implements Comparable {
         return "R[count:" + count + "]";
     }
 
-    // ¸ù¾İcountÀ´ÅĞ¶ÏÁ½¸ö¶ÔÏóÊÇ·ñÏàµÈ¡£
+    // æ ¹æ®countæ¥åˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡æ˜¯å¦ç›¸ç­‰ã€‚
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
@@ -24,7 +24,7 @@ class R implements Comparable {
         return false;
     }
 
-    // ¸ù¾İcountÊôĞÔÖµÀ´ÅĞ¶ÏÁ½¸ö¶ÔÏóµÄ´óĞ¡¡£
+    // æ ¹æ®countå±æ€§å€¼æ¥åˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡çš„å¤§å°ã€‚
     public int compareTo(Object obj) {
         R r = (R) obj;
         return count > r.count ? 1 :
@@ -35,19 +35,19 @@ class R implements Comparable {
 public class TreeMapTest {
     public static void main(String[] args) {
         TreeMap tm = new TreeMap();
-        tm.put(new R(3), "ÇáÁ¿¼¶Java EEÆóÒµÓ¦ÓÃÊµÕ½");
-        tm.put(new R(-5), "Java¿ª·¢");
-        tm.put(new R(9), "Android¿ª·¢");
+        tm.put(new R(3), "è½»é‡çº§Java EEä¼ä¸šåº”ç”¨å®æˆ˜");
+        tm.put(new R(-5), "Javaå¼€å‘");
+        tm.put(new R(9), "Androidå¼€å‘");
         System.out.println(tm);
-        // ·µ»Ø¸ÃTreeMapµÄµÚÒ»¸öEntry¶ÔÏó
+        // è¿”å›è¯¥TreeMapçš„ç¬¬ä¸€ä¸ªEntryå¯¹è±¡
         System.out.println(tm.firstEntry());
-        // ·µ»Ø¸ÃTreeMapµÄ×îºóÒ»¸ökeyÖµ
+        // è¿”å›è¯¥TreeMapçš„æœ€åä¸€ä¸ªkeyå€¼
         System.out.println(tm.lastKey());
-        // ·µ»Ø¸ÃTreeMapµÄ±Ènew R(2)´óµÄ×îĞ¡keyÖµ¡£
+        // è¿”å›è¯¥TreeMapçš„æ¯”new R(2)å¤§çš„æœ€å°keyå€¼ã€‚
         System.out.println(tm.higherKey(new R(2)));
-        // ·µ»Ø¸ÃTreeMapµÄ±Ènew R(2)Ğ¡µÄ×î´óµÄkey-value¶Ô¡£
+        // è¿”å›è¯¥TreeMapçš„æ¯”new R(2)å°çš„æœ€å¤§çš„key-valueå¯¹ã€‚
         System.out.println(tm.lowerEntry(new R(2)));
-        // ·µ»Ø¸ÃTreeMapµÄ×ÓTreeMap
+        // è¿”å›è¯¥TreeMapçš„å­TreeMap
         System.out.println(tm.subMap(new R(-1), new R(4)));
     }
 }
