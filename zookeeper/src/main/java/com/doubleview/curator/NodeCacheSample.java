@@ -3,13 +3,14 @@ package com.doubleview.curator;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.framework.recipes.cache.NodeCache;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
-import org.apache.zookeeper.data.Stat;
 
-public class GetDataSample {
+public class NodeCacheSample {
 
     public static void main(String[] args) throws Exception {
+        String path = "/zk-curator-test/node-cache";
         RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
         CuratorFramework curatorFramework =
                 CuratorFrameworkFactory.builder()
@@ -19,20 +20,17 @@ public class GetDataSample {
                         .retryPolicy(retryPolicy)
                         .build();
         curatorFramework.start();
-        String path = "/zk-curator-test/c1";
         curatorFramework.create()
                 .creatingParentContainersIfNeeded()
                 .withMode(CreateMode.EPHEMERAL)
                 .forPath(path, "init".getBytes());
-        System.out.println("创建成功 path: " + path);
-        Stat stat = new Stat();
-        curatorFramework.getData().storingStatIn(stat).forPath(path);
-        System.out.println("success set node for " + path + ", new version : " +
-                curatorFramework.setData().withVersion(stat.getVersion()).forPath(path).getVersion());
-        try {
-            curatorFramework.setData().withVersion(stat.getVersion()).forPath(path);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        NodeCache nodeCache = new NodeCache(curatorFramework, path, false);
+        nodeCache.start(true);
+        nodeCache.getListenable()
+                .addListener(() -> System.out.println("node data update, new data " + new String(nodeCache.getCurrentData().getData())));
+        curatorFramework.setData().forPath(path, "uuu".getBytes());
+        Thread.sleep(1000);
+        curatorFramework.delete().deletingChildrenIfNeeded().forPath(path);
+        Thread.sleep(Integer. MAX_VALUE);
     }
 }

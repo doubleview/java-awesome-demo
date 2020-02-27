@@ -24,6 +24,8 @@
         <module>lucene</module>
         <module>apache-commons</module>
         <module>zookeeper</module>
+        <module>mq</module>
+        <module>aviator</module>
     </modules>
 
     <properties>
@@ -47,6 +49,11 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>22.0</version>
         </dependency>
     </dependencies>
 

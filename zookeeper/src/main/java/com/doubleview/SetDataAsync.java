@@ -16,16 +16,7 @@ public class SetDataAsync implements Watcher {
         zk.create(path, "123".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
         zk.getData(path, true, null);
         //基于最新版本进行更新
-        Stat stat = zk.setData(path, "456".getBytes(), -1);
-        System.out.println(stat.getCzxid() + ", " + stat.getMzxid() + ", " + stat.getVersion());
-
-        Stat stat2 = zk.setData(path, "456".getBytes(), stat.getVersion());
-        System.out.println(stat2.getCzxid() + ", " + stat2.getMzxid() + ", " + stat2.getVersion());
-        try {
-            zk.setData(path, "456".getBytes(), stat.getVersion());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        zk.setData(path, "456".getBytes(), -1, new IStatCallback(), null);
         Thread.sleep(Integer.MAX_VALUE);
     }
 

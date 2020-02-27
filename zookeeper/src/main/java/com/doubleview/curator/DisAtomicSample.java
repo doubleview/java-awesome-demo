@@ -3,13 +3,15 @@ package com.doubleview.curator;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.framework.recipes.atomic.AtomicValue;
+import org.apache.curator.framework.recipes.atomic.DistributedAtomicInteger;
 import org.apache.curator.retry.ExponentialBackoffRetry;
-import org.apache.zookeeper.CreateMode;
-import org.apache.zookeeper.data.Stat;
+import org.apache.curator.retry.RetryNTimes;
 
-public class DeleteNodeSample {
+public class DisAtomicSample {
 
     public static void main(String[] args) throws Exception {
+        String path = "/dis_atomic_path";
         RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
         CuratorFramework curatorFramework =
                 CuratorFrameworkFactory.builder()
@@ -19,15 +21,9 @@ public class DeleteNodeSample {
                         .retryPolicy(retryPolicy)
                         .build();
         curatorFramework.start();
-        String path = "/zk-curator-test/c1";
-        curatorFramework.create()
-                .creatingParentContainersIfNeeded()
-                .withMode(CreateMode.EPHEMERAL)
-                .forPath(path, "init".getBytes());
-        System.out.println("创建成功 path: " + path);
-        Stat stat = new Stat();
-        curatorFramework.getData().storingStatIn(stat).forPath(path);
-        curatorFramework.delete().deletingChildrenIfNeeded().withVersion(stat.getVersion()).forPath(path);
-        System.out.println("删除成功 path: " + path);
+        DistributedAtomicInteger distributedAtomicInteger =
+                new DistributedAtomicInteger(curatorFramework, path, new RetryNTimes(1000, 3));
+        AtomicValue<Integer> atomicValue = distributedAtomicInteger.add(8);
+        System.out.println("Result : " + atomicValue.succeeded());
     }
 }

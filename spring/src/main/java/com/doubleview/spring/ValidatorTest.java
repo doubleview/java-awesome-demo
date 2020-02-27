@@ -58,7 +58,7 @@ public class ValidatorTest {
 
 
     @Data
-    private static class ValidatorDemo{
+    private static class ValidatorDemo {
 
         @NotBlank
         private String name;

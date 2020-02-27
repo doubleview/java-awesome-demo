@@ -18,7 +18,7 @@ public class GetChildrenAsync implements Watcher {
         zk.create(path, "".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
         zk.create(path + "/c1", "".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
 
-        zk.getChildren(path, true, new IChildren2Callback(), null);
+        zk.getChildren(path, false, new IChildren2Callback(), null);
         zk.create(path + "/c2", "".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
         Thread.sleep(Integer.MAX_VALUE);
     }
