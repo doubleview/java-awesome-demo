@@ -13,7 +13,6 @@
         <module>hibernate</module>
         <module>java-se-samples</module>
         <module>dom4j</module>
-        <module>velocity</module>
         <module>json</module>
         <module>guava</module>
         <module>rxjava</module>
@@ -26,6 +25,7 @@
         <module>zookeeper</module>
         <module>mq</module>
         <module>aviator</module>
+        <module>grpc</module>
     </modules>
 
     <properties>
@@ -51,10 +51,23 @@
             <version>3.9</version>
         </dependency>
         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.4.1</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>22.0</version>
         </dependency>
+
     </dependencies>
 
 

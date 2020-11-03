@@ -16,6 +16,8 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.sql.Timestamp;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -31,14 +33,14 @@ public class JacksonTest {
     private ObjectMapper mapper;
 
     @Before
-    public void init(){
+    public void init() {
         this.mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
     }
 
     @Test
     public void testWriteJson() throws IOException {
-        //²»Êä³öÖµnullµÄÊôĞÔ
+        //ä¸è¾“å‡ºå€¼nullçš„å±æ€§
         mapper.setSerializationInclusion(Include.NON_NULL);
         People people = new People();
         people.setName("hcc");
@@ -48,11 +50,13 @@ public class JacksonTest {
         people.setBirthday(new Date());
         people.setGender(1);
         people.setIdCardNo("340121199310044612");
+        people.setTimestamp(new Timestamp(System.currentTimeMillis()));
+        people.setaDouble(3.141592D);
 
-        //Êä³öjson
+        //è¾“å‡ºjson
         System.out.println(mapper.writeValueAsString(people));
 
-        //Êä³öµ½ÎÄ¼şÖĞ
+        //è¾“å‡ºåˆ°æ–‡ä»¶ä¸­
         mapper.writeValue(new File("result.json") , people);
 
         List<People> peopleList = new ArrayList<>();
@@ -63,7 +67,7 @@ public class JacksonTest {
 
     @Test
     public void testReadJson() throws IOException {
-        //´ÓÎÄ¼şÖĞ¶ÁÈ¡
+        //ä»æ–‡ä»¶ä¸­è¯»å–
         People people = mapper.readValue(new File("result.json"), People.class);
         System.out.println(people);
 
@@ -73,12 +77,12 @@ public class JacksonTest {
         List<People> peopleList = mapper.readValue(new File("resultList.json"), new TypeReference<List<People>>(){});
         System.out.println(peopleList);
 
-        //Ä¬ÈÏ½«¶ÔÏóĞÍjson¸ñÊ½×ª»»ÎªMapÀàĞÍ
+        //é»˜è®¤å°†å¯¹è±¡å‹jsonæ ¼å¼è½¬æ¢ä¸ºMapç±»å‹
         List resultList = mapper.readValue(new File("resultList.json"), List.class);
         System.out.println(resultList.get(0).getClass());
         System.out.println(resultList);
 
-        //´Ó×Ö·û´®ÖĞ¶ÁÈ¡²¢½âÎö
+        //ä»å­—ç¬¦ä¸²ä¸­è¯»å–å¹¶è§£æ
         people = mapper.readValue("{\"name\":\"hcc\",\"age\":24,\"photo\":\"my.jpg\","
             + "\"idCardNo\":\"340121199310044612\",\"gender\":1,\"birthday\":1506580198051,\"createTime\":1506580198051,"
             + "\"lastModifyTime\":1506580198051,\"onlyMethod\":\"onlyMethod\"}", People.class);
@@ -151,15 +155,15 @@ public class JacksonTest {
         people.setGender(1);
         people.setIdCardNo("340121199310044612");
 
-        //¸ñÊ½»¯Êä³ö£¬Ä¬ÈÏdisable
+        //æ ¼å¼åŒ–è¾“å‡ºï¼Œé»˜è®¤disable
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
         System.out.println(mapper.writeValueAsString(people));
 
-        //ÔÚPOJO¶ÔÏóÃ»ÓĞ¿ÉĞòÁĞ»¯µÄÊôĞÔÊ±£¬»áÅ×³öÒì³££¬Ä¬ÈÏenable
+        //åœ¨POJOå¯¹è±¡æ²¡æœ‰å¯åºåˆ—åŒ–çš„å±æ€§æ—¶ï¼Œä¼šæŠ›å‡ºå¼‚å¸¸ï¼Œé»˜è®¤enable
         mapper.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
         System.out.println(mapper.writeValueAsString(new Object()));
 
-        //½«Ê±¼äÊôĞÔÒÔtimestampµÄĞÎÊ½Êä³ö£¬Ä¬ÈÏenable
+        //å°†æ—¶é—´å±æ€§ä»¥timestampçš„å½¢å¼è¾“å‡ºï¼Œé»˜è®¤enable
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         System.out.println(mapper.writeValueAsString(people));
     }
@@ -167,9 +171,9 @@ public class JacksonTest {
 
     @Test
     public void testDeserializationFeature() throws IOException {
-        //ÔÚÓöµ½Î´ÖªÊôĞÔÊ±£¬»áÅ×³öÒì³£, Ä¬ÈÏenable
+        //åœ¨é‡åˆ°æœªçŸ¥å±æ€§æ—¶ï¼Œä¼šæŠ›å‡ºå¼‚å¸¸, é»˜è®¤enable
         mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-        //ÔÊĞí½«¿Õ×Ö·û´®"" ×÷Îª¿Õ¶ÔÏó´¦Àí£¬Ä¬ÈÏdisable
+        //å…è®¸å°†ç©ºå­—ç¬¦ä¸²"" ä½œä¸ºç©ºå¯¹è±¡å¤„ç†ï¼Œé»˜è®¤disable
         mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
         People people = mapper.readValue("{\"name\":\"hcc\",\"age\":24,\"photo\":\"my.jpg\","
             + "\"idCardNo\":\"340121199310044612\",\"gender\":1,\"birthday\":1506580198051,\"createTime\":1506580198051,"
@@ -180,14 +184,14 @@ public class JacksonTest {
 
     @Test
     public void testGeneratorAndParserFeature() {
-        //ÔÊĞíÒ»Ğ©C/C++ÑùÊ½µÄ×¢ÊÍ´æÔÚ
+        //å…è®¸ä¸€äº›C/C++æ ·å¼çš„æ³¨é‡Šå­˜åœ¨
         mapper.configure(Feature.ALLOW_COMMENTS, true);
-        //ÔÊĞí·ÇÒıÓÃ×Ö¶ÎÃû´æÔÚ
+        //å…è®¸éå¼•ç”¨å­—æ®µåå­˜åœ¨
         mapper.configure(Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
-        //ÔÊĞíµ¥ÒıºÅ×Ö¶Î´æÔÚ
+        //å…è®¸å•å¼•å·å­—æ®µå­˜åœ¨
         mapper.configure(Feature.ALLOW_SINGLE_QUOTES, true);
 
-        //Ç¿ÖÆÈ¥³ı·ÇASCII×Ö·û
+        //å¼ºåˆ¶å»é™¤éASCIIå­—ç¬¦
         mapper.configure(JsonGenerator.Feature.ESCAPE_NON_ASCII, true);
     }
 }

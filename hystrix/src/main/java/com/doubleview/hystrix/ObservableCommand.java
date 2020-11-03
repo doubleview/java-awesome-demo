@@ -1,9 +1,10 @@
 package com.doubleview.hystrix;
 
-import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
+import com.netflix.hystrix.HystrixObservableCommand;
 import rx.Observable;
 import rx.Observer;
+import rx.schedulers.Schedulers;
 
 /**
  * @author huchengchao.
@@ -11,18 +12,12 @@ import rx.Observer;
  * @date: 2018-08-12 上午9:44
  * @Copyright: 2016 Hangzhou Enniu Tech Ltd. All rights reserved.
  */
-public class ObservableCommand extends HystrixCommand<String> {
+public class ObservableCommand extends HystrixObservableCommand<String> {
 
     private String name;
     public ObservableCommand(String name) {
         super(HystrixCommandGroupKey.Factory.asKey("ExampleGroup"));
         this.name = name;
-    }
-
-    @Override
-    protected String run() {
-        System.out.println("HelloWorldCommand run");
-        return "Hello " + name + "thread" + Thread.currentThread().getName();
     }
 
     public static void main(String[] args) {
@@ -45,5 +40,21 @@ public class ObservableCommand extends HystrixCommand<String> {
                 System.out.println("onNext: " + s);
             }
         });
+    }
+
+    @Override
+    protected Observable<String> construct() {
+        return Observable.create((Observable.OnSubscribe<String>) observer -> {
+            try {
+                if (!observer.isUnsubscribed()) {
+                    // a real example would do work like a network call here
+                    observer.onNext("Hello");
+                    observer.onNext(name + "!");
+                    observer.onCompleted();
+                }
+            } catch (Exception e) {
+                observer.onError(e);
+            }
+        }).subscribeOn(Schedulers.io());
     }
 }

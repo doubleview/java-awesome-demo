@@ -3,8 +3,10 @@
   "age" : 24,
   "idCardNo" : "340121199310044612",
   "gender" : 1,
-  "birthday" : 1510131735817,
-  "createTime" : 1510131735817,
-  "lastModifyTime" : 1510131735817,
-  "onlyMethod" : "onlyMethod"
+  "birthday" : 1586847093637,
+  "createTime" : 1586847093637,
+  "lastModifyTime" : 1586847093637,
+  "onlyMethod" : "onlyMethod",
+  "timestamp" : "2020-04-14 14:51:33",
+  "aDouble" : 3.141592
 }

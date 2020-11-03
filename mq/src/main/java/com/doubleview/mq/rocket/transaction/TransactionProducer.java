@@ -1,4 +1,4 @@
-package com.doubleview.mq.transaction;
+package com.doubleview.mq.rocket.transaction;
 
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.client.producer.TransactionMQProducer;
@@ -9,7 +9,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class TransactionProducer {
-
 
     public static void main(String[] args) throws Exception {
         //接收RocketMQ回调的一个接口

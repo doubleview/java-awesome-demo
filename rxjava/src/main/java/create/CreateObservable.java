@@ -16,7 +16,7 @@ import rx.Subscriber;
 public class CreateObservable {
 
     public static void main(String[] args) {
-        Observable.create((OnSubscribe<Integer>) subscriber -> {
+        Observable.unsafeCreate((OnSubscribe<Integer>) subscriber -> {
             try {
                 if (!subscriber.isUnsubscribed()) {
                     for (int i = 1; i < 5; i++) {

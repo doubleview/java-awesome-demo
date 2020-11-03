@@ -12,7 +12,7 @@ import rx.Subscriber;
 public class ScanObservable {
 
     public static void main(String[] args) {
-        Observable.just(1 , 2 , 3 , 4 , 5).scan((integer, integer2) -> integer+integer2).subscribe(new Subscriber<Integer>() {
+        Observable.just(1 , 2 , 3 , 4 , 5).scan(Integer::sum).subscribe(new Subscriber<Integer>() {
             @Override
             public void onNext(Integer item) {
                 System.out.println("Next: " + item);

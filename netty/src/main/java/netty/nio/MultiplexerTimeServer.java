@@ -34,8 +34,6 @@ public class MultiplexerTimeServer implements Runnable {
 
     private Selector selector;
 
-    private ServerSocketChannel servChannel;
-
     private volatile boolean stop;
 
     /**
@@ -44,10 +42,10 @@ public class MultiplexerTimeServer implements Runnable {
     public MultiplexerTimeServer(int port) {
         try {
             selector = Selector.open();
-            servChannel = ServerSocketChannel.open();
-            servChannel.configureBlocking(false);
-            servChannel.socket().bind(new InetSocketAddress(port), 1024);
-            servChannel.register(selector, SelectionKey.OP_ACCEPT);
+            ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+            serverSocketChannel.configureBlocking(false);
+            serverSocketChannel.socket().bind(new InetSocketAddress(port), 1024);
+            serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
             System.out.println("The time server is start in port : " + port);
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.doubleview.mq;
+package com.doubleview.mq.rocket;
 
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;

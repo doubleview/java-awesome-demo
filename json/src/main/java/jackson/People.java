@@ -1,5 +1,8 @@
 package jackson;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -26,6 +29,11 @@ public class People {
     private String onlyField = "onlyField";
 
     private String onlyMethod;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
+    private Timestamp timestamp;
+
+    private Double aDouble;
 
     public String getName() {
         return name;
@@ -96,6 +104,21 @@ public class People {
         return "onlyMethod";
     }
 
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public Double getaDouble() {
+        return aDouble;
+    }
+
+    public void setaDouble(Double aDouble) {
+        this.aDouble = aDouble;
+    }
 
     @Override
     public String toString() {

@@ -14,7 +14,7 @@ import rx.schedulers.Schedulers;
 public class ScheduleObservable {
 
     public static void main(String[] args) throws InterruptedException {
-        Observable.create((OnSubscribe<String>) subscriber -> {
+        Observable.unsafeCreate((OnSubscribe<String>) subscriber -> {
             System.out.println("currentThreadName : " + Thread.currentThread().getName());
             subscriber.onNext("info1");
             try {

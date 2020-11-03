@@ -15,8 +15,9 @@
  */
 package netty.bio;
 
+import cn.hutool.core.io.IoUtil;
+
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -59,25 +60,9 @@ public class TimeServerHandler implements Runnable {
             }
 
         } catch (Exception e) {
-            if (in != null) {
-                try {
-                    in.close();
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-            }
-            if (out != null) {
-                out.close();
-                out = null;
-            }
-            if (this.socket != null) {
-                try {
-                    this.socket.close();
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-                this.socket = null;
-            }
+            IoUtil.close(in);
+            IoUtil.close(out);
+            IoUtil.close(socket);
         }
     }
 }

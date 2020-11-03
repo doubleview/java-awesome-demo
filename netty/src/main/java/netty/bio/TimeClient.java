@@ -15,6 +15,8 @@
  */
 package netty.bio;
 
+import cn.hutool.core.io.IoUtil;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -55,28 +57,9 @@ public class TimeClient {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            if (out != null) {
-                out.close();
-                out = null;
-            }
-
-            if (in != null) {
-                try {
-                    in.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                in = null;
-            }
-
-            if (socket != null) {
-                try {
-                    socket.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                socket = null;
-            }
+            IoUtil.close(in);
+            IoUtil.close(out);
+            IoUtil.close(socket);
         }
     }
 }

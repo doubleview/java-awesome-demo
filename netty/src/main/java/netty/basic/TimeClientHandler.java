@@ -19,7 +19,9 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelPromise;
 
+import java.net.SocketAddress;
 import java.util.logging.Logger;
 
 /**
@@ -55,6 +57,13 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
         buf.readBytes(req);
         String body = new String(req, "UTF-8");
         System.out.println("Now is : " + body);
+    }
+
+    public void connect(
+            ChannelHandlerContext ctx,
+            SocketAddress remoteAddress, SocketAddress localAddress, ChannelPromise promise) throws Exception {
+        System.out.println("准备连接中");
+        ctx.connect(remoteAddress, localAddress, promise);
     }
 
     @Override
