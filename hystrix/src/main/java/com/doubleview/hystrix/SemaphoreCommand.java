@@ -17,7 +17,8 @@ public class SemaphoreCommand extends HystrixCommand<String> {
 
     public SemaphoreCommand(String name) {
         super(Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey("HelloWorldGroup"))
-        .andCommandPropertiesDefaults(HystrixCommandProperties.Setter().withExecutionIsolationStrategy(ExecutionIsolationStrategy.SEMAPHORE)));
+                .andCommandPropertiesDefaults(HystrixCommandProperties.Setter()
+                        .withExecutionIsolationStrategy(ExecutionIsolationStrategy.SEMAPHORE)));
         this.name = name;
     }
 

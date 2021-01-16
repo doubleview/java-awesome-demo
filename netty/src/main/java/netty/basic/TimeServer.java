@@ -53,8 +53,7 @@ public class TimeServer {
         }
     }
 
-    private class ChildChannelHandler extends ChannelInitializer<SocketChannel> {
-
+    private static class ChildChannelHandler extends ChannelInitializer<SocketChannel> {
         @Override
         protected void initChannel(SocketChannel arg0) throws Exception {
             arg0.pipeline().addLast(new TimeServerHandler());
@@ -62,10 +61,7 @@ public class TimeServer {
 
     }
 
-    /**
-     * @param args
-     * @throws Exception
-     */
+
     public static void main(String[] args) throws Exception {
         new TimeServer().bind(8080);
     }

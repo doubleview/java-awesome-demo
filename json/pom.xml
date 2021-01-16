@@ -11,8 +11,6 @@
 
     <artifactId>json</artifactId>
 
-
-
     <dependencies>
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -25,5 +23,13 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.9.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
+        </dependency>
+
     </dependencies>
 </project>

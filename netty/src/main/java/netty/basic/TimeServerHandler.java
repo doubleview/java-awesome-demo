@@ -20,6 +20,8 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 
+import java.nio.charset.StandardCharsets;
+
 /**
  * @author lilinfeng
  * @version 1.0
@@ -28,11 +30,11 @@ import io.netty.channel.ChannelHandlerContext;
 public class TimeServerHandler extends ChannelHandlerAdapter {
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+    public void channelRead(ChannelHandlerContext ctx, Object msg) {
         ByteBuf buf = (ByteBuf) msg;
         byte[] req = new byte[buf.readableBytes()];
         buf.readBytes(req);
-        String body = new String(req, "UTF-8");
+        String body = new String(req, StandardCharsets.UTF_8);
         System.out.println("The time server receive order : " + body);
         String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body) ? new java.util.Date(System.currentTimeMillis()).toString() : "BAD ORDER";
         ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
@@ -40,7 +42,7 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
     }
 
     @Override
-    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+    public void channelReadComplete(ChannelHandlerContext ctx) {
         ctx.flush();
     }
 

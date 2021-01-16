@@ -26,6 +26,11 @@
         <module>mq</module>
         <module>aviator</module>
         <module>grpc</module>
+        <module>kotlin</module>
+        <module>groovy</module>
+        <module>groovy</module>
+        <module>groovy-mojo</module>
+        <module>algorithm</module>
     </modules>
 
     <properties>
