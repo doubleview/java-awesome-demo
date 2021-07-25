@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.doubleview.model.Emp" table="emp">
+        <!---开启二级缓存-->
+        <cache usage="read-only"/>
+        <id name="id" type="integer" column="id">
+            <generator class="native"></generator>
+        </id>
+        <property name="name" type="string" column="name"/>
+        <property name="age" type="integer" column="age"/>
+        <property name="salary" type="double"/>
+        <property name="birthday" type="date" column="birthday"/>
+        <property name="lastLoginTime" type="timestamp" column="last_login_time"/>
+        <property name="marry" type="yes_no" column="marry"/>
+    </class>
+</hibernate-mapping>

@@ -10,27 +10,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>hibernate</module>
         <module>java-se-samples</module>
-        <module>dom4j</module>
-        <module>json</module>
-        <module>guava</module>
-        <module>rxjava</module>
-        <module>netty</module>
-        <module>cglib</module>
-        <module>hystrix</module>
-        <module>spring</module>
-        <module>lucene</module>
-        <module>apache-commons</module>
-        <module>zookeeper</module>
-        <module>mq</module>
-        <module>aviator</module>
-        <module>grpc</module>
-        <module>kotlin</module>
-        <module>groovy</module>
-        <module>groovy</module>
-        <module>groovy-mojo</module>
-        <module>algorithm</module>
+        <module>algorithm-samples</module>
+        <module>framework-samples</module>
+        <module>language-samples</module>
+        <module>middleware-samples</module>
     </modules>
 
     <properties>
@@ -64,7 +48,7 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.4.1</version>
+            <version>5.6.5</version>
         </dependency>
 
         <dependency>

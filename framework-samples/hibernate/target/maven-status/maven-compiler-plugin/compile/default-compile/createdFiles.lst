@@ -1,0 +1,14 @@
+com/doubleview/test/TestFirstCache.class
+com/doubleview/model/Emp.class
+com/doubleview/test/TestPersistent.class
+com/doubleview/model/Account.class
+com/doubleview/test/TestHQL.class
+com/doubleview/model/Service.class
+com/doubleview/test/TestOneToMany.class
+com/doubleview/test/TestOtherQuery.class
+com/doubleview/test/TestEmp.class
+com/doubleview/util/HibernateUtil.class
+com/doubleview/test/TestCascade.class
+com/doubleview/test/TestManyToOne.class
+com/doubleview/test/TestSecondCache.class
+com/doubleview/test/TestLazy.class

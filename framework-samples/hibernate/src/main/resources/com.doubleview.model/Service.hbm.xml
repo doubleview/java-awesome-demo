@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.doubleview.model.Service" table="service">
+        <id name="id" type="integer" column="id">
+            <generator class="native"></generator>
+        </id>
+        <!--<property name="accountId" type="integer" column="account_id"/>-->
+        <property name="unixHost" type="string" column="unix_host"/>
+        <property name="osUserName" type="string" column="os_username"/>
+        <property name="loginPassword" type="string" column="login_password"/>
+        <property name="status" type="string" column="status"/>
+        <property name="createDate" type="date" column="create_date"/>
+        <property name="pauseDate" type="date" column="pause_date"/>
+        <property name="closeDate" type="date" column="close_date"/>
+        <property name="costId" type="integer" column="cost_id"/>
+
+        <!--配置多对一关联关系-->
+        <many-to-one name="account" class="com.doubleview.model.Account" column="account_id" lazy="false" fetch="join"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.doubleview.model.Account" table="account">
+        <id name="id" type="integer" column="id">
+            <generator class="native"></generator>
+        </id>
+        <property name="recommenderId" type="integer" column="recommender_id"/>
+        <property name="loginName" type="string" column="login_name"/>
+        <property name="loginPassword" type="string" column="login_password"/>
+        <property name="status" type="string" column="status"/>
+        <property name="createDate" type="date" column="create_date"/>
+        <property name="pauseDate" type="date" column="pause_date"/>
+        <property name="closeDate" type="date" column="close_date"/>
+        <property name="realName" type="string" column="real_name"/>
+        <property name="idcardNo" type="string" column="idcard_no"/>
+        <property name="birthdate" type="date" column="birthdate"/>
+        <property name="gender" type="string" column="gender"/>
+        <property name="occupation" type="string" column="occupation"/>
+        <property name="telephone" type="string" column="telephone"/>
+        <property name="email" type="string" column="email"/>
+        <property name="mailaddress" type="string" column="mailaddress"/>
+        <property name="zipcode" type="string" column="zipcode"/>
+        <property name="qq" type="string" column="qq"/>
+        <property name="lastLoginTime" type="date" column="last_login_time"/>
+        <property name="lastLoginIp" type="string" column="last_login_ip"/>
+        <set name="services" lazy="false" fetch="join" cascade="all" inverse="true">
+            <!--用于指定关联条件，写关联条件的外键字段-->
+            <key column="account_id"/>
+            <!--用于指定采用哪种关系 加载哪方数据-->
+            <one-to-many class="com.doubleview.model.Service"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,5 @@
+dom/TestXml.class
+xslt/TestXSLT.class
+sax/TestSAX$MyErrorHandler.class
+sax/TestSAX$MyDefaultHandler.class
+sax/TestSAX.class
